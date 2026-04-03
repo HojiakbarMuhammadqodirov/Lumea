@@ -1,0 +1,2461 @@
+:root {
+  --bg-1: #dff0ff;
+  --bg-2: #8bc2ff;
+  --bg-3: #0d4f9c;
+  --glass: rgba(255, 255, 255, 0.22);
+  --glass-strong: rgba(255, 255, 255, 0.32);
+  --glass-line: rgba(255, 255, 255, 0.34);
+  --ink: #08355f;
+  --ink-soft: #376b99;
+  --danger: #bf2c55;
+  --shadow: 0 18px 50px rgba(7, 49, 94, 0.18);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Soleil", "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), transparent 24%),
+    radial-gradient(circle at 80% 0%, rgba(162, 209, 255, 0.8), transparent 20%),
+    radial-gradient(circle at 30% 100%, rgba(26, 103, 184, 0.42), transparent 30%),
+    linear-gradient(135deg, var(--bg-1), #f7fbff 35%, #b6dcff 68%, var(--bg-3));
+  background-attachment: fixed;
+}
+
+.container {
+  width: min(1180px, calc(100% - 32px));
+  margin: 24px auto 42px;
+  display: grid;
+  gap: 16px;
+}
+
+.hero,
+.card,
+.cardSection,
+.levelCard,
+.lessonItem,
+.manageItem,
+.stats div,
+.chatMessage,
+.dataTable,
+.menu,
+button,
+input,
+select,
+.modalCard {
+  backdrop-filter: blur(10px) saturate(130%);
+  -webkit-backdrop-filter: blur(10px) saturate(130%);
+}
+
+.hero,
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.18));
+  border: 1px solid var(--glass-line);
+  box-shadow: var(--shadow);
+}
+
+.hero,
+.card,
+.cardSection {
+  border-radius: 28px;
+  padding: 20px;
+}
+
+.cardSection {
+  padding: 0;
+}
+
+.cardCompact {
+  padding: 14px 18px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.hero h1,
+.card h2,
+.cardSection h3,
+.cardSection h4 {
+  margin: 0;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: var(--ink-soft);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+
+.subtext,
+.hint {
+  color: var(--ink-soft);
+}
+
+.userBox {
+  min-width: 180px;
+  display: grid;
+  justify-items: end;
+  gap: 6px;
+  text-align: right;
+}
+
+.stack,
+.lessonList,
+.manageList {
+  display: grid;
+  gap: 14px;
+}
+
+.cardHeaderLine {
+  justify-content: space-between;
+}
+
+.menuBar,
+.inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+button,
+.menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 18px;
+  padding: 11px 16px;
+  color: #fff;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.1)),
+    linear-gradient(135deg, rgba(13, 79, 156, 0.88), rgba(32, 122, 215, 0.72));
+  cursor: pointer;
+  font-weight: 700;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    background 160ms ease,
+    border-color 160ms ease;
+  box-shadow: 0 12px 28px rgba(13, 79, 156, 0.22);
+  font-family: inherit;
+}
+
+button:hover,
+.menu:hover {
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: 0 16px 34px rgba(13, 79, 156, 0.28);
+  border-color: rgba(255, 255, 255, 0.66);
+}
+
+button:active,
+.menu:active {
+  transform: translateY(1px) scale(0.985);
+  box-shadow: 0 8px 16px rgba(13, 79, 156, 0.18);
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.menu.active {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.12)),
+    linear-gradient(135deg, rgba(7, 49, 94, 0.92), rgba(13, 79, 156, 0.78));
+}
+
+.ghost {
+  color: var(--ink);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.18));
+}
+
+.secondary {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.08)),
+    linear-gradient(135deg, rgba(43, 119, 191, 0.74), rgba(103, 182, 255, 0.58));
+}
+
+.danger {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.08)),
+    linear-gradient(135deg, rgba(191, 44, 85, 0.85), rgba(232, 98, 137, 0.68));
+}
+
+.iconButton {
+  padding-inline: 14px;
+}
+
+input,
+select {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 16px;
+  padding: 12px 14px;
+  color: var(--ink);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.2));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.38);
+  font-family: inherit;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: rgba(26, 117, 212, 0.7);
+  box-shadow: 0 0 0 3px rgba(69, 156, 255, 0.14);
+}
+
+.formGrid {
+  display: grid;
+  gap: 12px;
+}
+
+.profileGrid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.levels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin: 16px 0;
+}
+
+.levelCard,
+.lessonItem,
+.manageItem,
+.stats div,
+.chatBox,
+.dataTable {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.16));
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  box-shadow: 0 10px 30px rgba(7, 49, 94, 0.1);
+}
+
+.levelCard,
+.lessonItem,
+.manageItem,
+.stats div {
+  border-radius: 22px;
+  padding: 16px;
+}
+
+.levelCardCurrent {
+  border-color: rgba(83, 166, 255, 0.8);
+  box-shadow: 0 16px 32px rgba(13, 79, 156, 0.18);
+}
+
+.levelCardLocked {
+  opacity: 0.62;
+}
+
+.badge {
+  color: var(--ink-soft);
+  font-size: 0.94rem;
+}
+
+.grow {
+  flex: 1;
+  min-width: 0;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(110px, 1fr));
+  gap: 12px;
+}
+
+.stats strong {
+  display: block;
+  font-size: 1.5rem;
+}
+
+.split,
+.splitWide {
+  display: grid;
+  gap: 14px;
+}
+
+.split {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.splitWide {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+}
+
+.tableWrap {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 22px;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+}
+
+.dataTable th,
+.dataTable td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  text-align: left;
+  font-size: 0.95rem;
+  vertical-align: top;
+  word-break: break-word;
+}
+
+.dataTable tbody tr {
+  cursor: pointer;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.dataTable tbody tr:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.assignmentRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 180px) minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.lessonMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.22));
+}
+
+.placeholder {
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+}
+
+.toolbar {
+  margin: 8px 0 14px;
+}
+
+
+.chatBox {
+  display: grid;
+  gap: 10px;
+  max-height: 320px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 16px;
+  padding-right: 12px;
+  border-radius: 22px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(108, 177, 245, 0.85) rgba(255, 255, 255, 0.18);
+}
+
+.chatBox::-webkit-scrollbar {
+  width: 10px;
+}
+
+.chatBox::-webkit-scrollbar-track {
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  margin-block: 6px;
+}
+
+.chatBox::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(128, 197, 255, 0.95), rgba(89, 159, 240, 0.95));
+  border: 2px solid rgba(255, 255, 255, 0.35);
+}
+
+.chatMessage {
+  max-width: min(100%, 78%);
+  padding: 12px 14px;
+  border-radius: 18px 18px 18px 8px;
+}
+
+.chatMessage p {
+  margin: 6px 0 0;
+  overflow-wrap: anywhere;
+}
+
+.chatMessage.own {
+  justify-self: end;
+  border-radius: 18px 18px 8px 18px;
+  background: linear-gradient(180deg, rgba(224, 244, 255, 0.5), rgba(164, 214, 255, 0.28));
+}
+
+.chatComposer {
+  margin-top: 18px;
+  padding: 0;
+  background: none;
+  border: 0;
+  box-shadow: none;
+}
+
+.chatComposerLabel {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.chatComposerRow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.2), transparent 28%),
+    linear-gradient(180deg, rgba(8, 39, 72, 0.2), rgba(8, 39, 72, 0.28));
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+}
+
+.modalCard {
+  width: min(760px, 100%);
+  max-height: min(90vh, 860px);
+  overflow-y: auto;
+  border-radius: 30px;
+  padding: 30px;
+  background:
+    linear-gradient(180deg, rgba(252, 254, 255, 0.985), rgba(240, 247, 253, 0.97)),
+    linear-gradient(135deg, rgba(173, 220, 255, 0.16), rgba(125, 187, 248, 0.08));
+  border: 1px solid rgba(186, 211, 235, 0.92);
+  box-shadow:
+    0 28px 70px rgba(7, 35, 66, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.modalCard.wide {
+  width: min(1120px, 100%);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.modalSection {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.modalActions {
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.error {
+  margin: 0;
+  padding: 12px 16px;
+  border-radius: 18px;
+  color: #8d1737;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(255, 212, 222, 0.42));
+  border: 1px solid rgba(255, 255, 255, 0.34);
+}
+
+.authShell {
+  position: relative;
+  overflow: hidden;
+  padding: 14px 0 4px;
+}
+
+.authShellRegister .authGlowOne {
+  transform: translateX(36px) translateY(18px) scale(1.08);
+}
+
+.authShellRegister .authGlowTwo {
+  transform: translateX(-24px) translateY(-16px) scale(1.06);
+}
+
+.authBackdropGlow {
+  position: absolute;
+  inset: auto;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  filter: blur(22px);
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.authGlowOne {
+  top: 30px;
+  left: 40px;
+  background: radial-gradient(circle, rgba(119, 197, 255, 0.9), transparent 64%);
+}
+
+.authGlowTwo {
+  right: 48px;
+  bottom: 24px;
+  background: radial-gradient(circle, rgba(24, 93, 182, 0.9), transparent 64%);
+}
+
+.authStage {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.9fr);
+  gap: 18px;
+  min-height: 560px;
+}
+
+.authForms,
+.authSwitcher {
+  position: relative;
+  min-width: 0;
+}
+
+.authPane {
+  position: relative;
+  min-height: 560px;
+}
+
+.authCard {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-content: center;
+  gap: 14px;
+  padding: 28px;
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.14));
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  box-shadow: var(--shadow);
+  transition:
+    opacity 320ms ease,
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 320ms ease;
+}
+
+.authCardWizard {
+  gap: 18px;
+}
+
+.authCardRegister {
+  opacity: 0;
+  transform: translateX(48px) scale(0.96);
+  pointer-events: none;
+}
+
+.authCardHidden {
+  opacity: 0;
+  transform: translateX(-48px) scale(0.96);
+  pointer-events: none;
+}
+
+.authCardActive {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  pointer-events: auto;
+}
+
+.authProgress {
+  display: grid;
+  gap: 10px;
+}
+
+.authProgressTrack {
+  position: relative;
+  width: 100%;
+  height: 12px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.08));
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.authProgressFill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, rgba(142, 223, 255, 0.95), rgba(102, 188, 255, 0.95));
+  box-shadow: 0 0 24px rgba(112, 199, 255, 0.46);
+  transition: width 260ms ease;
+}
+
+.authProgressLabels {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.authProgressLabel {
+  font-size: 0.78rem;
+  color: rgba(8, 53, 95, 0.46);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.authProgressLabel.active {
+  color: rgba(8, 53, 95, 0.88);
+}
+
+.authStepGrid {
+  min-height: 250px;
+  align-content: start;
+}
+
+.authStepNote {
+  margin: 0;
+}
+
+.authWizardActions {
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.authChoiceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.authChoiceCard {
+  color: var(--ink);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.44), rgba(255, 255, 255, 0.16)),
+    linear-gradient(135deg, rgba(171, 222, 255, 0.22), rgba(117, 185, 255, 0.14));
+}
+
+.authChoiceCardActive {
+  color: #fff;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.08)),
+    linear-gradient(135deg, rgba(14, 94, 182, 0.92), rgba(98, 184, 255, 0.76));
+}
+
+.authPhotoUpload {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.authPhotoPreview {
+  width: 120px;
+  height: 120px;
+  border-radius: 28px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0.2));
+}
+
+.authPhotoPlaceholder {
+  display: grid;
+  place-items: center;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+
+.authInlineError {
+  padding: 10px 14px;
+}
+
+.authSwitcher {
+  display: flex;
+}
+
+.authGlassTrack {
+  position: relative;
+  width: 100%;
+  border-radius: 34px;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.06)),
+    linear-gradient(135deg, rgba(18, 91, 186, 0.92), rgba(110, 189, 255, 0.68));
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  box-shadow: 0 24px 58px rgba(8, 53, 95, 0.22);
+  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.authGlassTrackRight {
+  transform: translateY(8px) scale(1.01);
+}
+
+.authGlassTrack::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.42), transparent 36%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.02));
+  opacity: 0.9;
+}
+
+.authSwitcherFace {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: grid;
+  align-content: center;
+  gap: 14px;
+  padding: 32px 28px;
+  color: #fff;
+}
+
+.authMiniStats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.authMiniStats div {
+  padding: 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  text-align: center;
+}
+
+.authMiniStats strong {
+  display: block;
+  font-size: 1.2rem;
+}
+
+.dashboardShell {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 18px;
+  min-height: calc(100vh - 48px);
+}
+
+.dashboardShell.collapsed {
+  grid-template-columns: 92px minmax(0, 1fr);
+}
+
+.dashboardShell.collapsed .dashboardSidebar {
+  justify-items: center;
+  padding-inline: 12px;
+}
+
+.dashboardShell.collapsed .dashboardMenuButton,
+.dashboardShell.collapsed .dashboardNavItem {
+  width: 60px;
+  padding-inline: 0;
+  justify-content: center;
+}
+
+.dashboardSidebar,
+.dashboardCard,
+.lessonRail,
+.lessonHeroCard,
+.lessonStepCard,
+.learningSlideCard,
+.dashboardNavItem {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.36), rgba(255, 255, 255, 0.18));
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(9px) saturate(130%);
+  -webkit-backdrop-filter: blur(9px) saturate(130%);
+}
+
+.dashboardSidebar,
+.dashboardCard,
+.lessonRail,
+.lessonHeroCard,
+.lessonStepCard,
+.learningSlideCard {
+  border-radius: 28px;
+}
+
+.dashboardSidebar {
+  padding: 18px;
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+}
+
+.dashboardMenuButton,
+.dashboardNavItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.dashboardMenuButton svg,
+.dashboardNavItem svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: none;
+}
+
+.dashboardBrand {
+  padding: 6px 4px 10px;
+}
+
+.dashboardNav {
+  display: grid;
+  gap: 10px;
+}
+
+.dashboardNavItem {
+  justify-content: flex-start;
+  color: var(--ink);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0.2));
+}
+
+.dashboardNavItem.active {
+  color: #fff;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.08)),
+    linear-gradient(135deg, #5da8f4, #7fc8ff);
+}
+
+.dashboardContent {
+  min-width: 0;
+}
+
+.dashboardContentTopbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.profileTopButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  color: var(--ink);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(236, 244, 252, 0.86));
+}
+
+.profileTopAvatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(173, 199, 225, 0.8);
+}
+
+.profileTopPlaceholder {
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  background: linear-gradient(145deg, #5da8f4, #7fc8ff);
+  color: #fff;
+}
+
+.dashboardMainGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
+  gap: 18px;
+}
+
+.dashboardMainGridCompact {
+  grid-template-columns: 1fr;
+}
+
+.dashboardCard {
+  padding: 22px;
+}
+
+.greetingCard,
+.lessonHighlightCard,
+.recentLessonsCard {
+  grid-column: 1;
+}
+
+.profileSpotlight,
+.targetScoreCard,
+.actionCard,
+.ratingCard,
+.teachersCard {
+  grid-column: 2;
+}
+
+.recentLessonsCard {
+  min-height: 280px;
+}
+
+.dashboardCardHead {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: start;
+}
+
+.dashboardCardTitle {
+  display: flex;
+  gap: 14px;
+  align-items: start;
+}
+
+.dashboardBrand.hidden {
+  display: none;
+}
+
+.profileMini {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.recentLessonList,
+.vocabularyGrid {
+  display: grid;
+  gap: 12px;
+}
+
+.recentLessonItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.34);
+}
+
+.targetScoreTicker {
+  overflow: hidden;
+  border-radius: 22px;
+  margin-top: 14px;
+  background: rgba(255, 255, 255, 0.32);
+}
+
+.targetScoreTrack {
+  display: flex;
+  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.targetScorePane {
+  min-width: 100%;
+  padding: 18px;
+  display: grid;
+  gap: 6px;
+}
+
+.targetScorePane strong {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+.ratingPill,
+.stepBadge {
+  display: inline-grid;
+  place-items: center;
+  width: 92px;
+  min-width: 92px;
+  min-height: 92px;
+  padding: 10px;
+  border-radius: 999px;
+  font-weight: 800;
+  line-height: 1.1;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.56);
+}
+
+.stepBadge.complete {
+  color: #fff;
+  background: linear-gradient(135deg, #0d6e68, #2f9e83);
+}
+
+.lessonWorkspace {
+  padding: 24px;
+}
+
+.lessonWorkspaceHeader,
+.lessonWorkspaceBody,
+.lessonStepHeader {
+  display: flex;
+  gap: 18px;
+}
+
+.lessonWorkspaceHeader {
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 18px;
+}
+
+.lessonWorkspaceTotal {
+  min-width: 160px;
+  padding: 18px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.34);
+  text-align: center;
+}
+
+.lessonWorkspaceTotal strong {
+  display: block;
+  font-size: 2rem;
+}
+
+.lessonRail {
+  width: 300px;
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.lessonRailItem {
+  width: 100%;
+  padding: 14px;
+  border-radius: 22px;
+  display: flex;
+  gap: 12px;
+  align-items: start;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.lessonRailItem.active {
+  color: #fff;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.08)),
+    linear-gradient(135deg, #0f576a, #1d8eb2);
+}
+
+.lessonRailIndex {
+  width: 36px;
+  height: 36px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.32);
+}
+
+.lessonRailText {
+  display: grid;
+  gap: 4px;
+  text-align: left;
+}
+
+.lessonRailText small {
+  opacity: 0.82;
+}
+
+.lessonStage {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.lessonHeroCard,
+.lessonStepCard {
+  padding: 20px;
+}
+
+.lessonHeroCard {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: start;
+}
+
+.lessonStepsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.lessonStepCard {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+  min-height: 0;
+}
+
+.lessonStepHeader {
+  justify-content: space-between;
+  align-items: start;
+  gap: 12px;
+}
+
+.learningSlideCard {
+  padding: 18px;
+}
+
+.learningSlideCard h5 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.lessonTopActions {
+  align-items: center;
+}
+
+.lessonTextWrap {
+  overflow-wrap: anywhere;
+}
+
+.lessonActionArea,
+.lessonActionColumn {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.lessonActionRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  align-items: stretch;
+}
+
+.lessonActionButton {
+  width: 100%;
+  justify-content: center;
+}
+
+.lessonMiniButton {
+  width: 100%;
+  min-width: 0;
+}
+
+.lessonScoreInput {
+  width: 100%;
+}
+
+.iconBadge3d {
+  width: 58px;
+  height: 58px;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.16) 48%),
+    linear-gradient(145deg, rgba(86, 177, 244, 0.92), rgba(72, 179, 153, 0.86));
+  box-shadow:
+    inset 0 2px 8px rgba(255, 255, 255, 0.48),
+    0 14px 22px rgba(17, 92, 150, 0.24);
+}
+
+.iconBadge3d svg {
+  width: 28px;
+  height: 28px;
+  stroke: #fff;
+  stroke-width: 1.8;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.greetingCard,
+.recentLessonsCard,
+.actionCard,
+.ratingCard,
+.teachersCard,
+.testsCard {
+  grid-column: auto;
+}
+
+.studentQuickGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.quickAccessCard {
+  min-height: 240px;
+  padding: 22px 20px;
+  border-radius: 30px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 14px;
+  color: var(--ink);
+  text-align: center;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(236, 244, 252, 0.2));
+  border: 1px solid rgba(255, 255, 255, 0.44);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    0 18px 42px rgba(15, 87, 145, 0.12);
+  backdrop-filter: blur(12px) saturate(125%);
+  -webkit-backdrop-filter: blur(12px) saturate(125%);
+}
+
+.quickAccessCard strong {
+  font-size: 1.5rem;
+  line-height: 1.15;
+  max-width: 12ch;
+}
+
+.quickAccessHint {
+  max-width: 24ch;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 180ms ease, transform 180ms ease;
+  color: var(--ink-soft);
+}
+
+.quickAccessCard:hover .quickAccessHint,
+.quickAccessCard:focus-visible .quickAccessHint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.glassIconBadge {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  border-radius: 28px;
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0.14)),
+    linear-gradient(140deg, rgba(115, 187, 255, 0.32), rgba(186, 224, 255, 0.12));
+  border: 1px solid rgba(255, 255, 255, 0.54);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.62),
+    inset 0 -8px 20px rgba(120, 180, 255, 0.1),
+    0 18px 28px rgba(66, 135, 201, 0.16);
+  overflow: hidden;
+}
+
+.glassIconGlow {
+  position: absolute;
+  inset: 8px;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.75), transparent 38%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02));
+}
+
+.glassIconBadge svg {
+  position: relative;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  stroke: rgba(29, 77, 122, 0.9);
+  stroke-width: 1.7;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 6px 10px rgba(255, 255, 255, 0.35));
+}
+
+.lessonCatalogGrid,
+.lessonDetailGrid {
+  display: grid;
+  gap: 16px;
+}
+
+.lessonCatalogGrid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.lessonDetailGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+}
+
+.lessonDetailCard {
+  display: grid;
+  gap: 18px;
+}
+
+.lessonOverviewGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.lessonStepCardCompact {
+  min-height: 260px;
+}
+
+.lessonLearningStage,
+.lessonTaskStage {
+  max-width: 760px;
+}
+
+.satDemoScreen,
+.ieltsDemoScreen {
+  display: grid;
+  gap: 18px;
+  padding: 18px;
+  border-radius: 26px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(242, 247, 252, 0.9));
+  border: 1px solid rgba(184, 206, 229, 0.84);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+.satDemoTopbar,
+.ieltsDemoTopbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.satDemoModule,
+.ieltsDemoTrack {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: var(--ink);
+  background: rgba(93, 168, 244, 0.16);
+  font-weight: 700;
+}
+
+.satQuestionPrompt {
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.satChoiceGrid {
+  display: grid;
+  gap: 12px;
+}
+
+.satChoiceButton {
+  width: 100%;
+  justify-content: flex-start;
+  padding: 14px 16px;
+  color: var(--ink);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(240, 246, 251, 0.96));
+  border: 1px solid rgba(178, 201, 223, 0.9);
+  box-shadow: none;
+}
+
+.satChoiceButton span {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: var(--ink);
+  background: rgba(93, 168, 244, 0.14);
+  font-weight: 800;
+}
+
+.satChoiceButton.active {
+  color: #fff;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.06)),
+    linear-gradient(135deg, #0d4f9c, #5da8f4);
+}
+
+.satChoiceButton.active span {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.satExamShell {
+  min-height: calc(100vh - 64px);
+  display: grid;
+  grid-template-rows: auto auto 1fr auto auto;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #fff;
+  border: 1px solid rgba(202, 216, 231, 0.9);
+  box-shadow: 0 20px 48px rgba(8, 53, 95, 0.16);
+}
+
+.satExamHeader,
+.satExamDirections,
+.satExamFooter,
+.satExamScoreBar {
+  padding-inline: 24px;
+}
+
+.satExamHeader {
+  min-height: 88px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  border-bottom: 1px solid rgba(217, 225, 235, 0.92);
+}
+
+.satExamHeaderLeft,
+.satExamHeaderCenter,
+.satExamHeaderRight,
+.satExamFooterActions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.satExamHeaderCenter {
+  justify-content: center;
+}
+
+.satExamHeaderRight {
+  justify-content: flex-end;
+}
+
+.satExamMeta {
+  margin: 0 0 4px;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.satExitButton,
+.satHideButton,
+.satUtilityButton {
+  min-height: 42px;
+  color: var(--ink);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(241, 246, 250, 0.96));
+  border-color: rgba(204, 214, 226, 0.92);
+  box-shadow: none;
+}
+
+.satExamDirections {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  color: var(--ink-soft);
+  border-bottom: 1px dashed rgba(181, 195, 211, 0.8);
+}
+
+.satExamBody {
+  padding: 28px 24px;
+  display: grid;
+  align-content: start;
+  gap: 18px;
+  background:
+    linear-gradient(180deg, rgba(248, 250, 252, 0.72), rgba(255, 255, 255, 0.98)),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 40px, rgba(233, 238, 244, 0.2) 40px, rgba(233, 238, 244, 0.2) 41px);
+}
+
+.satQuestionTopline {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.satQuestionBadge {
+  min-width: 40px;
+  height: 34px;
+  padding: 0 10px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 800;
+  background: #111827;
+}
+
+.satReviewToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+}
+
+.satExamQuestionWrap {
+  width: min(860px, 100%);
+  padding: 20px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(214, 223, 233, 0.96);
+  box-shadow: 0 10px 22px rgba(16, 46, 77, 0.06);
+  display: grid;
+  gap: 18px;
+}
+
+.satExamFooter {
+  min-height: 72px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  border-top: 1px solid rgba(217, 225, 235, 0.92);
+}
+
+.satQuestionCounter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  color: #fff;
+  background: #111827;
+  font-weight: 700;
+}
+
+.satExamScoreBar {
+  padding-top: 16px;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: minmax(0, 220px) auto;
+  gap: 12px;
+  align-items: center;
+  background: rgba(245, 248, 251, 0.92);
+  border-top: 1px solid rgba(217, 225, 235, 0.9);
+}
+
+.ieltsAudioPlayer {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(241, 247, 252, 0.94), rgba(231, 240, 248, 0.92));
+  border: 1px solid rgba(184, 206, 229, 0.8);
+}
+
+.ieltsPlayButton {
+  min-width: 88px;
+}
+
+.ieltsAudioProgress {
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(151, 184, 214, 0.28);
+}
+
+.ieltsAudioProgress span {
+  display: block;
+  width: 34%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #0d4f9c, #5da8f4);
+}
+
+.ieltsDemoBody {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: 16px;
+}
+
+.ieltsPromptPanel,
+.ieltsAnswerPanel,
+.ieltsNoteCard {
+  display: grid;
+  gap: 12px;
+}
+
+.ieltsAnswerPanel {
+  align-content: start;
+  padding: 18px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(247, 250, 253, 0.96), rgba(238, 245, 251, 0.94));
+  border: 1px solid rgba(184, 206, 229, 0.84);
+}
+
+.ieltsNoteCard {
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.66);
+  border: 1px solid rgba(184, 206, 229, 0.68);
+}
+
+.testCatalogCard {
+  display: grid;
+  gap: 18px;
+  align-content: space-between;
+}
+
+.testQuestionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.testQuestionCard {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+}
+
+.testQuestionHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.testScoreBar {
+  display: grid;
+  grid-template-columns: minmax(0, 220px) auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.profileGrid {
+  gap: 14px;
+}
+
+.profileEditShell {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.profileEditIntro {
+  grid-column: 1 / -1;
+  padding: 4px 2px 6px;
+}
+
+.profileGrid input,
+.profileGrid select {
+  border-radius: 18px;
+  min-height: 54px;
+  background: linear-gradient(180deg, #ffffff, #f1f6fb);
+  border: 1px solid rgba(178, 201, 223, 0.9);
+  box-shadow: none;
+}
+
+.profileGrid input[type="file"] {
+  padding: 14px;
+}
+
+.profileEditShell .modalActions {
+  grid-column: 1 / -1;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.fileUploadField {
+  grid-column: span 2;
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff, #f1f6fb);
+  border: 1px solid rgba(178, 201, 223, 0.9);
+  cursor: pointer;
+}
+
+.fileUploadField input {
+  display: none;
+}
+
+.fileUploadButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 14px;
+  color: #fff;
+  background: linear-gradient(135deg, #5da8f4, #7fc8ff);
+  font-weight: 700;
+}
+
+.fileUploadName {
+  color: var(--ink-soft);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.adminEditorGrid {
+  gap: 16px;
+}
+
+.adminEditorIntro {
+  padding-bottom: 4px;
+}
+
+.adminModalSection {
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(190, 211, 233, 0.7);
+}
+
+.adminModalSection h4 {
+  margin-bottom: 16px;
+}
+
+.adminInnerSection {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(190, 211, 233, 0.55);
+}
+
+.adminTargetGrid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.adminFileUploadField {
+  grid-column: span 2;
+}
+
+.assignmentList {
+  display: grid;
+  gap: 14px;
+}
+
+.assignmentRow {
+  grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+  margin-bottom: 0;
+}
+
+.assignmentRowTeacher {
+  grid-template-columns: minmax(0, 220px) minmax(0, 220px);
+}
+
+.assignmentControls {
+  display: grid;
+  grid-template-columns: minmax(0, 180px) minmax(0, 1fr);
+  gap: 12px;
+}
+
+.assignmentToggle {
+  position: relative;
+  min-height: 54px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(178, 201, 223, 0.9);
+  background: linear-gradient(180deg, #ffffff, #f1f6fb);
+  color: var(--ink);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+
+.assignmentToggle input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.assignmentToggle.active {
+  border-color: rgba(95, 168, 244, 0.9);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(233, 244, 255, 0.96));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.92),
+    0 10px 22px rgba(93, 168, 244, 0.14);
+}
+
+.assignmentToggleMark {
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  flex: none;
+  border: 1px solid rgba(154, 183, 210, 0.88);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(232, 240, 248, 0.96));
+  transition: background 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.assignmentToggleMark svg {
+  width: 15px;
+  height: 15px;
+  stroke: transparent;
+  stroke-width: 2.4;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.assignmentToggle.active .assignmentToggleMark {
+  border-color: rgba(93, 168, 244, 0.88);
+  background: linear-gradient(135deg, #5da8f4, #7fc8ff);
+  box-shadow: 0 8px 20px rgba(93, 168, 244, 0.26);
+}
+
+.assignmentToggle.active .assignmentToggleMark svg {
+  stroke: #fff;
+}
+
+.assignmentToggleText {
+  font-weight: 700;
+}
+
+.profileHero {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.desmosScreen {
+  position: relative;
+  height: min(78vh, 860px);
+  display: grid;
+  grid-template-rows: 48px minmax(0, 1fr) auto;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid rgba(205, 210, 216, 0.95);
+  box-shadow: 0 18px 46px rgba(8, 53, 95, 0.12);
+}
+
+.desmosTopbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  padding: 0 12px;
+  background: linear-gradient(180deg, #f7f7f7, #ececec);
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.desmosTopbarLeft,
+.desmosTopbarRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.desmosTopIconButton,
+.desmosTopTextButton {
+  min-width: 42px;
+  min-height: 42px;
+  padding: 0 14px;
+  border-radius: 8px;
+  color: #4b5563;
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+  font-size: 1.55rem;
+  font-weight: 600;
+}
+
+.desmosTopTextButton {
+  font-size: 1.25rem;
+}
+
+.desmosTopIconButton:hover,
+.desmosTopTextButton:hover {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.08);
+  transform: none;
+  box-shadow: none;
+}
+
+.desmosMain {
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr);
+  min-height: 0;
+}
+
+.desmosExpressionsPane {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  min-height: 0;
+  background: #fff;
+  border-right: 1px solid #d9d9d9;
+}
+
+.desmosExpressionsList {
+  overflow-y: auto;
+}
+
+.desmosSliderPanel {
+  display: grid;
+  gap: 10px;
+  padding: 12px 14px 16px;
+  border-top: 1px solid #ececec;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.desmosSliderPanel p {
+  margin: 0;
+}
+
+.desmosSliderRow {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.desmosSliderRow input[type="range"] {
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.desmosExpressionLine {
+  display: grid;
+  grid-template-columns: 38px 12px minmax(0, 1fr) 28px;
+  gap: 10px;
+  align-items: center;
+  min-height: 52px;
+  padding: 0 10px 0 0;
+  border-bottom: 1px solid #ececec;
+  cursor: text;
+}
+
+.desmosExpressionNumber {
+  width: 38px;
+  height: 52px;
+  border-radius: 0;
+  color: #6b7280;
+  background: #f5f5f5;
+  border: 0;
+  box-shadow: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.desmosExpressionNumber.active {
+  color: #fff;
+  background: #2d70b3;
+}
+
+.desmosExpressionDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: transparent;
+  opacity: 0;
+}
+
+.desmosExpressionDot.active {
+  opacity: 1;
+}
+
+.desmosFormulaInput {
+  width: 100%;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  font-size: 1.08rem;
+  color: #111827;
+  caret-color: #2d70b3;
+}
+
+.desmosFormulaInput::placeholder {
+  color: #9ca3af;
+}
+
+.desmosFormulaInput:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+
+.desmosClearButton {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  color: #b0b0b0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.desmosClearButton:hover {
+  color: #6b7280;
+  background: transparent;
+  transform: none;
+  box-shadow: none;
+}
+
+.desmosKeyboardRow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.desmosKeyButton {
+  min-height: 46px;
+  padding: 0 8px;
+  border-radius: 8px;
+  color: #374151;
+  background: linear-gradient(180deg, #ffffff, #ececec);
+  border: 1px solid #d2d6dc;
+  box-shadow: none;
+  font-weight: 600;
+  font-size: 1.12rem;
+}
+
+.desmosKeyButton:hover {
+  transform: none;
+  background: linear-gradient(180deg, #ffffff, #e7ebef);
+  box-shadow: none;
+}
+
+.desmosKeyButton.enter {
+  color: #fff;
+  background: linear-gradient(180deg, #2d70b3, #2a6097);
+  border-color: #2a6097;
+}
+
+.desmosGraphArea {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  background: #fff;
+  cursor: grab;
+  touch-action: none;
+}
+
+.desmosGraphArea.dragging {
+  cursor: grabbing;
+}
+
+.desmosGraphSvg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.desmosMinorGridLine {
+  stroke: rgba(0, 0, 0, 0.1);
+  stroke-width: 1;
+}
+
+.desmosMajorGridLine {
+  stroke: rgba(0, 0, 0, 0.22);
+  stroke-width: 1;
+}
+
+.desmosAxisLine {
+  stroke: rgba(0, 0, 0, 0.8);
+  stroke-width: 1.4;
+}
+
+.desmosAxisLabel {
+  fill: #111827;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.desmosFloatingTools {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: grid;
+  gap: 6px;
+}
+
+.desmosFloatButton {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border-radius: 6px;
+  color: #555;
+  background: linear-gradient(180deg, #ffffff, #f1f1f1);
+  border: 1px solid #cfd4da;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.desmosFloatButton:hover {
+  transform: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.desmosKeyboardDock {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.desmosKeyboardToggle {
+  width: 88px;
+  min-height: 48px;
+  padding: 0 14px;
+  border-radius: 0 8px 0 0;
+  color: #555;
+  background: linear-gradient(180deg, #f8f8f8, #ececec);
+  border: 1px solid #cfd4da;
+  border-bottom: 0;
+  box-shadow: none;
+  justify-content: space-between;
+  font-size: 1.35rem;
+}
+
+.desmosKeyboardToggle:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.desmosKeyboardPanel {
+  border-top: 1px solid #d8d8d8;
+  background: linear-gradient(180deg, #efefef, #e4e4e4);
+  padding: 8px 16px 12px 0;
+}
+
+.desmosKeyboardLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 150px;
+  gap: 16px;
+  align-items: start;
+  width: min(840px, 100%);
+  margin: 0 auto;
+}
+
+.desmosKeyboardCluster,
+.desmosKeyboardUtility {
+  display: grid;
+  gap: 6px;
+}
+
+.desmosKeyButton.light {
+  background: linear-gradient(180deg, #ffffff, #efefef);
+}
+
+.desmosKeyButton.dark,
+.desmosKeyButton.utility,
+.desmosFunctionButton {
+  background: linear-gradient(180deg, #d5d5d5, #c3c3c3);
+}
+
+.desmosFunctionButton {
+  min-height: 46px;
+  padding: 0 12px;
+  border-radius: 6px;
+  color: #444;
+  border: 1px solid #bfc3c8;
+  box-shadow: none;
+  font-weight: 600;
+  font-size: 1.02rem;
+}
+
+.desmosFunctionButton:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.desmosArrowRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.profileHeroAvatar {
+  width: 82px;
+  height: 82px;
+}
+
+.teachersCard h3,
+.lessonHighlightCard h3,
+.actionCard h3,
+.ratingCard h3 {
+  margin-bottom: 8px;
+}
+
+.cardSectionPlain {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.adminTopbarActions {
+  display: grid;
+  gap: 12px;
+  justify-items: end;
+  margin-bottom: 10px;
+}
+
+.adminLogoutPanel {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.adminLogoutPanel p {
+  margin: 4px 0 0;
+}
+
+.adminLogoutPanel button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.adminLogoutPanel svg,
+.adminOverviewIcon {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.adminOverviewCard .adminOverviewIcon {
+  width: 34px;
+  height: 34px;
+}
+
+.adminOverviewGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.adminOverviewCard {
+  aspect-ratio: 1 / 1;
+  padding: 22px 20px;
+  border-radius: 30px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 14px;
+  text-align: center;
+  color: var(--ink);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(236, 244, 252, 0.2));
+  border: 1px solid rgba(255, 255, 255, 0.44);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    0 18px 42px rgba(15, 87, 145, 0.12);
+  backdrop-filter: blur(12px) saturate(125%);
+  -webkit-backdrop-filter: blur(12px) saturate(125%);
+}
+
+.adminOverviewCard strong {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.adminOverviewCard span,
+.adminOverviewCard strong {
+  color: inherit;
+}
+
+.adminOverviewCard.active {
+  color: #fff;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.06)),
+    linear-gradient(135deg, #5da8f4, #7fc8ff);
+}
+
+@media (max-width: 860px) {
+  .splitWide,
+  .assignmentRow,
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .assignmentControls {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboardShell,
+  .dashboardShell.collapsed,
+  .dashboardMainGrid,
+  .dashboardMainGridCompact,
+  .desmosMain,
+  .lessonWorkspaceBody,
+  .lessonStepsGrid,
+  .lessonOverviewGrid,
+  .lessonDetailGrid,
+  .testQuestionGrid,
+  .testScoreBar {
+    grid-template-columns: 1fr;
+  }
+
+  .satDemoBody,
+  .ieltsDemoBody,
+  .satExamHeader,
+  .satExamScoreBar {
+    grid-template-columns: 1fr;
+  }
+
+  .satExamHeaderRight,
+  .satExamHeaderCenter {
+    justify-content: flex-start;
+  }
+
+  .satExamFooter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .desmosScreen {
+    height: auto;
+    min-height: 70vh;
+  }
+
+  .studentQuickGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboardSidebar {
+    position: static;
+  }
+
+  .greetingCard,
+  .lessonHighlightCard,
+  .recentLessonsCard,
+  .profileSpotlight,
+  .targetScoreCard,
+  .actionCard,
+  .ratingCard,
+  .teachersCard {
+    grid-column: auto;
+  }
+
+  .lessonRail {
+    width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    width: min(100% - 18px, 100%);
+    margin-top: 14px;
+  }
+
+  .hero,
+  .card,
+  .cardSection,
+  .modalCard {
+    border-radius: 24px;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .userBox {
+    justify-items: start;
+    text-align: left;
+  }
+
+  .profileGrid,
+  .levels {
+    grid-template-columns: 1fr;
+  }
+
+  .adminFileUploadField {
+    grid-column: auto;
+  }
+
+  .chatMessage {
+    max-width: 100%;
+  }
+
+  .authStage {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .authProgressLabels {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .authPane,
+  .authCard {
+    position: relative;
+    min-height: auto;
+  }
+
+  .authCard,
+  .authCardRegister,
+  .authCardHidden,
+  .authCardActive {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .authPane {
+    display: grid;
+    gap: 14px;
+  }
+
+  .authPhotoUpload {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dashboardSidebar {
+    padding: 14px;
+  }
+
+  .studentQuickGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboardCard,
+  .lessonHeroCard,
+  .lessonStepCard,
+  .learningSlideCard {
+    padding: 18px;
+  }
+
+  .lessonWorkspaceHeader,
+  .lessonHeroCard,
+  .dashboardCardHead,
+  .dashboardCardTitle,
+  .profileHero {
+    flex-direction: column;
+  }
+}

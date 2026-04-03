@@ -1,0 +1,42 @@
+[
+  {
+    "id": "m_1774931139551",
+    "programId": "sat-math",
+    "studentId": "u_1773080875499",
+    "teacherId": "t_1773081322651",
+    "senderId": "u_1773080875499",
+    "senderRole": "student",
+    "text": "Hi! I don’t understand this question: solve  2x^2 − 7𝑥 + 3 = 0",
+    "sentAt": "2026-03-31T04:25:39.551Z"
+  },
+  {
+    "id": "m_1774931221354",
+    "programId": "sat-math",
+    "studentId": "u_1773080875499",
+    "teacherId": "t_1773081322651",
+    "senderId": "t_1773081322651",
+    "senderRole": "teacher",
+    "text": "No problem! Let’s solve it step by step. First, we try factoring. We look for two numbers that multiply to  2 × 3 = 6 and add up to  − 7.",
+    "sentAt": "2026-03-31T04:27:01.354Z"
+  },
+  {
+    "id": "m_1774931275491",
+    "programId": "sat-math",
+    "studentId": "u_1773080875499",
+    "teacherId": "t_1773081322651",
+    "senderId": "u_1773080875499",
+    "senderRole": "student",
+    "text": "Hmm… is it  − 6 and  − 1?",
+    "sentAt": "2026-03-31T04:27:55.491Z"
+  },
+  {
+    "id": "m_1774931421203",
+    "programId": "sat-math",
+    "studentId": "u_1773080875499",
+    "teacherId": "t_1773081322651",
+    "senderId": "t_1773081322651",
+    "senderRole": "teacher",
+    "text": "Exactly! Now rewrite the middle term:  2𝑥^2 − 6𝑥 − 𝑥 + 3 = 0. Then factor:  2𝑥 (𝑥 − 3) − 1(𝑥 − 3) = 0, (2𝑥 − 1) (𝑥 − 3) = 0. So the answers are:  𝑥 = 1/2, x= 3",
+    "sentAt": "2026-03-31T04:30:21.203Z"
+  }
+]

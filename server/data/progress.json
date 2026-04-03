@@ -1,0 +1,47 @@
+{
+  "u_1773080875499": {
+    "completedLessons": [
+      {
+        "programId": "sat-math",
+        "levelId": "advanced",
+        "lessonId": "advanced-lesson-1",
+        "completedAt": "2026-03-09T18:28:37.664Z"
+      },
+      {
+        "programId": "sat-math",
+        "levelId": "beginner",
+        "lessonId": "beginner-lesson-1",
+        "completedAt": "2026-03-27T16:35:43.845Z"
+      }
+    ],
+    "topicTestScores": [
+      {
+        "programId": "sat-math",
+        "levelId": "advanced",
+        "lessonId": "advanced-lesson-1",
+        "score": 100,
+        "submittedAt": "2026-03-09T18:28:42.828Z"
+      },
+      {
+        "programId": "sat-math",
+        "levelId": "beginner",
+        "lessonId": "beginner-lesson-1",
+        "score": 0,
+        "submittedAt": "2026-03-27T16:35:53.063Z"
+      }
+    ],
+    "practiceTestScores": [],
+    "lessonActivity": [
+      {
+        "programId": "sat-math",
+        "levelId": "beginner",
+        "lessonId": "beginner-lesson-1",
+        "videoCompleted": true,
+        "learningCompleted": true,
+        "taskCompleted": true,
+        "taskScore": 0,
+        "updatedAt": "2026-03-27T16:35:53.068Z"
+      }
+    ]
+  }
+}

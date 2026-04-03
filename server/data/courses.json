@@ -1,0 +1,2618 @@
+{
+  "programs": [
+    {
+      "id": "sat-math",
+      "title": "SAT Math",
+      "description": "Algebra, advanced math, problem solving and data analysis.",
+      "levels": [
+        {
+          "id": "beginner",
+          "title": "Beginner",
+          "focus": "Foundation skills and core concepts.",
+          "lessons": [
+            {
+              "id": "beginner-lesson-1",
+              "title": "SAT Math Beginner Lesson 1: Linear Equations in One Variable",
+              "videoUrl": "https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-solving-equations/cc-8th-linear-equations/v/equations-3",
+              "pdfUrl": "https://example.com/docs/sat-math/beginner/lesson-1.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-1",
+                "format": "JSON",
+                "questionCount": 8
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-1-slide-1",
+                  "title": "What is a linear equation?",
+                  "content": "A linear equation in one variable is an equation such as 3x + 5 = 20 where the variable has power 1. The main goal is to isolate the variable and keep both sides balanced."
+                },
+                {
+                  "id": "beginner-lesson-1-slide-2",
+                  "title": "Use inverse operations",
+                  "content": "Undo addition or subtraction first, then undo multiplication or division. For example, 3x + 5 = 20 becomes 3x = 15 and then x = 5."
+                },
+                {
+                  "id": "beginner-lesson-1-slide-3",
+                  "title": "Variables on both sides",
+                  "content": "Move variable terms to one side and constants to the other. In 5x - 7 = 2x + 8, subtract 2x from both sides and add 7 to both sides to get 3x = 15, so x = 5."
+                },
+                {
+                  "id": "beginner-lesson-1-slide-4",
+                  "title": "Special SAT idea",
+                  "content": "Some SAT questions ask whether an equation has one solution, no solution, or infinitely many solutions. If the variable disappears and the statement is always true, there are infinitely many solutions. If it becomes false, there is no solution."
+                },
+                {
+                  "id": "beginner-lesson-1-slide-5",
+                  "title": "Quick check for the presentation",
+                  "content": "Students can finish this lesson by solving one-step, two-step, and variable-on-both-sides equations and by checking the solution in the original equation."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-2",
+              "title": "SAT Math Beginner Lesson 2: Question Types",
+              "videoUrl": "https://example.com/videos/sat-math/beginner/lesson-2",
+              "pdfUrl": "https://example.com/docs/sat-math/beginner/lesson-2.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-2",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-2-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Beginner: SAT Math Beginner Lesson 2: Question Types starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-2-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-2-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-3",
+              "title": "SAT Math Beginner Lesson 3: Techniques and Shortcuts",
+              "videoUrl": "https://example.com/videos/sat-math/beginner/lesson-3",
+              "pdfUrl": "https://example.com/docs/sat-math/beginner/lesson-3.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-3",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-3-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Beginner: SAT Math Beginner Lesson 3: Techniques and Shortcuts starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-3-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-3-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-4",
+              "title": "SAT Math Beginner Lesson 4: Common Mistakes",
+              "videoUrl": "https://example.com/videos/sat-math/beginner/lesson-4",
+              "pdfUrl": "https://example.com/docs/sat-math/beginner/lesson-4.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-4",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-4-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Beginner: SAT Math Beginner Lesson 4: Common Mistakes starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-4-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-4-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-5",
+              "title": "SAT Math Beginner Lesson 5: Timed Practice",
+              "videoUrl": "https://example.com/videos/sat-math/beginner/lesson-5",
+              "pdfUrl": "https://example.com/docs/sat-math/beginner/lesson-5.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-5",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-5-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Beginner: SAT Math Beginner Lesson 5: Timed Practice starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-5-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-5-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-6",
+              "title": "SAT Math Beginner Lesson 6: Targeted Drills",
+              "videoUrl": "https://example.com/videos/sat-math/beginner/lesson-6",
+              "pdfUrl": "https://example.com/docs/sat-math/beginner/lesson-6.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-6",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-6-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Beginner: SAT Math Beginner Lesson 6: Targeted Drills starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-6-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-6-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-7",
+              "title": "SAT Math Beginner Lesson 7: Mixed Set Training",
+              "videoUrl": "https://example.com/videos/sat-math/beginner/lesson-7",
+              "pdfUrl": "https://example.com/docs/sat-math/beginner/lesson-7.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-7",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-7-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Beginner: SAT Math Beginner Lesson 7: Mixed Set Training starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-7-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-7-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-8",
+              "title": "SAT Math Beginner Lesson 8: Data Interpretation",
+              "videoUrl": "https://example.com/videos/sat-math/beginner/lesson-8",
+              "pdfUrl": "https://example.com/docs/sat-math/beginner/lesson-8.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-8",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-8-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Beginner: SAT Math Beginner Lesson 8: Data Interpretation starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-8-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-8-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-9",
+              "title": "SAT Math Beginner Lesson 9: Score Improvement Plan",
+              "videoUrl": "https://example.com/videos/sat-math/beginner/lesson-9",
+              "pdfUrl": "https://example.com/docs/sat-math/beginner/lesson-9.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-9",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-9-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Beginner: SAT Math Beginner Lesson 9: Score Improvement Plan starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-9-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-9-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-10",
+              "title": "SAT Math Beginner Lesson 10: Final Review",
+              "videoUrl": "https://example.com/videos/sat-math/beginner/lesson-10",
+              "pdfUrl": "https://example.com/docs/sat-math/beginner/lesson-10.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-10",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-10-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Beginner: SAT Math Beginner Lesson 10: Final Review starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-10-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-10-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "intermediate",
+          "title": "Intermediate",
+          "focus": "Exam strategy and mixed-difficulty drills.",
+          "lessons": [
+            {
+              "id": "intermediate-lesson-1",
+              "title": "SAT Math Intermediate Lesson 1: Core Concepts",
+              "videoUrl": "https://example.com/videos/sat-math/intermediate/lesson-1",
+              "pdfUrl": "https://example.com/docs/sat-math/intermediate/lesson-1.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-1",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-1-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Intermediate: SAT Math Intermediate Lesson 1: Core Concepts starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-1-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-1-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-2",
+              "title": "SAT Math Intermediate Lesson 2: Question Types",
+              "videoUrl": "https://example.com/videos/sat-math/intermediate/lesson-2",
+              "pdfUrl": "https://example.com/docs/sat-math/intermediate/lesson-2.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-2",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-2-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Intermediate: SAT Math Intermediate Lesson 2: Question Types starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-2-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-2-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-3",
+              "title": "SAT Math Intermediate Lesson 3: Techniques and Shortcuts",
+              "videoUrl": "https://example.com/videos/sat-math/intermediate/lesson-3",
+              "pdfUrl": "https://example.com/docs/sat-math/intermediate/lesson-3.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-3",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-3-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Intermediate: SAT Math Intermediate Lesson 3: Techniques and Shortcuts starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-3-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-3-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-4",
+              "title": "SAT Math Intermediate Lesson 4: Common Mistakes",
+              "videoUrl": "https://example.com/videos/sat-math/intermediate/lesson-4",
+              "pdfUrl": "https://example.com/docs/sat-math/intermediate/lesson-4.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-4",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-4-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Intermediate: SAT Math Intermediate Lesson 4: Common Mistakes starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-4-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-4-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-5",
+              "title": "SAT Math Intermediate Lesson 5: Timed Practice",
+              "videoUrl": "https://example.com/videos/sat-math/intermediate/lesson-5",
+              "pdfUrl": "https://example.com/docs/sat-math/intermediate/lesson-5.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-5",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-5-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Intermediate: SAT Math Intermediate Lesson 5: Timed Practice starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-5-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-5-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-6",
+              "title": "SAT Math Intermediate Lesson 6: Targeted Drills",
+              "videoUrl": "https://example.com/videos/sat-math/intermediate/lesson-6",
+              "pdfUrl": "https://example.com/docs/sat-math/intermediate/lesson-6.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-6",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-6-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Intermediate: SAT Math Intermediate Lesson 6: Targeted Drills starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-6-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-6-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-7",
+              "title": "SAT Math Intermediate Lesson 7: Mixed Set Training",
+              "videoUrl": "https://example.com/videos/sat-math/intermediate/lesson-7",
+              "pdfUrl": "https://example.com/docs/sat-math/intermediate/lesson-7.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-7",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-7-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Intermediate: SAT Math Intermediate Lesson 7: Mixed Set Training starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-7-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-7-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-8",
+              "title": "SAT Math Intermediate Lesson 8: Data Interpretation",
+              "videoUrl": "https://example.com/videos/sat-math/intermediate/lesson-8",
+              "pdfUrl": "https://example.com/docs/sat-math/intermediate/lesson-8.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-8",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-8-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Intermediate: SAT Math Intermediate Lesson 8: Data Interpretation starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-8-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-8-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-9",
+              "title": "SAT Math Intermediate Lesson 9: Score Improvement Plan",
+              "videoUrl": "https://example.com/videos/sat-math/intermediate/lesson-9",
+              "pdfUrl": "https://example.com/docs/sat-math/intermediate/lesson-9.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-9",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-9-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Intermediate: SAT Math Intermediate Lesson 9: Score Improvement Plan starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-9-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-9-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-10",
+              "title": "SAT Math Intermediate Lesson 10: Final Review",
+              "videoUrl": "https://example.com/videos/sat-math/intermediate/lesson-10",
+              "pdfUrl": "https://example.com/docs/sat-math/intermediate/lesson-10.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-10",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-10-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Intermediate: SAT Math Intermediate Lesson 10: Final Review starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-10-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-10-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "advanced",
+          "title": "Advanced",
+          "focus": "High-score tactics and timed mastery practice.",
+          "lessons": [
+            {
+              "id": "advanced-lesson-1",
+              "title": "SAT Math Advanced Lesson 1: Core Concepts",
+              "videoUrl": "https://example.com/videos/sat-math/advanced/lesson-1",
+              "pdfUrl": "https://example.com/docs/sat-math/advanced/lesson-1.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-1",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-1-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Advanced: SAT Math Advanced Lesson 1: Core Concepts starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-1-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-1-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-2",
+              "title": "SAT Math Advanced Lesson 2: Question Types",
+              "videoUrl": "https://example.com/videos/sat-math/advanced/lesson-2",
+              "pdfUrl": "https://example.com/docs/sat-math/advanced/lesson-2.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-2",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-2-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Advanced: SAT Math Advanced Lesson 2: Question Types starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-2-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-2-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-3",
+              "title": "SAT Math Advanced Lesson 3: Techniques and Shortcuts",
+              "videoUrl": "https://example.com/videos/sat-math/advanced/lesson-3",
+              "pdfUrl": "https://example.com/docs/sat-math/advanced/lesson-3.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-3",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-3-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Advanced: SAT Math Advanced Lesson 3: Techniques and Shortcuts starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-3-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-3-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-4",
+              "title": "SAT Math Advanced Lesson 4: Common Mistakes",
+              "videoUrl": "https://example.com/videos/sat-math/advanced/lesson-4",
+              "pdfUrl": "https://example.com/docs/sat-math/advanced/lesson-4.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-4",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-4-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Advanced: SAT Math Advanced Lesson 4: Common Mistakes starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-4-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-4-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-5",
+              "title": "SAT Math Advanced Lesson 5: Timed Practice",
+              "videoUrl": "https://example.com/videos/sat-math/advanced/lesson-5",
+              "pdfUrl": "https://example.com/docs/sat-math/advanced/lesson-5.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-5",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-5-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Advanced: SAT Math Advanced Lesson 5: Timed Practice starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-5-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-5-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-6",
+              "title": "SAT Math Advanced Lesson 6: Targeted Drills",
+              "videoUrl": "https://example.com/videos/sat-math/advanced/lesson-6",
+              "pdfUrl": "https://example.com/docs/sat-math/advanced/lesson-6.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-6",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-6-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Advanced: SAT Math Advanced Lesson 6: Targeted Drills starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-6-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-6-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-7",
+              "title": "SAT Math Advanced Lesson 7: Mixed Set Training",
+              "videoUrl": "https://example.com/videos/sat-math/advanced/lesson-7",
+              "pdfUrl": "https://example.com/docs/sat-math/advanced/lesson-7.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-7",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-7-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Advanced: SAT Math Advanced Lesson 7: Mixed Set Training starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-7-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-7-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-8",
+              "title": "SAT Math Advanced Lesson 8: Data Interpretation",
+              "videoUrl": "https://example.com/videos/sat-math/advanced/lesson-8",
+              "pdfUrl": "https://example.com/docs/sat-math/advanced/lesson-8.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-8",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-8-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Advanced: SAT Math Advanced Lesson 8: Data Interpretation starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-8-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-8-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-9",
+              "title": "SAT Math Advanced Lesson 9: Score Improvement Plan",
+              "videoUrl": "https://example.com/videos/sat-math/advanced/lesson-9",
+              "pdfUrl": "https://example.com/docs/sat-math/advanced/lesson-9.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-9",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-9-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Advanced: SAT Math Advanced Lesson 9: Score Improvement Plan starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-9-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-9-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-10",
+              "title": "SAT Math Advanced Lesson 10: Final Review",
+              "videoUrl": "https://example.com/videos/sat-math/advanced/lesson-10",
+              "pdfUrl": "https://example.com/docs/sat-math/advanced/lesson-10.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-10",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-10-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT Math Advanced: SAT Math Advanced Lesson 10: Final Review starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-10-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-10-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat-english",
+      "title": "SAT English",
+      "description": "Reading, writing, grammar and rhetorical skills.",
+      "levels": [
+        {
+          "id": "beginner",
+          "title": "Beginner",
+          "focus": "Foundation skills and core concepts.",
+          "lessons": [
+            {
+              "id": "beginner-lesson-1",
+              "title": "SAT English Beginner Lesson 1: Core Concepts",
+              "videoUrl": "https://example.com/videos/sat-english/beginner/lesson-1",
+              "pdfUrl": "https://example.com/docs/sat-english/beginner/lesson-1.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-1",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-1-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Beginner: SAT English Beginner Lesson 1: Core Concepts starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-1-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-1-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-2",
+              "title": "SAT English Beginner Lesson 2: Question Types",
+              "videoUrl": "https://example.com/videos/sat-english/beginner/lesson-2",
+              "pdfUrl": "https://example.com/docs/sat-english/beginner/lesson-2.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-2",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-2-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Beginner: SAT English Beginner Lesson 2: Question Types starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-2-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-2-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-3",
+              "title": "SAT English Beginner Lesson 3: Techniques and Shortcuts",
+              "videoUrl": "https://example.com/videos/sat-english/beginner/lesson-3",
+              "pdfUrl": "https://example.com/docs/sat-english/beginner/lesson-3.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-3",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-3-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Beginner: SAT English Beginner Lesson 3: Techniques and Shortcuts starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-3-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-3-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-4",
+              "title": "SAT English Beginner Lesson 4: Common Mistakes",
+              "videoUrl": "https://example.com/videos/sat-english/beginner/lesson-4",
+              "pdfUrl": "https://example.com/docs/sat-english/beginner/lesson-4.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-4",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-4-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Beginner: SAT English Beginner Lesson 4: Common Mistakes starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-4-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-4-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-5",
+              "title": "SAT English Beginner Lesson 5: Timed Practice",
+              "videoUrl": "https://example.com/videos/sat-english/beginner/lesson-5",
+              "pdfUrl": "https://example.com/docs/sat-english/beginner/lesson-5.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-5",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-5-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Beginner: SAT English Beginner Lesson 5: Timed Practice starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-5-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-5-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-6",
+              "title": "SAT English Beginner Lesson 6: Targeted Drills",
+              "videoUrl": "https://example.com/videos/sat-english/beginner/lesson-6",
+              "pdfUrl": "https://example.com/docs/sat-english/beginner/lesson-6.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-6",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-6-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Beginner: SAT English Beginner Lesson 6: Targeted Drills starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-6-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-6-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-7",
+              "title": "SAT English Beginner Lesson 7: Mixed Set Training",
+              "videoUrl": "https://example.com/videos/sat-english/beginner/lesson-7",
+              "pdfUrl": "https://example.com/docs/sat-english/beginner/lesson-7.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-7",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-7-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Beginner: SAT English Beginner Lesson 7: Mixed Set Training starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-7-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-7-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-8",
+              "title": "SAT English Beginner Lesson 8: Data Interpretation",
+              "videoUrl": "https://example.com/videos/sat-english/beginner/lesson-8",
+              "pdfUrl": "https://example.com/docs/sat-english/beginner/lesson-8.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-8",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-8-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Beginner: SAT English Beginner Lesson 8: Data Interpretation starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-8-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-8-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-9",
+              "title": "SAT English Beginner Lesson 9: Score Improvement Plan",
+              "videoUrl": "https://example.com/videos/sat-english/beginner/lesson-9",
+              "pdfUrl": "https://example.com/docs/sat-english/beginner/lesson-9.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-9",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-9-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Beginner: SAT English Beginner Lesson 9: Score Improvement Plan starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-9-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-9-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-10",
+              "title": "SAT English Beginner Lesson 10: Final Review",
+              "videoUrl": "https://example.com/videos/sat-english/beginner/lesson-10",
+              "pdfUrl": "https://example.com/docs/sat-english/beginner/lesson-10.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-10",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-10-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Beginner: SAT English Beginner Lesson 10: Final Review starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-10-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-10-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "intermediate",
+          "title": "Intermediate",
+          "focus": "Exam strategy and mixed-difficulty drills.",
+          "lessons": [
+            {
+              "id": "intermediate-lesson-1",
+              "title": "SAT English Intermediate Lesson 1: Core Concepts",
+              "videoUrl": "https://example.com/videos/sat-english/intermediate/lesson-1",
+              "pdfUrl": "https://example.com/docs/sat-english/intermediate/lesson-1.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-1",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-1-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Intermediate: SAT English Intermediate Lesson 1: Core Concepts starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-1-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-1-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-2",
+              "title": "SAT English Intermediate Lesson 2: Question Types",
+              "videoUrl": "https://example.com/videos/sat-english/intermediate/lesson-2",
+              "pdfUrl": "https://example.com/docs/sat-english/intermediate/lesson-2.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-2",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-2-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Intermediate: SAT English Intermediate Lesson 2: Question Types starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-2-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-2-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-3",
+              "title": "SAT English Intermediate Lesson 3: Techniques and Shortcuts",
+              "videoUrl": "https://example.com/videos/sat-english/intermediate/lesson-3",
+              "pdfUrl": "https://example.com/docs/sat-english/intermediate/lesson-3.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-3",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-3-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Intermediate: SAT English Intermediate Lesson 3: Techniques and Shortcuts starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-3-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-3-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-4",
+              "title": "SAT English Intermediate Lesson 4: Common Mistakes",
+              "videoUrl": "https://example.com/videos/sat-english/intermediate/lesson-4",
+              "pdfUrl": "https://example.com/docs/sat-english/intermediate/lesson-4.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-4",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-4-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Intermediate: SAT English Intermediate Lesson 4: Common Mistakes starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-4-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-4-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-5",
+              "title": "SAT English Intermediate Lesson 5: Timed Practice",
+              "videoUrl": "https://example.com/videos/sat-english/intermediate/lesson-5",
+              "pdfUrl": "https://example.com/docs/sat-english/intermediate/lesson-5.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-5",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-5-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Intermediate: SAT English Intermediate Lesson 5: Timed Practice starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-5-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-5-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-6",
+              "title": "SAT English Intermediate Lesson 6: Targeted Drills",
+              "videoUrl": "https://example.com/videos/sat-english/intermediate/lesson-6",
+              "pdfUrl": "https://example.com/docs/sat-english/intermediate/lesson-6.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-6",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-6-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Intermediate: SAT English Intermediate Lesson 6: Targeted Drills starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-6-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-6-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-7",
+              "title": "SAT English Intermediate Lesson 7: Mixed Set Training",
+              "videoUrl": "https://example.com/videos/sat-english/intermediate/lesson-7",
+              "pdfUrl": "https://example.com/docs/sat-english/intermediate/lesson-7.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-7",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-7-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Intermediate: SAT English Intermediate Lesson 7: Mixed Set Training starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-7-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-7-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-8",
+              "title": "SAT English Intermediate Lesson 8: Data Interpretation",
+              "videoUrl": "https://example.com/videos/sat-english/intermediate/lesson-8",
+              "pdfUrl": "https://example.com/docs/sat-english/intermediate/lesson-8.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-8",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-8-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Intermediate: SAT English Intermediate Lesson 8: Data Interpretation starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-8-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-8-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-9",
+              "title": "SAT English Intermediate Lesson 9: Score Improvement Plan",
+              "videoUrl": "https://example.com/videos/sat-english/intermediate/lesson-9",
+              "pdfUrl": "https://example.com/docs/sat-english/intermediate/lesson-9.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-9",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-9-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Intermediate: SAT English Intermediate Lesson 9: Score Improvement Plan starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-9-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-9-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-10",
+              "title": "SAT English Intermediate Lesson 10: Final Review",
+              "videoUrl": "https://example.com/videos/sat-english/intermediate/lesson-10",
+              "pdfUrl": "https://example.com/docs/sat-english/intermediate/lesson-10.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-10",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-10-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Intermediate: SAT English Intermediate Lesson 10: Final Review starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-10-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-10-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "advanced",
+          "title": "Advanced",
+          "focus": "High-score tactics and timed mastery practice.",
+          "lessons": [
+            {
+              "id": "advanced-lesson-1",
+              "title": "SAT English Advanced Lesson 1: Core Concepts",
+              "videoUrl": "https://example.com/videos/sat-english/advanced/lesson-1",
+              "pdfUrl": "https://example.com/docs/sat-english/advanced/lesson-1.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-1",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-1-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Advanced: SAT English Advanced Lesson 1: Core Concepts starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-1-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-1-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-2",
+              "title": "SAT English Advanced Lesson 2: Question Types",
+              "videoUrl": "https://example.com/videos/sat-english/advanced/lesson-2",
+              "pdfUrl": "https://example.com/docs/sat-english/advanced/lesson-2.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-2",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-2-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Advanced: SAT English Advanced Lesson 2: Question Types starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-2-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-2-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-3",
+              "title": "SAT English Advanced Lesson 3: Techniques and Shortcuts",
+              "videoUrl": "https://example.com/videos/sat-english/advanced/lesson-3",
+              "pdfUrl": "https://example.com/docs/sat-english/advanced/lesson-3.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-3",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-3-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Advanced: SAT English Advanced Lesson 3: Techniques and Shortcuts starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-3-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-3-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-4",
+              "title": "SAT English Advanced Lesson 4: Common Mistakes",
+              "videoUrl": "https://example.com/videos/sat-english/advanced/lesson-4",
+              "pdfUrl": "https://example.com/docs/sat-english/advanced/lesson-4.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-4",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-4-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Advanced: SAT English Advanced Lesson 4: Common Mistakes starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-4-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-4-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-5",
+              "title": "SAT English Advanced Lesson 5: Timed Practice",
+              "videoUrl": "https://example.com/videos/sat-english/advanced/lesson-5",
+              "pdfUrl": "https://example.com/docs/sat-english/advanced/lesson-5.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-5",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-5-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Advanced: SAT English Advanced Lesson 5: Timed Practice starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-5-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-5-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-6",
+              "title": "SAT English Advanced Lesson 6: Targeted Drills",
+              "videoUrl": "https://example.com/videos/sat-english/advanced/lesson-6",
+              "pdfUrl": "https://example.com/docs/sat-english/advanced/lesson-6.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-6",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-6-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Advanced: SAT English Advanced Lesson 6: Targeted Drills starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-6-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-6-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-7",
+              "title": "SAT English Advanced Lesson 7: Mixed Set Training",
+              "videoUrl": "https://example.com/videos/sat-english/advanced/lesson-7",
+              "pdfUrl": "https://example.com/docs/sat-english/advanced/lesson-7.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-7",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-7-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Advanced: SAT English Advanced Lesson 7: Mixed Set Training starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-7-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-7-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-8",
+              "title": "SAT English Advanced Lesson 8: Data Interpretation",
+              "videoUrl": "https://example.com/videos/sat-english/advanced/lesson-8",
+              "pdfUrl": "https://example.com/docs/sat-english/advanced/lesson-8.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-8",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-8-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Advanced: SAT English Advanced Lesson 8: Data Interpretation starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-8-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-8-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-9",
+              "title": "SAT English Advanced Lesson 9: Score Improvement Plan",
+              "videoUrl": "https://example.com/videos/sat-english/advanced/lesson-9",
+              "pdfUrl": "https://example.com/docs/sat-english/advanced/lesson-9.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-9",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-9-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Advanced: SAT English Advanced Lesson 9: Score Improvement Plan starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-9-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-9-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-10",
+              "title": "SAT English Advanced Lesson 10: Final Review",
+              "videoUrl": "https://example.com/videos/sat-english/advanced/lesson-10",
+              "pdfUrl": "https://example.com/docs/sat-english/advanced/lesson-10.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-10",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-10-slide-1",
+                  "title": "What we learn first",
+                  "content": "SAT English Advanced: SAT English Advanced Lesson 10: Final Review starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-10-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-10-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ielts",
+      "title": "IELTS",
+      "description": "Listening, reading, writing and speaking strategies.",
+      "levels": [
+        {
+          "id": "beginner",
+          "title": "Beginner",
+          "focus": "Foundation skills and core concepts.",
+          "lessons": [
+            {
+              "id": "beginner-lesson-1",
+              "title": "IELTS Beginner Lesson 1: Core Concepts",
+              "videoUrl": "https://example.com/videos/ielts/beginner/lesson-1",
+              "pdfUrl": "https://example.com/docs/ielts/beginner/lesson-1.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-1",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-1-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Beginner: IELTS Beginner Lesson 1: Core Concepts starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-1-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-1-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-2",
+              "title": "IELTS Beginner Lesson 2: Question Types",
+              "videoUrl": "https://example.com/videos/ielts/beginner/lesson-2",
+              "pdfUrl": "https://example.com/docs/ielts/beginner/lesson-2.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-2",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-2-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Beginner: IELTS Beginner Lesson 2: Question Types starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-2-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-2-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-3",
+              "title": "IELTS Beginner Lesson 3: Techniques and Shortcuts",
+              "videoUrl": "https://example.com/videos/ielts/beginner/lesson-3",
+              "pdfUrl": "https://example.com/docs/ielts/beginner/lesson-3.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-3",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-3-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Beginner: IELTS Beginner Lesson 3: Techniques and Shortcuts starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-3-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-3-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-4",
+              "title": "IELTS Beginner Lesson 4: Common Mistakes",
+              "videoUrl": "https://example.com/videos/ielts/beginner/lesson-4",
+              "pdfUrl": "https://example.com/docs/ielts/beginner/lesson-4.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-4",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-4-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Beginner: IELTS Beginner Lesson 4: Common Mistakes starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-4-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-4-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-5",
+              "title": "IELTS Beginner Lesson 5: Timed Practice",
+              "videoUrl": "https://example.com/videos/ielts/beginner/lesson-5",
+              "pdfUrl": "https://example.com/docs/ielts/beginner/lesson-5.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-5",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-5-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Beginner: IELTS Beginner Lesson 5: Timed Practice starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-5-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-5-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-6",
+              "title": "IELTS Beginner Lesson 6: Targeted Drills",
+              "videoUrl": "https://example.com/videos/ielts/beginner/lesson-6",
+              "pdfUrl": "https://example.com/docs/ielts/beginner/lesson-6.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-6",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-6-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Beginner: IELTS Beginner Lesson 6: Targeted Drills starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-6-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-6-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-7",
+              "title": "IELTS Beginner Lesson 7: Mixed Set Training",
+              "videoUrl": "https://example.com/videos/ielts/beginner/lesson-7",
+              "pdfUrl": "https://example.com/docs/ielts/beginner/lesson-7.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-7",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-7-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Beginner: IELTS Beginner Lesson 7: Mixed Set Training starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-7-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-7-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-8",
+              "title": "IELTS Beginner Lesson 8: Data Interpretation",
+              "videoUrl": "https://example.com/videos/ielts/beginner/lesson-8",
+              "pdfUrl": "https://example.com/docs/ielts/beginner/lesson-8.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-8",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-8-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Beginner: IELTS Beginner Lesson 8: Data Interpretation starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-8-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-8-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-9",
+              "title": "IELTS Beginner Lesson 9: Score Improvement Plan",
+              "videoUrl": "https://example.com/videos/ielts/beginner/lesson-9",
+              "pdfUrl": "https://example.com/docs/ielts/beginner/lesson-9.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-9",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-9-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Beginner: IELTS Beginner Lesson 9: Score Improvement Plan starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-9-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-9-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "beginner-lesson-10",
+              "title": "IELTS Beginner Lesson 10: Final Review",
+              "videoUrl": "https://example.com/videos/ielts/beginner/lesson-10",
+              "pdfUrl": "https://example.com/docs/ielts/beginner/lesson-10.pdf",
+              "topicTest": {
+                "id": "topic-test-beginner-10",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "beginner-lesson-10-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Beginner: IELTS Beginner Lesson 10: Final Review starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "beginner-lesson-10-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "beginner-lesson-10-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "intermediate",
+          "title": "Intermediate",
+          "focus": "Exam strategy and mixed-difficulty drills.",
+          "lessons": [
+            {
+              "id": "intermediate-lesson-1",
+              "title": "IELTS Intermediate Lesson 1: Core Concepts",
+              "videoUrl": "https://example.com/videos/ielts/intermediate/lesson-1",
+              "pdfUrl": "https://example.com/docs/ielts/intermediate/lesson-1.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-1",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-1-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Intermediate: IELTS Intermediate Lesson 1: Core Concepts starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-1-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-1-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-2",
+              "title": "IELTS Intermediate Lesson 2: Question Types",
+              "videoUrl": "https://example.com/videos/ielts/intermediate/lesson-2",
+              "pdfUrl": "https://example.com/docs/ielts/intermediate/lesson-2.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-2",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-2-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Intermediate: IELTS Intermediate Lesson 2: Question Types starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-2-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-2-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-3",
+              "title": "IELTS Intermediate Lesson 3: Techniques and Shortcuts",
+              "videoUrl": "https://example.com/videos/ielts/intermediate/lesson-3",
+              "pdfUrl": "https://example.com/docs/ielts/intermediate/lesson-3.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-3",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-3-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Intermediate: IELTS Intermediate Lesson 3: Techniques and Shortcuts starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-3-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-3-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-4",
+              "title": "IELTS Intermediate Lesson 4: Common Mistakes",
+              "videoUrl": "https://example.com/videos/ielts/intermediate/lesson-4",
+              "pdfUrl": "https://example.com/docs/ielts/intermediate/lesson-4.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-4",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-4-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Intermediate: IELTS Intermediate Lesson 4: Common Mistakes starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-4-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-4-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-5",
+              "title": "IELTS Intermediate Lesson 5: Timed Practice",
+              "videoUrl": "https://example.com/videos/ielts/intermediate/lesson-5",
+              "pdfUrl": "https://example.com/docs/ielts/intermediate/lesson-5.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-5",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-5-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Intermediate: IELTS Intermediate Lesson 5: Timed Practice starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-5-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-5-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-6",
+              "title": "IELTS Intermediate Lesson 6: Targeted Drills",
+              "videoUrl": "https://example.com/videos/ielts/intermediate/lesson-6",
+              "pdfUrl": "https://example.com/docs/ielts/intermediate/lesson-6.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-6",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-6-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Intermediate: IELTS Intermediate Lesson 6: Targeted Drills starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-6-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-6-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-7",
+              "title": "IELTS Intermediate Lesson 7: Mixed Set Training",
+              "videoUrl": "https://example.com/videos/ielts/intermediate/lesson-7",
+              "pdfUrl": "https://example.com/docs/ielts/intermediate/lesson-7.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-7",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-7-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Intermediate: IELTS Intermediate Lesson 7: Mixed Set Training starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-7-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-7-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-8",
+              "title": "IELTS Intermediate Lesson 8: Data Interpretation",
+              "videoUrl": "https://example.com/videos/ielts/intermediate/lesson-8",
+              "pdfUrl": "https://example.com/docs/ielts/intermediate/lesson-8.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-8",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-8-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Intermediate: IELTS Intermediate Lesson 8: Data Interpretation starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-8-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-8-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-9",
+              "title": "IELTS Intermediate Lesson 9: Score Improvement Plan",
+              "videoUrl": "https://example.com/videos/ielts/intermediate/lesson-9",
+              "pdfUrl": "https://example.com/docs/ielts/intermediate/lesson-9.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-9",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-9-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Intermediate: IELTS Intermediate Lesson 9: Score Improvement Plan starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-9-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-9-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "intermediate-lesson-10",
+              "title": "IELTS Intermediate Lesson 10: Final Review",
+              "videoUrl": "https://example.com/videos/ielts/intermediate/lesson-10",
+              "pdfUrl": "https://example.com/docs/ielts/intermediate/lesson-10.pdf",
+              "topicTest": {
+                "id": "topic-test-intermediate-10",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "intermediate-lesson-10-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Intermediate: IELTS Intermediate Lesson 10: Final Review starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "intermediate-lesson-10-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "intermediate-lesson-10-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "advanced",
+          "title": "Advanced",
+          "focus": "High-score tactics and timed mastery practice.",
+          "lessons": [
+            {
+              "id": "advanced-lesson-1",
+              "title": "IELTS Advanced Lesson 1: Core Concepts",
+              "videoUrl": "https://example.com/videos/ielts/advanced/lesson-1",
+              "pdfUrl": "https://example.com/docs/ielts/advanced/lesson-1.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-1",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-1-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Advanced: IELTS Advanced Lesson 1: Core Concepts starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-1-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-1-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-2",
+              "title": "IELTS Advanced Lesson 2: Question Types",
+              "videoUrl": "https://example.com/videos/ielts/advanced/lesson-2",
+              "pdfUrl": "https://example.com/docs/ielts/advanced/lesson-2.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-2",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-2-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Advanced: IELTS Advanced Lesson 2: Question Types starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-2-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-2-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-3",
+              "title": "IELTS Advanced Lesson 3: Techniques and Shortcuts",
+              "videoUrl": "https://example.com/videos/ielts/advanced/lesson-3",
+              "pdfUrl": "https://example.com/docs/ielts/advanced/lesson-3.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-3",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-3-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Advanced: IELTS Advanced Lesson 3: Techniques and Shortcuts starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-3-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-3-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-4",
+              "title": "IELTS Advanced Lesson 4: Common Mistakes",
+              "videoUrl": "https://example.com/videos/ielts/advanced/lesson-4",
+              "pdfUrl": "https://example.com/docs/ielts/advanced/lesson-4.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-4",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-4-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Advanced: IELTS Advanced Lesson 4: Common Mistakes starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-4-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-4-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-5",
+              "title": "IELTS Advanced Lesson 5: Timed Practice",
+              "videoUrl": "https://example.com/videos/ielts/advanced/lesson-5",
+              "pdfUrl": "https://example.com/docs/ielts/advanced/lesson-5.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-5",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-5-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Advanced: IELTS Advanced Lesson 5: Timed Practice starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-5-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-5-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-6",
+              "title": "IELTS Advanced Lesson 6: Targeted Drills",
+              "videoUrl": "https://example.com/videos/ielts/advanced/lesson-6",
+              "pdfUrl": "https://example.com/docs/ielts/advanced/lesson-6.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-6",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-6-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Advanced: IELTS Advanced Lesson 6: Targeted Drills starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-6-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-6-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-7",
+              "title": "IELTS Advanced Lesson 7: Mixed Set Training",
+              "videoUrl": "https://example.com/videos/ielts/advanced/lesson-7",
+              "pdfUrl": "https://example.com/docs/ielts/advanced/lesson-7.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-7",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-7-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Advanced: IELTS Advanced Lesson 7: Mixed Set Training starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-7-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-7-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-8",
+              "title": "IELTS Advanced Lesson 8: Data Interpretation",
+              "videoUrl": "https://example.com/videos/ielts/advanced/lesson-8",
+              "pdfUrl": "https://example.com/docs/ielts/advanced/lesson-8.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-8",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-8-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Advanced: IELTS Advanced Lesson 8: Data Interpretation starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-8-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-8-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-9",
+              "title": "IELTS Advanced Lesson 9: Score Improvement Plan",
+              "videoUrl": "https://example.com/videos/ielts/advanced/lesson-9",
+              "pdfUrl": "https://example.com/docs/ielts/advanced/lesson-9.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-9",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-9-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Advanced: IELTS Advanced Lesson 9: Score Improvement Plan starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-9-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-9-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            },
+            {
+              "id": "advanced-lesson-10",
+              "title": "IELTS Advanced Lesson 10: Final Review",
+              "videoUrl": "https://example.com/videos/ielts/advanced/lesson-10",
+              "pdfUrl": "https://example.com/docs/ielts/advanced/lesson-10.pdf",
+              "topicTest": {
+                "id": "topic-test-advanced-10",
+                "format": "JSON",
+                "questionCount": 10
+              },
+              "learningSlides": [
+                {
+                  "id": "advanced-lesson-10-slide-1",
+                  "title": "What we learn first",
+                  "content": "IELTS Advanced: IELTS Advanced Lesson 10: Final Review starts with the key idea and the main rule students should remember."
+                },
+                {
+                  "id": "advanced-lesson-10-slide-2",
+                  "title": "How to use it",
+                  "content": "This part explains how the concept is used in real exam questions and what steps the student should follow."
+                },
+                {
+                  "id": "advanced-lesson-10-slide-3",
+                  "title": "Common mistakes",
+                  "content": "Students review the usual mistakes, quick checks, and a short reminder before moving to the task."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
