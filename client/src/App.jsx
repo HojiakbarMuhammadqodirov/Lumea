@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import AOS from "aos";
 import { api } from "./api";
-import Header from "./components/Header";
 import AuthPanel from "./components/AuthPanel";
+import LandingPage from "./components/LandingPage";
 import AdminTeacherPanel from "./components/AdminTeacherPanel";
 import StudentDashboard from "./components/StudentDashboard";
 
@@ -283,12 +283,20 @@ export default function App() {
     }
   };
 
+  const scrollToLogin = () => {
+    document.getElementById("login")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
-    <main className="container">
-      {!user && <Header user={user} onLogout={clearSession} />}
+    <main className={user ? "container" : "publicContainer"}>
+      {!user && <LandingPage onLoginClick={scrollToLogin} />}
       {error && <p className="error">{error}</p>}
 
-      {!user && <AuthPanel onLogin={login} onRegister={register} error={error} />}
+      {!user && (
+        <div id="login" className="publicAuthWrap">
+          <AuthPanel onLogin={login} onRegister={register} error={error} />
+        </div>
+      )}
 
       {user && (
         <>
