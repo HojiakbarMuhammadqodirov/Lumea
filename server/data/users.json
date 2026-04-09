@@ -49,7 +49,7 @@
     "id": "u_1773080875499",
     "name": "Hojiakbar Muhammadkodirov",
     "email": "student@student.com",
-    "passwordHash": "$2a$10$JEg0MiH4Td9y3XkhHovbi.XTZpgKghLJYDkNsFLJT4yVXPJjQwvHu",
+    "passwordHash": "$2a$10$J9LcRib66Tu2wTQJoL2JZuZD/gXUxczmoymRSPs01DNzTugAob1Bm",
     "role": "student",
     "profile": {
       "firstName": "Hojiakbar",
@@ -75,8 +75,8 @@
       },
       {
         "programId": "ielts",
-        "levelId": "beginner",
-        "teacherId": "t_1773081322651"
+        "levelId": "intermediate",
+        "teacherId": "t_1775717002774"
       }
     ],
     "targetScores": {
@@ -158,5 +158,42 @@
       "sat-english": "",
       "ielts": ""
     }
+  },
+  {
+    "id": "t_1775717002774",
+    "email": "teacher2@learnova.com",
+    "passwordHash": "$2a$10$COIVVnY4IR6atV1SBu9qC.QnxYUTe52ZyVEf4DsL4B3WL0B2gHh/6",
+    "role": "teacher",
+    "profile": {
+      "firstName": "Teacher",
+      "lastName": "Kate",
+      "gender": "",
+      "englishLevel": "",
+      "phoneNumber": "",
+      "dateOfBirth": "",
+      "addressLine1": "New York NS",
+      "addressLine2": "",
+      "city": "",
+      "country": "",
+      "postalCode": "",
+      "profilePicture": ""
+    },
+    "programAccess": [
+      "ielts-listening",
+      "ielts-speaking",
+      "ielts-reading",
+      "ielts-writing"
+    ],
+    "programScores": {
+      "sat-math": "",
+      "sat-english": "",
+      "ielts-listening": "9.0",
+      "ielts-reading": "9.0",
+      "ielts-speaking": "9.0",
+      "ielts-writing": "9.0"
+    },
+    "name": "Teacher Kate",
+    "phoneNumber": "",
+    "dateOfBirth": ""
   }
 ]

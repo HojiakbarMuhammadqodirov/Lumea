@@ -22,6 +22,8 @@ export default function App() {
   const [myTeachers, setMyTeachers] = useState([]);
   const [selectedProgramId, setSelectedProgramId] = useState("");
   const [selectedLevelId, setSelectedLevelId] = useState("");
+  const [publicView, setPublicView] = useState("landing");
+  const [toast, setToast] = useState("");
 
   const studentAssignments = user?.programAssignments || [];
   const visibleCourses = useMemo(() => {
@@ -42,6 +44,20 @@ export default function App() {
       localStorage.setItem("learnova_token", nextToken);
     }
   };
+
+  const showToast = (message) => {
+    setError(message);
+    setToast(message);
+  };
+
+  useEffect(() => {
+    if (!toast) return;
+    const timeoutId = window.setTimeout(() => {
+      setToast("");
+      setError("");
+    }, 7000);
+    return () => window.clearTimeout(timeoutId);
+  }, [toast]);
 
   const clearSession = () => {
     setToken("");
@@ -136,18 +152,20 @@ export default function App() {
   const login = async (payload) => {
     try {
       setError("");
+      setToast("");
       handleAuth(await api.login(payload));
     } catch (e) {
-      setError(e.message);
+      showToast(e.message);
     }
   };
 
   const register = async (payload) => {
     try {
       setError("");
+      setToast("");
       handleAuth(await api.register(payload));
     } catch (e) {
-      setError(e.message);
+      showToast(e.message);
     }
   };
 
@@ -163,7 +181,7 @@ export default function App() {
         await refreshUsers();
       }
     } catch (e) {
-      setError(e.message);
+      showToast(e.message);
     }
   };
 
@@ -171,7 +189,7 @@ export default function App() {
     try {
       setProgress(await api.completeLesson(token, user.id, { programId, levelId, lessonId }));
     } catch (e) {
-      setError(e.message);
+      showToast(e.message);
     }
   };
 
@@ -179,7 +197,7 @@ export default function App() {
     try {
       setProgress(await api.submitTopicScore(token, user.id, { programId, levelId, lessonId, score }));
     } catch (e) {
-      setError(e.message);
+      showToast(e.message);
     }
   };
 
@@ -196,7 +214,7 @@ export default function App() {
         })
       );
     } catch (e) {
-      setError(e.message);
+      showToast(e.message);
     }
   };
 
@@ -205,7 +223,7 @@ export default function App() {
       setSelectedProgramId(programId);
       setPracticeTests(await api.getPracticeTests(token, programId));
     } catch (e) {
-      setError(e.message);
+      showToast(e.message);
     }
   };
 
@@ -213,7 +231,7 @@ export default function App() {
     try {
       setProgress(await api.submitPracticeScore(token, user.id, { programId: selectedProgram.id, testId, score }));
     } catch (e) {
-      setError(e.message);
+      showToast(e.message);
     }
   };
 
@@ -222,7 +240,7 @@ export default function App() {
       await api.addStudent(token, payload);
       await refreshUsers();
     } catch (e) {
-      setError(e.message);
+      showToast(e.message);
     }
   };
 
@@ -231,7 +249,7 @@ export default function App() {
       await api.addTeacher(token, payload);
       await refreshUsers();
     } catch (e) {
-      setError(e.message);
+      showToast(e.message);
     }
   };
 
@@ -243,7 +261,7 @@ export default function App() {
         await refreshMe();
       }
     } catch (e) {
-      setError(e.message);
+      showToast(e.message);
     }
   };
 
@@ -252,7 +270,7 @@ export default function App() {
       await api.deleteUser(token, userId);
       await refreshUsers();
     } catch (e) {
-      setError(e.message);
+      showToast(e.message);
     }
   };
 
@@ -261,7 +279,7 @@ export default function App() {
       await api.addLesson(token, payload);
       await refreshCourses();
     } catch (e) {
-      setError(e.message);
+      showToast(e.message);
     }
   };
 
@@ -270,7 +288,7 @@ export default function App() {
       await api.updateLesson(token, programId, levelId, lessonId, payload);
       await refreshCourses();
     } catch (e) {
-      setError(e.message);
+      showToast(e.message);
     }
   };
 
@@ -283,19 +301,31 @@ export default function App() {
     }
   };
 
-  const scrollToLogin = () => {
-    document.getElementById("login")?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
   return (
     <main className={user ? "container" : "publicContainer"}>
-      {!user && <LandingPage onLoginClick={scrollToLogin} />}
-      {error && <p className="error">{error}</p>}
+      {toast && <div className="toastAlert">{toast}</div>}
+      {!user && publicView === "landing" && <LandingPage onLoginClick={() => setPublicView("login")} />}
 
-      {!user && (
-        <div id="login" className="publicAuthWrap">
-          <AuthPanel onLogin={login} onRegister={register} error={error} />
-        </div>
+      {!user && publicView === "login" && (
+        <section className="publicAuthPage">
+          <nav className="authPageNavbar" aria-label="Login navigation">
+            <button className="landingLogo authPageLogo" type="button" onClick={() => setPublicView("landing")}>
+              Lumea
+            </button>
+            <button className="landingUtilityButton authBackButton" type="button" onClick={() => setPublicView("landing")}>
+              Back
+            </button>
+          </nav>
+
+          <div className="publicAuthIntro">
+            <h1>Welcome back to Lumea.</h1>
+            <p>Log in or create your profile to continue your study path.</p>
+          </div>
+
+          <div className="publicAuthWrap">
+            <AuthPanel onLogin={login} onRegister={register} onAlert={showToast} />
+          </div>
+        </section>
       )}
 
       {user && (
