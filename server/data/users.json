@@ -162,7 +162,7 @@
   {
     "id": "t_1775717002774",
     "email": "teacher2@learnova.com",
-    "passwordHash": "$2a$10$COIVVnY4IR6atV1SBu9qC.QnxYUTe52ZyVEf4DsL4B3WL0B2gHh/6",
+    "passwordHash": "$2a$10$.ZnLiDCLp5WaWr75HubgDe8Hyvup8//dxugE24j1ty4LvZGRVaCpy",
     "role": "teacher",
     "profile": {
       "firstName": "Teacher",

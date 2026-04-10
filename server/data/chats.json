@@ -48,5 +48,25 @@
     "senderRole": "student",
     "text": "Hi! I don’t understand this question: \"Some people think that universities should focus on academic subjects, while others believe they should also teach practical skills. Discuss both views and give your opinion.\" What exactly should I write?",
     "sentAt": "2026-04-09T06:45:01.971Z"
+  },
+  {
+    "id": "m_1775720860106",
+    "programId": "ielts",
+    "studentId": "u_1773080875499",
+    "teacherId": "t_1775717002774",
+    "senderId": "t_1775717002774",
+    "senderRole": "teacher",
+    "text": "Great question. This is a discussion + opinion essay. You need to: 1)Explain why some people support academic subjects. 2)Explain why others support practical skills. 3)Clearly give your own opinion",
+    "sentAt": "2026-04-09T07:47:40.106Z"
+  },
+  {
+    "id": "m_1775720888279",
+    "programId": "ielts",
+    "studentId": "u_1773080875499",
+    "teacherId": "t_1775717002774",
+    "senderId": "u_1773080875499",
+    "senderRole": "student",
+    "text": "So I need 3 body paragraphs?",
+    "sentAt": "2026-04-09T07:48:08.279Z"
   }
 ]

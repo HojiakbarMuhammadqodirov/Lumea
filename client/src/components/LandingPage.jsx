@@ -3,10 +3,42 @@ import FloatingBackgroundPhotos from "./FloatingBackgroundPhotos";
 
 const navItems = ["SAT", "IELTS", "Past tests", "Question bank"];
 
+function LumeaAccentMark({ className = "" }) {
+  return (
+    <svg className={className} viewBox="0 0 72 72" aria-hidden="true">
+      <path
+        d="M36 6c10.4 0 20.8 3 28 8.8v19.4c0 15.4-10.4 25.5-28 31.8C18.4 59.7 8 49.6 8 34.2V14.8C15.2 9 25.6 6 36 6Z"
+        fill="#ffde70"
+        stroke="#173B64"
+        strokeWidth="4"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M26 23.5v20.5h18.5"
+        fill="none"
+        stroke="#173B64"
+        strokeWidth="5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M26 44 48 22"
+        fill="none"
+        stroke="#173B64"
+        strokeWidth="4.5"
+        strokeLinecap="round"
+        opacity="0.24"
+      />
+      <circle cx="49.5" cy="22.5" r="4.5" fill="#F6FAFF" stroke="#173B64" strokeWidth="3" />
+    </svg>
+  );
+}
+
 function AnimatedCounter({ start, end, duration = 1800, suffix = "", className = "", decimals = 0, step = null }) {
   const [value, setValue] = useState(start);
   const [isVisible, setIsVisible] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
+  const [isCounting, setIsCounting] = useState(false);
   const elementRef = useRef(null);
 
   useEffect(() => {
@@ -32,6 +64,7 @@ function AnimatedCounter({ start, end, duration = 1800, suffix = "", className =
 
     let frameId = 0;
     let startTime = 0;
+    setIsCounting(true);
 
     const tick = (timestamp) => {
       if (!startTime) startTime = timestamp;
@@ -45,16 +78,20 @@ function AnimatedCounter({ start, end, duration = 1800, suffix = "", className =
       if (progress < 1) {
         frameId = window.requestAnimationFrame(tick);
       } else {
+        setIsCounting(false);
         setHasAnimated(true);
       }
     };
 
     frameId = window.requestAnimationFrame(tick);
-    return () => window.cancelAnimationFrame(frameId);
+    return () => {
+      setIsCounting(false);
+      window.cancelAnimationFrame(frameId);
+    };
   }, [duration, end, hasAnimated, isVisible, start]);
 
   return (
-    <span ref={elementRef} className={className}>
+    <span ref={elementRef} className={isCounting ? `${className} isCounting` : className}>
       {decimals > 0 ? Number(value).toFixed(decimals) : value}
       {suffix}
     </span>
@@ -65,12 +102,21 @@ export default function LandingPage({ onLoginClick }) {
   const [language, setLanguage] = useState("ENG");
   const [isDarkIcon, setIsDarkIcon] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [chatFrontIndex, setChatFrontIndex] = useState(0);
 
   useEffect(() => {
     const updateNavbar = () => setIsScrolled(window.scrollY > 18);
     updateNavbar();
     window.addEventListener("scroll", updateNavbar, { passive: true });
     return () => window.removeEventListener("scroll", updateNavbar);
+  }, []);
+
+  useEffect(() => {
+    const intervalId = window.setInterval(() => {
+      setChatFrontIndex((current) => (current === 0 ? 1 : 0));
+    }, 5000);
+
+    return () => window.clearInterval(intervalId);
   }, []);
 
   return (
@@ -146,26 +192,55 @@ export default function LandingPage({ onLoginClick }) {
       </section>
 
       <section className="landingStatsSection">
-        <div className="landingStatsCopy" data-aos="fade-up">
-          <p className="landingSectionLabel">Target Performance</p>
-          <h2>For minds that aim beyond the crowd.</h2>
-        </div>
-
-        <div className="landingStatsPanel" data-aos="fade-left">
-          <div className="landingStatCard landingSatStatCard">
-            <div className="landingSatScoreLine">
-              <AnimatedCounter className="landingStatValue" start={200} end={1600} />
-              <span className="landingStatLabel">SAT</span>
-            </div>
-            <div className="landingSatPercentile">
-              <AnimatedCounter className="landingSatPercentileValue" start={0} end={99} />
-              <span className="landingSatPercentileLabel">th Percentile</span>
-            </div>
+        <div className="landingStatsShell">
+          <div className="landingStatsCopy" data-aos="fade-up">
+            <p className="landingSectionLabel">Target Performance</p>
+            <LumeaAccentMark className="landingSectionAccent landingSectionAccentStats" />
+            <h2>For minds that aim beyond the crowd.</h2>
           </div>
 
-          <div className="landingStatCard landingIeltsStatCard">
-            <AnimatedCounter className="landingStatValue" start={0} end={9} duration={1800} decimals={1} step={0.5} />
-            <span className="landingStatLabel">IELTS</span>
+          <div className="landingStatsPanel" data-aos="fade-left">
+            <div className="landingStatCard landingSatStatCard">
+              <div className="landingSatScoreLine">
+                <AnimatedCounter className="landingStatValue" start={400} end={1600} step={10} duration={1900} />
+                <span className="landingStatLabel">SAT</span>
+              </div>
+              <div className="landingSatPercentile">
+                <AnimatedCounter className="landingSatPercentileValue" start={0} end={99} />
+                <span className="landingSatPercentileLabel">th Percentile</span>
+              </div>
+            </div>
+
+            <div className="landingStatCard landingIeltsStatCard">
+              <div className="landingIeltsScoreLine">
+                <AnimatedCounter className="landingStatValue" start={0} end={9} duration={1800} decimals={1} step={0.5} />
+                <span className="landingStatLabel">IELTS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="landingTeachersSection" data-aos="fade-up">
+        <div className="landingTeachersShell">
+          <div className="landingChatShotStack" aria-hidden="true">
+            <img
+              className={chatFrontIndex === 0 ? "landingChatShot front" : "landingChatShot back"}
+              src="/images/screenshots/chat.png"
+              alt=""
+            />
+            <img
+              className={chatFrontIndex === 1 ? "landingChatShot front landingChatShotOffset" : "landingChatShot back landingChatShotOffset"}
+              src="/images/screenshots/chat2.png"
+              alt=""
+            />
+          </div>
+
+          <div className="landingChatProofText">
+            <p className="landingSectionLabel">Always Around</p>
+            <LumeaAccentMark className="landingSectionAccent landingSectionAccentTeachers" />
+            <h2>Experienced SAT 1510+, IELTS 7.5</h2>
+            <p>24/7 reading to answer you on chat.</p>
           </div>
         </div>
       </section>
