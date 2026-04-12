@@ -1,9 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import FloatingBackgroundPhotos from "./FloatingBackgroundPhotos";
+import PublicHeader from "./PublicHeader";
+import PublicFooter from "./PublicFooter";
 
-const navItems = ["SAT", "IELTS", "Past tests", "Question bank"];
+const books = [
+  { src: "/images/books/ebrwpanda.png", alt: "Erica Meltzer EBRW practice book" },
+  { src: "/images/books/ielts.png", alt: "IELTS preparation book" },
+  { src: "/images/books/mathpanda.png", alt: "Panda SAT Math book" },
+  { src: "/images/books/satguide.png", alt: "Official SAT study guide" },
+];
 
-function LumeaAccentMark({ className = "" }) {
+function LumeaAccentMark({ className = "", variant = "growth" }) {
   return (
     <svg className={className} viewBox="0 0 72 72" aria-hidden="true">
       <path
@@ -13,23 +20,48 @@ function LumeaAccentMark({ className = "" }) {
         strokeWidth="4"
         strokeLinejoin="round"
       />
-      <path
-        d="M26 23.5v20.5h18.5"
-        fill="none"
-        stroke="#173B64"
-        strokeWidth="5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M26 44 48 22"
-        fill="none"
-        stroke="#173B64"
-        strokeWidth="4.5"
-        strokeLinecap="round"
-        opacity="0.24"
-      />
-      <circle cx="49.5" cy="22.5" r="4.5" fill="#F6FAFF" stroke="#173B64" strokeWidth="3" />
+      {variant === "chat" ? (
+        <>
+          <path
+            d="M22 20.5h28c3.3 0 6 2.7 6 6v13c0 3.3-2.7 6-6 6H36l-8.8 7.2c-1.4 1.1-3.5.1-3.5-1.7v-5.5H22c-3.3 0-6-2.7-6-6v-13c0-3.3 2.7-6 6-6Z"
+            fill="#F6FAFF"
+            stroke="#173B64"
+            strokeWidth="4"
+            strokeLinejoin="round"
+          />
+          <path d="M24.5 31h23" stroke="#173B64" strokeWidth="4" strokeLinecap="round" />
+          <path d="M24.5 39h15" stroke="#173B64" strokeWidth="4" strokeLinecap="round" />
+        </>
+      ) : variant === "tick" ? (
+        <path
+          d="M22 37.5 31 46.5 49.5 25.5"
+          fill="none"
+          stroke="#173B64"
+          strokeWidth="5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      ) : (
+        <>
+          <path d="M20 47.5h31" fill="none" stroke="#173B64" strokeWidth="4" strokeLinecap="round" />
+          <path
+            d="M22 41.5 30.5 34l7 4.5 13-15"
+            fill="none"
+            stroke="#173B64"
+            strokeWidth="4.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M45 23.5h5.5V29"
+            fill="none"
+            stroke="#173B64"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </>
+      )}
     </svg>
   );
 }
@@ -88,10 +120,14 @@ function AnimatedCounter({ start, end, duration = 1800, suffix = "", className =
       setIsCounting(false);
       window.cancelAnimationFrame(frameId);
     };
-  }, [duration, end, hasAnimated, isVisible, start]);
+  }, [duration, end, hasAnimated, isVisible, start, step, decimals]);
 
   return (
-    <span ref={elementRef} className={isCounting ? `${className} isCounting` : className}>
+    <span
+      ref={elementRef}
+      className={isCounting ? `${className} isCounting` : className}
+      style={{ "--count-duration": `${duration}ms` }}
+    >
       {decimals > 0 ? Number(value).toFixed(decimals) : value}
       {suffix}
     </span>
@@ -99,75 +135,27 @@ function AnimatedCounter({ start, end, duration = 1800, suffix = "", className =
 }
 
 export default function LandingPage({ onLoginClick }) {
-  const [language, setLanguage] = useState("ENG");
-  const [isDarkIcon, setIsDarkIcon] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [chatFrontIndex, setChatFrontIndex] = useState(0);
-
-  useEffect(() => {
-    const updateNavbar = () => setIsScrolled(window.scrollY > 18);
-    updateNavbar();
-    window.addEventListener("scroll", updateNavbar, { passive: true });
-    return () => window.removeEventListener("scroll", updateNavbar);
-  }, []);
+  const [activeBookIndex, setActiveBookIndex] = useState(0);
 
   useEffect(() => {
     const intervalId = window.setInterval(() => {
       setChatFrontIndex((current) => (current === 0 ? 1 : 0));
     }, 5000);
+    return () => window.clearInterval(intervalId);
+  }, []);
 
+  useEffect(() => {
+    const intervalId = window.setInterval(() => {
+      setActiveBookIndex((current) => (current + 1) % books.length);
+    }, 10000);
     return () => window.clearInterval(intervalId);
   }, []);
 
   return (
     <section className="landingPage">
       <FloatingBackgroundPhotos />
-
-      <nav className={isScrolled ? "landingNavbar landingNavbarScrolled" : "landingNavbar"} aria-label="Main navigation">
-        <a className="landingLogo" href="#top" aria-label="Lumea home">
-          Lumea
-        </a>
-
-        <div className="landingNavLinks">
-          {navItems.map((item) => (
-            <a className="landingNavLink" key={item} href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}>
-              {item}
-            </a>
-          ))}
-        </div>
-
-        <div className="landingNavbarActions">
-          <button
-            className="landingUtilityButton"
-            type="button"
-            onClick={() => setLanguage((current) => (current === "ENG" ? "UZB" : "ENG"))}
-            aria-label="Switch language"
-          >
-            {language}
-          </button>
-
-          <button
-            className={isDarkIcon ? "landingUtilityButton landingThemeButton dark" : "landingUtilityButton landingThemeButton"}
-            type="button"
-            onClick={() => setIsDarkIcon((current) => !current)}
-            aria-label={isDarkIcon ? "Switch to light mode" : "Switch to dark mode"}
-          >
-            <span className="themeIconWrap" aria-hidden="true">
-              <svg className="themeIcon themeIconSun" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="4" />
-                <path d="M12 2v2.2M12 19.8V22M4.93 4.93l1.56 1.56M17.51 17.51l1.56 1.56M2 12h2.2M19.8 12H22M4.93 19.07l1.56-1.56M17.51 6.49l1.56-1.56" />
-              </svg>
-              <svg className="themeIcon themeIconMoon" viewBox="0 0 24 24">
-                <path d="M20.5 15.2A7.9 7.9 0 0 1 8.8 3.5 8.8 8.8 0 1 0 20.5 15.2Z" />
-              </svg>
-            </span>
-          </button>
-
-          <button className="landingLoginButton" type="button" onClick={onLoginClick}>
-            Log in
-          </button>
-        </div>
-      </nav>
+      <PublicHeader onLoginClick={onLoginClick} />
 
       <section className="landingHero" id="top">
         <div className="landingHeroCopy" data-aos="fade-up">
@@ -195,7 +183,7 @@ export default function LandingPage({ onLoginClick }) {
         <div className="landingStatsShell">
           <div className="landingStatsCopy" data-aos="fade-up">
             <p className="landingSectionLabel">Target Performance</p>
-            <LumeaAccentMark className="landingSectionAccent landingSectionAccentStats" />
+            <LumeaAccentMark className="landingSectionAccent landingSectionAccentStats" variant="growth" />
             <h2>For minds that aim beyond the crowd.</h2>
           </div>
 
@@ -221,9 +209,9 @@ export default function LandingPage({ onLoginClick }) {
         </div>
       </section>
 
-      <section className="landingTeachersSection" data-aos="fade-up">
+      <section className="landingTeachersSection">
         <div className="landingTeachersShell">
-          <div className="landingChatShotStack" aria-hidden="true">
+          <div className="landingChatShotStack" aria-hidden="true" data-aos="fade-right" data-aos-duration="900">
             <img
               className={chatFrontIndex === 0 ? "landingChatShot front" : "landingChatShot back"}
               src="/images/screenshots/chat.png"
@@ -236,14 +224,127 @@ export default function LandingPage({ onLoginClick }) {
             />
           </div>
 
-          <div className="landingChatProofText">
+          <div className="landingChatProofText" data-aos="fade-left" data-aos-duration="900">
             <p className="landingSectionLabel">Always Around</p>
-            <LumeaAccentMark className="landingSectionAccent landingSectionAccentTeachers" />
+            <LumeaAccentMark className="landingSectionAccent landingSectionAccentTeachers" variant="chat" />
             <h2>Experienced SAT 1510+, IELTS 7.5</h2>
             <p>24/7 reading to answer you on chat.</p>
           </div>
         </div>
       </section>
+
+      <section className="landingBooksSection">
+        <div className="landingBooksShell">
+          <div className="landingBooksCopy" data-aos="fade-up" data-aos-duration="900">
+            <p className="landingSectionLabel">Official Sources</p>
+            <LumeaAccentMark className="landingSectionAccent landingSectionAccentBooks" variant="tick" />
+            <h2>Real materials from official books and past papers.</h2>
+            <p>Study with the same sources serious test takers use when they want reliable practice and cleaner score jumps.</p>
+          </div>
+
+          <div className="landingBooksStage" data-aos="zoom-in-left" data-aos-duration="1000" aria-hidden="true">
+            {books.map((book, index) => {
+              const distance = (index - activeBookIndex + books.length) % books.length;
+              const positionClass =
+                distance === 0
+                  ? "isCenter"
+                  : distance === 1
+                    ? "isRight"
+                    : distance === books.length - 1
+                      ? "isLeft"
+                      : "isBack";
+
+              return (
+                <div className={`landingBookCard ${positionClass}`} key={book.src}>
+                  <img className="landingBookImage" src={book.src} alt={book.alt} />
+                  <span className="landingBookShadow" />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="landingMilestonesSection" data-aos="fade-up" data-aos-duration="900">
+        <div className="landingMilestonesShell">
+          <div className="landingMilestoneCard">
+            <div className="landingResultNumberLine">
+              <AnimatedCounter className="landingResultValue" start={0} end={1000} duration={1700} />
+              <span className="landingResultPlus">+</span>
+            </div>
+            <span className="landingResultLabel">SAT-Math Questions</span>
+          </div>
+
+          <div className="landingMilestoneCard">
+            <div className="landingResultNumberLine">
+              <AnimatedCounter className="landingResultValue" start={0} end={1000} duration={1700} />
+              <span className="landingResultPlus">+</span>
+            </div>
+            <span className="landingResultLabel">SAT-EBRW Questions</span>
+          </div>
+
+          <div className="landingMilestoneCard">
+            <div className="landingResultNumberLine">
+              <AnimatedCounter className="landingResultValue" start={0} end={200} duration={1600} />
+              <span className="landingResultPlus">+</span>
+            </div>
+            <span className="landingResultLabel">IELTS Questions</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="landingResultsSection" data-aos="fade-up" data-aos-duration="900">
+        <div className="landingResultsShell">
+          <div className="landingResultsIntro">
+            <p className="landingSectionLabel">Score Pushshing</p>
+            <LumeaAccentMark className="landingSectionAccent landingSectionAccentResults" variant="growth" />
+            <h2>
+              Improve your next score unimaginavely with <span className="landingResultsHighlight">Score Rush</span>.
+            </h2>
+            <p>Put your score report to work.</p>
+          </div>
+
+          <div className="landingResultsCards">
+            <div className="landingResultsCard">
+              <span className="landingResultExamLabel">SAT</span>
+              <div className="landingResultScoreRow">
+                <div className="landingResultScoreBlock">
+                  <div className="landingResultNumberLine">
+                    <AnimatedCounter className="landingResultValue landingResultValuePrevious" start={0} end={1100} duration={1700} step={10} />
+                  </div>
+                  <span className="landingScoreMeta">Previous score</span>
+                </div>
+                <div className="landingResultScoreBlock">
+                  <div className="landingResultNumberLine">
+                    <AnimatedCounter className="landingResultValue" start={0} end={1500} duration={1700} step={10} />
+                  </div>
+                  <span className="landingScoreMeta landingScoreMetaNext">Next score</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="landingResultsCard">
+              <span className="landingResultExamLabel">IELTS</span>
+              <div className="landingResultScoreRow">
+                <div className="landingResultScoreBlock">
+                  <div className="landingResultNumberLine">
+                    <AnimatedCounter className="landingResultValue landingResultValuePrevious" start={0} end={5.5} duration={1600} decimals={1} step={0.5} />
+                  </div>
+                  <span className="landingScoreMeta">Previous score</span>
+                </div>
+                <div className="landingResultScoreBlock">
+                  <div className="landingResultNumberLine">
+                    <AnimatedCounter className="landingResultValue" start={0} end={8.0} duration={1600} decimals={1} step={0.5} />
+                  </div>
+                  <span className="landingScoreMeta landingScoreMetaNext">Next score</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <PublicFooter onLoginClick={onLoginClick} />
     </section>
   );
 }

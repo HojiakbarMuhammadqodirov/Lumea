@@ -158,6 +158,7 @@ body {
   gap: clamp(12px, 2vw, 30px);
   align-items: center;
   min-width: 0;
+  flex-wrap: nowrap;
 }
 
 .landingNavbarActions {
@@ -165,6 +166,7 @@ body {
   gap: 12px;
   align-items: center;
   justify-content: flex-end;
+  flex-wrap: nowrap;
 }
 
 .landingNavLink,
@@ -177,10 +179,46 @@ body {
   color: #7c858d;
   text-decoration: none;
   font-weight: 800;
+  white-space: nowrap;
   transition:
     color 180ms ease,
     transform 140ms ease,
     filter 180ms ease;
+}
+
+.landingNavLinkSoon {
+  position: relative;
+  display: inline-flex;
+  min-height: 42px;
+  color: #a8b1b8;
+  cursor: default;
+  pointer-events: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.landingNavLinkSoon > :first-child {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  line-height: 1;
+}
+
+.landingNavLinkSoon::after {
+  display: none;
+}
+
+.landingNavSoonText {
+  position: absolute;
+  top: calc(100% - 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  color: #c5ccd3;
+  font-size: 0.46rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .landingNavLink::after {
@@ -350,7 +388,7 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, auto);
-  gap: clamp(22px, 4vw, 44px);
+  gap: clamp(8px, 1.4vw, 18px);
   align-items: center;
 }
 
@@ -373,7 +411,7 @@ body {
   width: 62px;
   height: 62px;
   display: block;
-  filter: drop-shadow(0 16px 24px rgba(23, 59, 100, 0.12));
+  filter: drop-shadow(0 4px 0 rgba(23, 59, 100, 0.22));
 }
 
 .landingSectionAccentStats {
@@ -391,10 +429,11 @@ body {
 .landingStatsPanel {
   display: flex;
   min-width: 0;
-  gap: clamp(18px, 2.4vw, 34px);
+  gap: clamp(10px, 1.2vw, 18px);
   flex-wrap: nowrap;
   align-items: flex-start;
   justify-content: flex-end;
+  margin-left: -10px;
 }
 
 .landingStatCard {
@@ -486,7 +525,7 @@ body {
 .landingTeachersSection {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 220px 0 120px;
+  padding: 330px 0 120px;
   position: relative;
   z-index: 1;
 }
@@ -501,15 +540,16 @@ body {
 
 .landingChatShotStack {
   position: relative;
-  width: 430px;
-  height: 320px;
+  width: 455px;
+  height: 348px;
+  margin-top: 50px;
 }
 
 .landingChatShot {
   position: absolute;
   left: 0;
   top: 0;
-  width: 300px;
+  width: 336px;
   border-radius: 8px;
   border: 1px solid rgba(23, 59, 100, 0.1);
   background: #f6faff;
@@ -525,8 +565,8 @@ body {
 }
 
 .landingChatShotOffset {
-  --shot-x: 74px;
-  --shot-y: -54px;
+  --shot-x: 82px;
+  --shot-y: -42px;
 }
 
 .landingChatShot.front {
@@ -556,6 +596,10 @@ body {
   margin: 4px 0 12px;
 }
 
+.landingSectionAccentBooks {
+  margin: 4px 0 12px;
+}
+
 .landingChatProofText h2 {
   margin: 0;
   color: #173B64;
@@ -569,6 +613,384 @@ body {
   color: #7c858d;
   font-size: 1.08rem;
   line-height: 1.6;
+}
+
+.landingBooksSection {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 260px 0 140px;
+  position: relative;
+  z-index: 1;
+}
+
+.landingBooksShell {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(460px, 1fr);
+  gap: 34px;
+  align-items: center;
+}
+
+.landingBooksCopy {
+  display: grid;
+  gap: 14px;
+  max-width: 500px;
+}
+
+.landingBooksCopy h2 {
+  margin: 0;
+  color: #173B64;
+  font-size: clamp(2rem, 4.3vw, 3.5rem);
+  line-height: 1.08;
+}
+
+.landingBooksCopy p:last-child {
+  margin: 0;
+  color: #7c858d;
+  font-size: 1.08rem;
+  line-height: 1.65;
+}
+
+.landingBooksStage {
+  position: relative;
+  height: 480px;
+  perspective: 1800px;
+  transform-style: preserve-3d;
+}
+
+.landingBookCard {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 240px;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transform-origin: center bottom;
+  will-change: transform, opacity;
+  transition:
+    transform 760ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 760ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.landingBookImage {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+  box-shadow:
+    0 22px 42px rgba(13, 29, 49, 0.18),
+    18px 0 24px rgba(23, 59, 100, 0.08);
+  user-select: none;
+}
+
+.landingBookShadow {
+  position: absolute;
+  left: 50%;
+  bottom: -18px;
+  width: 72%;
+  height: 24px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(16, 29, 44, 0.32) 0%, rgba(16, 29, 44, 0.08) 58%, rgba(16, 29, 44, 0) 100%);
+  transform: translateX(-50%) rotateX(72deg);
+  filter: blur(6px);
+  pointer-events: none;
+}
+
+.landingBookCard.isCenter {
+  z-index: 4;
+  opacity: 1;
+  transform: translate(-50%, -50%) translateX(0) translateY(6px) scale(1.05) rotateY(0deg);
+}
+
+.landingBookCard.isLeft {
+  z-index: 3;
+  opacity: 0.7;
+  transform: translate(-50%, -50%) translateX(-158px) translateY(22px) scale(0.82) rotateY(34deg);
+}
+
+.landingBookCard.isRight {
+  z-index: 3;
+  opacity: 1;
+  transform: translate(-50%, -50%) translateX(158px) translateY(22px) scale(0.82) rotateY(-34deg);
+}
+
+.landingBookCard.isBack {
+  z-index: 2;
+  opacity: 0.06;
+  transform: translate(-50%, -50%) translateX(0) translateY(0) scale(0.72) rotateY(0deg);
+}
+
+.landingMilestonesSection {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 150px 0 160px;
+  position: relative;
+  z-index: 1;
+}
+
+.landingMilestonesShell {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(28px, 5vw, 88px);
+  flex-wrap: wrap;
+}
+
+.landingMilestoneCard {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #173B64;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.landingResultsSection {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 120px 0 160px;
+  position: relative;
+  z-index: 1;
+}
+
+.landingResultsShell {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(28px, 4vw, 72px);
+}
+
+.landingResultsIntro {
+  display: grid;
+  gap: 14px;
+  max-width: 460px;
+}
+
+.landingSectionAccentResults {
+  margin: 4px 0 12px;
+}
+
+.landingResultsIntro h2 {
+  margin: 0;
+  color: #173B64;
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  line-height: 1.08;
+}
+
+.landingResultsHighlight {
+  color: #ffde70;
+}
+
+.landingResultsIntro p:last-child {
+  margin: 0;
+  color: #7c858d;
+  font-size: 1.08rem;
+  line-height: 1.65;
+}
+
+.landingResultsCards {
+  display: grid;
+  gap: 20px;
+}
+
+.landingResultsCard {
+  display: grid;
+  gap: 10px;
+  padding: 22px 24px;
+  border-radius: 8px;
+  background: rgba(246, 250, 255, 0.9);
+  border: 1px solid rgba(23, 59, 100, 0.08);
+  box-shadow: 0 18px 40px rgba(23, 59, 100, 0.08);
+}
+
+.landingResultExamLabel {
+  color: #173B64;
+  font-size: 0.92rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.landingResultScoreRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 22px;
+}
+
+.landingResultScoreBlock {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  align-content: center;
+  min-height: 136px;
+}
+
+.landingScoreMeta {
+  color: #7c858d;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.landingScoreMetaNext {
+  color: #173B64;
+}
+
+.landingResultNumberLine {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.landingResultValue {
+  display: inline-block;
+  color: #173B64;
+  font-size: clamp(2.9rem, 6vw, 5.6rem);
+  font-weight: 1000;
+  line-height: 0.95;
+  transform-origin: center bottom;
+  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.landingResultValue.isCounting {
+  animation: landingResultCountPulse var(--count-duration, 1700ms) cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.landingResultValuePrevious {
+  color: #d4687d;
+  font-size: clamp(2.2rem, 4.5vw, 4.2rem);
+  animation: landingPreviousScorePulse 1.35s ease-in-out infinite;
+}
+
+.landingResultValuePrevious.isCounting {
+  animation:
+    landingResultCountPulse var(--count-duration, 1700ms) cubic-bezier(0.22, 1, 0.36, 1) forwards,
+    landingPreviousScorePulse 1.35s ease-in-out infinite;
+}
+
+.landingResultPlus {
+  color: #173B64;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.landingResultLabel {
+  color: #5c6670;
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+@keyframes landingResultCountPulse {
+  0% {
+    transform: scale(1);
+  }
+
+  78% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes landingPreviousScorePulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.82;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+.landingFooter {
+  width: 100%;
+  margin: 0;
+  padding: 42px 0 32px;
+  border-top: 1px solid rgba(23, 59, 100, 0.1);
+}
+
+.landingFooterShell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(0, 0.7fr));
+  gap: 28px;
+  align-items: start;
+}
+
+.landingFooterBrand {
+  display: grid;
+  gap: 14px;
+}
+
+.landingFooterBrand p {
+  margin: 0;
+  max-width: 420px;
+  color: #7c858d;
+  line-height: 1.7;
+}
+
+.landingFooterLinks,
+.landingFooterActions,
+.landingFooterBottomLinks {
+  display: grid;
+  gap: 10px;
+}
+
+.landingFooter a {
+  color: #5c6670;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.landingFooter a:hover {
+  color: #173B64;
+}
+
+.landingFooterActions {
+  justify-items: start;
+}
+
+.landingFooterButton {
+  min-height: 44px;
+  padding: 0 22px;
+}
+
+.landingFooterBottom {
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(23, 59, 100, 0.08);
+}
+
+.landingFooterBottomInner {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: #8a949d;
+  font-size: 0.92rem;
+}
+
+.landingFooterBottomLinks {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
 @keyframes landingPercentileGlow {
@@ -3364,7 +3786,264 @@ select:focus {
     linear-gradient(135deg, #5da8f4, #7fc8ff);
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1180px) {
+  .landingNavbar {
+    width: min(calc(100% - 18px), 1400px);
+    gap: 18px;
+    padding: 14px clamp(14px, 2vw, 26px);
+  }
+
+  .landingNavbarScrolled {
+    width: min(calc(100% - 36px), 1120px);
+    padding: 13px 22px;
+  }
+
+  .landingLogo {
+    font-size: 1.8rem;
+  }
+
+  .landingNavLinks {
+    gap: clamp(10px, 1.6vw, 18px);
+  }
+
+  .landingNavLink,
+  .landingUtilityButton,
+  .landingLoginButton {
+    font-size: 0.96rem;
+  }
+
+  .landingStatsShell {
+    gap: 18px;
+  }
+
+  .landingStatsCopy h2,
+  .landingChatProofText h2 {
+    font-size: clamp(1.9rem, 4.1vw, 3rem);
+  }
+
+  .landingStatValue {
+    font-size: clamp(2.7rem, 5vw, 4.4rem);
+  }
+
+  .landingTeachersShell {
+    grid-template-columns: minmax(300px, 400px) minmax(0, 1fr);
+    gap: 40px;
+  }
+
+  .landingBooksShell {
+    grid-template-columns: minmax(0, 0.85fr) minmax(380px, 1fr);
+    gap: 26px;
+  }
+
+  .landingBooksStage {
+    height: 430px;
+  }
+
+  .landingBookCard {
+    width: 216px;
+  }
+
+  .landingBookCard.isLeft {
+    transform: translate(-50%, -50%) translateX(-138px) translateY(22px) scale(0.8) rotateY(32deg);
+  }
+
+  .landingBookCard.isRight {
+    transform: translate(-50%, -50%) translateX(138px) translateY(22px) scale(0.8) rotateY(-32deg);
+  }
+
+  .landingResultsSection {
+    padding-top: 180px;
+    padding-bottom: 130px;
+  }
+
+  .landingMilestonesSection {
+    padding-top: 180px;
+    padding-bottom: 130px;
+  }
+
+  .landingResultsShell {
+    gap: 28px;
+  }
+
+  .landingChatShotStack {
+    width: 422px;
+    height: 320px;
+  }
+
+  .landingChatShot {
+    width: 302px;
+  }
+}
+
+@media (max-width: 900px) {
+  .landingNavbar {
+    gap: 14px;
+    padding: 12px 14px;
+  }
+
+  .landingNavbarScrolled {
+    width: min(calc(100% - 24px), 1120px);
+    top: 18px;
+    padding: 12px 16px;
+  }
+
+  .landingLogo {
+    font-size: 1.6rem;
+  }
+
+  .landingNavLinks {
+    gap: 12px;
+  }
+
+  .landingNavLink,
+  .landingUtilityButton,
+  .landingLoginButton {
+    font-size: 0.88rem;
+  }
+
+  .landingUtilityButton {
+    min-width: 42px;
+    min-height: 40px;
+    padding: 0 10px;
+  }
+
+  .landingLoginButton {
+    min-height: 42px;
+    padding: 0 18px;
+  }
+
+  .landingStatsSection {
+    padding-top: 170px;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .landingStatsShell {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .landingStatsCopy {
+    justify-items: center;
+  }
+
+  .landingStatsCopy h2 {
+    max-width: 640px;
+  }
+
+  .landingStatsPanel,
+  .landingStatCard {
+    justify-items: center;
+  }
+
+  .landingStatsPanel {
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .landingTeachersSection {
+    padding-top: 230px;
+    padding-bottom: 90px;
+  }
+
+  .landingTeachersShell {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .landingChatProofText {
+    order: 1;
+  }
+
+  .landingChatShotStack {
+    order: 2;
+    margin-top: 54px;
+  }
+
+  .landingChatProofText {
+    justify-self: center;
+  }
+
+  .landingSectionAccentTeachers {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .landingBooksSection {
+    padding-top: 210px;
+    padding-bottom: 100px;
+  }
+
+  .landingBooksShell {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .landingBooksCopy {
+    justify-items: center;
+  }
+
+  .landingBooksStage {
+    width: min(100%, 640px);
+    height: 420px;
+  }
+
+  .landingResultsSection {
+    padding-top: 160px;
+    padding-bottom: 110px;
+  }
+
+  .landingMilestonesSection {
+    padding-top: 160px;
+    padding-bottom: 110px;
+  }
+
+  .landingMilestonesShell {
+    gap: 22px;
+  }
+
+  .landingResultsShell {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 22px;
+  }
+
+  .landingResultsIntro {
+    justify-items: center;
+  }
+
+  .landingResultScoreRow {
+    justify-content: center;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .landingFooterShell {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .landingFooterBrand,
+  .landingFooterLinks,
+  .landingFooterActions {
+    justify-items: center;
+  }
+
+  .landingFooterBottom {
+    width: min(1180px, calc(100% - 32px));
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .landingFooterBottomInner {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
   .landingNavbar {
     position: relative;
     grid-template-columns: 1fr;
@@ -3392,43 +4071,6 @@ select:focus {
     font-size: 3rem;
   }
 
-  .landingStatsSection {
-    padding-top: 160px;
-    justify-items: center;
-    text-align: center;
-  }
-
-  .landingStatsShell {
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
-
-  .landingStatsCopy h2 {
-    max-width: 640px;
-  }
-
-  .landingStatsPanel,
-  .landingStatCard {
-    justify-items: center;
-  }
-
-  .landingStatsPanel {
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-  .landingTeachersSection {
-    padding-top: 88px;
-    padding-bottom: 90px;
-  }
-
-  .landingTeachersShell {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    text-align: center;
-  }
-
   .landingChatShotStack {
     width: 330px;
     height: 250px;
@@ -3438,8 +4080,71 @@ select:focus {
     width: 240px;
   }
 
-  .landingChatProofText {
-    justify-self: center;
+  .landingBooksStage {
+    width: 100%;
+    height: 360px;
+  }
+
+  .landingBookCard {
+    width: 174px;
+  }
+
+  .landingBookCard.isCenter {
+    transform: translate(-50%, -50%) translateX(0) translateY(6px) scale(1.02) rotateY(0deg);
+  }
+
+  .landingBookCard.isLeft {
+    transform: translate(-50%, -50%) translateX(-102px) translateY(20px) scale(0.78) rotateY(28deg);
+  }
+
+  .landingBookCard.isRight {
+    transform: translate(-50%, -50%) translateX(102px) translateY(20px) scale(0.78) rotateY(-28deg);
+  }
+
+  .landingBookCard.isBack {
+    transform: translate(-50%, -50%) translateX(0) translateY(-6px) scale(0.62) rotateY(0deg);
+  }
+
+  .landingResultsSection {
+    width: min(100% - 18px, 100%);
+    padding-top: 140px;
+    padding-bottom: 100px;
+  }
+
+  .landingMilestonesSection {
+    width: min(100% - 18px, 100%);
+    padding-top: 140px;
+    padding-bottom: 100px;
+  }
+
+  .landingResultsShell {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .landingMilestonesShell {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .landingResultsCard {
+    width: 100%;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .landingResultScoreRow {
+    justify-content: center;
+  }
+
+  .landingFooter {
+    width: 100%;
+  }
+
+  .landingFooterShell,
+  .landingFooterBottomInner,
+  .landingFooterBottom {
+    width: min(100% - 18px, 100%);
   }
 
   .splitWide,
@@ -3523,7 +4228,7 @@ select:focus {
 
   .landingNavLinks {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .landingNavLink {
@@ -3563,6 +4268,7 @@ select:focus {
 
   .landingStatsPanel {
     gap: 18px;
+    flex-wrap: wrap;
   }
 
   .landingSatStatCard,
