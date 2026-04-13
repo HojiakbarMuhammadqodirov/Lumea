@@ -134,7 +134,7 @@ function AnimatedCounter({ start, end, duration = 1800, suffix = "", className =
   );
 }
 
-export default function LandingPage({ onLoginClick }) {
+export default function LandingPage({ onLoginClick, onNavClick }) {
   const [chatFrontIndex, setChatFrontIndex] = useState(0);
   const [activeBookIndex, setActiveBookIndex] = useState(0);
 
@@ -155,7 +155,7 @@ export default function LandingPage({ onLoginClick }) {
   return (
     <section className="landingPage">
       <FloatingBackgroundPhotos />
-      <PublicHeader onLoginClick={onLoginClick} />
+      <PublicHeader onLoginClick={onLoginClick} onNavClick={onNavClick} currentView="landing" />
 
       <section className="landingHero" id="top">
         <div className="landingHeroCopy" data-aos="fade-up">
@@ -265,6 +265,7 @@ export default function LandingPage({ onLoginClick }) {
         </div>
       </section>
 
+
       <section className="landingMilestonesSection" data-aos="fade-up" data-aos-duration="900">
         <div className="landingMilestonesShell">
           <div className="landingMilestoneCard">
@@ -344,7 +345,7 @@ export default function LandingPage({ onLoginClick }) {
         </div>
       </section>
 
-      <PublicFooter onLoginClick={onLoginClick} />
+      <PublicFooter onLoginClick={onLoginClick} onNavClick={onNavClick} />
     </section>
   );
 }

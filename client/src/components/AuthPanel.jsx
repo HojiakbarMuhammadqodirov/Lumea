@@ -26,8 +26,8 @@ const initial = {
   profilePicture: ""
 };
 
-export default function AuthPanel({ onLogin, onRegister, onAlert }) {
-  const [isRegister, setIsRegister] = useState(false);
+export default function AuthPanel({ onLogin, onRegister, onAlert, defaultRegister = false }) {
+  const [isRegister, setIsRegister] = useState(defaultRegister);
   const [step, setStep] = useState(0);
   const [loginForm, setLoginForm] = useState({ email: "", password: "" });
   const [registerForm, setRegisterForm] = useState(initial);

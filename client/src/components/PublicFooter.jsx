@@ -1,20 +1,25 @@
-export default function PublicFooter({ onLoginClick }) {
+export default function PublicFooter({ onLoginClick, onNavClick }) {
   return (
     <footer className="landingFooter">
       <div className="landingFooterShell">
         <div className="landingFooterBrand">
-          <a className="landingLogo" href="#top" aria-label="Lumea home">
+          <button
+            className="landingLogo"
+            style={{ background: "none", border: "none", cursor: "pointer", padding: 0 }}
+            onClick={() => onNavClick?.("landing")}
+            aria-label="Lumea home"
+          >
             Lumea
-          </a>
+          </button>
           <p>Structured prep, AI-powered guidance, real materials, and support from experienced teachers that keeps moving with you.</p>
         </div>
 
         <div className="landingFooterLinks">
-          <a href="#top">Home</a>
-          <a href="#sat">SAT</a>
-          <a href="#ielts">IELTS</a>
-          <a href="#past-tests">Past tests</a>
-          <a href="#question-bank">Question bank</a>
+          <button className="landingFooterNavBtn" onClick={() => onNavClick?.("landing")}>Home</button>
+          <button className="landingFooterNavBtn" onClick={() => onNavClick?.("sat")}>SAT</button>
+          <button className="landingFooterNavBtn" onClick={() => onNavClick?.("ielts")}>IELTS</button>
+          <button className="landingFooterNavBtn" onClick={() => onNavClick?.("pricing")}>Pricing</button>
+          <button className="landingFooterNavBtn" onClick={() => onNavClick?.("faq")}>FAQ</button>
         </div>
 
         <div className="landingFooterActions">

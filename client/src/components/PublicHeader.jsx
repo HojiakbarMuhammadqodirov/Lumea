@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 
 const navItems = [
-  { label: "SAT", href: "#sat" },
-  { label: "IELTS", href: "#ielts" },
-  { label: "Past tests", href: "#past-tests" },
-  { label: "Question bank", href: "#question-bank" },
-  { label: "AP", soon: true },
+  { label: "SAT",     view: "sat" },
+  { label: "IELTS",   view: "ielts" },
+  { label: "Pricing", view: "pricing" },
+  { label: "FAQ",     view: "faq" },
+  { label: "AP",      soon: true },
 ];
 
-export default function PublicHeader({ onLoginClick }) {
+export default function PublicHeader({ onLoginClick, onNavClick, currentView }) {
   const [language, setLanguage] = useState("ENG");
   const [isDarkIcon, setIsDarkIcon] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,9 +22,13 @@ export default function PublicHeader({ onLoginClick }) {
 
   return (
     <nav className={isScrolled ? "landingNavbar landingNavbarScrolled" : "landingNavbar"} aria-label="Main navigation">
-      <a className="landingLogo" href="#top" aria-label="Lumea home">
-        Lumea
-      </a>
+      {currentView && currentView !== "landing" ? (
+        <button className="landingLogo" style={{ background:"none",border:"none",cursor:"pointer",padding:0 }} onClick={() => onNavClick?.("landing")} aria-label="Lumea home">
+          Lumea
+        </button>
+      ) : (
+        <a className="landingLogo" href="#top" aria-label="Lumea home">Lumea</a>
+      )}
 
       <div className="landingNavLinks">
         {navItems.map((item) =>
@@ -33,6 +37,14 @@ export default function PublicHeader({ onLoginClick }) {
               <span>{item.label}</span>
               <span className="landingNavSoonText">Soon</span>
             </span>
+          ) : item.view ? (
+            <button
+              key={item.label}
+              className={`landingNavLink landingNavLinkBtn${currentView === item.view ? " landingNavLinkActive" : ""}`}
+              onClick={() => onNavClick?.(item.view)}
+            >
+              {item.label}
+            </button>
           ) : (
             <a className="landingNavLink" key={item.label} href={item.href}>
               {item.label}

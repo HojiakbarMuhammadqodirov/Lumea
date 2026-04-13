@@ -3,6 +3,10 @@ import AOS from "aos";
 import { api } from "./api";
 import AuthPanel from "./components/AuthPanel";
 import LandingPage from "./components/LandingPage";
+import SatPage from "./components/SatPage";
+import IeltsPage from "./components/IeltsPage";
+import PricingPage from "./components/PricingPage";
+import FaqPage from "./components/FaqPage";
 import AdminTeacherPanel from "./components/AdminTeacherPanel";
 import StudentDashboard from "./components/StudentDashboard";
 
@@ -23,6 +27,7 @@ export default function App() {
   const [selectedProgramId, setSelectedProgramId] = useState("");
   const [selectedLevelId, setSelectedLevelId] = useState("");
   const [publicView, setPublicView] = useState("landing");
+  const [needsPlan, setNeedsPlan] = useState(false);
   const [toast, setToast] = useState("");
 
   const studentAssignments = user?.programAssignments || [];
@@ -164,6 +169,7 @@ export default function App() {
       setError("");
       setToast("");
       handleAuth(await api.register(payload));
+      setNeedsPlan(true);
     } catch (e) {
       showToast(e.message);
     }
@@ -304,7 +310,36 @@ export default function App() {
   return (
     <main className={user ? "container" : "publicContainer"}>
       {toast && <div className="toastAlert">{toast}</div>}
-      {!user && publicView === "landing" && <LandingPage onLoginClick={() => setPublicView("login")} />}
+      {!user && publicView === "landing" && (
+        <LandingPage
+          onLoginClick={() => setPublicView("login")}
+          onNavClick={(view) => { setPublicView(view); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+        />
+      )}
+      {!user && publicView === "sat" && (
+        <SatPage
+          onLoginClick={() => setPublicView("login")}
+          onNavClick={(view) => { setPublicView(view); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+        />
+      )}
+      {!user && publicView === "ielts" && (
+        <IeltsPage
+          onLoginClick={() => setPublicView("login")}
+          onNavClick={(view) => { setPublicView(view); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+        />
+      )}
+      {!user && publicView === "pricing" && (
+        <PricingPage
+          onLoginClick={() => setPublicView("login")}
+          onNavClick={(view) => { setPublicView(view); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+        />
+      )}
+      {!user && publicView === "faq" && (
+        <FaqPage
+          onLoginClick={() => setPublicView("login")}
+          onNavClick={(view) => { setPublicView(view); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+        />
+      )}
 
       {!user && publicView === "login" && (
         <section className="publicAuthPage">
@@ -323,12 +358,20 @@ export default function App() {
           </div>
 
           <div className="publicAuthWrap">
-            <AuthPanel onLogin={login} onRegister={register} onAlert={showToast} />
+            <AuthPanel onLogin={login} onRegister={register} onAlert={showToast} defaultRegister />
           </div>
         </section>
       )}
 
-      {user && (
+      {user && needsPlan && (
+        <PricingPage
+          onLoginClick={() => {}}
+          onNavClick={() => {}}
+          onSelectPlan={() => setNeedsPlan(false)}
+        />
+      )}
+
+      {user && !needsPlan && (
         <>
           {user.role === "student" && (
             <StudentDashboard
