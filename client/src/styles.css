@@ -6111,6 +6111,12 @@ select:focus {
   gap: 14px;
 }
 
+.examPlanAction {
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+
 .examPlanWeek {
   padding: 16px 16px;
   border-radius: 12px;

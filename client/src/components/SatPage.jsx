@@ -130,7 +130,7 @@ const REG_STEPS = [
   "Navigate to SAT → Register for the SAT.",
   "Choose your target test date and nearest test center.",
   "Complete personal information and upload your ID photo.",
-  "Pay the registration fee (approx. $60 USD).",
+  "Pay the registration fee ($111 USD for Uzbekistan residents).",
   "Download your admission ticket 2 weeks before the test.",
 ];
 

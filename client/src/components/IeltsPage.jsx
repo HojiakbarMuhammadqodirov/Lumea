@@ -38,7 +38,7 @@ const REG_STEPS = [
   "Select Computer-delivered or Paper-based IELTS.",
   "Pick your test date and nearest test centre in Uzbekistan.",
   "Complete personal information and ID details.",
-  "Pay the registration fee and confirm your booking.",
+  "Pay the registration fee and confirm your booking ($210-240).",
   "Download your confirmation and prepare your ID for test day.",
 ];
 
@@ -461,8 +461,8 @@ export default function IeltsPage({ onLoginClick, onNavClick }) {
                   <span className="tcCardDur">{t.duration}</span>
                 </div>
                 <div className="tcCardTitle">{t.label}</div>
-                <button className="tcCardBtnIelts" onClick={onClick}>
-                  {t.file ? "Start Test" : "Coming Soon"}
+                <button className="tcCardBtnIelts" onClick={t.file ? onClick : onLoginClick}>
+                  Start Test
                 </button>
               </div>
             )}
@@ -580,6 +580,9 @@ export default function IeltsPage({ onLoginClick, onNavClick }) {
                     </ul>
                   </div>
                 ))}
+              </div>
+              <div className="examPlanAction">
+                <button className="landingHeroPrimary" onClick={onLoginClick}>Go to the Plan →</button>
               </div>
             </div>
           )}
