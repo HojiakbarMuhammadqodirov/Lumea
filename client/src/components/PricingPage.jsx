@@ -1,94 +1,53 @@
 import { useState } from "react";
 import PublicHeader from "./PublicHeader";
 import PublicFooter from "./PublicFooter";
+import { useLanguage } from "../context/LanguageContext";
+import { translations } from "../i18n/translations";
 
-// ── Pricing data ───────────────────────────────────────────────────────────
+// ── Pricing meta (non-translated) ────────────────────────────────────────────
 
-const BILLING = [
-  { key: "monthly",   label: "Monthly",   months: 1 },
-  { key: "quarterly", label: "3-Month",   months: 3 },
-  { key: "yearly",    label: "Yearly",    months: 12 },
+const BILLING_KEYS = [
+  { key: "monthly",   months: 1 },
+  { key: "quarterly", months: 3 },
+  { key: "yearly",    months: 12 },
 ];
 
-const PLANS = [
-  {
-    id: "basic",
-    name: "Basic",
-    badge: null,
-    isFree: true,
-    highlight: false,
-    cta: "Get Started Free",
-    ctaStyle: "ghost",
-    features: [
-      { text: "1 SAT mock test" },
-      { text: "1 IELTS mock test" },
-      { text: "1 full lesson access" },
-      { text: "200 SAT Question Bank questions" },
-      { text: "10 IELTS practice tests" },
-      { text: "Community support" },
-    ],
-  },
-  {
-    id: "plus",
-    name: "Plus",
-    badge: "Most Popular",
-    isFree: false,
-    baseMonthly: 79990,
-    discounts: { monthly: 0, quarterly: 0.09, yearly: 0.17 },
-    highlight: true,
-    cta: "Start Plus",
-    ctaStyle: "primary",
-    features: [
-      { text: "Everything in Basic" },
-      { text: "All 24 SAT practice tests" },
-      { text: "All 50 IELTS practice tests" },
-      { text: "5 full mock tests (SAT + IELTS)" },
-      { text: "All 8 BlueBook official tests" },
-      { text: "AI Score Push & weekly study plan" },
-      { text: "Progress tracking dashboard" },
-    ],
-  },
-  {
-    id: "pro",
-    name: "Pro",
-    badge: "Full Access",
-    isFree: false,
-    baseMonthly: 119990,
-    discounts: { monthly: 0, quarterly: 0.09, yearly: 0.17 },
-    highlight: false,
-    cta: "Start Pro",
-    ctaStyle: "dark",
-    features: [
-      { text: "Everything in Plus" },
-      { text: "Unlimited question bank" },
-      { text: "AI Speaking feedback & scoring" },
-      { text: "Weekly live study sessions" },
-      { text: "Personalized 1-on-1 study plan" },
-      { text: "Advanced performance analytics" },
-      { text: "Priority support" },
-    ],
-  },
+const PLAN_META = [
+  { id: "basic",  isFree: true,  highlight: false, badge: null,         ctaStyle: "ghost",   baseMonthly: 0,      discounts: {} },
+  { id: "plus",   isFree: false, highlight: true,  badge: "mostPopular", ctaStyle: "primary", baseMonthly: 79990,  discounts: { monthly: 0, quarterly: 0.09, yearly: 0.17 } },
+  { id: "pro",    isFree: false, highlight: false, badge: "fullAccess",  ctaStyle: "dark",    baseMonthly: 119990, discounts: { monthly: 0, quarterly: 0.09, yearly: 0.17 } },
 ];
 
 function formatSum(n) {
   return n.toLocaleString("ru-RU") + " UZS";
 }
 
-function getPlanPrice(plan, billing) {
-  if (plan.isFree) return { perMonth: 0, total: 0, saved: 0 };
-  const disc = plan.discounts[billing.key] ?? 0;
-  const perMonth = Math.round(plan.baseMonthly * (1 - disc));
-  const total = perMonth * billing.months;
-  const saved = (plan.baseMonthly - perMonth) * billing.months;
+function getPlanPrice(meta, billingKey) {
+  if (meta.isFree) return { perMonth: 0, total: 0, saved: 0 };
+  const months = BILLING_KEYS.find((b) => b.key === billingKey)?.months ?? 1;
+  const disc = meta.discounts[billingKey] ?? 0;
+  const perMonth = Math.round(meta.baseMonthly * (1 - disc));
+  const total = perMonth * months;
+  const saved = (meta.baseMonthly - perMonth) * months;
   return { perMonth, total, saved };
 }
 
 // ── Main component ─────────────────────────────────────────────────────────
 
 export default function PricingPage({ onLoginClick, onNavClick, onSelectPlan }) {
-  const [billing, setBilling] = useState(BILLING[0]);
-  // onSelectPlan is passed when shown post-registration; otherwise use onLoginClick
+  const { lang } = useLanguage();
+  const t = translations[lang].pricing;
+
+  const [billingKey, setBillingKey] = useState("monthly");
   const handleCta = onSelectPlan ?? onLoginClick;
+
+  const billingLabels = [
+    { key: "monthly",   label: t.billing.monthly },
+    { key: "quarterly", label: t.billing.quarterly },
+    { key: "yearly",    label: t.billing.yearly },
+  ];
+
+  const months = BILLING_KEYS.find((b) => b.key === billingKey)?.months ?? 1;
 
   return (
     <section className="pricingPage">
@@ -96,17 +55,17 @@ export default function PricingPage({ onLoginClick, onNavClick, onSelectPlan }) 
 
       {/* ── Hero ── */}
       <div className="pricingHero" data-aos="fade-up">
-        <span className="pricingHeroBadge">Pricing</span>
-        <h1 className="pricingHeroTitle">Simple, honest pricing.</h1>
-        <p className="pricingHeroSub">Choose the plan that fits your preparation. Upgrade or cancel any time.</p>
+        <span className="pricingHeroBadge">{t.badge}</span>
+        <h1 className="pricingHeroTitle">{t.heading}</h1>
+        <p className="pricingHeroSub">{t.sub}</p>
 
         {/* Billing toggle */}
         <div className="pricingBillingToggle" role="group" aria-label="Billing period">
-          {BILLING.map((b) => (
+          {billingLabels.map((b) => (
             <button
               key={b.key}
-              className={`pricingBillingBtn${billing.key === b.key ? " pricingBillingBtnActive" : ""}`}
-              onClick={() => setBilling(b)}
+              className={`pricingBillingBtn${billingKey === b.key ? " pricingBillingBtnActive" : ""}`}
+              onClick={() => setBillingKey(b.key)}
             >
               {b.label}
               {b.key === "quarterly" && <span className="pricingBillingDiscount">−9%</span>}
@@ -118,54 +77,55 @@ export default function PricingPage({ onLoginClick, onNavClick, onSelectPlan }) 
 
       {/* ── Plan cards ── */}
       <div className="pricingCards" data-aos="fade-up" data-aos-delay="80">
-        {PLANS.map((plan) => {
-          const { perMonth, total, saved } = getPlanPrice(plan, billing);
+        {PLAN_META.map((meta, idx) => {
+          const plan = t.plans[idx];
+          const { perMonth, total, saved } = getPlanPrice(meta, billingKey);
           return (
-            <div key={plan.id} className={`pricingCard${plan.highlight ? " pricingCardHighlight" : ""}`}>
-              {plan.badge && (
-                <div className={`pricingCardBadge${plan.highlight ? " pricingCardBadgeHighlight" : ""}`}>
-                  {plan.badge}
+            <div key={meta.id} className={`pricingCard${meta.highlight ? " pricingCardHighlight" : ""}`}>
+              {meta.badge && (
+                <div className={`pricingCardBadge${meta.highlight ? " pricingCardBadgeHighlight" : ""}`}>
+                  {meta.badge === "mostPopular" ? t.mostPopular : t.fullAccess}
                 </div>
               )}
 
               <div className="pricingCardHead">
                 <span className="pricingCardName">{plan.name}</span>
-                {plan.isFree ? (
+                {meta.isFree ? (
                   <div className="pricingCardPrice">
-                    <span className="pricingCardAmount">Free</span>
-                    <span className="pricingCardPeriod">forever</span>
+                    <span className="pricingCardAmount">{t.free}</span>
+                    <span className="pricingCardPeriod">{t.forever}</span>
                   </div>
                 ) : (
                   <div className="pricingCardPrice">
                     <span className="pricingCardAmount">{formatSum(perMonth)}</span>
-                    <span className="pricingCardPeriod">/ month</span>
+                    <span className="pricingCardPeriod">{t.perMonth}</span>
                   </div>
                 )}
-                {!plan.isFree && billing.key !== "monthly" && saved > 0 && (
+                {!meta.isFree && billingKey !== "monthly" && saved > 0 && (
                   <div className="pricingCardTotal">
-                    Billed {billing.key === "quarterly" ? "every 3 months" : "yearly"} —{" "}
+                    {t.billed} {billingKey === "quarterly" ? t.billedEvery3 : t.billedYearly} —{" "}
                     <strong>{formatSum(total)}</strong>
-                    <span className="pricingCardSaved"> · Save {formatSum(saved)}</span>
+                    <span className="pricingCardSaved"> · {t.save} {formatSum(saved)}</span>
                   </div>
                 )}
-                {plan.isFree && (
-                  <div className="pricingCardTotal">No credit card required</div>
+                {meta.isFree && (
+                  <div className="pricingCardTotal">{t.noCard}</div>
                 )}
               </div>
 
               <ul className="pricingCardFeatures">
                 {plan.features.map((f) => (
-                  <li key={f.text} className="pricingCardFeature">
+                  <li key={f} className="pricingCardFeature">
                     <svg className="pricingCheckIcon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                       <path d="M4 10.5 8.5 15 16 7" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
-                    {f.text}
+                    {f}
                   </li>
                 ))}
               </ul>
 
               <button
-                className={`pricingCardCta pricingCardCta--${plan.ctaStyle}`}
+                className={`pricingCardCta pricingCardCta--${meta.ctaStyle}`}
                 onClick={handleCta}
               >
                 {plan.cta}

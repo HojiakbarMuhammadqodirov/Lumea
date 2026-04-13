@@ -1,15 +1,19 @@
 import { useEffect, useState } from "react";
-
-const navItems = [
-  { label: "SAT",     view: "sat" },
-  { label: "IELTS",   view: "ielts" },
-  { label: "Pricing", view: "pricing" },
-  { label: "FAQ",     view: "faq" },
-  { label: "AP",      soon: true },
-];
+import { useLanguage } from "../context/LanguageContext";
+import { translations } from "../i18n/translations";
 
 export default function PublicHeader({ onLoginClick, onNavClick, currentView }) {
-  const [language, setLanguage] = useState("ENG");
+  const { lang, toggle } = useLanguage();
+  const t = translations[lang].header;
+
+  const navItems = [
+    { label: t.nav.sat,    view: "sat" },
+    { label: t.nav.ielts,  view: "ielts" },
+    { label: t.nav.pricing, view: "pricing" },
+    { label: t.nav.faq,    view: "faq" },
+    { label: t.nav.ap,     soon: true },
+  ];
+
   const [isDarkIcon, setIsDarkIcon] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -35,7 +39,7 @@ export default function PublicHeader({ onLoginClick, onNavClick, currentView }) 
           item.soon ? (
             <span className="landingNavLink landingNavLinkSoon" key={item.label} aria-disabled="true">
               <span>{item.label}</span>
-              <span className="landingNavSoonText">Soon</span>
+              <span className="landingNavSoonText">{t.soon}</span>
             </span>
           ) : item.view ? (
             <button
@@ -57,10 +61,10 @@ export default function PublicHeader({ onLoginClick, onNavClick, currentView }) 
         <button
           className="landingUtilityButton"
           type="button"
-          onClick={() => setLanguage((current) => (current === "ENG" ? "UZB" : "ENG"))}
+          onClick={toggle}
           aria-label="Switch language"
         >
-          {language}
+          {t.langLabel}
         </button>
 
         <button
@@ -81,7 +85,7 @@ export default function PublicHeader({ onLoginClick, onNavClick, currentView }) 
         </button>
 
         <button className="landingLoginButton" type="button" onClick={onLoginClick}>
-          Log in
+          {t.login}
         </button>
       </div>
     </nav>

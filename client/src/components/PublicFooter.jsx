@@ -1,4 +1,10 @@
+import { useLanguage } from "../context/LanguageContext";
+import { translations } from "../i18n/translations";
+
 export default function PublicFooter({ onLoginClick, onNavClick }) {
+  const { lang } = useLanguage();
+  const t = translations[lang].footer;
+
   return (
     <footer className="landingFooter">
       <div className="landingFooterShell">
@@ -11,32 +17,32 @@ export default function PublicFooter({ onLoginClick, onNavClick }) {
           >
             Lumea
           </button>
-          <p>Structured prep, AI-powered guidance, real materials, and support from experienced teachers that keeps moving with you.</p>
+          <p>{t.brand}</p>
         </div>
 
         <div className="landingFooterLinks">
-          <button className="landingFooterNavBtn" onClick={() => onNavClick?.("landing")}>Home</button>
-          <button className="landingFooterNavBtn" onClick={() => onNavClick?.("sat")}>SAT</button>
-          <button className="landingFooterNavBtn" onClick={() => onNavClick?.("ielts")}>IELTS</button>
-          <button className="landingFooterNavBtn" onClick={() => onNavClick?.("pricing")}>Pricing</button>
-          <button className="landingFooterNavBtn" onClick={() => onNavClick?.("faq")}>FAQ</button>
+          <button className="landingFooterNavBtn" onClick={() => onNavClick?.("landing")}>{t.home}</button>
+          <button className="landingFooterNavBtn" onClick={() => onNavClick?.("sat")}>{t.sat}</button>
+          <button className="landingFooterNavBtn" onClick={() => onNavClick?.("ielts")}>{t.ielts}</button>
+          <button className="landingFooterNavBtn" onClick={() => onNavClick?.("pricing")}>{t.pricing}</button>
+          <button className="landingFooterNavBtn" onClick={() => onNavClick?.("faq")}>{t.faq}</button>
         </div>
 
         <div className="landingFooterActions">
           <a href="mailto:info@lumea.uz">info@lumea.uz</a>
           <button className="landingLoginButton landingFooterButton" type="button" onClick={onLoginClick}>
-            Log in
+            {t.login}
           </button>
         </div>
       </div>
 
       <div className="landingFooterBottom">
         <div className="landingFooterBottomInner">
-          <span>© 2026 Lumea. All rights reserved.</span>
+          <span>{t.copyright}</span>
           <div className="landingFooterBottomLinks">
-            <a href="#top">Privacy</a>
-            <a href="#top">Terms</a>
-            <a href="#top">Support</a>
+            <a href="#top">{t.privacy}</a>
+            <a href="#top">{t.terms}</a>
+            <a href="#top">{t.support}</a>
           </div>
         </div>
       </div>

@@ -1,12 +1,6 @@
 import { useMemo, useState } from "react";
-
-const steps = [
-  { id: "personal", label: "Personal" },
-  { id: "account", label: "Account" },
-  { id: "address", label: "Address" },
-  { id: "english", label: "English" },
-  { id: "photo", label: "Photo" }
-];
+import { useLanguage } from "../context/LanguageContext";
+import { translations } from "../i18n/translations";
 
 const initial = {
   firstName: "",
@@ -27,12 +21,16 @@ const initial = {
 };
 
 export default function AuthPanel({ onLogin, onRegister, onAlert, defaultRegister = false }) {
+  const { lang } = useLanguage();
+  const t = translations[lang].auth;
+
   const [isRegister, setIsRegister] = useState(defaultRegister);
   const [step, setStep] = useState(0);
   const [loginForm, setLoginForm] = useState({ email: "", password: "" });
   const [registerForm, setRegisterForm] = useState(initial);
 
-  const progress = useMemo(() => `${((step + 1) / steps.length) * 100}%`, [step]);
+  const steps = t.steps;
+  const progress = useMemo(() => `${((step + 1) / steps.length) * 100}%`, [step, steps.length]);
 
   const updateRegister = (key, value) => setRegisterForm((prev) => ({ ...prev, [key]: value }));
 
@@ -44,34 +42,31 @@ export default function AuthPanel({ onLogin, onRegister, onAlert, defaultRegiste
   };
 
   const validateStep = () => {
+    const v = t.validation;
     if (step === 0) {
       if (!registerForm.firstName || !registerForm.lastName || !registerForm.dateOfBirth) {
-        return "Please complete your full name and date of birth.";
+        return v.personalRequired;
       }
     }
-
     if (step === 1) {
       if (!registerForm.email || !registerForm.password || !registerForm.confirmPassword) {
-        return "Please complete email and both password fields.";
+        return v.accountRequired;
       }
       if (registerForm.password !== registerForm.confirmPassword) {
-        return "Passwords do not match.";
+        return v.passwordMismatch;
       }
       if (registerForm.password.length < 6) {
-        return "Password should be at least 6 characters.";
+        return v.passwordShort;
       }
     }
-
     if (step === 2) {
       if (!registerForm.addressLine1 || !registerForm.city || !registerForm.country) {
-        return "Please complete the required address fields.";
+        return v.addressRequired;
       }
     }
-
     if (step === 3 && !registerForm.englishLevel) {
-      return "Please choose your current English level.";
+      return v.englishRequired;
     }
-
     return "";
   };
 
@@ -91,7 +86,6 @@ export default function AuthPanel({ onLogin, onRegister, onAlert, defaultRegiste
       onAlert?.(validationError);
       return;
     }
-
     await onRegister({
       name: `${registerForm.firstName} ${registerForm.lastName}`.trim(),
       email: registerForm.email,
@@ -113,6 +107,9 @@ export default function AuthPanel({ onLogin, onRegister, onAlert, defaultRegiste
     });
   };
 
+  const rc = t.registerCard;
+  const f = rc.fields;
+
   return (
     <section className={isRegister ? "authShell authShellRegister" : "authShell"}>
       <div className="authBackdropGlow authGlowOne" />
@@ -125,22 +122,22 @@ export default function AuthPanel({ onLogin, onRegister, onAlert, defaultRegiste
             type="button"
             onClick={() => setIsRegister(false)}
           >
-            Login
+            {t.login}
           </button>
           <button
             className={isRegister ? "authModeTab active" : "authModeTab"}
             type="button"
             onClick={() => setIsRegister(true)}
           >
-            Register
+            {t.register}
           </button>
         </div>
 
         {!isRegister && (
           <div className="authStandaloneCard">
-            <p className="eyebrow">Welcome Back</p>
-            <h2>Log in to continue.</h2>
-            <p className="hint">Pick up your plan, scores, and progress where you left them.</p>
+            <p className="eyebrow">{t.loginCard.eyebrow}</p>
+            <h2>{t.loginCard.heading}</h2>
+            <p className="hint">{t.loginCard.hint}</p>
             <form
               className="formGrid authStandaloneForm"
               onSubmit={(e) => {
@@ -149,26 +146,26 @@ export default function AuthPanel({ onLogin, onRegister, onAlert, defaultRegiste
               }}
             >
               <label className="authFieldLabel">
-                <span>Email</span>
+                <span>{t.loginCard.email}</span>
                 <input
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder={t.loginCard.emailPlaceholder}
                   value={loginForm.email}
                   onChange={(e) => setLoginForm((prev) => ({ ...prev, email: e.target.value }))}
                   required
                 />
               </label>
               <label className="authFieldLabel">
-                <span>Password</span>
+                <span>{t.loginCard.password}</span>
                 <input
                   type="password"
-                  placeholder="Enter your password"
+                  placeholder={t.loginCard.passwordPlaceholder}
                   value={loginForm.password}
                   onChange={(e) => setLoginForm((prev) => ({ ...prev, password: e.target.value }))}
                   required
                 />
               </label>
-              <button type="submit">Login</button>
+              <button type="submit">{t.loginCard.submit}</button>
             </form>
           </div>
         )}
@@ -177,14 +174,12 @@ export default function AuthPanel({ onLogin, onRegister, onAlert, defaultRegiste
           <div className="authStandaloneCard authStandaloneRegisterCard">
             <div className="authStandaloneHead">
               <div>
-                <p className="eyebrow">New Student</p>
-                <h2>Create Your Learnova Profile</h2>
-                <p className="hint">A guided setup, one step at a time.</p>
+                <p className="eyebrow">{rc.eyebrow}</p>
+                <h2>{rc.heading}</h2>
+                <p className="hint">{rc.hint}</p>
               </div>
               <div className="authProgressCompact">
-                <strong>
-                  {step + 1}/{steps.length}
-                </strong>
+                <strong>{step + 1}/{steps.length}</strong>
                 <span>{steps[step].label}</span>
               </div>
             </div>
@@ -199,45 +194,29 @@ export default function AuthPanel({ onLogin, onRegister, onAlert, defaultRegiste
               {step === 0 && (
                 <div className="formGrid authStepGrid authStandaloneGrid">
                   <label className="authFieldLabel">
-                    <span>First name</span>
-                    <input
-                      placeholder="First name"
-                      value={registerForm.firstName}
-                      onChange={(e) => updateRegister("firstName", e.target.value)}
-                    />
+                    <span>{f.firstName}</span>
+                    <input placeholder={f.firstName} value={registerForm.firstName} onChange={(e) => updateRegister("firstName", e.target.value)} />
                   </label>
                   <label className="authFieldLabel">
-                    <span>Surname</span>
-                    <input
-                      placeholder="Surname"
-                      value={registerForm.lastName}
-                      onChange={(e) => updateRegister("lastName", e.target.value)}
-                    />
+                    <span>{f.lastName}</span>
+                    <input placeholder={f.lastName} value={registerForm.lastName} onChange={(e) => updateRegister("lastName", e.target.value)} />
                   </label>
                   <label className="authFieldLabel">
-                    <span>Date of birth</span>
-                    <input
-                      type="date"
-                      value={registerForm.dateOfBirth}
-                      onChange={(e) => updateRegister("dateOfBirth", e.target.value)}
-                    />
+                    <span>{f.dob}</span>
+                    <input type="date" value={registerForm.dateOfBirth} onChange={(e) => updateRegister("dateOfBirth", e.target.value)} />
                   </label>
                   <label className="authFieldLabel">
-                    <span>Gender</span>
+                    <span>{f.gender}</span>
                     <select value={registerForm.gender} onChange={(e) => updateRegister("gender", e.target.value)}>
-                      <option value="">Gender</option>
-                      <option value="male">Male</option>
-                      <option value="female">Female</option>
-                      <option value="other">Other</option>
+                      <option value="">{f.genderOptions.placeholder}</option>
+                      <option value="male">{f.genderOptions.male}</option>
+                      <option value="female">{f.genderOptions.female}</option>
+                      <option value="other">{f.genderOptions.other}</option>
                     </select>
                   </label>
                   <label className="authFieldLabel authFieldWide">
-                    <span>Phone number</span>
-                    <input
-                      placeholder="Phone number"
-                      value={registerForm.phoneNumber}
-                      onChange={(e) => updateRegister("phoneNumber", e.target.value)}
-                    />
+                    <span>{f.phone}</span>
+                    <input placeholder={f.phone} value={registerForm.phoneNumber} onChange={(e) => updateRegister("phoneNumber", e.target.value)} />
                   </label>
                 </div>
               )}
@@ -245,31 +224,16 @@ export default function AuthPanel({ onLogin, onRegister, onAlert, defaultRegiste
               {step === 1 && (
                 <div className="formGrid authStepGrid authStandaloneGrid">
                   <label className="authFieldLabel authFieldWide">
-                    <span>Email</span>
-                    <input
-                      type="email"
-                      placeholder="Email"
-                      value={registerForm.email}
-                      onChange={(e) => updateRegister("email", e.target.value)}
-                    />
+                    <span>{f.email}</span>
+                    <input type="email" placeholder={f.email} value={registerForm.email} onChange={(e) => updateRegister("email", e.target.value)} />
                   </label>
                   <label className="authFieldLabel">
-                    <span>Password</span>
-                    <input
-                      type="password"
-                      placeholder="Password"
-                      value={registerForm.password}
-                      onChange={(e) => updateRegister("password", e.target.value)}
-                    />
+                    <span>{f.password}</span>
+                    <input type="password" placeholder={f.password} value={registerForm.password} onChange={(e) => updateRegister("password", e.target.value)} />
                   </label>
                   <label className="authFieldLabel">
-                    <span>Repeat password</span>
-                    <input
-                      type="password"
-                      placeholder="Repeat password"
-                      value={registerForm.confirmPassword}
-                      onChange={(e) => updateRegister("confirmPassword", e.target.value)}
-                    />
+                    <span>{f.confirmPassword}</span>
+                    <input type="password" placeholder={f.confirmPassword} value={registerForm.confirmPassword} onChange={(e) => updateRegister("confirmPassword", e.target.value)} />
                   </label>
                 </div>
               )}
@@ -277,70 +241,37 @@ export default function AuthPanel({ onLogin, onRegister, onAlert, defaultRegiste
               {step === 2 && (
                 <div className="formGrid authStepGrid authStandaloneGrid">
                   <label className="authFieldLabel authFieldWide">
-                    <span>Address line 1</span>
-                    <input
-                      placeholder="Address line 1"
-                      value={registerForm.addressLine1}
-                      onChange={(e) => updateRegister("addressLine1", e.target.value)}
-                    />
+                    <span>{f.address1}</span>
+                    <input placeholder={f.address1} value={registerForm.addressLine1} onChange={(e) => updateRegister("addressLine1", e.target.value)} />
                   </label>
                   <label className="authFieldLabel authFieldWide">
-                    <span>Address line 2</span>
-                    <input
-                      placeholder="Address line 2"
-                      value={registerForm.addressLine2}
-                      onChange={(e) => updateRegister("addressLine2", e.target.value)}
-                    />
+                    <span>{f.address2}</span>
+                    <input placeholder={f.address2} value={registerForm.addressLine2} onChange={(e) => updateRegister("addressLine2", e.target.value)} />
                   </label>
                   <label className="authFieldLabel">
-                    <span>City</span>
-                    <input
-                      placeholder="City"
-                      value={registerForm.city}
-                      onChange={(e) => updateRegister("city", e.target.value)}
-                    />
+                    <span>{f.city}</span>
+                    <input placeholder={f.city} value={registerForm.city} onChange={(e) => updateRegister("city", e.target.value)} />
                   </label>
                   <label className="authFieldLabel">
-                    <span>Country</span>
-                    <input
-                      placeholder="Country"
-                      value={registerForm.country}
-                      onChange={(e) => updateRegister("country", e.target.value)}
-                    />
+                    <span>{f.country}</span>
+                    <input placeholder={f.country} value={registerForm.country} onChange={(e) => updateRegister("country", e.target.value)} />
                   </label>
                   <label className="authFieldLabel authFieldWide">
-                    <span>Postal code</span>
-                    <input
-                      placeholder="Postal code"
-                      value={registerForm.postalCode}
-                      onChange={(e) => updateRegister("postalCode", e.target.value)}
-                    />
+                    <span>{f.postalCode}</span>
+                    <input placeholder={f.postalCode} value={registerForm.postalCode} onChange={(e) => updateRegister("postalCode", e.target.value)} />
                   </label>
                 </div>
               )}
 
               {step === 3 && (
                 <div className="formGrid authStepGrid">
-                  <p className="hint authStepNote">
-                    Choose the option that feels closest right now. We can still adjust your course level later.
-                  </p>
+                  <p className="hint authStepNote">{rc.englishHint}</p>
                   <div className="authChoiceGrid">
-                    {[
-                      "beginner",
-                      "elementary",
-                      "pre-intermediate",
-                      "intermediate",
-                      "upper-intermediate",
-                      "advanced"
-                    ].map((level) => (
+                    {["beginner","elementary","pre-intermediate","intermediate","upper-intermediate","advanced"].map((level) => (
                       <button
                         key={level}
                         type="button"
-                        className={
-                          registerForm.englishLevel === level
-                            ? "authChoiceCard authChoiceCardActive"
-                            : "authChoiceCard"
-                        }
+                        className={registerForm.englishLevel === level ? "authChoiceCard authChoiceCardActive" : "authChoiceCard"}
                         onClick={() => updateRegister("englishLevel", level)}
                       >
                         {level}
@@ -352,17 +283,17 @@ export default function AuthPanel({ onLogin, onRegister, onAlert, defaultRegiste
 
               {step === 4 && (
                 <div className="formGrid authStepGrid">
-                  <p className="hint authStepNote">Optional step. Add a profile photo now or skip and change it later.</p>
+                  <p className="hint authStepNote">{rc.photoHint}</p>
                   <div className="authPhotoUpload">
                     {registerForm.profilePicture ? (
                       <img className="authPhotoPreview" src={registerForm.profilePicture} alt="Profile preview" />
                     ) : (
-                      <div className="authPhotoPreview authPhotoPlaceholder">Photo</div>
+                      <div className="authPhotoPreview authPhotoPlaceholder">{rc.photoPlaceholder}</div>
                     )}
                     <div className="formGrid grow">
                       <input type="file" accept="image/*" onChange={(e) => updatePicture(e.target.files?.[0])} />
                       <button type="button" className="ghost" onClick={() => updateRegister("profilePicture", "")}>
-                        Skip For Now
+                        {rc.skipPhoto}
                       </button>
                     </div>
                   </div>
@@ -370,22 +301,13 @@ export default function AuthPanel({ onLogin, onRegister, onAlert, defaultRegiste
               )}
 
               <div className="inline authWizardActions">
-                <button
-                  type="button"
-                  className="ghost"
-                  onClick={() => {
-                    setStep((current) => Math.max(current - 1, 0));
-                  }}
-                  disabled={step === 0}
-                >
-                  Back
+                <button type="button" className="ghost" onClick={() => setStep((c) => Math.max(c - 1, 0))} disabled={step === 0}>
+                  {rc.back}
                 </button>
                 {step < steps.length - 1 ? (
-                  <button type="button" onClick={nextStep}>
-                    Next
-                  </button>
+                  <button type="button" onClick={nextStep}>{rc.next}</button>
                 ) : (
-                  <button type="submit">Finish Registration</button>
+                  <button type="submit">{rc.finish}</button>
                 )}
               </div>
             </form>

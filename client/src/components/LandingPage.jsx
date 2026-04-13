@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import FloatingBackgroundPhotos from "./FloatingBackgroundPhotos";
 import PublicHeader from "./PublicHeader";
 import PublicFooter from "./PublicFooter";
+import { useLanguage } from "../context/LanguageContext";
+import { translations } from "../i18n/translations";
 
 const books = [
   { src: "/images/books/ebrwpanda.png", alt: "Erica Meltzer EBRW practice book" },
@@ -135,6 +137,9 @@ function AnimatedCounter({ start, end, duration = 1800, suffix = "", className =
 }
 
 export default function LandingPage({ onLoginClick, onNavClick }) {
+  const { lang } = useLanguage();
+  const t = translations[lang].landing;
+
   const [chatFrontIndex, setChatFrontIndex] = useState(0);
   const [activeBookIndex, setActiveBookIndex] = useState(0);
 
@@ -160,9 +165,9 @@ export default function LandingPage({ onLoginClick, onNavClick }) {
       <section className="landingHero" id="top">
         <div className="landingHeroCopy" data-aos="fade-up">
           <h1>
-            Everything you need to secure
+            {t.hero.before}{" "}
             <span className="landingHeroHighlight">
-              next chapter
+              {t.hero.highlight}
               <svg className="landingGraduateCap" viewBox="0 0 64 42" aria-hidden="true">
                 <path d="M32 2 4 15.5 32 29 60 15.5 32 2Z" />
                 <path d="M18 22.5v8.2c3.7 4.4 8.4 6.6 14 6.6s10.3-2.2 14-6.6v-8.2L32 29 18 22.5Z" />
@@ -170,21 +175,18 @@ export default function LandingPage({ onLoginClick, onNavClick }) {
                 <circle cx="52" cy="33" r="3" />
               </svg>
             </span>{" "}
-            of your life.
+            {t.hero.after}
           </h1>
-          <p className="landingHeroSubtitle">
-            Prepare for IELTS, SAT, and AP with structured courses, AI-powered insights, and expert guidance designed
-            to maximize your scores and admission success.
-          </p>
+          <p className="landingHeroSubtitle">{t.hero.subtitle}</p>
         </div>
       </section>
 
       <section className="landingStatsSection">
         <div className="landingStatsShell">
           <div className="landingStatsCopy" data-aos="fade-up">
-            <p className="landingSectionLabel">Target Performance</p>
+            <p className="landingSectionLabel">{t.stats.label}</p>
             <LumeaAccentMark className="landingSectionAccent landingSectionAccentStats" variant="growth" />
-            <h2>For minds that aim beyond the crowd.</h2>
+            <h2>{t.stats.heading}</h2>
           </div>
 
           <div className="landingStatsPanel" data-aos="fade-left">
@@ -195,7 +197,7 @@ export default function LandingPage({ onLoginClick, onNavClick }) {
               </div>
               <div className="landingSatPercentile">
                 <AnimatedCounter className="landingSatPercentileValue" start={0} end={99} />
-                <span className="landingSatPercentileLabel">th Percentile</span>
+                <span className="landingSatPercentileLabel">{t.stats.percentile}</span>
               </div>
             </div>
 
@@ -225,10 +227,10 @@ export default function LandingPage({ onLoginClick, onNavClick }) {
           </div>
 
           <div className="landingChatProofText" data-aos="fade-left" data-aos-duration="900">
-            <p className="landingSectionLabel">Always Around</p>
+            <p className="landingSectionLabel">{t.teachers.label}</p>
             <LumeaAccentMark className="landingSectionAccent landingSectionAccentTeachers" variant="chat" />
-            <h2>Experienced SAT 1510+, IELTS 7.5</h2>
-            <p>24/7 reading to answer you on chat.</p>
+            <h2>{t.teachers.heading}</h2>
+            <p>{t.teachers.desc}</p>
           </div>
         </div>
       </section>
@@ -236,10 +238,10 @@ export default function LandingPage({ onLoginClick, onNavClick }) {
       <section className="landingBooksSection">
         <div className="landingBooksShell">
           <div className="landingBooksCopy" data-aos="fade-up" data-aos-duration="900">
-            <p className="landingSectionLabel">Official Sources</p>
+            <p className="landingSectionLabel">{t.books.label}</p>
             <LumeaAccentMark className="landingSectionAccent landingSectionAccentBooks" variant="tick" />
-            <h2>Real materials from official books and past papers.</h2>
-            <p>Study with the same sources serious test takers use when they want reliable practice and cleaner score jumps.</p>
+            <h2>{t.books.heading}</h2>
+            <p>{t.books.desc}</p>
           </div>
 
           <div className="landingBooksStage" data-aos="zoom-in-left" data-aos-duration="1000" aria-hidden="true">
@@ -273,7 +275,7 @@ export default function LandingPage({ onLoginClick, onNavClick }) {
               <AnimatedCounter className="landingResultValue" start={0} end={1000} duration={1700} />
               <span className="landingResultPlus">+</span>
             </div>
-            <span className="landingResultLabel">SAT-Math Questions</span>
+            <span className="landingResultLabel">{t.milestones.satMath}</span>
           </div>
 
           <div className="landingMilestoneCard">
@@ -281,7 +283,7 @@ export default function LandingPage({ onLoginClick, onNavClick }) {
               <AnimatedCounter className="landingResultValue" start={0} end={1000} duration={1700} />
               <span className="landingResultPlus">+</span>
             </div>
-            <span className="landingResultLabel">SAT-EBRW Questions</span>
+            <span className="landingResultLabel">{t.milestones.satEbrw}</span>
           </div>
 
           <div className="landingMilestoneCard">
@@ -289,7 +291,7 @@ export default function LandingPage({ onLoginClick, onNavClick }) {
               <AnimatedCounter className="landingResultValue" start={0} end={200} duration={1600} />
               <span className="landingResultPlus">+</span>
             </div>
-            <span className="landingResultLabel">IELTS Questions</span>
+            <span className="landingResultLabel">{t.milestones.ielts}</span>
           </div>
         </div>
       </section>
@@ -297,12 +299,12 @@ export default function LandingPage({ onLoginClick, onNavClick }) {
       <section className="landingResultsSection" data-aos="fade-up" data-aos-duration="900">
         <div className="landingResultsShell">
           <div className="landingResultsIntro">
-            <p className="landingSectionLabel">Score Pushshing</p>
+            <p className="landingSectionLabel">{t.results.label}</p>
             <LumeaAccentMark className="landingSectionAccent landingSectionAccentResults" variant="growth" />
             <h2>
-              Improve your next score unimaginavely with <span className="landingResultsHighlight">Score Rush</span>.
+              {t.results.heading} <span className="landingResultsHighlight">{t.results.highlight}</span>.
             </h2>
-            <p>Put your score report to work.</p>
+            <p>{t.results.desc}</p>
           </div>
 
           <div className="landingResultsCards">
@@ -313,13 +315,13 @@ export default function LandingPage({ onLoginClick, onNavClick }) {
                   <div className="landingResultNumberLine">
                     <AnimatedCounter className="landingResultValue landingResultValuePrevious" start={0} end={1100} duration={1700} step={10} />
                   </div>
-                  <span className="landingScoreMeta">Previous score</span>
+                  <span className="landingScoreMeta">{t.results.previous}</span>
                 </div>
                 <div className="landingResultScoreBlock">
                   <div className="landingResultNumberLine">
                     <AnimatedCounter className="landingResultValue" start={0} end={1500} duration={1700} step={10} />
                   </div>
-                  <span className="landingScoreMeta landingScoreMetaNext">Next score</span>
+                  <span className="landingScoreMeta landingScoreMetaNext">{t.results.next}</span>
                 </div>
               </div>
             </div>
@@ -331,13 +333,13 @@ export default function LandingPage({ onLoginClick, onNavClick }) {
                   <div className="landingResultNumberLine">
                     <AnimatedCounter className="landingResultValue landingResultValuePrevious" start={0} end={5.5} duration={1600} decimals={1} step={0.5} />
                   </div>
-                  <span className="landingScoreMeta">Previous score</span>
+                  <span className="landingScoreMeta">{t.results.previous}</span>
                 </div>
                 <div className="landingResultScoreBlock">
                   <div className="landingResultNumberLine">
                     <AnimatedCounter className="landingResultValue" start={0} end={8.0} duration={1600} decimals={1} step={0.5} />
                   </div>
-                  <span className="landingScoreMeta landingScoreMetaNext">Next score</span>
+                  <span className="landingScoreMeta landingScoreMetaNext">{t.results.next}</span>
                 </div>
               </div>
             </div>
