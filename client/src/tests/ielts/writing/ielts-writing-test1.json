@@ -1,0 +1,75 @@
+{
+  "id": "ielts-writing-test1",
+  "label": "IELTS Writing Test 1",
+  "section": "writing",
+  "time_minutes": 60,
+  "scoring": {
+    "_note": "Writing is scored by a human examiner, not automatically. Each task is scored 0–9 on four criteria. Task 1 is worth 1/3 of the writing band; Task 2 is worth 2/3.",
+    "tasks": {
+      "task_1": { "weight": "1/3", "min_words": 150 },
+      "task_2": { "weight": "2/3", "min_words": 250 }
+    },
+    "band_descriptors": {
+      "task_1": ["Task Achievement",         "Coherence and Cohesion", "Lexical Resource", "Grammatical Range and Accuracy"],
+      "task_2": ["Task Response",             "Coherence and Cohesion", "Lexical Resource", "Grammatical Range and Accuracy"]
+    }
+  },
+  "tasks": [
+    {
+      "task": 1,
+      "type": "academic",
+      "time_suggested": "20 minutes",
+      "min_words": 150,
+      "prompt": "The graph below shows the percentage of households in a European country that owned various technologies between 1990 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "figure": "/figures/ielts-writing-test1-task1.png",
+      "figure_description": "A line graph showing ownership of televisions, computers, and mobile phones from 1990–2020. TV ownership was consistently highest; mobile phone ownership grew the fastest, overtaking computers by 2005.",
+      "model_answer": "The line graph illustrates the proportion of European households owning three different technologies — televisions, computers, and mobile phones — over a 30-year period from 1990 to 2020.\n\nOverall, television ownership remained the most prevalent throughout the period, while mobile phone ownership experienced the most dramatic growth, eventually surpassing computer ownership.\n\nIn 1990, televisions were already found in approximately 80% of households, a figure that rose modestly to around 95% by 2020. Computer ownership, by contrast, began at just 10% in 1990 but climbed steadily to reach 70% by the end of the period.\n\nMobile phone ownership showed the most striking increase. Starting from a negligible 2% in 1990, it grew rapidly during the late 1990s and 2000s, overtaking computer ownership around 2005 and ultimately reaching 85% by 2020 — higher than computer ownership and nearly matching television ownership.\n\nIn conclusion, while television remained the most widely-owned technology, the rapid rise of mobile phones was the most notable trend, reflecting the growing importance of digital communication in everyday life.",
+      "band_9_criteria": {
+        "task_achievement":      "Covers all key features accurately; makes meaningful comparisons; data is well-selected",
+        "coherence_cohesion":    "Logically sequenced; overview present; cohesive devices used fluently",
+        "lexical_resource":      "Wide range of vocabulary; precise and natural word choices; no errors",
+        "grammatical_range":     "Wide range of structures; error-free; complex sentences used naturally"
+      },
+      "common_errors": [
+        "Describing every data point instead of selecting and summarising the main features",
+        "Omitting an overview sentence",
+        "Using present tense incorrectly for historical data (should use past tense)",
+        "Writing fewer than 150 words"
+      ]
+    },
+    {
+      "task": 2,
+      "type": "essay",
+      "time_suggested": "40 minutes",
+      "min_words": 250,
+      "essay_type": "opinion",
+      "_essay_types": ["opinion", "discussion", "problem_solution", "two_part_question", "direct_question"],
+      "prompt": "Some people believe that universities should focus mainly on providing academic knowledge, while others think they should also prepare students for employment. Discuss both views and give your own opinion.",
+      "model_answer": "There is ongoing debate about the primary role of universities: should they be centres of pure academic enquiry, or should they serve a more vocational purpose by equipping students for the world of work? In my view, universities should strive to achieve both goals, though practical preparation should not come at the expense of intellectual rigour.\n\nThose who advocate a purely academic focus argue that universities have traditionally been places of knowledge production and critical thinking. A student who studies philosophy or history gains the ability to analyse complex ideas, construct logical arguments, and think independently — skills that are transferable to many careers even if they are not explicitly vocational. Furthermore, vocational training can become quickly outdated as industries evolve, whereas fundamental academic skills remain relevant indefinitely.\n\nOn the other hand, proponents of employment-focused education point out that graduates face fierce competition in the job market. Many students take on significant debt to attend university and reasonably expect that their degree will lead to meaningful employment. If universities fail to develop practical skills such as communication, teamwork, and industry-specific knowledge, they risk producing graduates who struggle to secure positions relevant to their studies.\n\nIn my opinion, the most effective universities integrate both approaches. Core academic training in critical thinking and research should form the foundation of any degree, but institutions should also offer internships, industry partnerships, and career development programmes. This dual approach ensures that graduates are both intellectually capable and professionally competitive.\n\nIn conclusion, while academic knowledge remains central to university education, institutions have a responsibility to bridge the gap between theory and practice, producing graduates who are well-rounded and employment-ready.",
+      "band_9_criteria": {
+        "task_response":         "Fully addresses all parts of the task; clear, well-developed position; ideas are fully extended",
+        "coherence_cohesion":    "Logically organised; clear progression throughout; paragraphing used skilfully",
+        "lexical_resource":      "Wide, sophisticated vocabulary used with precision; no spelling errors",
+        "grammatical_range":     "Wide range of structures used flexibly and accurately; rare minor errors only"
+      },
+      "common_errors": [
+        "Not giving a clear personal opinion when the prompt asks for one",
+        "Not addressing both sides in a 'discuss both views' question",
+        "Weak topic sentences that don't support the thesis",
+        "Memorised phrases that sound unnatural or off-topic",
+        "Writing fewer than 250 words"
+      ]
+    }
+  ],
+  "_schema": {
+    "essay_types": {
+      "opinion":            "Do you agree or disagree? / To what extent do you agree?",
+      "discussion":         "Discuss both views and give your own opinion.",
+      "problem_solution":   "What are the causes of X? What solutions can you suggest?",
+      "two_part_question":  "Why is X happening? Is this a positive or negative development?",
+      "direct_question":    "What are the advantages and disadvantages of X?"
+    },
+    "figure":       "Path to the graph/chart/diagram image for Task 1, relative to /public/",
+    "model_answer": "A band 9 sample answer for reference. Students are scored against the band descriptors, not this answer."
+  }
+}

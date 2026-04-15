@@ -1,0 +1,1588 @@
+{
+  "id": "mock-2",
+  "label": "Full SAT Mock 2 вЂ” Reading & Writing",
+  "year": 2024,
+  "section": "ebrw",
+  "source": "SAToplam by @satashkent — Real DSAT Questions March 2023–December 2024",
+  "time_minutes": 64,
+  "scoring": {
+    "_note": "Raw score = correct answers out of 54. Scaled to 200-800.",
+    "max_raw": 54,
+    "scaled_max": 800
+  },
+  "modules": [
+    {
+      "module": 1,
+      "questions": [
+        {
+          "id": "mock2-m1-q1",
+          "number": 1,
+          "domain": "Craft and Structure",
+          "skill": "Words in Context",
+          "difficulty": "easy",
+          "type": "multiple_choice",
+          "passage": "Alfred Nobel intended for the Nobel Prize to be an award honoring those who have contributed 'the greatest benefit to mankind.' Indeed, the work of Richard Laurence Millington Synge represented a significant _____ the field of chemistry, and in 1952 he was among those awarded the Nobel Prize in Chemistry for 'their invention of partition chromatography.'",
+          "question": "Which choice completes the text with the most logical and precise word or phrase?",
+          "options": {
+            "A": "exposure to",
+            "B": "advancement in",
+            "C": "dependence on",
+            "D": "controversy in"
+          },
+          "answer": "B",
+          "explanation": "'Advancement in' means progress in a field — Synge's work represented significant progress in chemistry.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q2",
+          "number": 2,
+          "domain": "Craft and Structure",
+          "skill": "Words in Context",
+          "difficulty": "easy",
+          "type": "multiple_choice",
+          "passage": "Few religious buildings can be said to _____ the astonishing size of Al Saleh Mosque in Yemen, which, with the capacity to accommodate approximately 44,000 people at once, is one of the largest mosques in the world.",
+          "question": "Which choice completes the text with the most logical and precise word or phrase?",
+          "options": {
+            "A": "symbolize",
+            "B": "conceal",
+            "C": "minimize",
+            "D": "match"
+          },
+          "answer": "D",
+          "explanation": "'Match' means to equal or rival — few buildings can rival this mosque's size.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q3",
+          "number": 3,
+          "domain": "Craft and Structure",
+          "skill": "Words in Context",
+          "difficulty": "easy",
+          "type": "multiple_choice",
+          "passage": "The equipment from the Apollo Moon landings (1969-1972), such as solar wind sensors and seismic sensors, remains there to this day, but the data from these missions were mostly inaccessible until a recent data-transfer project made them _____. This project has allowed researcher Renee Weber to make use of the information in investigating tectonic activity on the Moon.",
+          "question": "Which choice completes the text with the most logical and precise word or phrase?",
+          "options": {
+            "A": "complicated",
+            "B": "representative",
+            "C": "available",
+            "D": "predictable"
+          },
+          "answer": "C",
+          "explanation": "The data was 'mostly inaccessible' until the project made them 'available' — directly contrasting with inaccessible.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q4",
+          "number": 4,
+          "domain": "Craft and Structure",
+          "skill": "Words in Context",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "Belaane Mocsaary, who traveled solo to four continents in the early 1900s, undoubtedly accomplished much, but her place in our historical memory is perhaps more _____ than that of a noteworthy 'first' such as Adeline and Augusta Van Buren, who were the first women to ride solo motorcycles across the continental United States, a deed for which they will always be remembered.",
+          "question": "Which choice completes the text with the most logical and precise word or phrase?",
+          "options": {
+            "A": "enduring",
+            "B": "conspicuous",
+            "C": "deserving",
+            "D": "uncertain"
+          },
+          "answer": "D",
+          "explanation": "Contrasted with the Van Burens who 'will always be remembered,' Mocsaary's place in historical memory is 'uncertain' — less secure.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q5",
+          "number": 5,
+          "domain": "Craft and Structure",
+          "skill": "Words in Context",
+          "difficulty": "easy",
+          "type": "multiple_choice",
+          "passage": "One way to _____ the importance of a scholar's research is to track how often other scholars refer to that research. For example, University of California-Berkeley economist Ulrike Malmendier is among the world's most frequently cited researchers in her field, indicating that her work has been quite significant.",
+          "question": "Which choice completes the text with the most logical and precise word or phrase?",
+          "options": {
+            "A": "assess",
+            "B": "utilize",
+            "C": "influence",
+            "D": "undermine"
+          },
+          "answer": "A",
+          "explanation": "'Assess' means to evaluate or measure — the text describes a method for measuring a scholar's importance.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q6",
+          "number": 6,
+          "domain": "Craft and Structure",
+          "skill": "Words in Context",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "Writer Lydia Davis observed that while traditional literary forms, such as the novel, are recognizable as such even as they evolve, there are rarer 'intergeneric' forms that might, for example, use elements of both fiction and essays to create something _____. The late-period pieces of James Tate arguably fit this description, since they straddle the line between prose and poetry.",
+          "question": "Which choice completes the text with the most logical and precise word or phrase?",
+          "options": {
+            "A": "orthodox",
+            "B": "unequivocal",
+            "C": "recurrent",
+            "D": "unclassifiable"
+          },
+          "answer": "D",
+          "explanation": "'Intergeneric' forms blur genre lines. 'Unclassifiable' — impossible to categorize — perfectly describes work that doesn't fit any single genre.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q7",
+          "number": 7,
+          "domain": "Craft and Structure",
+          "skill": "Words in Context",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "British painter Peter Edwards has a _____ painting portraits of notable figures from a variety of different fields. These characteristic works include his esteemed portraits of poet Seamus Heaney and casting director Ruth Lambert.",
+          "question": "Which choice completes the text with the most logical and precise word or phrase?",
+          "options": {
+            "A": "reputation for",
+            "B": "requirement for",
+            "C": "complaint about",
+            "D": "question about"
+          },
+          "answer": "A",
+          "explanation": "'Reputation for' means being known for something — Edwards is known for painting portraits of notable figures.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q8",
+          "number": 8,
+          "domain": "Craft and Structure",
+          "skill": "Text Structure and Purpose",
+          "difficulty": "hard",
+          "type": "multiple_choice",
+          "passage": "Eighteenth-century economist Adam Smith is famed for his metaphor of the invisible hand, which he putatively used to illustrate a robust model of how individuals produce aggregate benefits by pursuing their own economic interests. Note 'putatively': as Gavin Kennedy has shown, Smith deploys this metaphor only once in his economic writings — to make a narrow point about the then-dominant economic theory of mercantilism — and it was largely ignored until some twentieth-century economists eager to secure an intellectual pedigree for their views elevated it to a fully-fledged paradigm.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": {
+            "A": "The reputation of Smith's invisible hand metaphor is not due to its importance in Smith's work but to its promotion by later economists for their own ends.",
+            "B": "Smith's invisible hand metaphor was intended as a critique of mercantilism, not as a model of how self-interest produces collective benefits.",
+            "C": "Some twentieth-century economists gave Smith's metaphor a significance it does not have in Smith's work, but it is nevertheless a useful model.",
+            "D": "Although Smith is famed for his invisible hand metaphor, the metaphor was largely ignored until twentieth-century economists realized it anticipated their views."
+          },
+          "answer": "A",
+          "explanation": "The metaphor appeared once for a narrow purpose, but later economists elevated it into a paradigm for their own ends.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q9",
+          "number": 9,
+          "domain": "Craft and Structure",
+          "skill": "Text Structure and Purpose",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "Roy McLendon's Moonlit St. Lucie, a riverscape featuring the silhouette of a single palm tree against the backdrop of shimmering water and a brilliant moonlit sky, is typical of paintings by the Florida Highwaymen, an informal collective of landscape artists mainly active in the 1950s and '60s. Remarkable for anticipating and amplifying cultural perceptions of Florida that became pervasive in the public consciousness, paintings by the Highwaymen are readily identifiable by the natural iconography — placid inland rivers, windswept palm trees — that McLendon and colleagues perpetually revisited.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": {
+            "A": "Although similar in subject matter to many Florida Highwaymen paintings, Moonlit St. Lucie is now more highly regarded than other Florida Highwaymen paintings.",
+            "B": "Representative images found across many Florida Highwaymen paintings came to be widely associated with Florida in part due to the Highwaymen's influence.",
+            "C": "Although Florida Highwaymen paintings were once celebrated for their depictions of natural environments, their popularity waned after the 1960s.",
+            "D": "The placid rivers and windswept palm trees typical of McLendon's works help differentiate his paintings from those of his colleagues."
+          },
+          "answer": "B",
+          "explanation": "The Highwaymen anticipated and amplified cultural perceptions of Florida — their imagery became the public image of Florida.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q10",
+          "number": 10,
+          "domain": "Craft and Structure",
+          "skill": "Text Structure and Purpose",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "The following text is adapted from Jerome K. Jerome's 1889 novel Three Men in a Boat.\n\n[Harris] told us anecdotes of how he had gone across the [English] Channel when it was so rough that the passengers had to be tied into their [beds], and he and the captain were the only two living souls on board who were not ill. Sometimes it was he and the second mate who were not ill; but it was generally he and one other man. If not he and another man, then it was he by himself.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": {
+            "A": "During a previous boat trip, Harris spent more time with the other passengers than with the captain.",
+            "B": "Harris has a hard time remembering his first trip across the English Channel when his friends ask about it.",
+            "C": "When Harris speaks of an earlier trip, he often changes the details but always brags about his own wellness.",
+            "D": "Harris is worried that he and his friends will encounter rough waters during their boat trip."
+          },
+          "answer": "C",
+          "explanation": "Harris tells the same story but changes who else was well — the only constant is that Harris was never ill. He consistently boasts about his own wellness while details shift.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q11",
+          "number": 11,
+          "domain": "Craft and Structure",
+          "skill": "Cross-Text Connections",
+          "difficulty": "hard",
+          "type": "multiple_choice",
+          "passage_1_2": "Text 1:\nIsaac Asimov, author of Robots and Empire and I, Robot, is highly regarded despite his mediocre writing style. His prose is workmanlike; his characters are flat and discuss ideas rather than emotions. That his work is enjoyable despite this is a testament to his prodigious imagination.\n\nText 2:\nAsimov is critiqued for his style, but it is wrong to fault a writer for failing to do what he never intended to do. For example, although most of his novel Foundation consists of people discussing science and politics, Asimov wanted to convey the vast sweep of human history over centuries, and one of his points is that at such a timescale, individuals don't matter. Thus his lack of characterization is central to his thematic aims.",
+          "question": "Based on the texts, how would the author of Text 2 most likely respond to the description of Asimov's characters in Text 1?",
+          "options": {
+            "A": "The flatness of Asimov's characters is a feature of Robots and Empire and I, Robot but not of Foundation.",
+            "B": "Asimov's characterizations would have been more believable if his writing had discussed fewer ideas.",
+            "C": "Asimov's characterizations would have been richer if he had possessed a deeper understanding of history.",
+            "D": "The flatness of Asimov's characters should not necessarily be considered a flaw in his writing."
+          },
+          "answer": "D",
+          "explanation": "Text 2 argues flat characters were intentional — serving Asimov's thematic aims. The author of Text 2 would say flat characters aren't necessarily a flaw.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q12",
+          "number": 12,
+          "domain": "Craft and Structure",
+          "skill": "Cross-Text Connections",
+          "difficulty": "hard",
+          "type": "multiple_choice",
+          "passage_1_2": "Text 1:\nIn southern and central Georgia, many buildings rest on expansive soil that swells or shrinks as its moisture level changes. Because these effects are incremental and can generally be repaired, structures in southern and central Georgia are typically not built to resist them.\n\nText 2:\nIn a 2021 study, Rubayet Bin Mostafiz and colleagues calculated that in Louisiana alone, the annual cost of damage caused by expansive soils reaches nearly $90 million. But they note that this damage can be mitigated: building vapor barriers between structural foundations and the soil can significantly reduce the effects of soil swelling and shrinking.",
+          "question": "Based on the texts, how would Rubayet Bin Mostafiz and colleagues (Text 2) most likely respond to the information presented in Text 1?",
+          "options": {
+            "A": "They would encourage engineers in southern and central Georgia to insert vapor barriers between new structures' foundations and the surrounding soil.",
+            "B": "They would argue that engineers in southern and central Georgia have misjudged the effectiveness of the techniques they use.",
+            "C": "They would suggest that engineers consider the cost of reinforcing vapor barriers between existing structural foundations and the soil.",
+            "D": "They would recommend that engineers measure the moisture level in the soil beneath proposed structures before beginning construction."
+          },
+          "answer": "A",
+          "explanation": "Text 1 says Georgia structures aren't built to resist expansive soil. Text 2 shows this damage is costly and mitigable with vapor barriers. Mostafiz et al. would recommend Georgia engineers use vapor barriers.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q13",
+          "number": 13,
+          "domain": "Information and Ideas",
+          "skill": "Central Ideas and Details",
+          "difficulty": "easy",
+          "type": "multiple_choice",
+          "passage": "In a large community science effort, biologist Abbigail Merrill and colleagues collaborated with hundreds of students and amateur science enthusiasts for more than three years to study how butterfly color and time of day relate to butterfly behavior. They found that butterfly color might influence behavior more than butterfly size does, and that butterflies were observed to feed more often in the morning than at any other time of day.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": {
+            "A": "Time of day and butterfly color seem to have less influence on butterfly behavior than the location where the butterflies are studied does.",
+            "B": "A recent study suggested that butterflies' coloring seems to be less relevant to their behavior than time of day.",
+            "C": "Collaboration between professional scientists and members of the public is especially useful when studying butterfly behavior.",
+            "D": "A large study suggested that butterfly color and time of day might influence the behavior of certain butterflies."
+          },
+          "answer": "D",
+          "explanation": "The text describes a large community-science study finding that butterfly color and time of day both affect butterfly behavior.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q14",
+          "number": 14,
+          "domain": "Information and Ideas",
+          "skill": "Central Ideas and Details",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "Tomato is an example of a loanword — a word that originated in one language and was later adopted by another. The word came to English indirectly from tomate, the Spanish word for the plant. Spanish had borrowed it from Nahuatl, an Indigenous language of Central Mexico. 'Maize' also has an Indigenous origin and entered English through Spanish. But in this case, the original source was Taino, a language of the Caribbean islands.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": {
+            "A": "Many Spanish words with Indigenous origins first passed through English before entering Spanish.",
+            "B": "When borrowing from Indigenous languages, Spanish adopted roughly as many words from Nahuatl as from Taino.",
+            "C": "When non-Indigenous languages borrowed from Indigenous languages, the words often underwent significant changes in meaning.",
+            "D": "The English words 'tomato' and 'maize' are both examples of loanwords from Indigenous languages."
+          },
+          "answer": "D",
+          "explanation": "The text traces both 'tomato' and 'maize' as loanwords from Indigenous languages that entered English through Spanish.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q15",
+          "number": 15,
+          "domain": "Information and Ideas",
+          "skill": "Central Ideas and Details",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "Like all species of baleen whales, the sei whale feeds on krill by filtering water through baleen plates. Baleen whales can eat up to 30 percent of their total mass per day. And while no one would call the sei whale small — it can have a mass as high as 25,000 kg — it is much smaller than the bowhead whale, which can weigh 66,000 kg and consume as much as 19,800 kg of krill per day.",
+          "question": "Based on the text, what can most reasonably be concluded about krill consumption among sei and bowhead whales?",
+          "options": {
+            "A": "The quantities of krill consumed by bowhead whales has made it difficult for sei whales to find sufficient food.",
+            "B": "Both the sei whale and the bowhead whale can eat as much as 19,800 kg of krill per day.",
+            "C": "Most baleen whales include krill in their diets, but the sei whale is less likely than the bowhead whale to do so.",
+            "D": "The bowhead whale is able to eat more krill per day than the sei whale is."
+          },
+          "answer": "D",
+          "explanation": "The bowhead (66,000 kg) is much larger than the sei (max 25,000 kg). Since baleen whales eat up to 30% of mass daily, the bowhead can consume much more krill.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q16",
+          "number": 16,
+          "domain": "Information and Ideas",
+          "skill": "Inferences",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "The Mammillaria cactus M. guerreronis occurs naturally only in the state of Guerrero in Mexico. The traditional single-species approach to conservation emphasizes the need to focus on individual species most at risk, like M. guerreronis, but recently conservationists have argued that an ecosystem-based approach incorporating interactions between climate, terrain, and various species may lead to better outcomes for all species. If this view is correct, the single-species approach to the conservation of M. guerreronis could thus _____",
+          "question": "Which choice most logically completes the text?",
+          "options": {
+            "A": "lead to a better understanding of how the distribution of Mammillaria species throughout Mexico has affected their survival",
+            "B": "allow conservationists to better consider how climatic changes affecting Guerrero may reduce the number of species competing with M. guerreronis",
+            "C": "erroneously shift the focus of conservation efforts away from M. guerreronis itself",
+            "D": "fail to consider the ways in which the survival of M. guerreronis may be influenced by changes in the populations of other species that inhabit Guerrero"
+          },
+          "answer": "D",
+          "explanation": "The ecosystem approach considers interactions between species; the single-species approach doesn't. Focusing only on M. guerreronis would fail to account for how other species affect its survival.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q17",
+          "number": 17,
+          "domain": "Information and Ideas",
+          "skill": "Inferences",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "The Socio-Economic Panel (SOEP) is a longitudinal study surveying approximately 12,000 individuals in Germany to glean extended trends in childhood development. To carry out the necessary sampling over many years, SOEP needs extensive financial support. However, when questions of causation are irrelevant, as with a transportation study seeking only to reveal the number of people per day who use a city's public transportation system, longitudinal methods are unnecessary, and so _____",
+          "question": "Which choice most logically completes the text?",
+          "options": {
+            "A": "the expense of SOEP is likely greater than the cost of longitudinal studies of transportation",
+            "B": "conclusions drawn from SOEP are likely to be more authoritative than those from the transportation study",
+            "C": "longitudinal methods are suitable for studies of childhood development but ought to be avoided for those of transportation",
+            "D": "the success of the transportation study likely requires significantly less financial outlay than that needed for SOEP"
+          },
+          "answer": "D",
+          "explanation": "SOEP is expensive because it tracks long-term trends. A transportation count doesn't need longitudinal methods or the associated funding. It requires significantly less financial outlay.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q18",
+          "number": 18,
+          "domain": "Information and Ideas",
+          "skill": "Inferences",
+          "difficulty": "hard",
+          "type": "multiple_choice",
+          "passage": "Ships in the British Royal Navy during the Napoleonic Wars were ranked based on military strength: number of cannons and decks. First-rate ships had between 850 and 875 crewmen, while lower-ranked ships had fewer. Three ships were the Waterloo (80 cannons, two decks), the Temeraire (98 cannons, three decks), and the Caledonia (120 cannons, three decks). Among these, only the Caledonia was a first-rate ship. It can therefore be concluded that _____",
+          "question": "Which choice most logically completes the text?",
+          "options": {
+            "A": "the Temeraire had between 850 and 875 crewmen, but the Waterloo and Caledonia each had fewer than 850 crewmen.",
+            "B": "the Waterloo had a smaller crew than the Caledonia.",
+            "C": "all ships with three decks were ranked as first-rate ships.",
+            "D": "the Caledonia needed a crew larger than 875 people in order to operate efficiently."
+          },
+          "answer": "B",
+          "explanation": "Only the Caledonia was first-rate (850-875 crewmen). The Waterloo was lower-ranked, so it had fewer crewmen. Option C is ruled out because the Temeraire had three decks but wasn't first-rate.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q19",
+          "number": 19,
+          "domain": "Information and Ideas",
+          "skill": "Command of Evidence (Textual)",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "In a study by Mika R. Moran, Daniel A. Rodriguez, and colleagues, residents of Mexico City and La Paz were surveyed about parks in their cities. Of the 562 respondents from Mexico City, 77.6% indicated that they use the city's parks, and of the 528 respondents from La Paz, 67.5% indicated using city parks. Given that the percentage of Mexico City respondents who reported living within a 10-minute walk of a park was much lower than that reported by La Paz respondents, greater proximity alone can't explain the difference in park use.",
+          "question": "The text makes which point about the difference between the proportions of Mexico City residents and La Paz residents using parks?",
+          "options": {
+            "A": "It could be due to inaccuracies in the survey results.",
+            "B": "It was calculated using sources that predate the survey.",
+            "C": "It was much larger than the researchers conducting the study expected.",
+            "D": "It is caused by something other than the parks' proximity to city residents."
+          },
+          "answer": "D",
+          "explanation": "Mexico City has more park users despite lower proximity. The text explicitly concludes proximity alone can't explain the difference — another factor must be causing it.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q20",
+          "number": 20,
+          "domain": "Information and Ideas",
+          "skill": "Command of Evidence (Textual)",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "External shopping cues use obvious messaging to entice consumers to make spontaneous purchases. In a study, data scientist Sam K. Hui and colleagues found that this effect can also be achieved with a less obvious cue: rearranging a store's layout. The researchers explain that trying to find items in new locations causes shoppers to move through more of the store, exposing them to more products and increasing the likelihood that they'll buy an item they hadn't planned on purchasing.",
+          "question": "Which response from a survey given to shoppers who made a purchase at a retail store best supports the researchers' explanation?",
+          "options": {
+            "A": "I needed to buy cleaning supplies, but they weren't in their regular place. While I was looking for them, I saw this interesting notebook and decided to buy it, too.",
+            "B": "I didn't buy everything on my shopping list today. I couldn't find a couple of the items in the store.",
+            "C": "The store sent me a coupon for a new brand of soup, so I came here to buy some.",
+            "D": "This store is larger than one closer to where I live, and it carries more products."
+          },
+          "answer": "A",
+          "explanation": "The researchers say rearranging layouts causes shoppers to explore more and buy unplanned items. Option A shows exactly this: searching in a new location led to discovering and buying an unplanned notebook.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q21",
+          "number": 21,
+          "domain": "Information and Ideas",
+          "skill": "Inferences",
+          "difficulty": "hard",
+          "type": "multiple_choice",
+          "passage": "Arthurian legends derive from many sources, such as Annales Cambriae, composed around 970. Geoffrey of Monmouth's History of the Kings of Britain was written in the 1130s; some material from it was later adapted by the Norman poet Wace into the Roman de Brut in 1155. But while no source before 1155 includes references to the famous Round Table, both the Roman de Brut and Sir Thomas Malory's 15th-century Le Morte d'Arthur do. It can therefore be inferred that _____",
+          "question": "Which choice most logically completes the text?",
+          "options": {
+            "A": "Le Morte d'Arthur is more historically accurate than History, because the Mabinogion had not been written when Geoffrey of Monmouth was writing his work",
+            "B": "Geoffrey of Monmouth's accounts of Arthurian legends are more similar to the Mabinogion than to Roman de Brut",
+            "C": "Malory did not use Annales Cambriae as a source for information he presented about the Round Table",
+            "D": "Geoffrey of Monmouth was unaware of stories of the Round Table when composing his History"
+          },
+          "answer": "C",
+          "explanation": "No source before 1155 references the Round Table. Annales Cambriae was composed around 970 — before 1155 — so it contains no Round Table information. Therefore Malory could not have used it as a Round Table source.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q22",
+          "number": 22,
+          "domain": "Information and Ideas",
+          "skill": "Command of Evidence (Textual)",
+          "difficulty": "hard",
+          "type": "multiple_choice",
+          "passage": "Indigenous songs can be repositories of ecological information. Kwakwaka'wakw song keeper Kwaxsistalla Wathl'thla aided research by contributing songs that reference creating terraced intertidal gardens to foster the healthy development of clams. Analysis of local paleoecological marine bivalve records has revealed significant increases in clam size and productivity as clam garden practices became more prevalent and harvesting pressure increased — a finding that bolsters the notion that _____",
+          "question": "Which choice most logically completes the text?",
+          "options": {
+            "A": "the Kwakwaka'wakw people encouraged the health of clam gardens by periodically increasing their reliance on other sources of sustenance.",
+            "B": "the practical approach described in the Kwakwaka'wakw songs effectively maintained clams as a sustainable food source.",
+            "C": "the Kwakwaka'wakw people initially adapted their clam garden practices from methods observed among neighboring Indigenous peoples.",
+            "D": "contemporary Kwakwaka'wakw people have only minimally deviated from the clam-gardening practices described in the people's songs."
+          },
+          "answer": "B",
+          "explanation": "The data shows clam size and productivity increased as clam garden practices grew, even with increased harvesting. This bolsters the notion that the approach worked and maintained clams as a sustainable source.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q23",
+          "number": 23,
+          "domain": "Information and Ideas",
+          "skill": "Central Ideas and Details",
+          "difficulty": "hard",
+          "type": "multiple_choice",
+          "passage": "In Armenia, use of solid fuel as a share of total household fuel use fell by approximately 90 percent between 2000 and 2018; such shifts are typically explained by the energy ladder model, which holds that fuel choice is mediated mainly by household income. Boukary Ouedraogo's study of fuel use in Burkina Faso shows how reductive this model is, however: although income of course constrained fuel choice, several factors, including the frequency with which certain dishes are cooked, influenced fuel choice as well.",
+          "question": "Based on the text, the author would most likely agree with which statement about household income?",
+          "options": {
+            "A": "It constrains the amount of fuel households use but not the type of fuel they use.",
+            "B": "It affects household fuel choice but not for the reasons assumed by the energy ladder model.",
+            "C": "It can explain some but not all of the differences in fuel choice across households.",
+            "D": "It has no meaningful effect on household fuel choice according to Ouedraogo's study."
+          },
+          "answer": "C",
+          "explanation": "Income 'of course constrained fuel choice' — so income plays a role — but other factors also matter. Income explains some but not all differences in fuel choice.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q24",
+          "number": 24,
+          "domain": "Expression of Ideas",
+          "skill": "Transitions",
+          "difficulty": "easy",
+          "type": "multiple_choice",
+          "passage": "To guarantee the validity of experimental results, scientists rely on precise, unchanging standards of measurement. _____ metrologists (scientists who study measurement) developed the SI, or International System of Units. The SI's units of measurement are based on unchanging values in nature, such as the mass of an electron or the speed of light.",
+          "question": "Which choice completes the text with the most logical transition?",
+          "options": {
+            "A": "In contrast,",
+            "B": "Regardless,",
+            "C": "In addition,",
+            "D": "For this reason,"
+          },
+          "answer": "D",
+          "explanation": "Scientists need precise standards, so metrologists developed the SI. 'For this reason,' introduces the consequence — because of this need, the SI was developed.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q25",
+          "number": 25,
+          "domain": "Expression of Ideas",
+          "skill": "Transitions",
+          "difficulty": "easy",
+          "type": "multiple_choice",
+          "passage": "Author Ursula K. Le Guin's Rocannon's World is a science fiction story set in an era of intergalactic travel, whereas her The Tombs of Atuan is a work of fantasy set in a land of heroes and dragons. _____ both fans of science fiction and fans of fantasy are among her many readers.",
+          "question": "Which choice completes the text with the most logical transition?",
+          "options": {
+            "A": "At that time,",
+            "B": "Alternatively,",
+            "C": "Accordingly,",
+            "D": "Nevertheless,"
+          },
+          "answer": "C",
+          "explanation": "Le Guin writes both genres. 'Accordingly,' signals a natural result — since she writes both, fans of both are naturally among her readers.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q26",
+          "number": 26,
+          "domain": "Expression of Ideas",
+          "skill": "Transitions",
+          "difficulty": "easy",
+          "type": "multiple_choice",
+          "passage": "Voting members of the 2006 Latin Grammys were impressed by Los Tigres del Norte's album Historias Que Contar and its contribution to the norteno genre, a form of regional Mexican music featuring accordion and bajo sexto guitar that first developed in northern Mexico in the late nineteenth century. _____ they awarded the group the Best Norteno Album award.",
+          "question": "Which choice completes the text with the most logical transition?",
+          "options": {
+            "A": "In contrast,",
+            "B": "Accordingly,",
+            "C": "Meanwhile,",
+            "D": "Nevertheless,"
+          },
+          "answer": "B",
+          "explanation": "They were impressed by the album, so they awarded it. 'Accordingly,' signals a logical result — because they were impressed, the award followed.",
+          "points": 1
+        },
+        {
+          "id": "mock2-m1-q27",
+          "number": 27,
+          "domain": "Expression of Ideas",
+          "skill": "Rhetorical Synthesis",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "notes": "Documentary TV programs in the slow TV genre consist of uninterrupted broadcasts of ordinary events in real time. Nordlandsbanen: Minutt for Minutt is a Norwegian slow TV program. The 10-hour-long program documented a train ride from Trondheim to Bodo. It first aired in 2012. In her book Spectacular Television, British film scholar Helen Wheatley writes that slow TV offers 'unspectacular spectacle.'",
+          "question": "The student wants to provide a specific example of a slow TV program. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+          "options": {
+            "A": "British film scholar Helen Wheatley writes about the slow TV genre in her book Spectacular Television.",
+            "B": "An example of the slow TV genre can be seen in Nordlandsbanen: Minutt for Minutt, a Norwegian show featuring an uninterrupted 10-hour real-time broadcast of a train ride from Trondheim to Bodo.",
+            "C": "Slow TV programs provide uninterrupted broadcasts of ordinary events, such as train rides, in real time.",
+            "D": "Slow TV programs offer what film scholar Helen Wheatley calls the 'unspectacular spectacle' of ordinary events in real time."
+          },
+          "answer": "B",
+          "explanation": "The goal is a specific example. Option B names the specific show, its nationality, format (10-hour real-time), and specific content (train ride Trondheim to Bodo) — the most concrete example.",
+          "points": 1
+        }
+      ]
+    },
+    {
+      "module": 2,
+      "adaptive": true,
+      "_note": "Students see either easy or hard version based on Module 1 performance.",
+      "easy_version": {
+        "questions": [
+          {
+            "id": "mock2-m2e-q1",
+            "number": 1,
+            "domain": "Standard English Conventions",
+            "skill": "Boundaries",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "Sei Shonaagon composed many _____ 'Things That Have Lost Their Power,' which appears in her tenth-century account of Japanese courtly life, Pillow Book, she bemoans boats run aground, toppled trees, and defeated wrestlers.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "lists;",
+              "B": "lists in",
+              "C": "lists. In",
+              "D": "lists:"
+            },
+            "answer": "C",
+            "explanation": "Two independent clauses need to be separated. A period after 'lists' creates two correct sentences.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q2",
+            "number": 2,
+            "domain": "Standard English Conventions",
+            "skill": "Boundaries",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "In their 2019 study of butterfly diversity at Rupa Lake in Nepal, researcher Bandana Subedi and her colleagues counted 1,535 butterflies from 138 different _____ including one specimen of the Doleschallia bisaltide, a very rare butterfly known as the autumn leaf.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "species",
+              "B": "species;",
+              "C": "species:",
+              "D": "species,"
+            },
+            "answer": "D",
+            "explanation": "'Species,' with a comma introduces additional information about the 138 species. A comma correctly introduces this appended detail.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q3",
+            "number": 3,
+            "domain": "Standard English Conventions",
+            "skill": "Boundaries",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "Featuring works by the photographers Liselotte Grschebina and Else Neulaender-Simon, the 2021 exhibition The New Woman Behind the Camera set out to provide a wide-ranging overview of photography by women in the 1920s through the _____ given the collection's breadth of more than 120 photos, its efforts were largely successful.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "1950s, and",
+              "B": "1950s",
+              "C": "1950s,",
+              "D": "1950s and"
+            },
+            "answer": "C",
+            "explanation": "A comma after '1950s' separates two independent clauses. '1950s,' correctly sets off the first clause from the second beginning with 'given.'",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q4",
+            "number": 4,
+            "domain": "Standard English Conventions",
+            "skill": "Boundaries",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "On February 1, 2018, Florida-based researchers compiled climate data from several sites in Puerto Rico's Luquillo Mountains. At CC1, the site with the highest elevation, the air temperature fluctuated slightly throughout the day, _____ 18.4 degrees C at 11:00 a.m. to 16.2 degrees C at 7:00 p.m.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "from, 18.4 degrees C at",
+              "B": "from, 18.4 degrees C at,",
+              "C": "from 18.4 degrees C at",
+              "D": "from:18.4 degrees C at,"
+            },
+            "answer": "C",
+            "explanation": "'From 18.4 degrees C at 11:00 a.m. to 16.2 degrees C at 7:00 p.m.' is a prepositional phrase. No punctuation is needed between 'from' and the first value.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q5",
+            "number": 5,
+            "domain": "Standard English Conventions",
+            "skill": "Boundaries",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "Photosynthesis, the mechanism by which plants use sunlight to turn carbon dioxide and water into _____ is fueled in part by an enzyme called Photosystem II that harvests energy-giving electrons from water molecules.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "nutrients",
+              "B": "nutrients and",
+              "C": "nutrients,",
+              "D": "nutrients—"
+            },
+            "answer": "C",
+            "explanation": "'Nutrients,' with a comma closes the appositive phrase. The comma after 'nutrients' pairs with the comma after 'Photosynthesis' to set off the full appositive.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q6",
+            "number": 6,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "The city of Quito in Ecuador _____ one of the rare places in the world located almost directly on the equator.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "is",
+              "B": "have been",
+              "C": "are",
+              "D": "are being"
+            },
+            "answer": "A",
+            "explanation": "'The city of Quito' is singular. Singular present tense 'is' is correct for this permanent geographical fact.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q7",
+            "number": 7,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "National Heritage Areas like the Arabia Mountain National Heritage Area in Georgia _____ officially designated by the United States Congress as being 'unique [and] nationally significant' for their natural, cultural, and historical attributes.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "has been",
+              "B": "are",
+              "C": "was",
+              "D": "is"
+            },
+            "answer": "B",
+            "explanation": "'National Heritage Areas' is plural. Plural present tense 'are' is correct for their current designated status.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q8",
+            "number": 8,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "Upper Fruitland Chapter is one of the 110 chapters of the Navajo Nation. The chapter, whose boundaries encompass 83,400 acres, _____ known as Doo Alk'aai in the Navajo language.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "are",
+              "B": "have been",
+              "C": "were",
+              "D": "is"
+            },
+            "answer": "D",
+            "explanation": "'The chapter' is singular. The relative clause is a modifier, not the subject. Singular present tense 'is' is correct.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q9",
+            "number": 9,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "Technologies such as microphones and inkjet printers are made using piezoelectric materials, which generate an internal electric field when pressure is applied to them. The toxic nature of some of these materials recently led a team from the University of Sheffield to investigate how _____",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "could their use be better regulated?",
+              "B": "their use could be better regulated.",
+              "C": "their use could be better regulated?",
+              "D": "could their use be better regulated."
+            },
+            "answer": "B",
+            "explanation": "'How' introduces an indirect/embedded question requiring declarative word order and a period, not a question mark.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q10",
+            "number": 10,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "In 1929, Edwin Herbert Land invented a polarizing filter. A decade later, Land _____ his technology to invent the world's first instant camera, the Polaroid Land camera.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "used",
+              "B": "to have used",
+              "C": "to use",
+              "D": "using"
+            },
+            "answer": "A",
+            "explanation": "The sentence needs a simple past finite verb. 'Land used his technology' is correct.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q11",
+            "number": 11,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "Anthropologist Livia Barbosa, of the Universidade Federal Fluminense in Brazil, _____ and sociability in contemporary Brazil — specifically, how foods such as carne-de-sol function as central mechanisms in building social relationships, values, and identities.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "have studied",
+              "B": "studies",
+              "C": "study",
+              "D": "are studying"
+            },
+            "answer": "B",
+            "explanation": "'Anthropologist Livia Barbosa' is singular. Singular present tense 'studies' is correct for her ongoing research.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q12",
+            "number": 12,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "On Guadalupe Peak, which _____ an elevation of 8,751 feet, one can find the highest point in Texas.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "reaches",
+              "B": "reach",
+              "C": "reaching",
+              "D": "to reach"
+            },
+            "answer": "A",
+            "explanation": "'Which' refers to 'Guadalupe Peak' (singular). Singular present tense 'reaches' is correct.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q13",
+            "number": 13,
+            "domain": "Expression of Ideas",
+            "skill": "Transitions",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "A band might choose a name that is as unique and original as possible. _____ they might name themselves after a recognizable song by a favorite band. This is what the Japanese experimental rock band Boris did when they named themselves after the song 'Boris' by the Melvins.",
+            "question": "Which choice completes the text with the most logical transition?",
+            "options": {
+              "A": "Thus,",
+              "B": "Alternatively,",
+              "C": "In other words,",
+              "D": "For instance,"
+            },
+            "answer": "B",
+            "explanation": "Two different options are presented. 'Alternatively,' correctly signals a second different option.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q14",
+            "number": 14,
+            "domain": "Expression of Ideas",
+            "skill": "Transitions",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "Humans inherit specific physical traits (like having type O or type AB blood) from their parents. _____ cats inherit specific physical traits (like having short or long fur) from their parents.",
+            "question": "Which choice completes the text with the most logical transition?",
+            "options": {
+              "A": "In other words,",
+              "B": "As a result,",
+              "C": "In conclusion,",
+              "D": "Similarly,"
+            },
+            "answer": "D",
+            "explanation": "Both sentences describe the same phenomenon in different species. 'Similarly,' signals a parallel situation.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q15",
+            "number": 15,
+            "domain": "Expression of Ideas",
+            "skill": "Transitions",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "To guarantee the validity of experimental results, scientists rely on precise, unchanging standards of measurement. _____ metrologists developed the SI, or International System of Units. The SI's units of measurement are based on unchanging values in nature, such as the mass of an electron or the speed of light.",
+            "question": "Which choice completes the text with the most logical transition?",
+            "options": {
+              "A": "In contrast,",
+              "B": "Regardless,",
+              "C": "In addition,",
+              "D": "For this reason,"
+            },
+            "answer": "D",
+            "explanation": "Scientists need precise standards, so metrologists developed the SI. 'For this reason,' introduces the consequence.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q16",
+            "number": 16,
+            "domain": "Expression of Ideas",
+            "skill": "Transitions",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "Soil polluted with chromium is harmful to many plants and animals, but the plant species Ludwigia prostrata not only thrives in such conditions but also helps remediate them. As a metal hyperaccumulator, Ludwigia prostrata absorbs a large amount of chromium and stores it safely in its roots and shoots; _____ chromium concentrations in the soil decrease.",
+            "question": "Which choice completes the text with the most logical transition?",
+            "options": {
+              "A": "in addition,",
+              "B": "nevertheless,",
+              "C": "in turn,",
+              "D": "specifically,"
+            },
+            "answer": "C",
+            "explanation": "The plant absorbs chromium and as a consequence the soil's chromium decreases. 'In turn,' signals a consequential chain reaction.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q17",
+            "number": 17,
+            "domain": "Expression of Ideas",
+            "skill": "Transitions",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "Those who looked up at the right time on September 9, 1904, would have witnessed a total solar eclipse. _____ stargazers on December 25, 1935, would have seen an annular solar eclipse, during which the Moon blocks most of the Sun and causes it to look like a ring of light.",
+            "question": "Which choice completes the text with the most logical transition?",
+            "options": {
+              "A": "As a result,",
+              "B": "On the other hand,",
+              "C": "Simultaneously,",
+              "D": "Indeed,"
+            },
+            "answer": "B",
+            "explanation": "The text contrasts two different types of eclipses — total (1904) vs. annular (1935). 'On the other hand,' signals a contrast.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q18",
+            "number": 18,
+            "domain": "Expression of Ideas",
+            "skill": "Transitions",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "Scientists long debated the origins of chondrules, tiny glass beads that formed in meteors billions of years ago. For decades, different theories were proposed, but none had sufficient evidentiary support. _____ scientists found strong evidence that chondrules were formed by shock waves in nearby nebulae.",
+            "question": "Which choice completes the text with the most logical transition?",
+            "options": {
+              "A": "For example,",
+              "B": "Finally,",
+              "C": "Similarly,",
+              "D": "Therefore,"
+            },
+            "answer": "B",
+            "explanation": "After decades of uncertainty, scientists eventually found the answer. 'Finally,' signals resolution after a prolonged search.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q19",
+            "number": 19,
+            "domain": "Expression of Ideas",
+            "skill": "Rhetorical Synthesis",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "notes": "Maya Lin is an American artist known for her memorials and large-scale installation artworks. She became famous in 1982 when she completed the Vietnam Veterans Memorial, which consists of two 246-foot granite walls. She completed Water Line in 2006. It is an installation composed of aluminum tubing that fills an entire gallery room. She completed Seven Earth Mountain in 2015. It is an installation composed of soil that fills an entire gallery room.",
+            "question": "The student wants to emphasize a difference between Water Line and Seven Earth Mountain. Which choice most effectively uses information from the given sentences to accomplish this goal?",
+            "options": {
+              "A": "After completing the Vietnam Veterans Memorial, Maya Lin completed Water Line, another large-scale work.",
+              "B": "The sprawling size of Maya Lin's Vietnam Veterans Memorial is echoed in Water Line, a work made of aluminum tubing that fills an entire gallery room.",
+              "C": "Maya Lin's Water Line is composed of aluminum tubing; Seven Earth Mountain, by contrast, is composed of soil.",
+              "D": "Maya Lin is known for her memorials and installation art, such as Water Line and Seven Earth Mountain."
+            },
+            "answer": "C",
+            "explanation": "To emphasize a difference, Option C directly contrasts the two works: Water Line uses aluminum tubing while Seven Earth Mountain uses soil.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q20",
+            "number": 20,
+            "domain": "Expression of Ideas",
+            "skill": "Rhetorical Synthesis",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "notes": "Richard Serra is an American artist. He is known for his large metal sculptures. His large sculpture Open Ended is made of weathering steel. His large sculpture Strike: To Roberta and Rudy is made of hot-rolled steel.",
+            "question": "The student wants to emphasize a difference between the two sculptures. Which choice most effectively uses information from the given sentences to accomplish this goal?",
+            "options": {
+              "A": "Open Ended and Strike: To Roberta and Rudy are both large metal sculptures by artist Richard Serra.",
+              "B": "Strike: To Roberta and Rudy is one of artist Richard Serra's large metal sculptures.",
+              "C": "Artist Richard Serra is the creator of the weathering steel sculpture Open Ended.",
+              "D": "Open Ended is made from a different kind of steel than Strike: To Roberta and Rudy."
+            },
+            "answer": "D",
+            "explanation": "To emphasize a difference, Option D directly states the key difference: they are made from different types of steel.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q21",
+            "number": 21,
+            "domain": "Expression of Ideas",
+            "skill": "Rhetorical Synthesis",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "notes": "A lever is a simple machine consisting of a rigid beam and a fulcrum. The fulcrum is the point about which the beam pivots. The input force (effort) is the force applied to the lever. The output force (load) is the force that the lever exerts on another object. In first-class levers, the fulcrum is located between the effort and the load. In second-class levers, the load is located between the effort and the fulcrum.",
+            "question": "The student wants to contrast first-class levers and second-class levers. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+            "options": {
+              "A": "In levers, the effort is the force applied to the lever; the load is the force that the lever exerts on another object.",
+              "B": "In first-class and second-class levers, the fulcrum and the load are in different locations.",
+              "C": "First-class levers are simple machines consisting of a rigid beam and a fulcrum, as are second-class levers.",
+              "D": "In first-class levers, the fulcrum is located between the effort and the load, but in second-class levers, the load is located between the effort and the fulcrum."
+            },
+            "answer": "D",
+            "explanation": "Option D states the specific positional difference for each lever type directly and clearly.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q22",
+            "number": 22,
+            "domain": "Expression of Ideas",
+            "skill": "Rhetorical Synthesis",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "notes": "Jean-Michel Basquiat was an American artist who produced more than two thousand drawings and paintings. Most of his works were completed in New York City in the 1980s. His work Mater was completed in 1982. The work is composed of acrylic and oil stick on canvas and measures 72 inches by 84 inches. Mater was purchased by a private collection for $5.8 million in a 2009 auction.",
+            "question": "Which choice most effectively uses information from the given sentences to emphasize the scope of Basquiat's work?",
+            "options": {
+              "A": "Mater is just one of more than two thousand drawings and paintings completed by American artist Jean-Michel Basquiat.",
+              "B": "Though Basquiat completed most of his two thousand-plus drawings in the 1980s, his work Mater is composed of acrylic and oil stick on canvas.",
+              "C": "At auction, Basquiat's Mater sold for $5.8 million.",
+              "D": "Decades after Basquiat completed Mater, a private collection purchased it for $5.8 million."
+            },
+            "answer": "A",
+            "explanation": "To emphasize scope, Option A frames Mater as just one of more than two thousand works — directly highlighting the breadth of his output.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q23",
+            "number": 23,
+            "domain": "Expression of Ideas",
+            "skill": "Rhetorical Synthesis",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "notes": "Dinosaur fossil specimens can be found at science museums all over the world. A dinosaur fossil specimen nicknamed Jane is housed at the Burpee Museum of Natural History and Culture in Rockford, Illinois. Jane, a Tyrannosaurus, lived in the Late Cretaceous period. A dinosaur fossil specimen nicknamed Fafnir is housed at the Science Museum of Minnesota in Saint Paul, Minnesota. Fafnir, a Triceratops, lived in the Late Cretaceous period.",
+            "question": "The student wants to emphasize a similarity between the two dinosaur fossil specimens. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+            "options": {
+              "A": "Both the Tyrannosaurus fossil specimen Jane and the Triceratops fossil specimen Fafnir lived in the Late Cretaceous period.",
+              "B": "While the Tyrannosaurus fossil specimen Jane is in Rockford, Illinois, the Triceratops fossil specimen Fafnir is in Saint Paul, Minnesota.",
+              "C": "The Burpee Museum of Natural History is home to Jane, a Tyrannosaurus fossil specimen.",
+              "D": "Dinosaur fossil specimens can be found at science museums all over the world."
+            },
+            "answer": "A",
+            "explanation": "To emphasize similarity, Option A highlights the shared characteristic: both Jane and Fafnir lived in the Late Cretaceous period.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q24",
+            "number": 24,
+            "domain": "Expression of Ideas",
+            "skill": "Rhetorical Synthesis",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "notes": "The poem '5 love haiku' is by African American writer Sonia Sanchez. It was published in her 2010 poetry book entitled Morning Haiku. The poem is written as a sequence of five haiku. According to the book's publisher, the book 'celebrates the gifts of life and mourns the deaths of revered African American figures.' According to Sanchez, she chose to write in the form of haiku because it helps 'maintain memory and dignity.'",
+            "question": "The student wants to provide an example of a poem from Morning Haiku. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+            "options": {
+              "A": "Included in Sanchez's poetry book Morning Haiku (2010), '5 love haiku' is a poem written as a sequence of five haiku.",
+              "B": "Sanchez chose to write in the form of the haiku because it helps 'maintain memory and dignity.'",
+              "C": "The poetry book Morning Haiku 'celebrates the gifts of life and mourns the deaths of revered African American figures.'",
+              "D": "The poem by Sanchez is written as a sequence of five haiku."
+            },
+            "answer": "A",
+            "explanation": "The goal is a specific example of a poem. Option A names the specific poem, its book, year, and form — the most complete concrete example.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q25",
+            "number": 25,
+            "domain": "Expression of Ideas",
+            "skill": "Rhetorical Synthesis",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "notes": "Dinosaur fossil specimens can be found at science museums all over the world. A dinosaur fossil specimen nicknamed Jane is housed at the Burpee Museum of Natural History and Culture in Rockford, Illinois. Jane, a Tyrannosaurus, lived in the Late Cretaceous period. A dinosaur fossil specimen nicknamed Fafnir is housed at the Science Museum of Minnesota in Saint Paul, Minnesota. Fafnir, a Triceratops, lived in the Late Cretaceous period.",
+            "question": "The student wants to emphasize a difference between the locations of the two dinosaur fossil specimens. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+            "options": {
+              "A": "Both the Tyrannosaurus fossil specimen Jane and the Triceratops fossil specimen Fafnir lived in the Late Cretaceous period.",
+              "B": "While the Tyrannosaurus fossil specimen Jane is in Rockford, Illinois, the Triceratops fossil specimen Fafnir is in Saint Paul, Minnesota.",
+              "C": "The Burpee Museum of Natural History is home to Jane, a Tyrannosaurus fossil specimen from the Late Cretaceous period.",
+              "D": "Dinosaur fossil specimens can be found at science museums all over the world, including in Rockford, Illinois, and Saint Paul, Minnesota."
+            },
+            "answer": "B",
+            "explanation": "To contrast locations, Option B directly states: Jane is in Rockford while Fafnir is in Saint Paul — making the location difference explicit.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q26",
+            "number": 26,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "The writer Audre Lorde, along with others such as Haki Madhubuti and Quincy Troupe, _____ commonly associated with the Black Arts movement, a loose-knit group of writers and artists active in the 1960s and the 1970s who were interested in exploring the Black American experience through their work.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "are",
+              "B": "have been",
+              "C": "were",
+              "D": "is"
+            },
+            "answer": "D",
+            "explanation": "The subject is 'The writer Audre Lorde' (singular). 'Along with others' is a modifier, not a compound subject. Singular 'is' is correct.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2e-q27",
+            "number": 27,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "A species of Byropsis algae produces toxins to avoid being eaten by predators. However, in some cases, the toxins the organism uses to protect itself from predation actually _____ its attractiveness to predators. The Hawaiian sea slug, for example, not only tolerates Byropsis toxins but actually uses them for protection in the same way the algae does.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "is increasing",
+              "B": "increase",
+              "C": "increases",
+              "D": "has increased"
+            },
+            "answer": "B",
+            "explanation": "The subject is 'the toxins' (plural). Plural present tense 'increase' is correct — 'increases' would be for a singular subject.",
+            "points": 1
+          }
+        ]
+      },
+      "hard_version": {
+        "questions": [
+          {
+            "id": "mock2-m2h-q1",
+            "number": 1,
+            "domain": "Standard English Conventions",
+            "skill": "Boundaries",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "Featuring works by the photographers Niu Weiyu and Rogi Andre, the 2021 exhibition The New Woman Behind the Camera set out to provide a wide-ranging overview of photography by women in the 1920s through the _____ given the collection's breadth of more than 120 photos, its efforts were largely successful.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "1950s and",
+              "B": "1950s",
+              "C": "1950s, and",
+              "D": "1950s,"
+            },
+            "answer": "D",
+            "explanation": "A comma after '1950s' separates two independent clauses. '1950s,' is correct.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q2",
+            "number": 2,
+            "domain": "Standard English Conventions",
+            "skill": "Boundaries",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "Sei Shonagon composed many _____ 'Things That Make One's Heart Beat Faster,' which appears in her tenth-century account of Japanese courtly life, Pillow Book, she delights in sparrows feeding their young, a visitor arriving in a carriage, and rain on a window.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "lists. In",
+              "B": "lists:",
+              "C": "lists;",
+              "D": "lists in"
+            },
+            "answer": "A",
+            "explanation": "Two independent clauses need to be separated. A period after 'lists' creates two correct sentences.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q3",
+            "number": 3,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "To study the ultrafast movements of atoms, chemist Ahmed Zewail had to devise a novel spectroscopy technique capable of measuring chemical reactions _____ within molecules at a quadrillionth of a second. Ultimately, Zewail succeeded and was honored with multiple scientific awards.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "occurred",
+              "B": "occurring",
+              "C": "occur",
+              "D": "will occur"
+            },
+            "answer": "B",
+            "explanation": "'Occurring within molecules' is a participial phrase modifying 'chemical reactions.' The present participle 'occurring' correctly describes the reactions being measured.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q4",
+            "number": 4,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "Forming extensive networks via mycorrhizal association — that is, a symbiotic relationship between plants and fungi — _____",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "hemlock trees and the fungus Cantharellus cibarius can transport nutrients through their entangled tree roots and fungal hyphae.",
+              "B": "nutrients can be transported through the entanglement of hemlock trees' roots and the fungus Cantharellus cibarius's fungal hyphae.",
+              "C": "the transport of nutrients is possible through the entanglement of hemlock trees' roots and the fungus.",
+              "D": "it is the entanglement of hemlock trees' roots and the fungus that makes nutrient transport possible."
+            },
+            "answer": "A",
+            "explanation": "The opening participial phrase 'Forming extensive networks' must modify the subject. Only Option A has organisms (hemlock trees and fungus) as the subject — they form the networks.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q5",
+            "number": 5,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "A region of the Soviet Union encompassing the present-day city of Tiraspol, Moldova, the Romanian-speaking Moldavian Autonomous Soviet Socialist Republic was in fact only nominally autonomous. President Mikhail Gorbachev's reforms, by helping the Moldavian Republic and other Soviet republics established along ethnolinguistic lines assert their prerogatives, _____ to the Soviet Union's breakup.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "which contributed",
+              "B": "contributed",
+              "C": "having contributed",
+              "D": "contributing"
+            },
+            "answer": "B",
+            "explanation": "'President Mikhail Gorbachev's reforms' is the subject and needs a finite past-tense verb. 'Contributed' is correct.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q6",
+            "number": 6,
+            "domain": "Expression of Ideas",
+            "skill": "Transitions",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "Monument 61 is the name given to a 13-ton stone statue of a human head created during the ancient Olmec civilization. It was discovered in Veracruz, Mexico, at the San Lorenzo archaeological site. _____ at the La Venta site in the state of Tabasco, another colossal head statue called Monument 4 was discovered.",
+            "question": "Which choice completes the text with the most logical transition?",
+            "options": {
+              "A": "As a result,",
+              "B": "Specifically,",
+              "C": "For example,",
+              "D": "Elsewhere,"
+            },
+            "answer": "D",
+            "explanation": "The text describes one statue found at San Lorenzo, then another found at a different location (La Venta). 'Elsewhere,' signals that the second statue was found somewhere else.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q7",
+            "number": 7,
+            "domain": "Expression of Ideas",
+            "skill": "Transitions",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "In the South Asian country of Sri Lanka, the percentage of the population living in cities increased from 18.3% to 18.7% between 2015 and 2020; this upward trend in urbanization was seen throughout that part of the continent. _____ from 2015 to 2020, the overall percentage of the South Asian population living in cities rose from 34.5% to 36.6%.",
+            "question": "Which choice completes the text with the most logical transition?",
+            "options": {
+              "A": "Nevertheless,",
+              "B": "Indeed,",
+              "C": "In reality,",
+              "D": "Later,"
+            },
+            "answer": "B",
+            "explanation": "The first sentence says the upward trend was seen throughout the continent. 'Indeed,' introduces confirming regional data that proves this was a continent-wide trend.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q8",
+            "number": 8,
+            "domain": "Expression of Ideas",
+            "skill": "Transitions",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "Ugandan American professor Peter Nazareth believed that Elvis Presley's music is best understood not as a homogeneous collection but as an anthology. _____ Nazareth entitled his college course on Elvis 'Elvis as Anthology.'",
+            "question": "Which choice completes the text with the most logical transition?",
+            "options": {
+              "A": "In sum,",
+              "B": "To that end,",
+              "C": "In addition,",
+              "D": "That is,"
+            },
+            "answer": "B",
+            "explanation": "Naming the course 'Elvis as Anthology' was a direct action taken to express and advance Nazareth's belief. 'To that end,' means in order to achieve that purpose.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q9",
+            "number": 9,
+            "domain": "Expression of Ideas",
+            "skill": "Transitions",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "With many elements, like neon, scientists were able to isolate a relatively pure sample of the substance shortly after discovering its existence — but this wasn't the case with all elements. _____ the isolation process took years. The element erbium, for instance, was discovered in 1843 but not isolated until 1934.",
+            "question": "Which choice completes the text with the most logical transition?",
+            "options": {
+              "A": "However,",
+              "B": "Thus,",
+              "C": "Sometimes,",
+              "D": "Moreover,"
+            },
+            "answer": "C",
+            "explanation": "Not all elements were quickly isolated — in some cases it took years. 'Sometimes,' correctly signals this occurred in certain instances, not universally.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q10",
+            "number": 10,
+            "domain": "Expression of Ideas",
+            "skill": "Rhetorical Synthesis",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "notes": "The Future of Nostalgia is a scholarly book by literary theorist Svetlana Boym. The book explores the concept of nostalgia from various angles. Chapter 16 outlines the origins and use of the term nostalgia. Chapter 17 discusses various skeptics' takes on the concept of nostalgia. In chapter 17, Boym writes, 'The poethics of nostalgia combines estrangement and human solidarity, affect and reflection.'",
+            "question": "The student wants to explain what Svetlana Boym writes about in chapter 17. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+            "options": {
+              "A": "Literary theorist Svetlana Boym outlines the origins and use of the term nostalgia in chapter 16 of her book.",
+              "B": "As Svetlana Boym writes in the seventeenth chapter of her book, 'The poethics of nostalgia combines estrangement and human solidarity, affect and reflection.'",
+              "C": "After outlining the origins and use of the term nostalgia, Svetlana Boym goes on to discuss various skeptics' takes on the concept of nostalgia.",
+              "D": "Svetlana Boym's The Future of Nostalgia explores the concept of nostalgia from various angles."
+            },
+            "answer": "B",
+            "explanation": "The goal is to explain what Boym writes in chapter 17. Option B directly quotes Boym from chapter 17. Option A is about chapter 16; Options C and D are too general.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q11",
+            "number": 11,
+            "domain": "Information and Ideas",
+            "skill": "Central Ideas and Details",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "Spanning the 1920s to the 1980s, Mexican architect Luis Barragan's prolific career evolved through distinct phases. After traveling to the United States and Europe in the early 1930s and immersing himself in an international architectural discourse, Barragan began incorporating principles derived from functionalism and modernism in his work, as seen in the El Arenal Parish Church, whose unadorned geometric forms contrast with the historically inspired architecture found in the houses for Emiliano Robles Leon, one of Barragan's early projects in Guadalajara.",
+            "question": "Which choice best states the main idea of the text?",
+            "options": {
+              "A": "Barragan's designs of the El Arenal Parish Church and the houses for Emiliano Robles Leon are paragons of a functionalist and modernist aesthetic.",
+              "B": "Barragan's design of the houses for Emiliano Robles Leon is considered more experimental than his design for the El Arenal Parish Church.",
+              "C": "Barragan's early work shows an initial dedication to a modernist aesthetic that he later abandoned.",
+              "D": "A notable shift in Barragan's design aesthetic reflects the influence of his time abroad."
+            },
+            "answer": "D",
+            "explanation": "Barragan traveled abroad, immersed himself in international discourse, then began incorporating modernist principles. The main idea is that his time abroad caused a notable shift in his design approach.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q12",
+            "number": 12,
+            "domain": "Information and Ideas",
+            "skill": "Central Ideas and Details",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "The food industry has long used thermal technologies to preserve food in large batches. Recent advancements in infrared heating were made through research in Mexico on the preservation of bean flour. Infrared heating is considered an improvement over more conventional thermal preservation methods: whereas conventional methods transfer energy from the surface of a food to its interior, infrared heating uses high-intensity infrared light to generate heat within the food itself, thus reducing industrial cooking times.",
+            "question": "Based on the text, what is one disadvantage of some conventional thermal methods?",
+            "options": {
+              "A": "They are especially vulnerable to technological breakdowns.",
+              "B": "They are only effective in heating foods that are lightweight and small in size.",
+              "C": "Their cooking times are longer than those of other methods.",
+              "D": "They require more energy than other methods do."
+            },
+            "answer": "C",
+            "explanation": "The text says infrared heating reduces industrial cooking times compared to conventional methods, implying conventional methods have longer cooking times.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q13",
+            "number": 13,
+            "domain": "Information and Ideas",
+            "skill": "Central Ideas and Details",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "Reyjane P. Oliveira and colleagues relied on historical DNA (hDNA) — genomic data incidentally preserved in specimens housed in natural history collections — to investigate the evolutionary trajectory of the Malagasy grass genus Chasechloa. Although this approach offers unique benefits, such as the ability to ascertain the biogeographical origins of organisms, it remains a relatively underutilized resource because hDNA is often to some extent degraded, a situation not easily remediable under current methodological paradigms.",
+            "question": "Information in the text best supports which statement about hDNA?",
+            "options": {
+              "A": "It may yield insights that other types of genomic data cannot.",
+              "B": "It may be underused because of its controversial status among scientists.",
+              "C": "It has thus far proved valuable mainly to researchers studying flora.",
+              "D": "It tends to be much more degraded than other types of DNA of comparable age."
+            },
+            "answer": "A",
+            "explanation": "The text says hDNA offers 'unique benefits, such as the ability to ascertain the biogeographical origins of organisms' — benefits other approaches presumably cannot offer.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q14",
+            "number": 14,
+            "domain": "Information and Ideas",
+            "skill": "Inferences",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "Research such as the 2015 study of mammals by Jessie Patrice Bunkley and Jesse Rex Barber has shown that noise from human activity, like traffic on a busy highway, has significant effects on animals. A report on one such study proposed many more actions to mitigate the effects on birds in the area than it did to mitigate the effects on mammals. Despite the lack of focus on measures specifically for mammals, conservationists were satisfied that the proposed mitigations were sufficient to protect all the wildlife in the area because _____",
+            "question": "Which choice most logically completes the text?",
+            "options": {
+              "A": "the effects of noise on birds have been less extensively documented than the effects on mammals have.",
+              "B": "the severity of the effects of noise on different species of birds can differ significantly.",
+              "C": "the measures intended to protect birds can sometimes have adverse effects on mammals.",
+              "D": "the measures aimed at protecting birds will likely also minimize most of the effects on mammals."
+            },
+            "answer": "D",
+            "explanation": "Conservationists were satisfied that bird-focused mitigations would protect all wildlife. The logical reason: bird-protection measures would also protect mammals.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q15",
+            "number": 15,
+            "domain": "Information and Ideas",
+            "skill": "Command of Evidence (Textual)",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "A conservation group representing 11 tribal nations in the Great Lakes region reported to natural resources agencies that the firefly will likely fare significantly worse than the black bear due to rising temperatures over the next 50 years. This collaborative approach has helped build trust between government and tribal groups, which will likely improve the quality of any joint conservation projects.\n\nState and federal natural resources agencies are increasingly incorporating traditional ecological knowledge from tribal groups in the agencies' plans to address threats to natural resources due to increasing temperatures.",
+            "question": "Based on the texts, both authors would most likely agree with which statement?",
+            "options": {
+              "A": "Natural resources conservation projects are likely to benefit from collaboration between tribal and government groups.",
+              "B": "A collaborative approach to conservation is likely to help reduce the predicted temperature increases.",
+              "C": "It is more important to focus conservation efforts on the firefly than on the black bear.",
+              "D": "Conservation efforts focused on the firefly are likely to be more effective than those focused on the black bear."
+            },
+            "answer": "A",
+            "explanation": "Text 1 says tribal-government collaboration will likely improve joint conservation projects. Text 2 says agencies are incorporating tribal knowledge. Both authors would agree that collaboration benefits conservation.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q16",
+            "number": 16,
+            "domain": "Information and Ideas",
+            "skill": "Command of Evidence (Textual)",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "In a study by Mika R. Moran, Daniel A. Rodriguez, and colleagues, residents of Mexico City and La Paz were surveyed about parks in their cities. Of the 562 respondents from Mexico City, 77.6% indicated that they use the city's parks, and of the 528 respondents from La Paz, 67.5% indicated using city parks. Given that the percentage of Mexico City respondents who reported living within a 10-minute walk of a park was much lower than that reported by La Paz respondents, greater proximity alone can't explain the difference in park use.",
+            "question": "The text makes which point about the difference between the proportions of Mexico City residents and La Paz residents using parks?",
+            "options": {
+              "A": "It could be due to inaccuracies in the survey results.",
+              "B": "It was calculated using sources that predate the survey.",
+              "C": "It was much larger than the researchers expected.",
+              "D": "It is caused by something other than the parks' proximity to city residents."
+            },
+            "answer": "D",
+            "explanation": "Mexico City has more park users despite lower proximity. The text explicitly concludes proximity alone can't explain the difference — another factor must be causing it.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q17",
+            "number": 17,
+            "domain": "Craft and Structure",
+            "skill": "Words in Context",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "From sculptures like Miro's Chicago by Joan Miro, found at Brunswick Plaza, to street art like Justus Roe's mural South Shore on South Exchange Avenue, Chicago offers an array of works to _____ the tastes of art lovers.",
+            "question": "Which choice completes the text with the most logical and precise word or phrase?",
+            "options": {
+              "A": "supplant",
+              "B": "mitigate",
+              "C": "venerate",
+              "D": "satiate"
+            },
+            "answer": "D",
+            "explanation": "Chicago has an 'array of works' for art lovers. 'Satiate' means to fully satisfy — the array of works satisfies the tastes of art lovers.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q18",
+            "number": 18,
+            "domain": "Craft and Structure",
+            "skill": "Words in Context",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "A number of recording artists _____ distinctions between Indigenous music and other musical styles. For example, Inuit singer-songwriter Tanya Tagaq incorporated Inuit throat singing into electronic music on her album Tongue.",
+            "question": "Which choice completes the text with the most logical and precise word or phrase?",
+            "options": {
+              "A": "disguise",
+              "B": "reject",
+              "C": "replace",
+              "D": "observe"
+            },
+            "answer": "B",
+            "explanation": "The examples show artists blending Indigenous music with other genres — breaking down the boundaries between them. 'Reject' means to refuse to accept/respect the distinctions, which fits.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q19",
+            "number": 19,
+            "domain": "Craft and Structure",
+            "skill": "Words in Context",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "A number of recording artists _____ Indigenous music with other musical styles. For example, Choctaw singer-songwriter Samantha Crain incorporated elements of Choctaw hymns into folk-pop on her single 'When We Remain.'",
+            "question": "Which choice completes the text with the most logical and precise word or phrase?",
+            "options": {
+              "A": "acquire",
+              "B": "fuse",
+              "C": "ignore",
+              "D": "separate"
+            },
+            "answer": "B",
+            "explanation": "The examples show artists combining Indigenous music with other genres. 'Fuse' means to blend or merge different elements together.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q20",
+            "number": 20,
+            "domain": "Craft and Structure",
+            "skill": "Cross-Text Connections",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage_1_2": "Text 1:\nA conservation group representing 11 tribal nations in the Great Lakes region reported that the northern pike will have significantly worse outcomes over the next 50 years if temperatures increase as much as some models suggest. By contrast, the white-tailed deer should be able to withstand the highest predicted warming without much harm and so likely won't require the conservation efforts that the northern pike will.\n\nText 2:\nUS government agencies involved in conservation are unfortunately not able to address every possible threat to natural resources. They must use the best information available to decide which species are most threatened and therefore most in need of conservation efforts.",
+            "question": "Based on the texts, both authors would most likely agree with which statement?",
+            "options": {
+              "A": "A collaborative approach is necessary to keep temperatures in the Great Lakes region from increasing.",
+              "B": "Agencies should focus their conservation efforts more on the northern pike than on the white-tailed deer.",
+              "C": "Conservation efforts focused on the northern pike are more likely to be successful if they incorporate tribal knowledge.",
+              "D": "State, federal, and tribal groups should immediately begin conservation programs for both the northern pike and white-tailed deer."
+            },
+            "answer": "B",
+            "explanation": "Text 1: pike will suffer significantly, deer won't need help. Text 2: agencies must prioritize the most threatened species. Both authors would agree pike should receive more conservation focus than deer.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q21",
+            "number": 21,
+            "domain": "Information and Ideas",
+            "skill": "Inferences",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "Saeed M.Z.A. Tarabieh conducted a study of consumer attitudes and found that for consumers who value environmental conservation, their likelihood of purchasing a product decreased when their perception of the product's risk of causing environmental harm increased. Subsequently, other researchers studied various demographic groups in China, investigating participants' intentions to purchase a new television, and found that, on average, rural residents had the highest perception among all the demographic groups of the environmental risks of the TV. Assuming that the results of Tarabieh's study are broadly applicable, this finding suggests that _____",
+            "question": "Which choice most logically completes the text?",
+            "options": {
+              "A": "the new TV is more appealing to rural residents than other similar products on the market are.",
+              "B": "rural residents likely prioritize other factors over a product's environmental sustainability when making purchasing decisions.",
+              "C": "there is not a meaningful difference in the average likelihood of purchasing environmentally friendly products among the demographic groups.",
+              "D": "rural residents might be less likely than participants in the other demographic groups to purchase the TV."
+            },
+            "answer": "D",
+            "explanation": "Tarabieh found: higher perceived environmental risk → lower purchase likelihood. Rural residents had the highest perception of environmental risk. Applying Tarabieh's finding, rural residents would be least likely to purchase the TV.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q22",
+            "number": 22,
+            "domain": "Information and Ideas",
+            "skill": "Command of Evidence (Textual)",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "External shopping cues use obvious messaging to entice consumers to make spontaneous purchases. In a study, data scientist Sam K. Hui and colleagues found that this effect can also be achieved with a less obvious cue: rearranging a store's layout. The researchers explain that trying to find items in new locations causes shoppers to move through more of the store, exposing them to more products and increasing the likelihood that they'll buy an item they hadn't planned on purchasing.",
+            "question": "Which response from a survey given to shoppers who made a purchase at a retail store best supports the researchers' explanation?",
+            "options": {
+              "A": "I needed to buy cleaning supplies, but they weren't in their regular place. While I was looking for them, I saw this interesting notebook and decided to buy it, too.",
+              "B": "I didn't buy everything on my shopping list today. I couldn't find a couple of the items in the store.",
+              "C": "The store sent me a coupon for a new brand of soup, so I came here to buy some.",
+              "D": "This store is larger than one closer to where I live, and it carries more products."
+            },
+            "answer": "A",
+            "explanation": "Rearranging layouts causes shoppers to explore more and buy unplanned items. Option A shows exactly this: searching in a new location led to discovering and buying an unplanned notebook.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q23",
+            "number": 23,
+            "domain": "Information and Ideas",
+            "skill": "Central Ideas and Details",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "Like all species of baleen whales, the sei whale feeds on krill by filtering water through baleen plates. Baleen whales can eat up to 30 percent of their total mass per day. And while no one would call the sei whale small — it can have a mass as high as 25,000 kg — it is much smaller than the bowhead whale, which can weigh 66,000 kg and consume as much as 19,800 kg of krill per day.",
+            "question": "Based on the text, what can most reasonably be concluded about krill consumption among sei and bowhead whales?",
+            "options": {
+              "A": "The quantities of krill consumed by bowhead whales has made it difficult for sei whales to find sufficient food.",
+              "B": "Both the sei whale and the bowhead whale can eat as much as 19,800 kg of krill per day.",
+              "C": "Most baleen whales include krill in their diets, but the sei whale is less likely than the bowhead whale to do so.",
+              "D": "The bowhead whale is able to eat more krill per day than the sei whale is."
+            },
+            "answer": "D",
+            "explanation": "The bowhead (66,000 kg) is much larger than the sei (max 25,000 kg). Since baleen whales eat up to 30% of mass, the bowhead eats more krill per day than the sei whale.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q24",
+            "number": 24,
+            "domain": "Craft and Structure",
+            "skill": "Words in Context",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "Though the honeycomb conjecture seemed _____ to many mathematicians for centuries, it eventually yielded to the efforts of Thomas C. Hales, who presented a proof of it in 1999.",
+            "question": "Which choice completes the text with the most logical and precise word or phrase?",
+            "options": {
+              "A": "irreproachable",
+              "B": "unequivocal",
+              "C": "insuperable",
+              "D": "ineluctable"
+            },
+            "answer": "C",
+            "explanation": "The conjecture seemed impossible to prove but eventually was proven. 'Insuperable' means impossible to overcome — it seemed insuperable, but Hales proved it.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q25",
+            "number": 25,
+            "domain": "Information and Ideas",
+            "skill": "Inferences",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "The Mammillaria cactus M. guerreronis occurs naturally only in the state of Guerrero in Mexico, making it especially vulnerable to extinction. The traditional single-species approach to conservation emphasizes focusing on individual species most at risk, but recently conservationists have argued that an ecosystem-based approach incorporating interactions between climate, terrain, and various species may lead to better outcomes for all species. If this view is correct, the single-species approach to the conservation of M. guerreronis could thus _____",
+            "question": "Which choice most logically completes the text?",
+            "options": {
+              "A": "lead to a better understanding of how the distribution of Mammillaria species throughout Mexico has affected their survival",
+              "B": "allow conservationists to better consider how climatic changes affecting Guerrero may reduce competing species",
+              "C": "erroneously shift the focus of conservation efforts away from M. guerreronis itself",
+              "D": "fail to consider the ways in which the survival of M. guerreronis may be influenced by changes in the populations of other species that inhabit Guerrero"
+            },
+            "answer": "D",
+            "explanation": "The ecosystem approach considers species interactions; the single-species approach doesn't. Focusing only on M. guerreronis would fail to account for how other species affect its survival.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q26",
+            "number": 26,
+            "domain": "Information and Ideas",
+            "skill": "Inferences",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "Indigenous songs can be repositories of ecological information. Kwakwaka'wakw song keeper Kwaxsistalla Wathl'thla contributed songs that reference creating terraced intertidal gardens to foster the healthy development of clams. Analysis of local paleoecological marine bivalve records has revealed significant increases in clam size and productivity as clam garden practices became more prevalent and harvesting pressure increased — a finding that bolsters the notion that _____",
+            "question": "Which choice most logically completes the text?",
+            "options": {
+              "A": "the Kwakwaka'wakw people encouraged the health of clam gardens by periodically increasing their reliance on other sustenance.",
+              "B": "the practical approach described in the Kwakwaka'wakw songs effectively maintained clams as a sustainable food source.",
+              "C": "the Kwakwaka'wakw people initially adapted their clam garden practices from methods observed among neighboring Indigenous peoples.",
+              "D": "contemporary Kwakwaka'wakw people have only minimally deviated from the clam-gardening practices described in the people's songs."
+            },
+            "answer": "B",
+            "explanation": "The data shows clam size and productivity increased as clam garden practices grew. This bolsters the notion that the approach described in the songs worked and maintained clams as a sustainable source.",
+            "points": 1
+          },
+          {
+            "id": "mock2-m2h-q27",
+            "number": 27,
+            "domain": "Information and Ideas",
+            "skill": "Central Ideas and Details",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "In Armenia, use of solid fuel as a share of total household fuel use fell by approximately 90 percent between 2000 and 2018. Such shifts are typically explained by the energy ladder model, which holds that fuel choice is mediated mainly by household income. Boukary Ouedraogo's study of fuel use in Burkina Faso shows how reductive this model is, however: although income of course constrained fuel choice, several factors, including the frequency with which certain dishes are cooked, influenced fuel choice as well.",
+            "question": "Based on the text, the author would most likely agree with which statement about household income?",
+            "options": {
+              "A": "It constrains the amount of fuel households use but not the type of fuel they use.",
+              "B": "It affects household fuel choice but not for the reasons assumed by the energy ladder model.",
+              "C": "It can explain some but not all of the differences in fuel choice across households.",
+              "D": "It has no meaningful effect on household fuel choice according to Ouedraogo's study."
+            },
+            "answer": "C",
+            "explanation": "Income 'of course constrained fuel choice' so it plays a role, but other factors also matter. Income explains some but not all differences in fuel choice.",
+            "points": 1
+          }
+        ]
+      }
+    }
+  ],
+  "_schema": {
+    "domain": [
+      "Information and Ideas",
+      "Craft and Structure",
+      "Expression of Ideas",
+      "Standard English Conventions"
+    ],
+    "type": [
+      "multiple_choice"
+    ],
+    "special_fields": {
+      "passage": "Text for the question",
+      "passage_1_2": "Two texts for Cross-Text Connections",
+      "notes": "Bullet notes for Rhetorical Synthesis"
+    }
+  }
+}

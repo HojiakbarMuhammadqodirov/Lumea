@@ -1,0 +1,26 @@
+{
+  "id": "ielts-writing-test4",
+  "label": "IELTS Writing Test 4",
+  "section": "writing",
+  "time_minutes": 60,
+  "tasks": [
+    {
+      "task": 1,
+      "type": "academic",
+      "time_suggested": "20 minutes",
+      "min_words": 150,
+      "prompt": "",
+      "figure": "/figures/ielts-writing-test4-task1.png",
+      "model_answer": ""
+    },
+    {
+      "task": 2,
+      "type": "essay",
+      "time_suggested": "40 minutes",
+      "min_words": 250,
+      "essay_type": "opinion",
+      "prompt": "",
+      "model_answer": ""
+    }
+  ]
+}

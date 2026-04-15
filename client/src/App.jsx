@@ -8,8 +8,53 @@ import IeltsPage from "./components/IeltsPage";
 import PricingPage from "./components/PricingPage";
 import FaqPage from "./components/FaqPage";
 import AdminTeacherPanel from "./components/AdminTeacherPanel";
-import StudentDashboard from "./components/StudentDashboard";
 
+// ── Dashboard shell ──────────────────────────────────────────
+import { AppProvider, useApp } from "./dashboard/useApp";
+import Sidebar from "./dashboard/Sidebar";
+import Topbar from "./dashboard/Topbar";
+import { Toast } from "./dashboard/UI";
+import HomePage from "./dashboard/pages/Home";
+import LessonsPage from "./dashboard/pages/Lessons";
+import TestsPage from "./dashboard/pages/Tests";
+import { StatsPage, RatingPage, ProfilePage } from "./dashboard/pages/OtherPages";
+
+// ── Dashboard inner wrapper (needs AppProvider context) ──────
+function StudentDashboardShell({ onLogout }) {
+  const { toast } = useApp();
+  const [page, setPage] = useState("home");
+  const goTests = () => setPage("tests");
+
+  const pageComponent = {
+    home:    <HomePage    onNav={setPage} onStartTest={goTests} />,
+    lessons: <LessonsPage />,
+    tests:   <TestsPage  />,
+    stats:   <StatsPage  />,
+    rating:  <RatingPage />,
+    profile: <ProfilePage />,
+  };
+
+  return (
+    <div className="flex min-h-screen bg-[#F0F5FC] font-sans text-[#173B64]">
+      <Sidebar page={page} onNav={setPage} onLogout={onLogout} />
+      <div className="flex-1 flex flex-col min-w-0">
+        <Topbar page={page} />
+        <div className="p-6 flex-1 overflow-y-auto flex flex-col gap-4">
+          {pageComponent[page] || pageComponent.home}
+        </div>
+      </div>
+      <Toast toast={toast} />
+      <style>{`
+        @keyframes toastIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #DDE6F0; border-radius: 99px; }
+      `}</style>
+    </div>
+  );
+}
+
+// ── Root App ─────────────────────────────────────────────────
 export default function App() {
   const [token, setToken] = useState(localStorage.getItem("learnova_token") || "");
   const [user, setUser] = useState(() => {
@@ -33,21 +78,19 @@ export default function App() {
   const studentAssignments = user?.programAssignments || [];
   const visibleCourses = useMemo(() => {
     if (user?.role !== "student") return courses;
-    return courses.filter((course) => studentAssignments.some((item) => item.programId === course.id));
+    return courses.filter((c) => studentAssignments.some((a) => a.programId === c.id));
   }, [courses, user, studentAssignments]);
 
-  const selectedProgram = visibleCourses.find((course) => course.id === selectedProgramId) || visibleCourses[0];
-  const selectedAssignment = studentAssignments.find((item) => item.programId === selectedProgram?.id);
+  const selectedProgram = visibleCourses.find((c) => c.id === selectedProgramId) || visibleCourses[0];
+  const selectedAssignment = studentAssignments.find((a) => a.programId === selectedProgram?.id);
   const selectedLevel =
-    selectedProgram?.levels.find((level) => level.id === (selectedLevelId || selectedAssignment?.levelId)) ||
+    selectedProgram?.levels.find((l) => l.id === (selectedLevelId || selectedAssignment?.levelId)) ||
     selectedProgram?.levels[0];
 
   const persistUser = (nextUser, nextToken = token) => {
     setUser(nextUser);
     localStorage.setItem("learnova_user", JSON.stringify(nextUser));
-    if (nextToken) {
-      localStorage.setItem("learnova_token", nextToken);
-    }
+    if (nextToken) localStorage.setItem("learnova_token", nextToken);
   };
 
   const showToast = (message) => {
@@ -57,86 +100,51 @@ export default function App() {
 
   useEffect(() => {
     if (!toast) return;
-    const timeoutId = window.setTimeout(() => {
-      setToast("");
-      setError("");
-    }, 7000);
-    return () => window.clearTimeout(timeoutId);
+    const id = window.setTimeout(() => { setToast(""); setError(""); }, 7000);
+    return () => window.clearTimeout(id);
   }, [toast]);
 
   const clearSession = () => {
-    setToken("");
-    setUser(null);
-    setCourses([]);
-    setPracticeTests([]);
-    setProgress(null);
-    setStudents([]);
-    setTeachers([]);
-    setStudentProgressMap({});
-    setMyTeachers([]);
-    setSelectedProgramId("");
-    setSelectedLevelId("");
+    setToken(""); setUser(null); setCourses([]); setPracticeTests([]);
+    setProgress(null); setStudents([]); setTeachers([]);
+    setStudentProgressMap({}); setMyTeachers([]);
+    setSelectedProgramId(""); setSelectedLevelId("");
     localStorage.removeItem("learnova_token");
     localStorage.removeItem("learnova_user");
   };
 
-  const refreshCourses = async (activeToken = token) => {
-    const data = await api.getCourses(activeToken);
-    setCourses(data);
-    return data;
+  const refreshCourses = async (t = token) => { const d = await api.getCourses(t); setCourses(d); return d; };
+
+  const refreshUsers = async (t = token, role = user?.role) => {
+    if (role !== "admin" && role !== "teacher") return;
+    const [sr, tr] = await Promise.all([api.listUsers(t, "student"), api.listUsers(t, "teacher")]);
+    setStudents(sr); setTeachers(tr);
+    const rows = await Promise.all(sr.map(async (s) => [s.id, await api.getProgress(t, s.id)]));
+    setStudentProgressMap(Object.fromEntries(rows));
   };
 
-  const refreshUsers = async (activeToken = token, activeRole = user?.role) => {
-    if (activeRole !== "admin" && activeRole !== "teacher") return;
-    const [studentRows, teacherRows] = await Promise.all([
-      api.listUsers(activeToken, "student"),
-      api.listUsers(activeToken, "teacher")
-    ]);
-    setStudents(studentRows);
-    setTeachers(teacherRows);
-    const progressRows = await Promise.all(
-      studentRows.map(async (student) => [student.id, await api.getProgress(activeToken, student.id)])
-    );
-    setStudentProgressMap(Object.fromEntries(progressRows));
-  };
+  const refreshMe = async (t = token) => { const p = await api.getMyProfile(t); persistUser(p, t); return p; };
 
-  const refreshMe = async (activeToken = token) => {
-    const profile = await api.getMyProfile(activeToken);
-    persistUser(profile, activeToken);
-    return profile;
-  };
-
-  const loadDashboard = async (activeToken, activeUser) => {
-    const me = await api.getMyProfile(activeToken);
-    persistUser(me, activeToken);
-    const data = await refreshCourses(activeToken);
-
+  const loadDashboard = async (t, u) => {
+    const me = await api.getMyProfile(t);
+    persistUser(me, t);
+    const data = await refreshCourses(t);
     if (me.role === "student") {
-      const firstAssignment = me.programAssignments[0];
-      setSelectedProgramId(firstAssignment?.programId || data[0]?.id || "");
-      setSelectedLevelId(firstAssignment?.levelId || "");
-      setProgress(await api.getProgress(activeToken, me.id));
-      setMyTeachers(await api.getMyTeachers(activeToken));
+      const first = me.programAssignments[0];
+      setSelectedProgramId(first?.programId || data[0]?.id || "");
+      setSelectedLevelId(first?.levelId || "");
+      setProgress(await api.getProgress(t, me.id));
+      setMyTeachers(await api.getMyTeachers(t));
     }
-
-    if (activeUser.role === "teacher" || activeUser.role === "admin") {
-      await refreshUsers(activeToken, activeUser.role);
-    }
+    if (u.role === "teacher" || u.role === "admin") await refreshUsers(t, u.role);
   };
 
   useEffect(() => {
-    AOS.init({
-      duration: 650,
-      easing: "ease-out-cubic",
-      once: false,
-      mirror: false,
-      offset: 18
-    });
+    AOS.init({ duration: 650, easing: "ease-out-cubic", once: false, mirror: false, offset: 18 });
   }, []);
 
-  useEffect(() => {
-    AOS.refresh();
-  }, [user, error, courses.length, practiceTests.length, students.length, teachers.length, selectedProgramId, selectedLevelId]);
+  useEffect(() => { AOS.refresh(); },
+    [user, error, courses.length, practiceTests.length, students.length, teachers.length, selectedProgramId, selectedLevelId]);
 
   useEffect(() => {
     if (!token || !user) return;
@@ -155,24 +163,13 @@ export default function App() {
   };
 
   const login = async (payload) => {
-    try {
-      setError("");
-      setToast("");
-      handleAuth(await api.login(payload));
-    } catch (e) {
-      showToast(e.message);
-    }
+    try { setError(""); setToast(""); handleAuth(await api.login(payload)); }
+    catch (e) { showToast(e.message); }
   };
 
   const register = async (payload) => {
-    try {
-      setError("");
-      setToast("");
-      handleAuth(await api.register(payload));
-      setNeedsPlan(true);
-    } catch (e) {
-      showToast(e.message);
-    }
+    try { setError(""); setToast(""); handleAuth(await api.register(payload)); setNeedsPlan(true); }
+    catch (e) { showToast(e.message); }
   };
 
   const updateMyProfile = async (payload) => {
@@ -180,249 +177,130 @@ export default function App() {
       setError("");
       const result = await api.updateMyProfile(token, payload);
       persistUser(result.user);
-      if (result.user.role === "student") {
-        setMyTeachers(await api.getMyTeachers(token));
-      }
-      if (result.user.role === "teacher" || result.user.role === "admin") {
-        await refreshUsers();
-      }
-    } catch (e) {
-      showToast(e.message);
-    }
+      if (result.user.role === "student") setMyTeachers(await api.getMyTeachers(token));
+      if (result.user.role === "teacher" || result.user.role === "admin") await refreshUsers();
+    } catch (e) { showToast(e.message); }
   };
 
   const completeLesson = async (programId, levelId, lessonId) => {
-    try {
-      setProgress(await api.completeLesson(token, user.id, { programId, levelId, lessonId }));
-    } catch (e) {
-      showToast(e.message);
-    }
+    try { setProgress(await api.completeLesson(token, user.id, { programId, levelId, lessonId })); }
+    catch (e) { showToast(e.message); }
   };
 
   const submitTopicScore = async (programId, levelId, lessonId, score) => {
-    try {
-      setProgress(await api.submitTopicScore(token, user.id, { programId, levelId, lessonId, score }));
-    } catch (e) {
-      showToast(e.message);
-    }
+    try { setProgress(await api.submitTopicScore(token, user.id, { programId, levelId, lessonId, score })); }
+    catch (e) { showToast(e.message); }
   };
 
   const saveLessonActivity = async (programId, levelId, lessonId, step, value, taskScore = 0) => {
-    try {
-      setProgress(
-        await api.saveLessonActivity(token, user.id, {
-          programId,
-          levelId,
-          lessonId,
-          step,
-          value,
-          taskScore
-        })
-      );
-    } catch (e) {
-      showToast(e.message);
-    }
+    try { setProgress(await api.saveLessonActivity(token, user.id, { programId, levelId, lessonId, step, value, taskScore })); }
+    catch (e) { showToast(e.message); }
   };
 
   const openPractice = async (programId) => {
-    try {
-      setSelectedProgramId(programId);
-      setPracticeTests(await api.getPracticeTests(token, programId));
-    } catch (e) {
-      showToast(e.message);
-    }
+    try { setSelectedProgramId(programId); setPracticeTests(await api.getPracticeTests(token, programId)); }
+    catch (e) { showToast(e.message); }
   };
 
   const submitPracticeScore = async (testId, score) => {
-    try {
-      setProgress(await api.submitPracticeScore(token, user.id, { programId: selectedProgram.id, testId, score }));
-    } catch (e) {
-      showToast(e.message);
-    }
+    try { setProgress(await api.submitPracticeScore(token, user.id, { programId: selectedProgram.id, testId, score })); }
+    catch (e) { showToast(e.message); }
   };
 
-  const addStudent = async (payload) => {
-    try {
-      await api.addStudent(token, payload);
-      await refreshUsers();
-    } catch (e) {
-      showToast(e.message);
-    }
-  };
-
-  const addTeacher = async (payload) => {
-    try {
-      await api.addTeacher(token, payload);
-      await refreshUsers();
-    } catch (e) {
-      showToast(e.message);
-    }
-  };
+  const addStudent = async (p) => { try { await api.addStudent(token, p); await refreshUsers(); } catch (e) { showToast(e.message); } };
+  const addTeacher = async (p) => { try { await api.addTeacher(token, p); await refreshUsers(); } catch (e) { showToast(e.message); } };
 
   const updateManagedUser = async (userId, payload) => {
     try {
       await api.updateUser(token, userId, payload);
       await refreshUsers();
-      if (user?.role === "teacher") {
-        await refreshMe();
-      }
-    } catch (e) {
-      showToast(e.message);
-    }
+      if (user?.role === "teacher") await refreshMe();
+    } catch (e) { showToast(e.message); }
   };
 
   const deleteManagedUser = async (userId) => {
-    try {
-      await api.deleteUser(token, userId);
-      await refreshUsers();
-    } catch (e) {
-      showToast(e.message);
-    }
+    try { await api.deleteUser(token, userId); await refreshUsers(); }
+    catch (e) { showToast(e.message); }
   };
 
-  const addLesson = async (payload) => {
-    try {
-      await api.addLesson(token, payload);
-      await refreshCourses();
-    } catch (e) {
-      showToast(e.message);
-    }
-  };
+  const addLesson = async (p) => { try { await api.addLesson(token, p); await refreshCourses(); } catch (e) { showToast(e.message); } };
 
   const updateLesson = async (programId, levelId, lessonId, payload) => {
-    try {
-      await api.updateLesson(token, programId, levelId, lessonId, payload);
-      await refreshCourses();
-    } catch (e) {
-      showToast(e.message);
-    }
+    try { await api.updateLesson(token, programId, levelId, lessonId, payload); await refreshCourses(); }
+    catch (e) { showToast(e.message); }
   };
 
   const deleteLesson = async (programId, levelId, lessonId) => {
-    try {
-      await api.deleteLesson(token, programId, levelId, lessonId);
-      await refreshCourses();
-    } catch (e) {
-      setError(e.message);
-    }
+    try { await api.deleteLesson(token, programId, levelId, lessonId); await refreshCourses(); }
+    catch (e) { setError(e.message); }
   };
 
-  return (
-    <main className={user ? "container" : "publicContainer"}>
-      {toast && <div className="toastAlert">{toast}</div>}
-      {!user && publicView === "landing" && (
-        <LandingPage
-          onLoginClick={() => setPublicView("login")}
-          onNavClick={(view) => { setPublicView(view); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-        />
-      )}
-      {!user && publicView === "sat" && (
-        <SatPage
-          onLoginClick={() => setPublicView("login")}
-          onNavClick={(view) => { setPublicView(view); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-        />
-      )}
-      {!user && publicView === "ielts" && (
-        <IeltsPage
-          onLoginClick={() => setPublicView("login")}
-          onNavClick={(view) => { setPublicView(view); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-        />
-      )}
-      {!user && publicView === "pricing" && (
-        <PricingPage
-          onLoginClick={() => setPublicView("login")}
-          onNavClick={(view) => { setPublicView(view); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-        />
-      )}
-      {!user && publicView === "faq" && (
-        <FaqPage
-          onLoginClick={() => setPublicView("login")}
-          onNavClick={(view) => { setPublicView(view); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-        />
-      )}
+  // ── nav helper passed to all public pages ───────────────────
+  const navTo = (view) => { setPublicView(view); window.scrollTo({ top: 0, behavior: "smooth" }); };
+  const publicProps = { onLoginClick: () => navTo("login"), onNavClick: navTo };
 
+  return (
+    <main className={user ? "" : "publicContainer"} style={user ? {minHeight:"100vh"} : {}}>
+      {toast && <div className="toastAlert">{toast}</div>}
+
+      {/* ── PUBLIC VIEWS ── */}
+      {!user && publicView === "landing"  && <LandingPage  {...publicProps} />}
+      {!user && publicView === "sat"      && <SatPage      {...publicProps} />}
+      {!user && publicView === "ielts"    && <IeltsPage    {...publicProps} />}
+      {!user && publicView === "pricing"  && <PricingPage  {...publicProps} />}
+      {!user && publicView === "faq"      && <FaqPage      {...publicProps} />}
+
+      {/* ── LOGIN / REGISTER ── */}
       {!user && publicView === "login" && (
         <section className="publicAuthPage">
           <nav className="authPageNavbar" aria-label="Login navigation">
-            <button className="landingLogo authPageLogo" type="button" onClick={() => setPublicView("landing")}>
+            <button className="landingLogo authPageLogo" type="button" onClick={() => navTo("landing")}>
               Lumea
             </button>
-            <button className="landingUtilityButton authBackButton" type="button" onClick={() => setPublicView("landing")}>
+            <button className="landingUtilityButton authBackButton" type="button" onClick={() => navTo("landing")}>
               Back
             </button>
           </nav>
-
           <div className="publicAuthIntro">
             <h1>Welcome back to Lumea.</h1>
             <p>Log in or create your profile to continue your study path.</p>
           </div>
-
           <div className="publicAuthWrap">
             <AuthPanel onLogin={login} onRegister={register} onAlert={showToast} defaultRegister />
           </div>
         </section>
       )}
 
+      {/* ── AFTER REGISTER: choose plan ── */}
       {user && needsPlan && (
-        <PricingPage
-          onLoginClick={() => {}}
-          onNavClick={() => {}}
-          onSelectPlan={() => setNeedsPlan(false)}
-        />
+        <PricingPage {...publicProps} onSelectPlan={() => setNeedsPlan(false)} />
       )}
 
-      {user && !needsPlan && (
-        <>
-          {user.role === "student" && (
-            <StudentDashboard
-              token={token}
-              user={user}
-              courses={visibleCourses}
-              progress={progress}
-              myTeachers={myTeachers}
-              selectedProgramId={selectedProgramId}
-              selectedProgram={selectedProgram}
-              selectedLevel={selectedLevel}
-              studentAssignments={studentAssignments}
-              practiceTests={practiceTests}
-              onSelectProgram={(id) => {
-                setSelectedProgramId(id);
-                setPracticeTests([]);
-              }}
-              onSelectLevel={(programId, levelId) => {
-                setSelectedProgramId(programId);
-                setSelectedLevelId(levelId);
-                setPracticeTests([]);
-              }}
-              onOpenPractice={openPractice}
-              onSubmitPracticeScore={submitPracticeScore}
-              onSaveProfile={updateMyProfile}
-              onCompleteLesson={completeLesson}
-              onSubmitTopicScore={submitTopicScore}
-              onSaveLessonActivity={saveLessonActivity}
-              onLogout={clearSession}
-            />
-          )}
+      {/* ── STUDENT DASHBOARD (new UI) ── */}
+      {user && !needsPlan && user.role === "student" && (
+        <AppProvider onLogout={clearSession}>
+            <StudentDashboardShell onLogout={clearSession} />
+        </AppProvider>
+      )}
 
-          {(user.role === "admin" || user.role === "teacher") && (
-            <AdminTeacherPanel
-              token={token}
-              user={user}
-              students={students}
-              teachers={teachers}
-              courses={courses}
-              studentProgressMap={studentProgressMap}
-              onLogout={clearSession}
-              onAddTeacher={addTeacher}
-              onAddStudent={addStudent}
-              onUpdateUser={updateManagedUser}
-              onDeleteUser={deleteManagedUser}
-              onAddLesson={addLesson}
-              onUpdateLesson={updateLesson}
-              onDeleteLesson={deleteLesson}
-            />
-          )}
-        </>
+      {/* ── ADMIN / TEACHER PANEL (existing) ── */}
+      {user && !needsPlan && (user.role === "admin" || user.role === "teacher") && (
+        <AdminTeacherPanel
+          token={token}
+          user={user}
+          students={students}
+          teachers={teachers}
+          courses={courses}
+          studentProgressMap={studentProgressMap}
+          onLogout={clearSession}
+          onAddTeacher={addTeacher}
+          onAddStudent={addStudent}
+          onUpdateUser={updateManagedUser}
+          onDeleteUser={deleteManagedUser}
+          onAddLesson={addLesson}
+          onUpdateLesson={updateLesson}
+          onDeleteLesson={deleteLesson}
+        />
       )}
     </main>
   );

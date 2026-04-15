@@ -8297,3 +8297,5 @@ select:focus {
     padding-top: 56px;
   }
 }
+/* ── Tailwind v4 ── */
+@import "tailwindcss";

@@ -1,46 +1,82 @@
-# Learnova Platform
+# Learnova — Ishga tushirish qo'llanmasi
 
-Full-stack learning platform for Learnova (SAT/IELTS):
-- Programs: SAT Math, SAT English, IELTS
-- Levels per program: Beginner, Intermediate, Advanced
-- Practice tests with previous-exam style questions
-- Roles: Student, Teacher, Admin
-- Student registration, admin-managed teacher creation
-- Progress tracking (completed lessons + test scores)
+## Talab
+- **Node.js 18+** → https://nodejs.org
 
-## Tech Stack
-- Frontend: React + Vite
-- Backend: Node.js + Express
-- Data Storage: JSON files
+---
 
-## Run Locally
+## Ishga tushirish (2 ta terminal kerak)
 
-### 1) Install dependencies
+### Terminal 1 — Backend server
 ```bash
 cd server
 npm install
-cd ../client
-npm install
-```
-
-### 2) Start backend
-```bash
-cd server
 npm run dev
 ```
-Backend runs on `http://localhost:4000`.
+✅ `Server running on port 4000` ko'rinsa tayyor.
 
-### 3) Start frontend
+### Terminal 2 — Frontend
 ```bash
 cd client
+npm install
 npm run dev
 ```
-Frontend runs on `http://localhost:5173`.
+✅ Brauzerda `http://localhost:5173` oching.
 
-## Demo Users
-- Admin:
-  - Email: `admin@learnova.com`
-  - Password: `Admin123!`
-- Student:
-  - Create from registration form
+---
 
+## "Failed to fetch" xatosi
+
+**Sabab:** Server ishlamayapti.
+
+**Hal qilish:**
+1. Terminal 1 da server ishlayaptimi? (`npm run dev`)
+2. `http://localhost:4000/api/health` sahifasini oching — `{"ok":true}` ko'rinishi kerak
+3. Aks holda `cd server && npm install` qayta bajaring
+
+---
+
+## Tayyor test akkauntlar
+
+| Role | Email | Parol |
+|------|-------|-------|
+| **Student** | `student@student.com` | `student123` |
+| **Teacher** | `teacher@teacher.com` | `teacher123` |
+| **Admin** | `admin@learnova.com` | `Admin123!` |
+| **Admin 2** | `ops@learnova.com` | `OpsAdmin123!` |
+
+---
+
+## Loyiha tuzilmasi
+
+```
+learnova/
+├── server/          ← Backend (Express + Node.js, port 4000)
+│   ├── src/
+│   │   ├── index.js      ← API routes
+│   │   ├── auth.js       ← JWT auth
+│   │   └── dataStore.js  ← JSON fayl boshqaruvi
+│   └── data/
+│       ├── users.json
+│       ├── courses.json
+│       └── ...
+│
+└── client/          ← Frontend (React + Vite, port 5173)
+    └── src/
+        ├── App.jsx            ← Asosiy routing
+        ├── api.js             ← Backend bilan ulanish
+        ├── components/        ← Landing + Auth sahifalar
+        └── dashboard/         ← Student dashboard (dark UI)
+```
+
+## Qanday ishlaydi
+
+```
+Brauzer ochiladi
+  → Landing page ko'rinadi (LandingPage)
+  → "Log in" bosilsa → AuthPanel (login/register)
+  → Login muvaffaqiyatli bo'lsa:
+      student → Dark dashboard (Sidebar + Topbar + Pages)
+      admin/teacher → Admin panel
+  → "Chiqish" bosilsa → Landing page ga qaytadi
+```

@@ -1,0 +1,174 @@
+{
+  "id": "ielts-speaking-test1",
+  "label": "IELTS Speaking Test 1",
+  "section": "speaking",
+  "time_minutes": 15,
+  "scoring": {
+    "_note": "Speaking is scored by a human examiner on four criteria, each 0–9. The four scores are averaged for the final band.",
+    "band_descriptors": ["Fluency and Coherence", "Lexical Resource", "Grammatical Range and Accuracy", "Pronunciation"]
+  },
+  "parts": [
+    {
+      "part": 1,
+      "description": "Introduction and interview. The examiner asks about familiar topics: home, family, work, studies, interests. (4–5 minutes)",
+      "topics": [
+        {
+          "topic": "Hometown",
+          "questions": [
+            {
+              "id": "ilsp1-p1-q1",
+              "question": "Where are you from?",
+              "model_answer": "I'm from Tashkent, the capital of Uzbekistan. It's a large, bustling city with a mix of modern architecture and historical monuments. I've lived there my whole life, so it feels very much like home to me.",
+              "band_tips": "Give a direct answer and extend naturally with one or two supporting details. Avoid one-word answers.",
+              "score": 1
+            },
+            {
+              "id": "ilsp1-p1-q2",
+              "question": "What do you like most about your hometown?",
+              "model_answer": "What I enjoy most is the variety of things to do. There are excellent restaurants, parks, and cultural sites. The city has developed a lot recently, so there's always something new to explore. I particularly love the old city district, which has beautiful traditional architecture.",
+              "band_tips": "Use specific vocabulary related to the topic. Aim for 3–5 sentences.",
+              "score": 1
+            },
+            {
+              "id": "ilsp1-p1-q3",
+              "question": "Has your hometown changed much in recent years?",
+              "model_answer": "Yes, significantly. When I was growing up, there were far fewer modern buildings. Now there are new shopping centres, improved public transport, and many more international businesses. It's become much more cosmopolitan, though some people feel that certain traditional aspects of the city have been lost.",
+              "band_tips": "Use past and present tenses naturally. Contrast helps show grammatical range.",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "topic": "Studies or Work",
+          "questions": [
+            {
+              "id": "ilsp1-p1-q4",
+              "question": "Are you currently studying or working?",
+              "model_answer": "I'm studying at university at the moment. I'm in my third year of a computer science degree, which I find both challenging and rewarding. I've always been interested in technology, so it seemed like a natural choice.",
+              "band_tips": "Answer directly, then explain briefly. Avoid over-preparing a memorised script.",
+              "score": 1
+            },
+            {
+              "id": "ilsp1-p1-q5",
+              "question": "What do you enjoy most about your studies?",
+              "model_answer": "I'd say the problem-solving aspect. When you're working on a complex programming task and you finally figure it out, there's a real sense of satisfaction. I also enjoy the collaborative projects because they prepare you for working in teams in the real world.",
+              "band_tips": "Use idiomatic language naturally. Show enthusiasm — it sounds more fluent.",
+              "score": 1
+            },
+            {
+              "id": "ilsp1-p1-q6",
+              "question": "Do you think your studies will be useful in the future?",
+              "model_answer": "Absolutely. Technology is at the heart of almost every industry now, so I think the skills I'm learning will be relevant regardless of which direction I choose. I'd ideally like to work in software development or maybe AI research, both of which are growing fields.",
+              "band_tips": "Express opinions confidently. Words like 'absolutely', 'I'd say' and 'I believe' sound natural and fluent.",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "topic": "Free Time and Hobbies",
+          "questions": [
+            {
+              "id": "ilsp1-p1-q7",
+              "question": "What do you like to do in your free time?",
+              "model_answer": "I have a few different interests. I enjoy reading, particularly non-fiction books about science and history. I also play football at the weekends with some friends, which is a good way to stay active and socialise at the same time.",
+              "band_tips": "Give two or three interests and link them with connectors: 'I also', 'as well as', 'apart from that'.",
+              "score": 1
+            },
+            {
+              "id": "ilsp1-p1-q8",
+              "question": "Has the way you spend your free time changed since you were a child?",
+              "model_answer": "Quite a bit, actually. As a child, I spent most of my free time outdoors, playing with neighbours or riding my bike. Now, I tend to spend more time on screens — studying, reading online, or watching documentaries. I think that reflects a broader shift in how young people spend their leisure time.",
+              "band_tips": "Past vs present comparison naturally shows grammatical range. Use 'whereas', 'on the other hand', 'compared to'.",
+              "score": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "description": "Individual long turn. The examiner gives a task card. The student has 1 minute to prepare and must speak for 1–2 minutes. The examiner may ask 1–2 follow-up questions. (3–4 minutes)",
+      "tasks": [
+        {
+          "id": "ilsp1-p2-t1",
+          "cue_card": {
+            "topic": "Describe a memorable journey you have taken.",
+            "prompts": [
+              "where you went",
+              "how you travelled",
+              "who you were with",
+              "and explain why this journey was so memorable"
+            ]
+          },
+          "preparation_time": "1 minute",
+          "speaking_time": "1–2 minutes",
+          "model_answer": "I'd like to talk about a trip I took to Samarkand about two years ago. I travelled there by train from Tashkent, which took around two hours on the high-speed rail line. I went with two close friends from university, which made the whole experience much more enjoyable.\n\nWhat made it truly memorable was seeing the Registan for the first time. I'd seen photographs of it before, of course, but nothing prepared me for the sheer scale and beauty of those three madrasahs standing together in the central square. The tilework was extraordinary — deep blues and golds that seemed to glow in the afternoon light.\n\nWe also visited the Shah-i-Zinda necropolis, which was quieter and more intimate than the Registan. Walking through those narrow lanes lined with decorated mausoleums felt like stepping back several centuries.\n\nI think the journey was memorable for two reasons: the historical significance of the place, and the fact that I was discovering my own country's heritage almost as a tourist would. It gave me a renewed sense of pride in where I come from. I'd strongly recommend Samarkand to anyone who hasn't been.",
+          "band_tips": [
+            "Use the 1 minute preparation time to jot down 3–4 key points — don't try to script every sentence",
+            "Open with a clear statement: 'I'd like to talk about...'",
+            "Use past tenses correctly throughout",
+            "Include specific details (names of places, sensory descriptions) to demonstrate vocabulary range",
+            "Aim for 1.5–2 minutes — stopping under 1 minute will hurt your fluency score"
+          ],
+          "follow_up_questions": [
+            {
+              "question": "Would you like to travel to that place again?",
+              "model_answer": "Yes, definitely. I feel like I only scratched the surface during that trip. There's still so much I didn't get to see, and I think I'd appreciate it even more now with more background knowledge about the history of the Silk Road."
+            }
+          ],
+          "score": 1
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "description": "Two-way discussion. The examiner asks abstract questions linked to the topic in Part 2. Both speakers contribute. (4–5 minutes)",
+      "linked_topic": "Travel and tourism",
+      "questions": [
+        {
+          "id": "ilsp1-p3-q1",
+          "question": "Why do you think people enjoy travelling?",
+          "model_answer": "I think there are several reasons. At the most basic level, travel provides a break from routine and daily responsibilities — it gives people the chance to relax and recharge. Beyond that, many people travel to experience different cultures, cuisines, and ways of life. There's a real sense of broadening your horizons when you encounter perspectives very different from your own. Some people also travel for professional reasons, of course, but I think for most people it's primarily about exploration and enjoyment.",
+          "band_tips": "Part 3 requires more complex, abstract answers. Use phrases like 'I think', 'In my view', 'It depends on', 'On the one hand'. Show you can speculate and hypothesise.",
+          "score": 1
+        },
+        {
+          "id": "ilsp1-p3-q2",
+          "question": "How has tourism changed in recent decades?",
+          "model_answer": "The most obvious change is the sheer volume of tourists. International travel has become far more accessible and affordable thanks to budget airlines and online booking platforms. Destinations that were once considered exotic or hard to reach are now overrun with visitors. This has brought economic benefits to many regions, but it has also created serious problems — overtourism, environmental damage, and the commercialisation of local cultures. There's also been a rise in more niche forms of travel, like eco-tourism and heritage tourism, which suggests that some travellers are becoming more conscious of their impact.",
+          "band_tips": "Show cause and effect relationships: 'thanks to', 'which has led to', 'as a result'. Mention contrasting perspectives.",
+          "score": 1
+        },
+        {
+          "id": "ilsp1-p3-q3",
+          "question": "What are the advantages and disadvantages of international tourism for local communities?",
+          "model_answer": "On the positive side, tourism brings significant economic benefits — it creates jobs, supports local businesses, and generates revenue that governments can use to maintain infrastructure and cultural sites. In many developing countries, tourism is a vital source of income.\n\nHowever, the disadvantages are equally significant. As I mentioned, overtourism can cause environmental degradation and strain on public services. There's also the issue of cultural dilution — when an area becomes heavily touristic, local traditions can become commercialised and lose their authenticity. House prices often rise in popular destinations, pricing out local residents. So I think the key challenge for governments is to manage tourism sustainably rather than simply maximising visitor numbers.",
+          "band_tips": "Structure your answer clearly: advantages first, then disadvantages, then a balanced conclusion. This shows coherence. Use discourse markers: 'On the positive side', 'However', 'In contrast'.",
+          "score": 1
+        },
+        {
+          "id": "ilsp1-p3-q4",
+          "question": "Do you think space tourism will become popular in the future?",
+          "model_answer": "That's an interesting question. I think it probably will, but it will remain extremely exclusive for a long time. The technology is advancing rapidly — we've already seen private companies send civilians to the edge of space — but the cost is still prohibitive for the vast majority of people. Over time, as competition increases and technology matures, prices may fall, much as they did for commercial aviation. Whether it will ever be genuinely mass-market is harder to say. But I can certainly imagine a future where wealthy tourists regularly take orbital flights, and perhaps even stay at hotels in space.",
+          "band_tips": "Speculative language is key in Part 3: 'I think it probably will', 'It's possible that', 'I can imagine', 'Whether... is harder to say'. This shows you can discuss hypothetical scenarios.",
+          "score": 1
+        },
+        {
+          "id": "ilsp1-p3-q5",
+          "question": "Should governments do more to promote domestic tourism?",
+          "model_answer": "Yes, I think there's a strong case for it. Promoting domestic tourism has several benefits — it keeps money circulating within the national economy, reduces carbon emissions from international flights, and encourages citizens to appreciate their own country's heritage and natural beauty. There's also a cultural dimension: people who travel within their own country often develop a stronger sense of national identity and understanding.\n\nThat said, governments need to be careful not to over-restrict international travel, which has its own economic and diplomatic value. The most sensible approach is probably to incentivise domestic travel through tax breaks or promotional campaigns rather than imposing restrictions on going abroad.",
+          "band_tips": "Show you can give a nuanced answer: agree with the main point but acknowledge the limitations. This reflects higher-order thinking.",
+          "score": 1
+        }
+      ]
+    }
+  ],
+  "_schema": {
+    "score":          "1 = question is included in the test. Speaking is examiner-graded, not auto-scored.",
+    "model_answer":   "A band 8–9 sample answer. Students are not expected to memorise these — they serve as quality reference.",
+    "band_tips":      "Practical advice for students to improve their band score on this specific question.",
+    "part_1_format":  "Short answers, 2–5 sentences per question.",
+    "part_2_format":  "Extended monologue 1–2 minutes. Must cover all cue card prompts.",
+    "part_3_format":  "Longer analytical answers, 5–10 sentences. Requires opinion, speculation, and argumentation."
+  }
+}

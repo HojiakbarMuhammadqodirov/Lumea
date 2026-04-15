@@ -1,0 +1,1589 @@
+{
+  "id": "mock-1",
+  "label": "Full SAT Mock 1 вЂ” Reading & Writing",
+  "year": 2024,
+  "section": "ebrw",
+  "source": "SAToplam by @satashkent — Real DSAT Questions March 2023–December 2024",
+  "time_minutes": 64,
+  "scoring": {
+    "_note": "Raw score = correct answers out of 54. Scaled to 200-800.",
+    "max_raw": 54,
+    "scaled_max": 800
+  },
+  "modules": [
+    {
+      "module": 1,
+      "questions": [
+        {
+          "id": "mock1-m1-q1",
+          "number": 1,
+          "domain": "Craft and Structure",
+          "skill": "Words in Context",
+          "difficulty": "easy",
+          "type": "multiple_choice",
+          "passage": "The Lascaux Cave paintings—detailed paintings of animals found in what is now France and dating from around 17,000 years ago—are sometimes said to be emotionally powerful despite their age, but in fact the paintings are _____ precisely because of their age. It is the link of shared humanity with the artists across so many centuries that gives the Lascaux Cave paintings such resonance.",
+          "question": "Which choice completes the text with the most logical and precise word or phrase?",
+          "options": {
+            "A": "ingenious",
+            "B": "meticulous",
+            "C": "pristine",
+            "D": "affecting"
+          },
+          "answer": "D",
+          "explanation": "'Affecting' means emotionally moving. The paintings are emotionally powerful precisely because of their age and the sense of shared humanity across centuries.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q2",
+          "number": 2,
+          "domain": "Craft and Structure",
+          "skill": "Words in Context",
+          "difficulty": "easy",
+          "type": "multiple_choice",
+          "passage": "Some robots such as Surena (developed in 2008) and COMAN (developed in 2012) feature humanoid characteristics like bipedal locomotion so that people will find it easier to interact with them. While these features can help to _____ feelings of comfort in people, a robot that looks too like human can fall into the 'uncanny valley,' meaning that its appearance unintentionally unsettles those who encounter it.",
+          "question": "Which choice completes the text with the most logical and precise word or phrase?",
+          "options": {
+            "A": "engender",
+            "B": "constrict",
+            "C": "counterbalance",
+            "D": "repudiate"
+          },
+          "answer": "A",
+          "explanation": "'Engender' means to produce or bring about — humanoid features help produce feelings of comfort.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q3",
+          "number": 3,
+          "domain": "Craft and Structure",
+          "skill": "Words in Context",
+          "difficulty": "easy",
+          "type": "multiple_choice",
+          "passage": "To avoid conflict with incoming Europeans attempting to colonize North America, the Cherokee nation _____ many of the settler's culture, including language, religion, and economics. Despite this, when gold was discovered in their territory, the Indian Removal Act was passed in 1830 to remove the tribe from their lands and gain access to their resources.",
+          "question": "Which choice completes the text with the most logical and precise word or phrase?",
+          "options": {
+            "A": "learned",
+            "B": "mimicked",
+            "C": "adopted",
+            "D": "rejected"
+          },
+          "answer": "C",
+          "explanation": "'Adopted' means to take on as one's own — the Cherokee formally took on the settlers' cultural practices. 'Mimicked' suggests superficial imitation; 'rejected' contradicts the meaning.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q4",
+          "number": 4,
+          "domain": "Craft and Structure",
+          "skill": "Words in Context",
+          "difficulty": "easy",
+          "type": "multiple_choice",
+          "passage": "Text corpora such as the International Corpus of English are enormous collections of electronically stored texts that can be used for empirical testing of hypotheses regarding how _____ a word is in spoken and written English. For instance, one might have a guess about the incidence of the word 'first,' but only an analysis of a corpus can prove that 'first' is the third most commonly used adjective.",
+          "question": "Which choice completes the text with the most logical and precise word or phrase?",
+          "options": {
+            "A": "pervasive",
+            "B": "credible",
+            "C": "assertive",
+            "D": "profound"
+          },
+          "answer": "A",
+          "explanation": "'Pervasive' means widely spread or frequently occurring, matching the context of measuring word frequency.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q5",
+          "number": 5,
+          "domain": "Craft and Structure",
+          "skill": "Words in Context",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "The following text is adapted from Anton Chekhov's 1904 play The Cherry Orchard (translated by Julius West in 1916). TROFIMOV: Believe me, Anya, believe me! I'm not thirty yet, I'm young, I'm still a student, but I have undergone a great deal! I'm as hungry as the winter, I'm ill, I'm shaken...and where haven't I been — fate has tossed me everywhere!",
+          "question": "As used in the text, what does the word \"undergone\" most nearly mean?",
+          "options": {
+            "A": "Neglected",
+            "B": "Enjoyed",
+            "C": "Conveyed",
+            "D": "Endured"
+          },
+          "answer": "D",
+          "explanation": "'Endured' means suffered through hardships. Trofimov is describing being hungry, ill, and shaken — all hardships he has endured.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q6",
+          "number": 6,
+          "domain": "Craft and Structure",
+          "skill": "Words in Context",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "The following text is from Mark Twain's 1876 novel The Adventures of Tom Sawyer. Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush. He surveyed the fence, and all gladness left him and a deep melancholy settled down upon his spirit. Thirty yards of board fence nine feet high.",
+          "question": "As used in the text, what does the word \"surveyed\" most nearly mean?",
+          "options": {
+            "A": "Complimented",
+            "B": "Examined",
+            "C": "Converted",
+            "D": "Organized"
+          },
+          "answer": "B",
+          "explanation": "Tom looked at the fence carefully and felt despair. 'Examined' means to look at carefully — he studied the fence and was overwhelmed by the task ahead.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q7",
+          "number": 7,
+          "domain": "Craft and Structure",
+          "skill": "Text Structure and Purpose",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "The following text is adapted from Matthew Arnold's 1869 nonfiction book Culture and Anarchy.\n\nThe Times [a British newspaper], replying to some foreign strictures on the dress, looks, and behavior of the English abroad, urges that the English ideal is that everyone should be free to do and to look just as he likes. But culture indefatigably tries, not to make what each raw person may like the rule by which he fashions himself; but to draw ever nearer to a sense of what is indeed beautiful, graceful, and becoming, and to get the raw person to like that.",
+          "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+          "options": {
+            "A": "It suggests that opinions regarding culture change over time.",
+            "B": "It asserts that the English are not as well known for their sense of taste as they ought to be.",
+            "C": "It details an example that supports the author's primary claim.",
+            "D": "It presents an opinion with which the author disagrees."
+          },
+          "answer": "D",
+          "explanation": "The underlined sentence presents The Times's view. Arnold counters with 'But culture indefatigably tries...' — showing he disagrees with this position.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q8",
+          "number": 8,
+          "domain": "Craft and Structure",
+          "skill": "Text Structure and Purpose",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "The following text is Rainer Maria Rilke's 1897 poem \"Evening\" (translated by Jessie Lamont in 1918).\n\nThe bleak fields are asleep,\nMy heart alone wakes;\nThe evening in the harbour\nDown his red sails takes.\n\nNight, guardian of dreams,\nNow wanders through the land;\nThe moon, a lily white,\nBlossoms within her hand.",
+          "question": "Which choice best states the function of the underlined portion in the text as a whole?",
+          "options": {
+            "A": "It conveys the speaker's sense that he is alone while experiencing the evening.",
+            "B": "It shows that the speaker would rather look at the fields than at the water.",
+            "C": "It indicates the speaker's disappointment that other people dislike rural settings.",
+            "D": "It explains why the speaker has woken up from sleeping."
+          },
+          "answer": "A",
+          "explanation": "'The bleak fields are asleep, / My heart alone wakes' contrasts sleeping fields with the speaker's solitary wakefulness — conveying a sense of being alone.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q9",
+          "number": 9,
+          "domain": "Craft and Structure",
+          "skill": "Text Structure and Purpose",
+          "difficulty": "easy",
+          "type": "multiple_choice",
+          "passage": "When people think of dinosaurs with feathers, they typically think of winged dinosaurs, such as the bat-like Ambopteryx. However, many dinosaurs that didn't have wings also had feathers on their bodies. For instance, research indicates that the wingless, large Yutyrannus likely had feathers.",
+          "question": "Which choice best states the main purpose of the text?",
+          "options": {
+            "A": "To discuss the presence of feathers on certain types of dinosaurs",
+            "B": "To point out the differences between dinosaur feathers and bird feathers",
+            "C": "To explain why feathered dinosaurs went extinct",
+            "D": "To argue that only one species of dinosaur had feathers"
+          },
+          "answer": "A",
+          "explanation": "The text corrects a common assumption (only winged dinosaurs had feathers) and discusses feathers on wingless dinosaurs too. The main purpose is to discuss feathers across different dinosaur types.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q10",
+          "number": 10,
+          "domain": "Craft and Structure",
+          "skill": "Text Structure and Purpose",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "Researchers have found what they believe to be a cause behind mice being motivated to exercise: gut microbes. The specific molecules in these microbes appear to stimulate the desire in the brain to run and continue running. It has been postulated that if this bacteria could be given to people in pill form, they too could experience the same motivation to exercise.",
+          "question": "Which choice best states the main purpose of the text?",
+          "options": {
+            "A": "To understand better what makes mice motivated to move.",
+            "B": "To suggest that the findings in mice could be used to increase human activity.",
+            "C": "To explain research in mice that will be used to support people.",
+            "D": "To imply that a lack of motivation to work out is not controllable."
+          },
+          "answer": "B",
+          "explanation": "The text describes finding a cause for exercise motivation in mice (gut microbes) and extrapolates that this could be given to humans in pill form. The purpose is to suggest the findings could increase human exercise motivation.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q11",
+          "number": 11,
+          "domain": "Craft and Structure",
+          "skill": "Cross-Text Connections",
+          "difficulty": "hard",
+          "type": "multiple_choice",
+          "passage_1_2": "Text 1:\nFor decades, ornithologists assumed that if they saw a singing Bell's vireo—a bird species found in temperate North America—they must be observing a male. That's because birdsong has long been considered a male trait; researchers have argued that males sing to attract mates and claim territory.\n\nText 2:\nRecent evidence shows that a female Bell's vireo is as capable of song as a male is. In fact, Karan J. Odom and colleagues found evidence of female song in 71% of the 323 species they examined. They claim that the historical mischaracterization of birdsong as a male trait is largely the result of bias: much of the research ornithologists have carried out has been near universities in the temperate northern hemisphere, where female birdsong is less common than it is in the tropics.",
+          "question": "Based on the texts, how would Odom and colleagues (Text 2) most likely respond to the view of birdsong presented in Text 1?",
+          "options": {
+            "A": "They would suggest that it reflects a tendency to study male birds rather than female birds.",
+            "B": "They would claim that other factors than mate attraction and territorial defense have driven the evolution of singing in male birds.",
+            "C": "They would underscore that male songbirds in temperate zones are likely using their songs for different purposes than are male songbirds in the tropics.",
+            "D": "They would argue that it was influenced by the kinds of study sites researchers tended to select."
+          },
+          "answer": "D",
+          "explanation": "Text 2 argues the mischaracterization is due to research bias — studies were conducted in temperate areas near universities where female birdsong is less common. Odom et al. would say Text 1's view was shaped by where researchers chose to study.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q12",
+          "number": 12,
+          "domain": "Craft and Structure",
+          "skill": "Cross-Text Connections",
+          "difficulty": "hard",
+          "type": "multiple_choice",
+          "passage_1_2": "Text 1:\nIn 2019 Arequipa, Peru, was named a City of Gastronomy by UNESCO in recognition of the city's unique food culture. The honor is well known among both residents of the city and tourists who visit. Simply by selecting Arequipa, UNESCO has helped bring awareness to local recipes, cooking practices, and chefs and has provided a significant boost to the city's tourism industry.\n\nText 2:\nMany people in Arequipa's restaurant industry hoped that food tourism would increase after the city was chosen as a City of Gastronomy in 2019. However, as researcher Eerang Park and colleagues argue, cities must still create effective marketing strategies to benefit fully from being named a City of Gastronomy. Without intentional effort to promote the city's food scene, many current and potential visitors may not even be aware that it's home to uniquely delicious food.",
+          "question": "Which choice best describes a difference in how the authors of the texts view the benefits of being named a City of Gastronomy?",
+          "options": {
+            "A": "The author of Text 1 considers the effects of Arequipa's City of Gastronomy status to be less permanent than the author of Text 2 considers them to be.",
+            "B": "The author of Text 1 states that the benefits are automatic, while the author of Text 2 states that effort is required to fully achieve the benefits.",
+            "C": "The author of Text 1 views Arequipa's status as beneficial, but the author of Text 2 questions whether there has been any benefit.",
+            "D": "The author of Text 1 focuses only on tourism while Text 2 focuses on culinary reputation."
+          },
+          "answer": "B",
+          "explanation": "Text 1: simply being selected already boosted tourism (automatic). Text 2: cities must still create marketing strategies (effort required). This is the core difference.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q13",
+          "number": 13,
+          "domain": "Information and Ideas",
+          "skill": "Central Ideas and Details",
+          "difficulty": "easy",
+          "type": "multiple_choice",
+          "passage": "The Far Side of the World, first published in 1984, is a novel in Patrick O'Brian's Aubrey/Maturin series, which includes twenty books plus an unfinished fragment of a twenty-first. Like the rest of the books in the series, The Far Side of the World has a rather abrupt ending, but the following book, The Reverse of the Medal, picks up neatly where The Far Side of the World leaves off. Thus, the sudden ending is only an issue if one considers the books as independent texts — the Aubrey/Maturin series is best thought of as a single incredibly long work, similar to other multivolume stories, such as John Galsworthy's The Forsyte Saga.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": {
+            "A": "It is unfair that the Aubrey/Maturin series does not have the critical reputation of The Forsyte Saga, which has a similar structure.",
+            "B": "The Far Side of the World and The Reverse of the Medal are two of the most complex of Patrick O'Brian's novels with unconventional structures.",
+            "C": "The structure of each of the novels of the Aubrey/Maturin series suggests that the series should be considered a single continuous story.",
+            "D": "Many readers find the Aubrey/Maturin novels to be remarkably entertaining despite flaws in the novels' structures."
+          },
+          "answer": "C",
+          "explanation": "The text argues the abrupt ending only seems problematic if books are treated independently — they flow into each other, making the series best understood as one continuous long work.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q14",
+          "number": 14,
+          "domain": "Information and Ideas",
+          "skill": "Central Ideas and Details",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "Horses and barn owls can see in three dimensions (3D), which helps them perceive distance and depth. Octopuses and squid are thought to lack 3D vision. Many researchers once thought the same about cuttlefish, but Trevor Wardell and his team wanted to test whether this assumption was true. The team studied how cuttlefish wearing 3D glasses reacted to 3D images of shrimp (a favorite prey) projected on a tank wall. Cuttlefish changed their striking position to match the 3D images, suggesting that their vision is more like that of horses and barn owls than that of octopuses or squid.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": {
+            "A": "Researchers have long known that horses and barn owls can see in 3D.",
+            "B": "Cuttlefish are surprisingly similar in structure to octopuses and squid.",
+            "C": "Contrary to what many researchers had assumed, cuttlefish may be able to see in 3D.",
+            "D": "The ability to see in 3D allows many animals to interact with one another."
+          },
+          "answer": "C",
+          "explanation": "Researchers previously assumed cuttlefish lacked 3D vision, but Wardell's experiment showed they respond to 3D images — suggesting they do have 3D vision contrary to the assumption.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q15",
+          "number": 15,
+          "domain": "Information and Ideas",
+          "skill": "Inferences",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "The Study on Global Ageing and Adult Health (SAGE) seeks to discover long-term trends related to aging by compiling and analyzing evidence from approximately 66,000 participants in multiple countries. As with most longitudinal studies, extensive funding support is needed for SAGE to collect the relevant data over timescales and at intervals that will support robust conclusions. But the quality of a more constrained investigation, such as a sociology study seeking only to yield the average age at which people in a given city first become parents, is much less dependent on high levels of funding because _____",
+          "question": "Which choice most logically completes the text?",
+          "options": {
+            "A": "such studies are likely to be a lower priority for funding than SAGE.",
+            "B": "the sociology study is unlikely to be able to recruit 66,000 participants.",
+            "C": "expanding the scope of such studies is unlikely to be feasible.",
+            "D": "such studies are not trying to identify trends over time."
+          },
+          "answer": "D",
+          "explanation": "SAGE needs extensive funding to track long-term trends over time. A constrained study (average age of first-time parents) is a single measurement — not tracking trends over time — hence less funding needed.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q16",
+          "number": 16,
+          "domain": "Information and Ideas",
+          "skill": "Inferences",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "Anne Bronte's 1847 novel Agnes Grey contains elements drawn from Bronte's own life: there are many parallels between the experiences of the novel's title character and those of Bronte, and as a result Agnes Grey is regularly described as an autobiographical novel. This characterization can be useful, but it also presents drawbacks in terms of how the work is perceived, as it may lead readers to believe that Bronte merely fictionalized true events, which, in an artistic field where creativity and inventiveness are prized, can suggest that _____",
+          "question": "Which choice most logically completes the text?",
+          "options": {
+            "A": "Agnes Grey is less of an imaginative achievement than it actually is.",
+            "B": "the real-world counterparts of other characters in Agnes Grey are hard to identify.",
+            "C": "Bronte should not have claimed that Agnes Grey is based on real events.",
+            "D": "critics disagree about whether Agnes Grey shows greater originality than works without autobiographical elements."
+          },
+          "answer": "A",
+          "explanation": "In a field where creativity is prized, labeling the novel as merely autobiographical implies Bronte just fictionalized real events — making it seem less of a creative/imaginative achievement.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q17",
+          "number": 17,
+          "domain": "Information and Ideas",
+          "skill": "Inferences",
+          "difficulty": "hard",
+          "type": "multiple_choice",
+          "passage": "In a 2012 study in the United States, Michael E. Berndt and Travis K. Bavin found a positive association between levels of dissolved organic carbon and mercury in bodies of fresh water. Many other studies have yielded similar results, suggesting to some scientists that this association is true for all bodies of fresh water. But much of that research has been conducted at broadly similar sites in North America, and when Sean Oh and colleagues examined bodies of fresh water in South Korea, they found a negative association between dissolved organic carbon levels and mercury levels. If similar findings emerge from other locations outside North America, that could suggest that _____",
+          "question": "Which choice most logically completes the text?",
+          "options": {
+            "A": "the mercury levels reported in Oh and colleagues' study were much higher than those reported in the study by Berndt and Bavin.",
+            "B": "Berndt and Bavin may have inadvertently measured a different characteristic of bodies of fresh water.",
+            "C": "the relationship between dissolved organic carbon and mercury reported by Berndt and Bavin reflects conditions characteristic of certain North American ecosystems rather than all freshwater bodies globally.",
+            "D": "Oh and colleagues' study is more representative of freshwater bodies globally."
+          },
+          "answer": "C",
+          "explanation": "North American studies show positive association; South Korea shows negative. If other non-North American sites also differ, the Berndt and Bavin finding applies specifically to North American ecosystems, not globally.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q18",
+          "number": 18,
+          "domain": "Information and Ideas",
+          "skill": "Command of Evidence (Textual)",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "The bird species Myiobius barbatus (the bearded flycatcher), which forages in relatively dense vegetation, and Platyrinchus saturatus (the cinnamon-crested spadebill), which forages in open areas or low-density vegetation, share territory in French Guiana with Thainnomanes caesius (the cinereous antshrike), which emits a loud alarm call when it detects predators. Biologist Ari Martinez and colleagues, who studied the ecological community the species share, hypothesized that there is an inverse relationship between birds' field of vision while foraging and their sensitivity to alarm calls from neighboring species.",
+          "question": "Which finding, if true, would most directly support Martinez and colleagues' hypothesis?",
+          "options": {
+            "A": "When Martinez and colleagues played T. caesius alarm calls, M. barbatus and P. saturatus displayed no reaction, whereas T. caesius displayed predator-avoidance behavior.",
+            "B": "Many local bird species with similar foraging habits to those of M. barbatus displayed no reaction when Martinez and colleagues played T. caesius alarm calls, whereas M. barbatus displayed predator-avoidance behavior.",
+            "C": "Some individuals of P. saturatus displayed predator-avoidance behavior when Martinez and colleagues played T. caesius alarm calls, whereas nearly all did when M. barbatus alarm calls were played.",
+            "D": "P. saturatus displayed no reaction when Martinez and colleagues played T. caesius alarm calls, whereas M. barbatus displayed predator avoidance behavior in response to the calls."
+          },
+          "answer": "D",
+          "explanation": "The hypothesis: inverse relationship between field of vision and alarm sensitivity. M. barbatus (dense vegetation = limited vision) should be MORE sensitive; P. saturatus (open areas = wide vision) should be LESS sensitive. Option D shows exactly this.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q19",
+          "number": 19,
+          "domain": "Information and Ideas",
+          "skill": "Command of Evidence (Textual)",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "It was only when Alma Thomas turned away from figurative art and toward abstraction that she rose to acclaim as an artist. When the solidity of her line gave way to broken, vibrant colors, the beauty she had long seen emerged.",
+          "question": "Which choice, if true, would most effectively support the writer's claim?",
+          "options": {
+            "A": "Her painting Starry Night and the Astronauts (1972) includes a small kaleidoscope of red, orange, and yellow that suggests the spaceship Apollo 10.",
+            "B": "Thomas was fascinated by the natural world, incorporating everything from the flowers in her garden to the stars in the night sky into her paintings.",
+            "C": "Her Still Life with Vases and Flowers (1964), which contains realistic images, feels labored, whereas Lunar Surface (1970) glows with rich splashes of purple and blue.",
+            "D": "Although Thomas's own works focused on nature, she believed that art could also evoke the energy of airplanes, cars, skyscrapers, and electric signals."
+          },
+          "answer": "C",
+          "explanation": "The claim is that Thomas rose to acclaim when she moved from figurative to abstract art. Option C directly supports this by contrasting her figurative work (labored) with her abstract work (glowing with color).",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q20",
+          "number": 20,
+          "domain": "Information and Ideas",
+          "skill": "Command of Evidence (Textual)",
+          "difficulty": "hard",
+          "type": "multiple_choice",
+          "passage": "New research suggests that coffee could have a positive effect on cardiovascular health. Although caffeine is coffee's most well-known constituent, the beverage contains more than 100 biologically active components. In a study led by Jiyoung Kim, researchers at Seoul National University concluded that non-caffeinated compounds likely play a role in the positive relationship between coffee consumption and health.",
+          "question": "Which finding, if true, would most directly support the researchers' conclusion?",
+          "options": {
+            "A": "Whereas regular coffee contains from 70-140 mg of caffeine per cup, decaf contains approximately 0-7mg.",
+            "B": "Decaffeinated coffee causes cells to produce NQO1, an enzyme that has neuroprotective benefits.",
+            "C": "Extracts from caffeinated coffee have been shown to aid weight loss more than a placebo.",
+            "D": "People who drink several cups of coffee every day are less vulnerable to certain diseases."
+          },
+          "answer": "B",
+          "explanation": "The conclusion is that non-caffeinated compounds drive coffee's health benefits. Option B shows decaffeinated coffee (no caffeine, but has other compounds) triggering a beneficial enzyme — directly supporting that non-caffeine components are responsible.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q21",
+          "number": 21,
+          "domain": "Information and Ideas",
+          "skill": "Command of Evidence (Textual)",
+          "difficulty": "hard",
+          "type": "multiple_choice",
+          "passage": "In Hoocak, an Indigenous language from the Mid-Atlantic region of what is now the United States, okayeke means 'bad,' whereas ati okayeye'tesel means 'bad houses.' This phenomenon, in which an element of a root word is repeated, sometimes with modification, within another word that is related to the root word, is called reduplication. In this case, the element 'ye' in okayake gets repeated in ati okayeye'tesel. There are many examples of this type of reduplication in Hoocak.",
+          "question": "Which choice best describes the function of the underlined part?",
+          "options": {
+            "A": "It elaborates on the description of reduplication by explaining how it works in the specific Hoocak word mentioned earlier.",
+            "B": "It provides English translation of the Hoocak word mentioned earlier.",
+            "C": "It acknowledges that Hoocak has some important exceptions to the general pattern described earlier.",
+            "D": "It emphasizes how frequently reduplication occurs in Hoocak."
+          },
+          "answer": "A",
+          "explanation": "The underlined part traces exactly how the reduplication works in the specific example — elaborating on the definition with the concrete Hoocak case.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q22",
+          "number": 22,
+          "domain": "Information and Ideas",
+          "skill": "Inferences",
+          "difficulty": "hard",
+          "type": "multiple_choice",
+          "passage": "The Harlem Renaissance, which gave us great literary works like May Miller's play The Bog Guide and nonliterary works like James Van Der Zee's photograph Couple, Harlem, is often said to have ended in the 1930s shortly after the Great Depression began. But some scholars argue that the Harlem Renaissance never really ended because it continues to shape culture in the United States today. These scholars therefore suggest that _____",
+          "question": "Which choice most logically completes the text?",
+          "options": {
+            "A": "if a cultural movement has both literary and nonliterary innovations, then it is likely to be influential.",
+            "B": "if a cultural movement is very innovative, then it is unlikely to be able to sustain itself for long.",
+            "C": "if the literary works of a cultural movement are influential, then it doesn't matter whether the nonliterary works are.",
+            "D": "if the influence of a cultural movement continues, then in some sense the movement itself continues."
+          },
+          "answer": "D",
+          "explanation": "The scholars say the Renaissance never ended because its influence continues. This implies: if influence persists, the movement itself hasn't ended. Option D states this logical inference directly.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q23",
+          "number": 23,
+          "domain": "Information and Ideas",
+          "skill": "Command of Evidence (Textual)",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "Cane is a 1923 novel by Jean Toomer. In one portion of the novel, Toomer uses figurative language to connect the narrator's urban environment of Washington, DC, and the rural South of the narrator's past, writing _____",
+          "question": "Which quotation from Cane most effectively illustrates the claim?",
+          "options": {
+            "A": "\"The [train] engines of this valley have a whistle, the echoes of which sound like iterated gasps and sobs. I always think of them as crude music.\"",
+            "B": "\"And when the wind is from the South, soil of my homeland falls like a fertile shower upon the lean streets of [Washington, DC]\"",
+            "C": "\"I sang, with a strange quiver in my voice, a promise-song.\"",
+            "D": "\"The young trees had not outgrown their boxes then. V Street [in Washington, DC] was lined with them.\""
+          },
+          "answer": "B",
+          "explanation": "Option B uses figurative language (simile: 'falls like a fertile shower') and literally brings Southern soil into DC streets — bridging rural South and urban DC through figurative language.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q24",
+          "number": 24,
+          "domain": "Expression of Ideas",
+          "skill": "Transitions",
+          "difficulty": "easy",
+          "type": "multiple_choice",
+          "passage": "Of Names, an essay by French philosopher Michel de Montaigne, explores a relatively light subject, while his essay \"Of the Punishment of Cowardice\" takes on heavier fare. No matter the essay topic, Montaigne challenges his own ideas, beliefs, and values. _____ he questions his own perspective, regardless of subject matter.",
+          "question": "Which choice completes the text with the most logical transition?",
+          "options": {
+            "A": "For example,",
+            "B": "At that time,",
+            "C": "Indeed,",
+            "D": "However,"
+          },
+          "answer": "C",
+          "explanation": "'Indeed,' confirms and reinforces the previous claim that Montaigne challenges his own ideas regardless of topic — the following sentence is a restatement of this.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q25",
+          "number": 25,
+          "domain": "Expression of Ideas",
+          "skill": "Transitions",
+          "difficulty": "easy",
+          "type": "multiple_choice",
+          "passage": "The first documented use of the English word \"session\" is attributed to poet Geoffrey Chaucer's 1386 work \"Canterbury Prologue.\" However, Chaucer didn't write in Modern English; _____ he wrote in what we now call Middle English, which was commonly used during the period.",
+          "question": "Which choice completes the text with the most logical transition?",
+          "options": {
+            "A": "rather,",
+            "B": "as a result,",
+            "C": "similarly,",
+            "D": "finally,"
+          },
+          "answer": "A",
+          "explanation": "'Rather,' signals a correction (not X, but rather Y): Chaucer didn't write in Modern English; rather, he wrote in Middle English.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q26",
+          "number": 26,
+          "domain": "Expression of Ideas",
+          "skill": "Transitions",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "In the West African country of Burkina, the percentage of the population living in cities increased from 27.5% to 30.6% between 2015 and 2020; this upward trend in urbanization was seen throughout that part of the continent. _____ from 2015 to 2020, the overall percentage of the West African population living in cities rose from 44.5% to 47.7%.",
+          "question": "Which choice completes the text with the most logical transition?",
+          "options": {
+            "A": "Nevertheless,",
+            "B": "Later,",
+            "C": "Indeed,",
+            "D": "In reality,"
+          },
+          "answer": "C",
+          "explanation": "'Indeed,' introduces data confirming the previous claim that urbanization trends were seen across West Africa.",
+          "points": 1
+        },
+        {
+          "id": "mock1-m1-q27",
+          "number": 27,
+          "domain": "Expression of Ideas",
+          "skill": "Rhetorical Synthesis",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "notes": "The Music by Black Composers (MBC) project aims to inspire aspiring music students by archiving and sharing information about the music of Black classical composers. George Theophilus Walker is a Black classical music composer included in MBC's Historic Composers Directory. He was born in 1922 and died in 2018.",
+          "question": "Which choice most effectively uses information from the given sentences to set up a discussion of Walker's career for an audience already familiar with the MBC Project?",
+          "options": {
+            "A": "While George Theophilus Walker is considered a great composer included in MBC's Historic Composers Directory.",
+            "B": "Born in 1922, George Theophilus Walker passed away in 2018 according to the MBC project.",
+            "C": "Among the many talented figures included in the MBC project is classical music composer George Theophilus Walker.",
+            "D": "The MBC project's Historic Composers Directory highlights Black classical composers of the past, such as George Theophilus Walker (1922-2018), in order to inspire music students to become the classical composers of the future."
+          },
+          "answer": "C",
+          "explanation": "The audience already knows MBC. Option C efficiently introduces Walker as a figure in MBC, setting up a discussion of his career without re-explaining MBC.",
+          "points": 1
+        }
+      ]
+    },
+    {
+      "module": 2,
+      "adaptive": true,
+      "_note": "Students see either easy or hard version based on Module 1 performance.",
+      "easy_version": {
+        "questions": [
+          {
+            "id": "mock1-m2e-q1",
+            "number": 1,
+            "domain": "Standard English Conventions",
+            "skill": "Boundaries",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "Within Earth's biomes, there are four main types of deserts: arid, semiarid, coastal, and cold. The Great Salt Desert in western Asia is an arid _____ it is one of the largest deserts in the world, with a total area of about 77,000 km2.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "desert, for example;",
+              "B": "desert, for example,",
+              "C": "desert; for example,",
+              "D": "desert, for example"
+            },
+            "answer": "C",
+            "explanation": "Two independent clauses joined with 'for example' require a semicolon before and comma after: 'desert; for example,'",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q2",
+            "number": 2,
+            "domain": "Standard English Conventions",
+            "skill": "Boundaries",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "Sociologist Alton Okinaka sits on the review board tasked with adding new sites to the Hawaii Register of Historic Places, which includes the Pufu'opae Bridge, built in 1915, and the Ma'alaea General Store, built in 1910. Okinaka doesn't make such decisions single-handedly, _____ historical designations must be approved by a group of nine other experts.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "however, all",
+              "B": "however and all",
+              "C": "however all",
+              "D": "however. All"
+            },
+            "answer": "D",
+            "explanation": "'However' beginning a new independent clause needs a sentence boundary before it. A period creates two correct sentences.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q3",
+            "number": 3,
+            "domain": "Standard English Conventions",
+            "skill": "Boundaries",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "After finding information about Harold Eugene Ford, who represented Tennessee in the United States House of Representatives, the student discovered biographical sketches of two other Black Americans who served in _____ Harold Washington of Illinois and Augustus (Gus) Freeman Hawkins of California.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "Congress.",
+              "B": "Congress;",
+              "C": "Congress:",
+              "D": "Congress,"
+            },
+            "answer": "C",
+            "explanation": "A colon introduces a list of examples. 'Congress:' correctly introduces the two people who served in Congress.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q4",
+            "number": 4,
+            "domain": "Standard English Conventions",
+            "skill": "Boundaries",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "At 1,006 meters, the Forth Road Bridge in the United Kingdom is one of the longest suspension bridges in the _____ the Yavuz Sultan Selim Bridge in Turkey, at 14,08 meters, is even longer.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "world, but,",
+              "B": "world,",
+              "C": "world, but",
+              "D": "world but"
+            },
+            "answer": "C",
+            "explanation": "Two independent clauses joined by 'but' require a comma before it. 'world, but' is correct. Option A adds an unnecessary extra comma.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q5",
+            "number": 5,
+            "domain": "Standard English Conventions",
+            "skill": "Boundaries",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "There is a common misconception that all cats detest _____ fishing cat, Prionailurus viverrinus, proves this assumption is false. This wild cat that lives in Southeastern Asia can not only swim long distances but also relies on fish for roughly 75 percent of its diet.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "water; the",
+              "B": "water, the",
+              "C": "water the",
+              "D": "water - the"
+            },
+            "answer": "A",
+            "explanation": "Two independent clauses joined without a conjunction require a semicolon. 'water; the' correctly separates them.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q6",
+            "number": 6,
+            "domain": "Standard English Conventions",
+            "skill": "Boundaries",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "The Greek philosopher Aristotle had ideas that would have substantial influence thousands of years after he taught _____. American Framers would use his philosophies like government moderation, the rule of law, and citizen rights when writing the United States Constitution.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "it.",
+              "B": "that.",
+              "C": "this.",
+              "D": "them."
+            },
+            "answer": "D",
+            "explanation": "The pronoun refers to 'his philosophies' (plural). 'Them' is the correct plural pronoun.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q7",
+            "number": 7,
+            "domain": "Standard English Conventions",
+            "skill": "Boundaries",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "Theories have been put forth about what most influences our cultural _____, or environment. Of the three options, the findings suggest that family background is the strongest determinant in molding an individual's cultural preferences.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "tastes: genes,",
+              "B": "tastes; genes,",
+              "C": "tastes, genes,",
+              "D": "tastes genes,"
+            },
+            "answer": "A",
+            "explanation": "A colon introduces the list of three options (genes, something, environment). 'tastes: genes,' correctly introduces the list.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q8",
+            "number": 8,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "The writer Maya Angelou, along with others such as Lorenzo Thomas and Gwendolyn Brooks, _____ commonly associated with the Black Arts movement, a loose-knit group of writers and artists active in the 1960s and the 1970s who were interested in exploring the Black American experience through their work.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "have been",
+              "B": "is",
+              "C": "are",
+              "D": "were"
+            },
+            "answer": "B",
+            "explanation": "The subject is 'The writer Maya Angelou' (singular). 'Along with others' doesn't change the subject's number. Singular present tense 'is' is correct.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q9",
+            "number": 9,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "Both Heinrich Boll and Camilo Jose Cela have been commended for _____ contributions to literature, perhaps most notably when the Swedish Academy awarded Boll the Nobel Prize in Literature in 1972 and Cela in 1989.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "it's",
+              "B": "their",
+              "C": "its",
+              "D": "they're"
+            },
+            "answer": "B",
+            "explanation": "'Both Heinrich Boll and Camilo Jose Cela' is plural. The plural possessive 'their' is correct.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q10",
+            "number": 10,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "On the other hand, Newark Liberty International Airport, which _____ located in Newark, New Jersey, saw an overall increase in departing passengers over the same time period, from 16,704,844 total passengers to 23,171,827.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "is",
+              "B": "are",
+              "C": "were",
+              "D": "have been"
+            },
+            "answer": "A",
+            "explanation": "'Newark Liberty International Airport' is singular. Singular present tense 'is' is correct for a permanent fact about location.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q11",
+            "number": 11,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "Rising 11,371 feet above sea level, Mount Leuser _____ among the world's tallest mountains.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "is ranked",
+              "B": "to rank",
+              "C": "ranking",
+              "D": "having ranked"
+            },
+            "answer": "A",
+            "explanation": "The sentence needs a finite verb. 'Is ranked' (passive, present tense) correctly serves as the main predicate.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q12",
+            "number": 12,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "In Tallin, Estonia, the average temperature is 57.4 degrees in June, _____ to 63 degrees in July, and then dips slightly to 60 degrees in August.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "rising",
+              "B": "rises",
+              "C": "has risen",
+              "D": "rose"
+            },
+            "answer": "A",
+            "explanation": "'Rising' is a participial phrase maintaining the parallel series: 'is 57.4 in June, rising to 63 in July, and then dips in August.'",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q13",
+            "number": 13,
+            "domain": "Expression of Ideas",
+            "skill": "Transitions",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "Built at a scale of 1:110, the Eiffel Tower in Baku, Azerbaijan, is one of many replicas of the famous Eiffel Tower in Paris, France. _____ towers like the Metallic Tower of Fourviere in Lyon, France, though not exact replicas, pay homage to the Eiffel's iconic spire-like design.",
+            "question": "Which choice completes the text with the most logical transition?",
+            "options": {
+              "A": "On the contrary,",
+              "B": "Consequently,",
+              "C": "Invariably,",
+              "D": "Moreover,"
+            },
+            "answer": "D",
+            "explanation": "'Moreover,' adds related information about towers inspired by but not copying the Eiffel Tower, extending the main point.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q14",
+            "number": 14,
+            "domain": "Expression of Ideas",
+            "skill": "Transitions",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "Though Middle English was widely spoken in fourteenth-century England, the language was rarely employed in literature until poet Geoffrey Chaucer helped pioneer its literary use. _____ his manuscripts contain the first documented uses of over 2,000 English words — like the word \"exaltation\" in his 1386 poem \"The Squire's Tale\" — which led a contemporary to dub him \"the first finder of our fair language.\"",
+            "question": "Which choice completes the text with the most logical transition?",
+            "options": {
+              "A": "However,",
+              "B": "That being said,",
+              "C": "Besides,",
+              "D": "Indeed,"
+            },
+            "answer": "D",
+            "explanation": "'Indeed,' reinforces and confirms Chaucer's pioneering role by providing strong evidence — 2,000 first-documented word uses.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q15",
+            "number": 15,
+            "domain": "Expression of Ideas",
+            "skill": "Transitions",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "According to traditional classifications, each of William Shakespeare's plays belongs to one of three distinct genres: comedy, history, or tragedy. The play Much Ado About Nothing (1598-99), _____ is classified as a comedy, whereas Richard II (1595) is classified as a history.",
+            "question": "Which choice completes the text with the most logical transition?",
+            "options": {
+              "A": "in addition,",
+              "B": "similarly,",
+              "C": "for instance,",
+              "D": "however,"
+            },
+            "answer": "C",
+            "explanation": "'For instance,' signals that what follows is an illustrative example of the three-genre classification system.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q16",
+            "number": 16,
+            "domain": "Expression of Ideas",
+            "skill": "Rhetorical Synthesis",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "notes": "Blackberries are fruits that contain ascorbic acid, an essential nutrient for humans. Every 100 grams (g) of blackberries contains 21 milligrams (mg) of ascorbic acid. Many animals can make ascorbic acid in their bodies, but humans cannot. Humans must get ascorbic acid from foods, including fruits and vegetables. Ascorbic acid is also known as Vitamin C.",
+            "question": "The student wants to specify how much vitamin C is in blackberries. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+            "options": {
+              "A": "Many animals can make ascorbic acid, which is also known as vitamin C, in their bodies, but humans cannot.",
+              "B": "There is 21 mg of vitamin C in every 100 g of blackberries.",
+              "C": "Since humans cannot make vitamin C in their bodies, they must get this essential nutrient from foods like blackberries.",
+              "D": "Blackberries contain vitamin C, which humans must get from food."
+            },
+            "answer": "B",
+            "explanation": "The goal is to specify HOW MUCH. Only Option B provides the exact quantity: 21 mg per 100 g.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q17",
+            "number": 17,
+            "domain": "Expression of Ideas",
+            "skill": "Rhetorical Synthesis",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "notes": "Sister cities are pairs of cities that form social or legal partnerships to promote each other's cultures. Previously known as 'town twinning,' the concept of sister cities evolved in Europe after World War II as a way to repair bonds between cities. Many cities in New York State maintain such partnerships with cities around the world. Rhinebeck, New York, and Larreynaga, Nicaragua, became sister cities in 1989.",
+            "question": "The student wants to emphasize the duration of Rhinebeck and Larreynaga's sister city relationship. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+            "options": {
+              "A": "Since the end of World War II, sister cities such as Rhinebeck, New York, and Larreynaga, Nicaragua, have continued to form social partnerships to promote each other's cultures.",
+              "B": "As sister cities, Rhinebeck, New York, and Larreynaga, Nicaragua, have engaged in cultural exchange and partnership since 1989.",
+              "C": "Larreynaga, which became a sister city to Rhinebeck, New York, is located in Nicaragua.",
+              "D": "Despite their distance from each other, the sister cities of Rhinebeck, New York, and Larreynaga, Nicaragua have enjoyed the same partnership as many other sister cities."
+            },
+            "answer": "B",
+            "explanation": "To emphasize duration, Option B mentions both cities and specifies 'since 1989' — directly indicating the length of the relationship.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q18",
+            "number": 18,
+            "domain": "Expression of Ideas",
+            "skill": "Rhetorical Synthesis",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "notes": "In a 2011 study, Loydi tested the effect of plant litter on seedling emergence in a grassland setting. Plant litter includes dead leaves and other plant material. The test site was a mesic grassland in Argentina. It was in a subtropic climate with year-round rain. The researcher found that in these environmental conditions the presence of plant litter had a neutral effect on seedling emergence.",
+            "question": "Which choice most effectively uses information from the given sentences to specify the test site's climate?",
+            "options": {
+              "A": "Loydi's study was conducted in a subtropic climate with year-round rain.",
+              "B": "A test was conducted in Argentina to study the effect of plant litter on seedling emergence in a given climate.",
+              "C": "Loydi tested the effect of dead leaves and other plant material on seedling emergence in Argentina.",
+              "D": "In a study, Loydi found that the presence of plant litter had a neutral effect on seedling emergence."
+            },
+            "answer": "A",
+            "explanation": "Only Option A directly states the climate characteristics: 'subtropic climate with year-round rain.'",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q19",
+            "number": 19,
+            "domain": "Expression of Ideas",
+            "skill": "Rhetorical Synthesis",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "notes": "Jean-Michel Basquiat was an American artist who produced more than two thousand drawings and paintings. His work Thin in the Old was completed in 1986 and sold at auction in 2020. Thin in the Old is composed of acrylic, oil, and paper collage on wood and measures 3,028 square inches in area. His work Victor was completed in 1987 and sold at auction in 2017. Victor is composed of acrylic, oil stick, and crayon on canvas and measures 9,432 square inches in area.",
+            "question": "Which choice most effectively uses information from the given sentences to emphasize how the two works are similar?",
+            "options": {
+              "A": "Composed by artist Jean-Michel Basquiat in 1986 and 1987, respectively, both Thin in the Old and Victor use acrylic paint as a medium.",
+              "B": "Artist Jean-Michel Basquiat completed Thin in the Old in 1986, and Victor followed in 1987.",
+              "C": "Artist Jean-Michel Basquiat's work Thin in the Old is composed of acrylic, oil, and paper collage, while Victor is composed of acrylic, oil stick, and crayon.",
+              "D": "Between artist Jean-Michel Basquiat's works Victor and Thin in the Old, the former is the larger of the two."
+            },
+            "answer": "A",
+            "explanation": "Both works use acrylic paint. Option A explicitly highlights this shared element.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q20",
+            "number": 20,
+            "domain": "Expression of Ideas",
+            "skill": "Rhetorical Synthesis",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "notes": "Trans Siberian Orchestra (OTS) is a band from the US that was created in 1996. The band's sound combines the genres of hard rock and classical music, with an epic assembly of nearly fifty musicians that includes over a dozen singers. Musicians are regularly invited to perform with OTS on tour. Keyboardist Paul Morris toured with OTS in 2000. Electric violinist Alison toured with OTS.",
+            "question": "Which choice most effectively uses information from the given sentences to emphasize the role Paul Morris played when performing with OTS?",
+            "options": {
+              "A": "In 2000, Paul Morris performed with OTS as a touring keyboardist.",
+              "B": "From keyboardist Paul Morris to electric violinist Alison, musicians all over the world have taken the opportunity to perform with OTS.",
+              "C": "Musicians Paul Morris and Alison both toured with OTS.",
+              "D": "Paul Morris, who toured with OTS in 2000, is one of many musicians who have performed with the band."
+            },
+            "answer": "A",
+            "explanation": "Option A states both his specific role (keyboardist) and the year (2000), directly emphasizing what he did.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q21",
+            "number": 21,
+            "domain": "Expression of Ideas",
+            "skill": "Rhetorical Synthesis",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "notes": "The Mohs scale of mineral hardness is a ten-point scale that orders minerals by hardness based on their ability to scratch other minerals. Minerals with larger numbers are harder than minerals with smaller numbers and can leave visible scratches on them. Minerals with smaller numbers are softer than minerals with larger numbers and cannot leave visible scratches on them. The mineral talc has a Mohs scale number of 1. The mineral fluorite has a Mohs scale number of 4. The mineral topaz has a Mohs scale number of 8.",
+            "question": "The student wants to compare the hardness of talc and topaz. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+            "options": {
+              "A": "Topaz can leave visible scratches on fluorite, which is why topaz has a higher number than fluorite on the Mohs scale of mineral hardness.",
+              "B": "The Mohs scale of mineral hardness can be used to order fluorite, talc, and topaz by their ability to scratch other minerals.",
+              "C": "A mineral with a Mohs number of 4, like fluorite, is harder than one with a Mohs number of 1, like talc.",
+              "D": "Topaz can leave visible scratches on talc, which means that topaz is harder than talc."
+            },
+            "answer": "D",
+            "explanation": "The goal is to compare talc and topaz. Option D directly compares these two: topaz can scratch talc, proving topaz is harder.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q22",
+            "number": 22,
+            "domain": "Standard English Conventions",
+            "skill": "Boundaries",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "A 2004 study led by _____ studied the impact of fertilizers containing nitrogen on grassland arthropod populations. Another study, led by Tracy in 2002, looked at fertilizers containing nitrogen and two other macronutrients: phosphorus and potassium.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "researcher Peter Dennis",
+              "B": "researcher Peter Dennis,",
+              "C": "researcher, Peter Dennis,",
+              "D": "researcher, Peter Dennis"
+            },
+            "answer": "A",
+            "explanation": "'Researcher Peter Dennis' is a tightly integrated appositive (Peter Dennis directly identifies researcher). No comma is needed.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q23",
+            "number": 23,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "As an object-oriented computer programming language Kotlin is used by coders like Black Girls Code founder Kimberly Bryant to create programs by manipulating \"objects\" into interacting with each other. Conversely Pascal, _____ in software development and educational instruction, is not an object-oriented language.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "to use",
+              "B": "used",
+              "C": "the use",
+              "D": "using"
+            },
+            "answer": "B",
+            "explanation": "'Used in software development and educational instruction' is a participial phrase modifying 'Pascal.' The past participle 'used' correctly functions as an adjective.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q24",
+            "number": 24,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "Fans of the film The Princess and the Frog (2009) likely _____ the commanding bass voice behind the character Dr. Facilier. It belongs to actor Keith David. The veteran actor has performed in everything from commercials to Broadway musicals, but he is most known for his voice acting.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "recognizes",
+              "B": "has recognized",
+              "C": "recognize",
+              "D": "is recognizing"
+            },
+            "answer": "C",
+            "explanation": "'Fans' is plural. Plural present tense 'recognize' is correct.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q25",
+            "number": 25,
+            "domain": "Standard English Conventions",
+            "skill": "Boundaries",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "Cut, bent, and welded from discarded metal materials, the sculptures of London-based Nigerian artist Sokari Douglas Camp are meant to challenge viewers to consider their own relationships to material _____ her thought-provoking works in the 1993 exhibition Steel Clothes and Ornamentation at the Redfern Gallery in London were no different.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "wastes;",
+              "B": "wastes and to",
+              "C": "wastes,",
+              "D": "wastes"
+            },
+            "answer": "A",
+            "explanation": "Two independent clauses need to be separated. A semicolon correctly joins them without a coordinating conjunction.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q26",
+            "number": 26,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "A recipient of the Othmer Gold Medal and the Davy Medal from the Royal Society, _____ known as femtochemistry when he devised an optical spectroscopy technique that allowed researchers to study ultrafast chemical reactions occurring within molecules.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "the result of chemist Ahmed Zewail's expansion of the limits of measurability was the introduction of a new scientific discipline",
+              "B": "the introduction of a new scientific discipline by chemist Ahmed Zewail led to the expansion of the limits of measurability",
+              "C": "the limits of measurability were expanded by chemist Ahmed Zewail who introduced a new scientific discipline",
+              "D": "chemist Ahmed Zewail expanded the limits of measurability and introduced a new scientific discipline"
+            },
+            "answer": "D",
+            "explanation": "The opening participial phrase must modify a person. Only Option D has a person (chemist Ahmed Zewail) as the subject.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2e-q27",
+            "number": 27,
+            "domain": "Standard English Conventions",
+            "skill": "Boundaries",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "What is the origin of the word \"pessimism\"? Interestingly, ____________. It first appears in a letter by English author Samuel Taylor Coleridge.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "it was invented by an author.",
+              "B": "it was invented by an author?",
+              "C": "wasn't it invented by an author.",
+              "D": "was it invented by an author."
+            },
+            "answer": "A",
+            "explanation": "The blank must be a declarative statement (followed by a period, then another declarative sentence). 'it was invented by an author.' is the correct declarative form.",
+            "points": 1
+          }
+        ]
+      },
+      "hard_version": {
+        "questions": [
+          {
+            "id": "mock1-m2h-q1",
+            "number": 1,
+            "domain": "Standard English Conventions",
+            "skill": "Boundaries",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "Within Earth's biomes, there are four main types of deserts: arid, semiarid, coastal, and cold. The Great Salt Desert in western Asia is an arid _____ it is one of the largest deserts in the world, with a total area of about 77,000 km2.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "desert, for example;",
+              "B": "desert, for example,",
+              "C": "desert; for example,",
+              "D": "desert, for example"
+            },
+            "answer": "C",
+            "explanation": "Two independent clauses joined with 'for example' require semicolon before, comma after.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q2",
+            "number": 2,
+            "domain": "Standard English Conventions",
+            "skill": "Boundaries",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "In Puerto Rico, it is not unusual for a city or town to be known by a nickname that corresponds to one of its notable features, like landscape, climate, famous residents, or chief exports. For example, the Puerto Rican Municipality of Arecibo has also been called \"the villa of Captain Correa,\" a nickname that alludes to what the area is well _____ Antonio de Correa, the 17th-century army captain who once defended the town.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "known for:",
+              "B": "known: for",
+              "C": ",known for",
+              "D": "known for;"
+            },
+            "answer": "A",
+            "explanation": "'Known for:' sets up the explanation with a colon introducing what Arecibo is specifically known for.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q3",
+            "number": 3,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "To divorce his first wife and marry Anne Boleyn, King Henry VIII of England separated from the Catholic Church in 1534. He then established his own religion, the Church of England, which would also become known as Protestantism. This decision would send England into centuries of turmoil as _____, some Catholic and some Protestant, would enforce their preferred religion and persecute their subjects if they did not follow suit.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "England's following monarchs",
+              "B": "English rulers that followed",
+              "C": "British kings that later ruled",
+              "D": "England's later-ruling kings"
+            },
+            "answer": "A",
+            "explanation": "'England's following monarchs' is the most precise — 'following' means coming after, and 'monarchs' correctly includes kings and queens.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q4",
+            "number": 4,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "After much debate, _____ finally made a decision: the judges for the 1974 Nobel Prize in Literature would award Eyvind Johnson of Sweden with that year's prize \"for a narrative art, far-seeing in lands and ages, in the service of freedom.\"",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "you",
+              "B": "it",
+              "C": "anyone",
+              "D": "they"
+            },
+            "answer": "D",
+            "explanation": "The sentence refers to 'the judges' (plural). 'They' is the correct third-person plural pronoun.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q5",
+            "number": 5,
+            "domain": "Standard English Conventions",
+            "skill": "Boundaries",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "Today, the Michelin Guide is widely known as the arbiter of fine dining, with its coveted 3-star rating being awarded to top restaurants like Xin Rong Ji in Beijing. However, few know the guide started as a marketing gimmick in 1900, when brothers Andre and Edouard Michelin sought to increase profits for their tire company by encouraging their customers to _____ their cars across France, visiting the guide's recommended hotels and restaurants along the way.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "drive.",
+              "B": "drive",
+              "C": "drive:",
+              "D": "drive;"
+            },
+            "answer": "B",
+            "explanation": "'Drive' is part of the infinitive 'to drive their cars.' No punctuation is needed between the infinitive and its object.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q6",
+            "number": 6,
+            "domain": "Standard English Conventions",
+            "skill": "Boundaries",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "Writer Silvia Moreno-Garcia's love of short fiction began when she read a collection of Edgar Allan Poe stories as a child. Yet she's best _____ especially since her 2020 novel Mexican Gothic reached the New York Times Best Sellers list — as a novelist.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "known",
+              "B": "known:",
+              "C": "known—",
+              "D": "known;"
+            },
+            "answer": "C",
+            "explanation": "The sentence uses paired dashes. The blank needs an opening dash to match the closing dash before 'as a novelist.' 'known—' opens the parenthetical.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q7",
+            "number": 7,
+            "domain": "Expression of Ideas",
+            "skill": "Transitions",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "In 1931, scientists first isolated a sample of the steroid hormone androsterone, which they knew existed in animals — and, they assumed, only in animals. _____ researchers would find androsterone in Swiss cheese plants (Monstera deliciosa), but this discovery wouldn't come until decades later.",
+            "question": "Which choice completes the text with the most logical transition?",
+            "options": {
+              "A": "For example,",
+              "B": "Eventually,",
+              "C": "In other words,",
+              "D": "Earlier,"
+            },
+            "answer": "B",
+            "explanation": "'Eventually,' signals that the discovery came later in time — confirmed by 'wouldn't come until decades later.'",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q8",
+            "number": 8,
+            "domain": "Expression of Ideas",
+            "skill": "Transitions",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "The moon Leda orbits Jupiter in the same direction that the planet rotates. _____ Leda's orbit is described as prograde. Ananke, another of Jupiter's moons, orbits in the opposite direction, so its orbit is described with the opposite term: retrograde.",
+            "question": "Which choice completes the text with the most logical transition?",
+            "options": {
+              "A": "In reality,",
+              "B": "Nevertheless,",
+              "C": "Hence,",
+              "D": "Next,"
+            },
+            "answer": "C",
+            "explanation": "'Hence,' signals logical consequence: Leda orbits same direction → therefore called prograde.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q9",
+            "number": 9,
+            "domain": "Expression of Ideas",
+            "skill": "Transitions",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "As part of a study, participants were asked to list animals they thought of as \"charismatic,\" which was defined as \"attractive, fascinating, or appealing.\" Researchers compiled the responses into a single list and found that the cheetah and the blue whale both landed in the top twenty. _____ no animal outranked the tiger.",
+            "question": "Which choice completes the text with the most logical transition?",
+            "options": {
+              "A": "In other words,",
+              "B": "As a result,",
+              "C": "Still,",
+              "D": "For example,"
+            },
+            "answer": "C",
+            "explanation": "'Still,' signals that despite the cheetah and blue whale's high rankings, the tiger remained #1 — a concessive contrast.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q10",
+            "number": 10,
+            "domain": "Expression of Ideas",
+            "skill": "Transitions",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "Shonte Tucker has worked at NASA's famed Jet Propulsion Laboratory (JPL), one of the world's leading facilities for robotic space exploration. _____ Tucker worked as a systems engineer on the JPL's Mars 2020 Perseverance rover team, which improved upon the 2011 Curiosity rover design by adding a coring drill to the robot that could collect rock samples for later analysis.",
+            "question": "Which choice completes the text with the most logical transition?",
+            "options": {
+              "A": "Conversely,",
+              "B": "Specifically,",
+              "C": "Finally,",
+              "D": "Nevertheless,"
+            },
+            "answer": "B",
+            "explanation": "'Specifically,' signals a more precise detail is being given about the general claim in the previous sentence.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q11",
+            "number": 11,
+            "domain": "Expression of Ideas",
+            "skill": "Rhetorical Synthesis",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "notes": "The Mohs scale of mineral hardness is a ten-point scale that orders minerals by hardness based on their ability to scratch other minerals. Minerals with larger numbers are harder than minerals with smaller numbers and can leave visible scratches on them. Minerals with smaller numbers are softer than minerals with larger numbers and cannot leave visible scratches on them. The mineral talc has a Mohs scale number of 1. The mineral fluorite has a Mohs scale number of 4. The mineral topaz has a Mohs scale number of 8.",
+            "question": "The student wants to compare the hardness of talc and topaz. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+            "options": {
+              "A": "Topaz can leave visible scratches on fluorite, which is why topaz has a higher number than fluorite on the Mohs scale.",
+              "B": "The Mohs scale can be used to order fluorite, talc, and topaz by their ability to scratch other minerals.",
+              "C": "A mineral with a Mohs number of 4, like fluorite, is harder than one with a Mohs number of 1, like talc.",
+              "D": "Topaz can leave visible scratches on talc, which means that topaz is harder than talc."
+            },
+            "answer": "D",
+            "explanation": "The goal is to compare talc and topaz. Option D directly compares these two minerals specifically.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q12",
+            "number": 12,
+            "domain": "Information and Ideas",
+            "skill": "Central Ideas and Details",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "Smartwatches and fitness trackers currently available to the public claim to be able to provide data on VO2max, a measurement of an individual's fitness level that indicates heart disease and mortality risk. However, whether or not these measurements are accurate is still unproven. Meanwhile, Cambridge developed a model that can provide more accurate tracking of one's heart rate and can also monitor fitness changes leading to better indications of health risks.",
+            "question": "Which choice best states the main purpose of the text?",
+            "options": {
+              "A": "To prove that currently available smartwatches are not an accurate indicator of overall health.",
+              "B": "To introduce a new fitness tracker model that may provide more accurate data on health than current products.",
+              "C": "To argue that individuals should not rely on fitness trackers or smartwatches to monitor their health.",
+              "D": "To summarize the findings of a new fitness tracker model that will be available to the public soon."
+            },
+            "answer": "B",
+            "explanation": "The text introduces current smartwatches' limitations and presents Cambridge's new model as a more accurate alternative. The purpose is to introduce this newer model.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q13",
+            "number": 13,
+            "domain": "Information and Ideas",
+            "skill": "Central Ideas and Details",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "Eden Robinson is a novelist and a member of the Haisia Nation in western Canada. Critics and fellow writers have praised her work for combining traditional Haisia stories with popular genres of literature, such as fantasy and mystery fiction. But Robinson is not the only Indigenous writer to blend traditional stories with popular literature. In the 2019 novel Empire of Wild, Cherie Dimaline successfully blended the oral storytelling tradition of her people, The Metis, with horror fiction.",
+            "question": "Which choice best states the main purpose of the text?",
+            "options": {
+              "A": "To discuss two writers who blend traditional indigenous stories with popular genres",
+              "B": "To urge younger Indigenous authors to avoid writing in popular genres",
+              "C": "To argue that traditional Indigenous stories are more memorable than most novels are",
+              "D": "To explain why one indigenous author has achieved more success than another has"
+            },
+            "answer": "A",
+            "explanation": "The text discusses both Robinson and Dimaline as examples of Indigenous writers blending traditional stories with popular genres. The main purpose is to discuss this shared approach.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q14",
+            "number": 14,
+            "domain": "Information and Ideas",
+            "skill": "Inferences",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "In order to identify research trends, Shirley Ann Williams et al. reviewed a collection of studies of the social media website Twitter. Williams's team searched for the term \"Twitter\" on the Scopus and Web of Science databases and found that, though most papers returned by the search did in fact focus on the social media platform, a few discussed unrelated subjects such as sounds made by tractor engines. One reasonable explanation for this result is that it occurred because _____",
+            "question": "Which choice most logically completes the text?",
+            "options": {
+              "A": "a group of researchers had an extensive discussion on Twitter about the design of tractor engines.",
+              "B": "most of the papers in the Scopus and Web of Science databases do not discuss automotive engines or social media websites.",
+              "C": "the word 'Twitter' may not always refer to a social media website, but to other subjects such as noises made by machines.",
+              "D": "academics who are active on social networks are likely to announce their recent publications on Twitter."
+            },
+            "answer": "C",
+            "explanation": "The explanation for why papers about tractor sounds appeared in a 'Twitter' search is that the word 'Twitter' has multiple meanings — it can also refer to machine sounds.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q15",
+            "number": 15,
+            "domain": "Information and Ideas",
+            "skill": "Command of Evidence (Textual)",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "Biologist Rosanna Alegato believes that we might learn how multicellular organisms developed from single-celled ones if we understand why the single-celled organism Salpingoeca rosetta, the oldest living relative of animals, sometimes forms colonies of cells. Alegato and colleagues reviewed data from many studies of how S. rosetta responds when exposed to bacteria, including John P. Bowman's work with Algoriphagus ratkowsky bacteria and Iftikhar Ahmed's work with Algoriphagus boritolerans bacteria. Alegato and colleagues concluded that _____",
+            "question": "Which finding, if true, would most directly support Alegato and colleagues' conclusion?",
+            "options": {
+              "A": "Bowman and Ahmed both found that S. rosetta tended to form colonies after bacterial exposure.",
+              "B": "Bowman found that S. rosetta tended to form colonies after bacterial exposure, but Ahmed did not.",
+              "C": "Ahmed found that S. rosetta tended to form colonies after bacterial exposure, but Bowman did not.",
+              "D": "Neither Bowman nor Ahmed found that S. rosetta tended to form colonies after bacterial exposure."
+            },
+            "answer": "A",
+            "explanation": "For Alegato's conclusion to be supported by both studies, both Bowman AND Ahmed must have found colony formation after bacterial exposure.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q16",
+            "number": 16,
+            "domain": "Information and Ideas",
+            "skill": "Command of Evidence (Textual)",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "The following text is adapted from Mark Twain's 1881 novel, The Prince and the Pauper.\n\n\"In the ancient city of London, on a certain autumn day in the second quarter of the sixteenth century, a boy was born to a poor family of the name of Canty, who did not want him. On the same day another English child was born to a rich family of the name of Tudor, who did want him. All England wanted him too. England had so longed for him, and hoped for him, and prayed God for him, that, now that he was really come, the people went nearly mad for joy.\"",
+            "question": "Which choice best states the function of the underlined sentence in the text as a whole?",
+            "options": {
+              "A": "It establishes a contrast with the previous character description.",
+              "B": "It introduces a character description continued in the following sentences.",
+              "C": "It demonstrates the setting that is explored in the rest of the paragraph.",
+              "D": "It expands upon the characterization in the former sentence."
+            },
+            "answer": "B",
+            "explanation": "The underlined sentence introduces the wealthy Tudor child. The following sentences then expand on this character's significance ('All England wanted him too').",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q17",
+            "number": 17,
+            "domain": "Craft and Structure",
+            "skill": "Text Structure and Purpose",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "Known for the albums Quiet Nights and Miles Ahead, jazz trumpeter Miles Davis collaborated several times with pianist Gil Evans. Their 1958 adaptation of George Gershwin's opera Porgy and Bess bears little resemblance to the 1935 original. Davies and Evans felt no desire to please listeners expecting an exact duplication of the opera. They omitted parts, such as the aria \"I Got Plenty of Nuthin',\" and sometimes made only brief gestures toward Gershwin's melodies. But Davies and Evans' willingness to recompose Gershwin's work led to one of the most enduring albums in Davis's catalog.",
+            "question": "Which choice best describes the function of the underlined part?",
+            "options": {
+              "A": "It shows how two artists benefited from ignoring certain conventions.",
+              "B": "It proposes a reason why one work of art is widely thought to be more successful than another.",
+              "C": "It underlines an assertion made later in the text.",
+              "D": "It presents examples to support a claim made earlier in the text."
+            },
+            "answer": "D",
+            "explanation": "The underlined part lists specific omissions and changes — examples supporting the earlier claim that their adaptation 'bears little resemblance to the 1935 original.'",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q18",
+            "number": 18,
+            "domain": "Craft and Structure",
+            "skill": "Cross-Text Connections",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage_1_2": "Text 1:\nOdaham farmers in the Sonoran Desert of the southwestern US and Northern Mexico plant different species in the same plot of land to help protect against the effect of drought. For example, while organ pipe cacti can tolerate extended periods of low moisture in the upper soil, chia flowers cannot. So, planting both species helps ensure that even in growing seasons too dry for chia flowers, a farmer might still be able to harvest an organ pipe fruit.\n\nText 2:\nChia flowers are well adapted to growing in the desert but are highly dependent on having sufficient moisture in the upper soil. Inspired by Odaham farmers, who often plant some crop species in the shade of more drought-tolerant species such as organ pipe cacti to help prevent the sun from drying the upper soil, Gray and colleagues planted chia flowers in the shade of solar panels in the Sonoran Desert and found that the chia flowers grew well.",
+            "question": "Based on the texts, the author of Text 1 and the author of Text 2 most likely agree on what point?",
+            "options": {
+              "A": "Gray's team's method could be refined to prevent soil moisture more actively from evaporating.",
+              "B": "Organ pipe and solar panels both provide adequate shade to help protect the moisture in the upper soil.",
+              "C": "The Odaham approach has an advantage over Gray's team's approach in that it is capable of producing chia seeds.",
+              "D": "Chia flowers require more moisture in the upper soil than organ pipe cacti do."
+            },
+            "answer": "D",
+            "explanation": "Both texts agree: chia flowers need more moisture than organ pipe cacti. Text 1 states chia can't tolerate low moisture but organ pipe can. Text 2 says chia are 'highly dependent on sufficient moisture' while organ pipe are drought-tolerant.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q19",
+            "number": 19,
+            "domain": "Information and Ideas",
+            "skill": "Command of Evidence (Textual)",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "Previous research has shown that plant species with a narrow geographical range tend to be more genetically homogeneous than plant species with extensive ranges. Researchers recently ran simulations to predict how the genetic variation of M. klissingiana, a cactus found only in the state of Tamaulipas, might change if it spread to new habitats outside Tamaulipas, and, consistent with previous findings, the results showed that _____",
+            "question": "Which choice most logically completes the text?",
+            "options": {
+              "A": "several other Mammillaria species could survive in Tamaulipas in the future.",
+              "B": "the genetic homogeneity of M. klissingiana decreased over time.",
+              "C": "there was a gradual increase in the genetic homogeneity of Mammillaria species in states neighboring Tamaulipas.",
+              "D": "Mammillaria species other than M. klissingiana would become more common in Tamaulipas."
+            },
+            "answer": "B",
+            "explanation": "Narrow-range species are more homogeneous. If M. klissingiana spreads and its range expands, consistent with previous findings its genetic homogeneity would DECREASE (become more diverse).",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q20",
+            "number": 20,
+            "domain": "Information and Ideas",
+            "skill": "Inferences",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "Architects looking for inspiration may examine photographs of iconic buildings such as the Forbidden City in Beijing. A two-dimensional photograph, however, cannot capture how a building interacts with its surroundings, whether by complementing, blending in with, or perhaps even clashing with sights and activities nearby. An image of the Forbidden City thus _____",
+            "question": "Which choice most logically completes the text?",
+            "options": {
+              "A": "serves to exaggerate the building's historical importance.",
+              "B": "fails to convey the full impact of the building's design and structure.",
+              "C": "misrepresents how the building is perceived by people who have never visited Beijing.",
+              "D": "conceals the subtle deterioration of the building's materials."
+            },
+            "answer": "B",
+            "explanation": "A 2D photo can't capture the building's interaction with surroundings, so it fails to convey the full impact of the building's design in context.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q21",
+            "number": 21,
+            "domain": "Information and Ideas",
+            "skill": "Inferences",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "Some studies can be done well with relatively little money. For example, a marketing study simply trying to identify the average amount customers spend per transaction at an online retailer has a straightforward central question that doesn't require many years of data collection. But it is much more expensive to conduct a longitudinal study like the Household, Income and Labour Dynamics in Australia Survey (HILDA), which looks at data for 25,000 people in Australia to find trends in economic well-being that can take a long time to develop. This requires lots of funding because _____",
+            "question": "Which choice most logically completes the text?",
+            "options": {
+              "A": "marketing studies are not likely to require data from very many individuals.",
+              "B": "data from 25,000 people may not be enough to reveal significant trends in economic well-being.",
+              "C": "long-term trends in economic well-being are hard to find without collecting data over many years.",
+              "D": "long-term trends in marketing can be found without examining many years of data."
+            },
+            "answer": "C",
+            "explanation": "HILDA tracks trends that 'can take a long time to develop.' Long-term trends require many years of data collection — which costs more money.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q22",
+            "number": 22,
+            "domain": "Craft and Structure",
+            "skill": "Words in Context",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "The following text is from Lilliam Rivera's 2020 novel Never Look Back.\n\nPops's pride and joy is his wall of towering bookshelves. He once said you can tell a man's worth by the number of books he owns. I guess this means Pops is overflowing with worth.",
+            "question": "As used in the text, what does the word \"tell\" most nearly mean?",
+            "options": {
+              "A": "Judge",
+              "B": "Urge",
+              "C": "Adore",
+              "D": "Instruct"
+            },
+            "answer": "A",
+            "explanation": "'You can tell a man's worth' means you can judge or assess a person's value. 'Judge' best captures this meaning.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q23",
+            "number": 23,
+            "domain": "Craft and Structure",
+            "skill": "Words in Context",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "The following text is adapted from Kenneth Grahame's 1908 novel The Wind in the Willows. The Mole is dazed after briefly meeting a stranger.\n\n(The) Mole stood still a moment, held in thought. As one wakened suddenly from a beautiful dream, who struggles to recall it, and can re-capture nothing but a dim sense of the beauty of it, the beauty! Till that, too, fades away in its turn.",
+            "question": "As used in the text, what does the word \"suddenly\" most nearly mean?",
+            "options": {
+              "A": "Abruptly",
+              "B": "Repeatedly",
+              "C": "Voluntarily",
+              "D": "Tenderly"
+            },
+            "answer": "A",
+            "explanation": "Being 'wakened suddenly' from a dream means being jolted awake quickly and without warning. 'Abruptly' means sharply and unexpectedly — the closest synonym.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q24",
+            "number": 24,
+            "domain": "Craft and Structure",
+            "skill": "Words in Context",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "The following text is adapted from John Matheus's 1926 short story, \"Mr. Bradford Teaches Sunday School.\" Mr. Bradford is driving through the countryside in Florida.\n\nThe moss in the towering water oaks had become enlivened with a verdant sheen of silver and hung like festoons of carnival or like funeral decorations for the mourning of the dead. The pine cones were pungent, the pine green was resplendent. The bald cypresses spread themselves along the water courses while the willows wept as they always did. Mr. Bradford was conscious of this gorgeous display of nature.",
+            "question": "As used in the text, what does the word \"display\" most nearly mean?",
+            "options": {
+              "A": "Spectacle",
+              "B": "Reproduction",
+              "C": "Pretentiousness",
+              "D": "Disguise"
+            },
+            "answer": "A",
+            "explanation": "Mr. Bradford observes vivid natural beauty — the vibrant moss, pungent pines, resplendent green. A 'gorgeous display of nature' refers to a striking show or spectacle of natural beauty.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q25",
+            "number": 25,
+            "domain": "Information and Ideas",
+            "skill": "Command of Evidence (Textual)",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "According to a study by a conservation group representing 11 tribal nations in the Great Lakes region, the northern pike will have significantly worse outcomes over the next 50 years if temperatures increase as much as some models suggest. By contrast, the white-tailed deer should be able to withstand the highest predicted warming without much harm and so likely won't require the conservation efforts that the northern pike will.\n\nUS government agencies involved in conservation are unfortunately not able to address every possible threat to natural resources. They must use the best information available to decide which species are most threatened and therefore most in need of conservation efforts.",
+            "question": "Based on the texts, both authors would most likely agree with which statement?",
+            "options": {
+              "A": "A collaborative approach is necessary to keep temperatures in the Great Lakes region from increasing to the highest predicted levels.",
+              "B": "Agencies involved in natural-resource management in the Great Lakes region should focus their conservation efforts more on the northern pike than on the white-tailed deer.",
+              "C": "Conservation efforts focused on the northern pike are more likely to be successful if they incorporate state and federal agency resources with the knowledge of tribal groups.",
+              "D": "State, federal, and tribal groups should immediately begin conservation programs for both the northern pike and white-tailed deer."
+            },
+            "answer": "B",
+            "explanation": "Text 1: pike will suffer significantly, deer won't need help. Text 2: agencies must prioritize the most threatened species. Both agree: pike are more threatened, so conservation efforts should prioritize them.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q26",
+            "number": 26,
+            "domain": "Information and Ideas",
+            "skill": "Inferences",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "The Harlem Renaissance, which gave us great literary works like May Miller's play The Bog Guide and nonliterary works like James Van Der Zee's photograph Couple, Harlem, is often said to have ended in the 1930s shortly after the Great Depression began. But some scholars argue that the Harlem Renaissance never really ended because it continues to shape culture in the United States today. These scholars therefore suggest that _____",
+            "question": "Which choice most logically completes the text?",
+            "options": {
+              "A": "if a cultural movement has both literary and nonliterary innovations, then it is likely to be influential.",
+              "B": "if a cultural movement is very innovative, then it is unlikely to be able to sustain itself for long.",
+              "C": "if the literary works of a cultural movement are influential, then it doesn't matter whether the nonliterary works are.",
+              "D": "if the influence of a cultural movement continues, then in some sense the movement itself continues."
+            },
+            "answer": "D",
+            "explanation": "The scholars say the Renaissance never ended because its influence continues. This implies: if influence persists, the movement itself continues. Option D states this inference directly.",
+            "points": 1
+          },
+          {
+            "id": "mock1-m2h-q27",
+            "number": 27,
+            "domain": "Information and Ideas",
+            "skill": "Command of Evidence (Textual)",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "It was only when Alma Thomas turned away from figurative art and toward abstraction that she rose to acclaim as an artist. When the solidity of her line gave way to broken, vibrant colors, the beauty she had long seen emerged.",
+            "question": "Which choice, if true, would most effectively support the writer's claim?",
+            "options": {
+              "A": "Her painting Starry Night and the Astronauts (1972) includes a small kaleidoscope of red, orange, and yellow that suggests the spaceship Apollo 10.",
+              "B": "Thomas was fascinated by the natural world, incorporating everything from the flowers in her garden to the stars in the night sky into her paintings.",
+              "C": "Her Still Life with Vases and Flowers (1964), which contains realistic images, feels labored, whereas Lunar Surface (1970) glows with rich splashes of purple and blue.",
+              "D": "Although Thomas's own works focused on nature, she believed that art could also evoke the energy of airplanes, cars, skyscrapers, and electric signals."
+            },
+            "answer": "C",
+            "explanation": "The claim is Thomas rose to acclaim when she moved from figurative to abstract art. Option C directly supports this: figurative work (1964) feels labored vs abstract work (1970) glows — showing the contrast in quality.",
+            "points": 1
+          }
+        ]
+      }
+    }
+  ],
+  "_schema": {
+    "domain": [
+      "Information and Ideas",
+      "Craft and Structure",
+      "Expression of Ideas",
+      "Standard English Conventions"
+    ],
+    "type": [
+      "multiple_choice"
+    ],
+    "special_fields": {
+      "passage": "Text for the question",
+      "passage_1_2": "Two texts for Cross-Text Connections",
+      "notes": "Bullet notes for Rhetorical Synthesis",
+      "table_or_graph": "Description of figure"
+    }
+  }
+}

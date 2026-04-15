@@ -1,0 +1,427 @@
+{
+  "id": "ielts-listening-test3",
+  "label": "IELTS Listening Test 3",
+  "section": "listening",
+  "time_minutes": 30,
+  "scoring": {
+    "_note": "1 point per correct answer. 40 total. Raw score converts to IELTS band.",
+    "max_raw": 40,
+    "band_conversion": {
+      "39-40": 9.0,
+      "37-38": 8.5,
+      "35-36": 8.0,
+      "32-34": 7.5,
+      "30-31": 7.0,
+      "26-29": 6.5,
+      "23-25": 6.0,
+      "18-22": 5.5,
+      "16-17": 5.0,
+      "13-15": 4.5,
+      "10-12": 4.0
+    }
+  },
+  "parts": [
+    {
+      "part": 1,
+      "description": "Conversation in an everyday social context.",
+      "audio_file": "/audio/ielts-listening-test3-part1.mp3",
+      "questions": [
+        {
+          "id": "ielts-listening-test3-p1-q1",
+          "number": 1,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p1-q2",
+          "number": 2,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p1-q3",
+          "number": 3,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p1-q4",
+          "number": 4,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p1-q5",
+          "number": 5,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p1-q6",
+          "number": 6,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p1-q7",
+          "number": 7,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p1-q8",
+          "number": 8,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p1-q9",
+          "number": 9,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p1-q10",
+          "number": 10,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "description": "Monologue in an everyday social context.",
+      "audio_file": "/audio/ielts-listening-test3-part2.mp3",
+      "questions": [
+        {
+          "id": "ielts-listening-test3-p2-q11",
+          "number": 11,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p2-q12",
+          "number": 12,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p2-q13",
+          "number": 13,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p2-q14",
+          "number": 14,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p2-q15",
+          "number": 15,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p2-q16",
+          "number": 16,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p2-q17",
+          "number": 17,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p2-q18",
+          "number": 18,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p2-q19",
+          "number": 19,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p2-q20",
+          "number": 20,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "description": "Conversation between 2-4 people in an educational or training context.",
+      "audio_file": "/audio/ielts-listening-test3-part3.mp3",
+      "questions": [
+        {
+          "id": "ielts-listening-test3-p3-q21",
+          "number": 21,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p3-q22",
+          "number": 22,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p3-q23",
+          "number": 23,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p3-q24",
+          "number": 24,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p3-q25",
+          "number": 25,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p3-q26",
+          "number": 26,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p3-q27",
+          "number": 27,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p3-q28",
+          "number": 28,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p3-q29",
+          "number": 29,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p3-q30",
+          "number": 30,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "part": 4,
+      "description": "Monologue on an academic subject.",
+      "audio_file": "/audio/ielts-listening-test3-part4.mp3",
+      "questions": [
+        {
+          "id": "ielts-listening-test3-p4-q31",
+          "number": 31,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p4-q32",
+          "number": 32,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p4-q33",
+          "number": 33,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p4-q34",
+          "number": 34,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p4-q35",
+          "number": 35,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p4-q36",
+          "number": 36,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p4-q37",
+          "number": 37,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p4-q38",
+          "number": 38,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p4-q39",
+          "number": 39,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-listening-test3-p4-q40",
+          "number": 40,
+          "type": "form_completion",
+          "question": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        }
+      ]
+    }
+  ],
+  "_schema": {
+    "type": [
+      "form_completion",
+      "note_completion",
+      "table_completion",
+      "sentence_completion",
+      "summary_completion",
+      "multiple_choice",
+      "matching",
+      "short_answer"
+    ],
+    "score": "Always 1 in template. Runtime assigns 1 or 0 based on student answer.",
+    "word_limit": "Most completion types: NO MORE THAN TWO WORDS AND/OR A NUMBER"
+  }
+}

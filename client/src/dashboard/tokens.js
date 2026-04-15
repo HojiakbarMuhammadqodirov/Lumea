@@ -1,0 +1,31 @@
+export const C = {
+  blue:        "#173B64",
+  blueAccent:  "#2563EB",
+  blueDim:     "rgba(37,99,235,0.09)",
+  blueBorder:  "rgba(37,99,235,0.18)",
+  green:       "#0F9E6A",
+  greenDim:    "rgba(15,158,106,0.09)",
+  greenBorder: "rgba(15,158,106,0.2)",
+  purple:      "#6D28D9",
+  purpleDim:   "rgba(109,40,217,0.08)",
+  amber:       "#D97706",
+  red:         "#DC2626",
+  bg:          "#F0F5FC",
+  card:        "#FFFFFF",
+  card2:       "#F0F5FC",
+  border:      "#DDE6F0",
+  muted:       "#6B7E96",
+  hint:        "#9EB3C8",
+  text:        "#173B64",
+  textBright:  "#0F2746",
+  textSub:     "#4A6580",
+};
+
+export const TAG = {
+  blue:   { background: "rgba(37,99,235,0.09)",  color: "#1D4ED8" },
+  green:  { background: "rgba(15,158,106,0.09)", color: "#065F46" },
+  purple: { background: "rgba(109,40,217,0.08)", color: "#5B21B6" },
+  amber:  { background: "rgba(217,119,6,0.09)",  color: "#92400E" },
+  red:    { background: "rgba(220,38,38,0.09)",  color: "#991B1B" },
+  gray:   { background: "#EEF4FB",               color: "#6B7E96" },
+};

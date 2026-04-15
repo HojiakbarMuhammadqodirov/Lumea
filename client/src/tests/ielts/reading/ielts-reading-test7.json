@@ -1,0 +1,427 @@
+{
+  "id": "ielts-reading-test7",
+  "label": "IELTS Reading Test 7",
+  "section": "reading",
+  "time_minutes": 60,
+  "scoring": {
+    "_note": "1 point per correct answer. 40 total. Raw score converts to IELTS band.",
+    "max_raw": 40,
+    "band_conversion": {
+      "39-40": 9.0,
+      "37-38": 8.5,
+      "35-36": 8.0,
+      "34": 7.5,
+      "32-33": 7.0,
+      "30-31": 6.5,
+      "27-29": 6.0,
+      "23-26": 5.5,
+      "19-22": 5.0,
+      "15-18": 4.5,
+      "13-14": 4.0
+    }
+  },
+  "passages": [
+    {
+      "passage": 1,
+      "description": "Shortest passage, factual. ~550-650 words.",
+      "title": "",
+      "text": "",
+      "questions": [
+        {
+          "id": "ielts-reading-test7-p1-q1",
+          "number": 1,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p1-q2",
+          "number": 2,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p1-q3",
+          "number": 3,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p1-q4",
+          "number": 4,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p1-q5",
+          "number": 5,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p1-q6",
+          "number": 6,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p1-q7",
+          "number": 7,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p1-q8",
+          "number": 8,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p1-q9",
+          "number": 9,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p1-q10",
+          "number": 10,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p1-q11",
+          "number": 11,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p1-q12",
+          "number": 12,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p1-q13",
+          "number": 13,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "passage": 2,
+      "description": "Medium difficulty, descriptive or analytical. ~700-750 words.",
+      "title": "",
+      "text": "",
+      "questions": [
+        {
+          "id": "ielts-reading-test7-p2-q14",
+          "number": 14,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p2-q15",
+          "number": 15,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p2-q16",
+          "number": 16,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p2-q17",
+          "number": 17,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p2-q18",
+          "number": 18,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p2-q19",
+          "number": 19,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p2-q20",
+          "number": 20,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p2-q21",
+          "number": 21,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p2-q22",
+          "number": 22,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p2-q23",
+          "number": 23,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p2-q24",
+          "number": 24,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p2-q25",
+          "number": 25,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p2-q26",
+          "number": 26,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "passage": 3,
+      "description": "Longest and most complex, argumentative or discursive. ~850-900 words.",
+      "title": "",
+      "text": "",
+      "questions": [
+        {
+          "id": "ielts-reading-test7-p3-q27",
+          "number": 27,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p3-q28",
+          "number": 28,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p3-q29",
+          "number": 29,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p3-q30",
+          "number": 30,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p3-q31",
+          "number": 31,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p3-q32",
+          "number": 32,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p3-q33",
+          "number": 33,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p3-q34",
+          "number": 34,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p3-q35",
+          "number": 35,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p3-q36",
+          "number": 36,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p3-q37",
+          "number": 37,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p3-q38",
+          "number": 38,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p3-q39",
+          "number": 39,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        },
+        {
+          "id": "ielts-reading-test7-p3-q40",
+          "number": 40,
+          "type": "true_false_not_given",
+          "statement": "",
+          "answer": "",
+          "explanation": "",
+          "score": 1
+        }
+      ]
+    }
+  ],
+  "_schema": {
+    "type": [
+      "true_false_not_given",
+      "yes_no_not_given",
+      "multiple_choice",
+      "short_answer",
+      "sentence_completion",
+      "note_completion",
+      "table_completion",
+      "summary_completion",
+      "matching_headings",
+      "matching_information",
+      "matching_features"
+    ],
+    "true_false_not_given": "answer: TRUE | FALSE | NOT GIVEN (factual texts)",
+    "yes_no_not_given": "answer: YES | NO | NOT GIVEN (opinion/argument texts)",
+    "score": "Always 1 in template. Runtime assigns 1 or 0 based on student answer."
+  }
+}

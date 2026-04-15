@@ -1,0 +1,23 @@
+{
+  "id": "ielts-speaking-test10",
+  "label": "IELTS Speaking Test 10",
+  "section": "speaking",
+  "time_minutes": 15,
+  "parts": [
+    {
+      "part": 1,
+      "description": "Introduction and interview (4–5 minutes)",
+      "topics": []
+    },
+    {
+      "part": 2,
+      "description": "Individual long turn (3–4 minutes)",
+      "tasks": []
+    },
+    {
+      "part": 3,
+      "description": "Two-way discussion (4–5 minutes)",
+      "questions": []
+    }
+  ]
+}
