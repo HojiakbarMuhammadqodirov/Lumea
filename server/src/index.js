@@ -818,6 +818,10 @@ app.post("/api/progress/:studentId/practice-score", authMiddleware, requireRole(
   res.json(current);
 });
 
-app.listen(PORT, () => {
-  console.log(`Learnova server running on http://localhost:${PORT}`);
-});
+if (process.env.NODE_ENV !== "production") {
+  app.listen(PORT, () => {
+    console.log(`Learnova server running on http://localhost:${PORT}`);
+  });
+}
+
+export default app;

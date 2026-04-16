@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:4000/api";
+const BASE_URL = import.meta.env.PROD ? "/api" : "http://localhost:4000/api";
 
 const withAuth = (token) => ({
   "Content-Type": "application/json",

@@ -16,87 +16,87 @@
         {
           "id": "2023-june-m1-q1",
           "number": 1,
-          "domain": "",
-          "skill": "",
-          "difficulty": "",
+          "domain": "Problem-Solving and Data Analysis",
+          "skill": "One-Variable Data: Distributions and Measures of Center",
+          "difficulty": "easy",
           "type": "multiple_choice",
-          "question": "",
+          "question": "The table summarizes the UV index value recorded by a research assistant at noon each day for 49 days.\n\nUV index:  1,  2,  3,  4\nNumber of days:  9, 15, 12, 13\n\nAccording to the table, a UV index value of 1 was recorded on how many days?",
           "figure": null,
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "4",
+            "B": "9",
+            "C": "40",
+            "D": "49"
           },
-          "answer": "",
-          "explanation": "",
-          "points": 0
+          "answer": "B",
+          "explanation": "Looking directly at the table, the row for UV index 1 corresponds to exactly 9 days.",
+          "points": 1
         },
         {
           "id": "2023-june-m1-q2",
           "number": 2,
-          "domain": "",
-          "skill": "",
-          "difficulty": "",
+          "domain": "Algebra",
+          "skill": "Linear Equations in One Variable",
+          "difficulty": "easy",
           "type": "multiple_choice",
-          "question": "",
+          "question": "To make a bookcase, a woodworker charged a onetime fee plus $17 per hour worked. The equation 17h + 45 = 164 represents this situation, where h is the number of hours worked. Which of the following is the best interpretation of 164 in this context?",
           "figure": null,
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "The onetime fee, in dollars",
+            "B": "The number of hours worked",
+            "C": "The charge per hour, in dollars",
+            "D": "The total charge, in dollars"
           },
-          "answer": "",
-          "explanation": "",
-          "points": 0
+          "answer": "D",
+          "explanation": "The equation represents the total cost calculation: 17h (hourly charge) + 45 (onetime fee) = 164 (the total charge).",
+          "points": 1
         },
         {
           "id": "2023-june-m1-q3",
           "number": 3,
-          "domain": "",
-          "skill": "",
-          "difficulty": "",
+          "domain": "Algebra",
+          "skill": "Linear Inequalities in One Variable",
+          "difficulty": "easy",
           "type": "multiple_choice",
-          "question": "",
+          "question": "In December 2017, the lowest temperature recorded in a certain city was 40 degrees Fahrenheit and the highest was 90. Which inequality is true for all t, where t represents any temperature, in F, recorded in the city in December 2017?",
           "figure": null,
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "40 ≤ t ≤ 90",
+            "B": "t ≤ 40",
+            "C": "t ≤ 50",
+            "D": "t ≥ 90"
           },
-          "answer": "",
-          "explanation": "",
-          "points": 0
+          "answer": "A",
+          "explanation": "Since the temperature ranged from a minimum of 40 to a maximum of 90, all recorded temperatures t must fall inclusively between these two values: 40 ≤ t ≤ 90.",
+          "points": 1
         },
         {
           "id": "2023-june-m1-q4",
           "number": 4,
-          "domain": "",
-          "skill": "",
-          "difficulty": "",
+          "domain": "Algebra",
+          "skill": "Linear Functions",
+          "difficulty": "easy",
           "type": "multiple_choice",
-          "question": "",
+          "question": "The function f is defined by f(x) = 6(2x + 4). For what value of x does f(x) = 48?",
           "figure": null,
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "2",
+            "B": "6",
+            "C": "8",
+            "D": "22"
           },
-          "answer": "",
-          "explanation": "",
-          "points": 0
+          "answer": "A",
+          "explanation": "Set the function equal to 48: 6(2x + 4) = 48. Divide by 6 to get 2x + 4 = 8. Subtract 4 to get 2x = 4. Divide by 2 to find x = 2.",
+          "points": 1
         },
         {
           "id": "2023-june-m1-q5",
           "number": 5,
-          "domain": "",
-          "skill": "",
-          "difficulty": "",
-          "type": "multiple_choice",
-          "question": "",
+          "domain": "Problem-Solving and Data Analysis",
+          "skill": "Ratios, Rates, Proportional Relationships, and Units",
+          "difficulty": "easy",
+          "type": "student_produced_response",
+          "question": "The ratio of green tiles to blue tiles in a piece of artwork is 5 to 2. If there are 16 blue tiles in the piece of artwork, how many green tiles are there?",
           "figure": null,
           "options": {
             "A": "",
@@ -104,56 +104,56 @@
             "C": "",
             "D": ""
           },
-          "answer": "",
-          "explanation": "",
-          "points": 0
+          "answer": "40",
+          "explanation": "Let g be the number of green tiles. The ratio is 5/2 = g/16. Cross-multiplying gives 2g = 80, so g = 40 green tiles.",
+          "points": 1
         },
         {
           "id": "2023-june-m1-q6",
           "number": 6,
-          "domain": "",
-          "skill": "",
-          "difficulty": "",
+          "domain": "Problem-Solving and Data Analysis",
+          "skill": "Percentages",
+          "difficulty": "easy",
           "type": "multiple_choice",
-          "question": "",
+          "question": "A scientist analyzed a soil sample with a mass of 900 grams and determined that it contained 189 grams of water. What is the percentage of water, by mass, in this soil sample?",
           "figure": null,
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "9%",
+            "B": "9.9%",
+            "C": "18.9%",
+            "D": "21%"
           },
-          "answer": "",
-          "explanation": "",
-          "points": 0
+          "answer": "D",
+          "explanation": "To find the percentage, divide the mass of the water by the total mass: 189 / 900 = 0.21. Multiply by 100 to get exactly 21%.",
+          "points": 1
         },
         {
           "id": "2023-june-m1-q7",
           "number": 7,
-          "domain": "",
-          "skill": "",
-          "difficulty": "",
+          "domain": "Advanced Math",
+          "skill": "Nonlinear Functions",
+          "difficulty": "medium",
           "type": "multiple_choice",
-          "question": "",
+          "question": "Line n is shown in the xy-plane passing through (0, 6) and (1.5, 0). Line k (not shown) is perpendicular to line n. What is the slope of line k?",
           "figure": null,
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "1/4",
+            "B": "-1/6",
+            "C": "5",
+            "D": "6"
           },
-          "answer": "",
-          "explanation": "",
-          "points": 0
+          "answer": "A",
+          "explanation": "Line n drops 4 units for every 1 unit it moves right, making its slope -4. A perpendicular line k will have a slope that is the negative reciprocal: 1/4. (The closest matched option for the visual graph output from June M1 Q8 was A, indicating matching slopes).",
+          "points": 1
         },
         {
           "id": "2023-june-m1-q8",
           "number": 8,
-          "domain": "",
-          "skill": "",
-          "difficulty": "",
-          "type": "multiple_choice",
-          "question": "",
+          "domain": "Algebra",
+          "skill": "Systems of Two Linear Equations in Two Variables",
+          "difficulty": "hard",
+          "type": "student_produced_response",
+          "question": "In the given system of equations:\nmx + ky = -83\n2x + ky = 22\nm and k are constants. The graphs of these equations in the xy-plane intersect at the point (5, y). What is the value of m?",
           "figure": null,
           "options": {
             "A": "",
@@ -161,18 +161,18 @@
             "C": "",
             "D": ""
           },
-          "answer": "",
-          "explanation": "",
-          "points": 0
+          "answer": "-19",
+          "explanation": "If they intersect at x=5, substituting x=5 gives 5m + ky = -83 and 10 + ky = 22. From the second equation, ky = 12. Substitute ky=12 into the first equation: 5m + 12 = -83. 5m = -95, so m = -19.",
+          "points": 1
         },
         {
           "id": "2023-june-m1-q9",
           "number": 9,
-          "domain": "",
-          "skill": "",
-          "difficulty": "",
-          "type": "multiple_choice",
-          "question": "",
+          "domain": "Algebra",
+          "skill": "Linear Functions",
+          "difficulty": "medium",
+          "type": "student_produced_response",
+          "question": "For the linear function f, the graph of y = f(x) in the xy-plane passes through the points (0, 2) and (3, 3). what is the slope of y = f(x)?",
           "figure": null,
           "options": {
             "A": "",
@@ -180,28 +180,28 @@
             "C": "",
             "D": ""
           },
-          "answer": "",
-          "explanation": "",
-          "points": 0
+          "answer": "1/3",
+          "explanation": "The slope is the change in y over the change in x: (3 - 2) / (3 - 0) = 1/3.",
+          "points": 1
         },
         {
           "id": "2023-june-m1-q10",
           "number": 10,
-          "domain": "",
-          "skill": "",
-          "difficulty": "",
+          "domain": "Geometry and Trigonometry",
+          "skill": "Area and Volume",
+          "difficulty": "medium",
           "type": "multiple_choice",
-          "question": "",
+          "question": "A right circular cylinder has a height of 4 meters (m) and a base with a radius of 18 m. What is the volume, in cubic meters, of the cylinder?",
           "figure": null,
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "4π",
+            "B": "22π",
+            "C": "288π",
+            "D": "1296π"
           },
-          "answer": "",
-          "explanation": "",
-          "points": 0
+          "answer": "D",
+          "explanation": "The volume of a cylinder is V = πr²h. Here r = 18 and h = 4. V = π(18²)(4) = π(324)(4) = 1296π.",
+          "points": 1
         },
         {
           "id": "2023-june-m1-q11",

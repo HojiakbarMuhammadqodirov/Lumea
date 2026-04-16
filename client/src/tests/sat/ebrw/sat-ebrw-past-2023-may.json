@@ -74,6 +74,25 @@
           "id": "2023-may-m1-q4",
           "number": 4,
           "domain": "Craft and Structure",
+          "skill": "Words in Context",
+          "difficulty": "easy",
+          "type": "multiple_choice",
+          "passage": "Sarah Marquis, who walked 16,000 kilometers across Asia, Siberia, and Australia, undoubtedly accomplished much, but to _____ a lasting historical legacy for oneself, almost nothing is more effective than being the first to do something. For example, people will always remember that Anesia Pinheiro Machado was the first female pilot in Brazil to carry passengers and the first to make stunt flights.",
+          "question": "Which choice completes the text with the most logical and precise word or phrase?",
+          "options": {
+            "A": "recognize",
+            "B": "undermine",
+            "C": "constrain",
+            "D": "establish"
+          },
+          "answer": "D",
+          "explanation": "'Establish' means to create or secure something lasting, which fits — to create/build a lasting historical legacy. 'Recognize' means to acknowledge something already existing, 'undermine' means to weaken, and 'constrain' means to limit — none fit the context of building a legacy.",
+          "points": 1
+        },
+        {
+          "id": "2023-may-m1-q5",
+          "number": 5,
+          "domain": "Craft and Structure",
           "skill": "Text Structure and Purpose",
           "difficulty": "medium",
           "type": "multiple_choice",
@@ -87,25 +106,6 @@
           },
           "answer": "D",
           "explanation": "The underlined portion ('It may be tempting to assume the difference is due to different levels of access to parks') presents a possible explanation (proximity/access) for the difference in park use. The rest of the passage then refutes this by showing Caracas actually had lower proximity but higher usage.",
-          "points": 1
-        },
-        {
-          "id": "2023-may-m1-q5",
-          "number": 5,
-          "domain": "Information and Ideas",
-          "skill": "Command of Evidence (Textual)",
-          "difficulty": "medium",
-          "type": "multiple_choice",
-          "passage": "The following text is adapted from Anton Chekhov's 1899 play Uncle Vanya. Professor Serebrakoff retires and moves to his country estate, which Vanya manages with the help of Sonia, the professor's daughter from a previous marriage. Chekhov portrays the professor as being someone adjusting to living at the country estate, as is evident when",
-          "question": "Which quotation from Uncle Vanya most effectively illustrates the claim?",
-          "options": {
-            "A": "Professor Serebrakoff says, \"I am a book-worm and a scholar, and am unfamiliar with practical affairs. I cannot, I find, dispense with the help of well-informed people.\"",
-            "B": "Professor Serebrakoff says to Helena, \"My darling, don't leave me alone with [Vanya]. He will begin lecture me.\"",
-            "C": "Professor Serebrakoff says to Helena, \"I am used to my library and the lecture hall and to the esteem and admiration of my colleagues. Now I suddenly find myself plunged into this wilderness (the cottage), condemned to see the same stupid people from morning till night and listen to their futile conversations.\"",
-            "D": "Vanya says to Professor Serebrakoff, \"You write on art without knowing anything about it. Those books of yours which I used to admire are not worth one copper kopeck. You are a hoax!\""
-          },
-          "answer": "C",
-          "explanation": "The claim is that the professor is adjusting to living at the country estate. Option C directly shows him expressing how out of place he feels — he was used to his library and academic colleagues, but now finds himself in what he calls a 'wilderness.' This directly illustrates the struggle of adjustment.",
           "points": 1
         },
         {
@@ -130,6 +130,25 @@
         {
           "id": "2023-may-m1-q7",
           "number": 7,
+          "domain": "Craft and Structure",
+          "skill": "Cross-Text Connections",
+          "difficulty": "hard",
+          "type": "multiple_choice",
+          "passage_1_2": "Text 1: The poet Audre Lorde once claimed that poetry is the most inexpensive of art forms to practice. While people who pursue other art forms—sculpture, architecture, long form prose—require large blocks of uninterrupted time as well as money to complete their work, poets can write, as Lorde said, \"between shifts, in the hospital pantry, on the subway, and on scraps of surplus paper.\" So poets can make worthwhile art even if they must earn their living in another way.\n\nText 2: Any assessment of the state of contemporary poetry must reckon with the professionalization of the field. While it is possible in theory for anyone to publish in Virginia Quarterly Review, Kenyon Review, or a similar major poetry outlet, many people who do so have professional training in poetry and extensive practice writing it, which requires time not often available to those who must also work full-time jobs. Thus, financial security indirectly affects which people become poets.",
+          "question": "Based on the texts, how would Lorde (Text 1) most likely respond to the argument presented in Text 2?",
+          "options": {
+            "A": "By indicating that those poets who publish in major poetry journals are most likely to be able to earn a living by writing poetry",
+            "B": "By pointing out that people can produce valuable poetry in other circumstances than those described by the author of Text 2",
+            "C": "By suggesting that those artists who specialize in more financially rewarding artistic forms are unlikely to also be successful as poets",
+            "D": "By asserting that people often work full-time jobs in order to afford the professional training described in Text 2"
+          },
+          "answer": "B",
+          "explanation": "Text 2 argues that professional training and financial security determine who becomes a poet. Lorde's position (Text 1) is that poetry can be written anywhere, anytime, on scraps of paper — making worthwhile art without large resources. Lorde would counter Text 2 by saying people can produce valuable poetry outside of the professional circumstances Text 2 describes.",
+          "points": 1
+        },
+        {
+          "id": "2023-may-m1-q8",
+          "number": 8,
           "domain": "Information and Ideas",
           "skill": "Central Ideas and Details",
           "difficulty": "easy",
@@ -147,8 +166,8 @@
           "points": 1
         },
         {
-          "id": "2023-may-m1-q8",
-          "number": 8,
+          "id": "2023-may-m1-q9",
+          "number": 9,
           "domain": "Information and Ideas",
           "skill": "Central Ideas and Details",
           "difficulty": "easy",
@@ -166,8 +185,65 @@
           "points": 1
         },
         {
-          "id": "2023-may-m1-q9",
-          "number": 9,
+          "id": "2023-may-m1-q10",
+          "number": 10,
+          "domain": "Information and Ideas",
+          "skill": "Central Ideas and Details",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "The Yellow Admiral, first published in 1996, is a novel in Patrick O'Brian's Aubrey/Maturin series, which includes twenty books plus an unfinished fragment of a twenty-first. Like the rest of the books in the series, The Yellow Admiral has a rather abrupt ending, but the following book, The Hundred Days, picks up neatly where The Yellow Admiral leaves off. Thus, the sudden ending is only an issue if one considers the books as independent texts—the Aubrey/Maturin series is best thought of as a single incredibly long work, similar to other multivolume stories, such as Marcel Proust's In Search of Lost Time.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": {
+            "A": "Over time, the Aubrey/Maturin series has acquired the same eminence among critics as works like In Search of Lost Time that have similar structures.",
+            "B": "A certain understanding of the structures of the novels in the Aubrey/Maturin series is helpful if one wishes to appreciate the series.",
+            "C": "Many readers find the Aubrey/Maturin novels to be remarkably entertaining despite flaws in the novels' structures.",
+            "D": "The Yellow Admiral and The Hundred Days are two of the most complex of O'Brian's novels due in part to their unconventional structures."
+          },
+          "answer": "B",
+          "explanation": "The text argues that the abrupt ending only seems like a flaw if you treat each book as independent — understanding that the series is one continuous long work resolves this. The main idea is that understanding the series' connected structure is key to appreciating it properly.",
+          "points": 1
+        },
+        {
+          "id": "2023-may-m1-q11",
+          "number": 11,
+          "domain": "Information and Ideas",
+          "skill": "Central Ideas and Details",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "The following text is from Mary Shelley's 1818 novel Frankenstein. Victor Frankenstein, who narrates this portion of text, describes the state of scientific knowledge as he began his own study of the natural world.\n\nThe untaught peasant beheld the elements around him and was acquainted with their practical uses. The most learned philosopher knew little more. He had partially unveiled the face of Nature, but her immortal lineaments were still a wonder and a mystery. He might dissect, anatomize, and give names; but, not to speak of a final cause, causes in their secondary and tertiary grades were utterly unknown to him. I had gazed upon the fortifications and impediments that seemed to keep human beings from entering the citadel of nature, and rashly and ignorantly I had repined.",
+          "question": "Which choice best describes the main idea of the text?",
+          "options": {
+            "A": "Victor became disappointed in science when he realized that the practical knowledge laypeople have of nature is often deeper than the scientific understanding.",
+            "B": "Victor was impressed by the layperson's practical understanding of nature but thought science provided a clearer understanding.",
+            "C": "Victor was immediately impressed by the advantages of the scientific approach to understanding natural phenomena.",
+            "D": "Victor thinks that conventional scientific approaches to understanding natural phenomena will not yield the answers he seeks."
+          },
+          "answer": "D",
+          "explanation": "Victor describes how even the most learned philosophers can only dissect and name things, while deeper causes remain unknown. He sees 'fortifications and impediments' blocking entrance to nature's secrets, and 'rashly and ignorantly repined' — suggesting frustration with conventional science's limitations. He believes these approaches won't give him the answers he wants.",
+          "points": 1
+        },
+        {
+          "id": "2023-may-m1-q12",
+          "number": 12,
+          "domain": "Information and Ideas",
+          "skill": "Command of Evidence (Textual)",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "The following text is adapted from Anton Chekhov's 1899 play Uncle Vanya. Professor Serebrakoff retires and moves to his country estate, which Vanya manages with the help of Sonia, the professor's daughter from a previous marriage. Chekhov portrays the professor as being someone adjusting to living at the country estate, as is evident when",
+          "question": "Which quotation from Uncle Vanya most effectively illustrates the claim?",
+          "options": {
+            "A": "Professor Serebrakoff says, \"I am a book-worm and a scholar, and am unfamiliar with practical affairs. I cannot, I find, dispense with the help of well-informed people.\"",
+            "B": "Professor Serebrakoff says to Helena, \"My darling, don't leave me alone with [Vanya]. He will begin lecture me.\"",
+            "C": "Professor Serebrakoff says to Helena, \"I am used to my library and the lecture hall and to the esteem and admiration of my colleagues. Now I suddenly find myself plunged into this wilderness (the cottage), condemned to see the same stupid people from morning till night and listen to their futile conversations.\"",
+            "D": "Vanya says to Professor Serebrakoff, \"You write on art without knowing anything about it. Those books of yours which I used to admire are not worth one copper kopeck. You are a hoax!\""
+          },
+          "answer": "C",
+          "explanation": "The claim is that the professor is adjusting to living at the country estate. Option C directly shows him expressing how out of place he feels — he was used to his library and academic colleagues, but now finds himself in what he calls a 'wilderness.' This directly illustrates the struggle of adjustment.",
+          "points": 1
+        },
+        {
+          "id": "2023-may-m1-q13",
+          "number": 13,
           "domain": "Information and Ideas",
           "skill": "Command of Evidence (Textual)",
           "difficulty": "medium",
@@ -185,8 +261,8 @@
           "points": 1
         },
         {
-          "id": "2023-may-m1-q10",
-          "number": 10,
+          "id": "2023-may-m1-q14",
+          "number": 14,
           "domain": "Information and Ideas",
           "skill": "Command of Evidence (Textual)",
           "difficulty": "medium",
@@ -204,8 +280,27 @@
           "points": 1
         },
         {
-          "id": "2023-may-m1-q11",
-          "number": 11,
+          "id": "2023-may-m1-q15",
+          "number": 15,
+          "domain": "Information and Ideas",
+          "skill": "Command of Evidence (Textual)",
+          "difficulty": "hard",
+          "type": "multiple_choice",
+          "passage": "Water flowing around an obstruction creates vortices (patterns of swirls) of varying size; by detecting the vortices, fish can determine the size and position of the obstruction. Testing by Yuzo R. Yanagisuru, Otar Akanyeti, and James C. Liao using models of three head shapes—narrow (low ratio of width to length), intermediate, and wide (high ratio of width to length)—showed that for large vortices, fish with intermediate heads would be better able than narrow-headed fish to distinguish between vortices and general turbulence in the water. A second research team has therefore hypothesized that in low-visibility conditions, intermediate-headed fish will be more likely than narrow-headed fish to detect obstructions that create large vortices.",
+          "question": "Which finding, if true, would most directly support the second research team's hypothesis?",
+          "options": {
+            "A": "A study using obstructions that created large vortices in low-visibility conditions found that the narrow-headed lake sturgeon (Acipenser fulvescens) bumped into obstructions more often than the intermediate-headed dusky smooth-hound (Mustelus canis) did.",
+            "B": "A study using obstructions that created large vortices in low-visibility conditions found that the lake sturgeon (Acipenser fulvescens), which has a relatively narrow head, bumped into more than half of the obstructions.",
+            "C": "A study using obstructions that created large vortices in low-visibility conditions found that some specimens of the intermediate-headed dusky smooth-hound (Mustelus canis) bumped into the obstructions more often than other specimens of the same fish did.",
+            "D": "A study using obstructions that created large vortices in low-visibility conditions found that the intermediate-headed dusky smooth-hound (Mustelus canis) avoided more than half of the obstructions."
+          },
+          "answer": "A",
+          "explanation": "The hypothesis is that intermediate-headed fish detect large-vortex obstructions better than narrow-headed fish in low visibility. Option A directly tests this: narrow-headed sturgeon bumped into obstructions MORE than intermediate-headed dusky smooth-hound, showing the intermediate-headed fish detected and avoided them better.",
+          "points": 1
+        },
+        {
+          "id": "2023-may-m1-q16",
+          "number": 16,
           "domain": "Information and Ideas",
           "skill": "Command of Evidence (Quantitative)",
           "difficulty": "medium",
@@ -224,27 +319,8 @@
           "points": 1
         },
         {
-          "id": "2023-may-m1-q12",
-          "number": 12,
-          "domain": "Information and Ideas",
-          "skill": "Command of Evidence (Textual)",
-          "difficulty": "hard",
-          "type": "multiple_choice",
-          "passage": "Water flowing around an obstruction creates vortices (patterns of swirls) of varying size; by detecting the vortices, fish can determine the size and position of the obstruction. Testing by Yuzo R. Yanagisuru, Otar Akanyeti, and James C. Liao using models of three head shapes—narrow (low ratio of width to length), intermediate, and wide (high ratio of width to length)—showed that for large vortices, fish with intermediate heads would be better able than narrow-headed fish to distinguish between vortices and general turbulence in the water. A second research team has therefore hypothesized that in low-visibility conditions, intermediate-headed fish will be more likely than narrow-headed fish to detect obstructions that create large vortices.",
-          "question": "Which finding, if true, would most directly support the second research team's hypothesis?",
-          "options": {
-            "A": "A study using obstructions that created large vortices in low-visibility conditions found that the narrow-headed lake sturgeon (Acipenser fulvescens) bumped into obstructions more often than the intermediate-headed dusky smooth-hound (Mustelus canis) did.",
-            "B": "A study using obstructions that created large vortices in low-visibility conditions found that the lake sturgeon (Acipenser fulvescens), which has a relatively narrow head, bumped into more than half of the obstructions.",
-            "C": "A study using obstructions that created large vortices in low-visibility conditions found that some specimens of the intermediate-headed dusky smooth-hound (Mustelus canis) bumped into the obstructions more often than other specimens of the same fish did.",
-            "D": "A study using obstructions that created large vortices in low-visibility conditions found that the intermediate-headed dusky smooth-hound (Mustelus canis) avoided more than half of the obstructions."
-          },
-          "answer": "A",
-          "explanation": "The hypothesis is that intermediate-headed fish detect large-vortex obstructions better than narrow-headed fish in low visibility. Option A directly tests this: narrow-headed sturgeon bumped into obstructions MORE than intermediate-headed dusky smooth-hound, showing the intermediate-headed fish detected and avoided them better.",
-          "points": 1
-        },
-        {
-          "id": "2023-may-m1-q13",
-          "number": 13,
+          "id": "2023-may-m1-q17",
+          "number": 17,
           "domain": "Information and Ideas",
           "skill": "Command of Evidence (Quantitative)",
           "difficulty": "medium",
@@ -263,8 +339,8 @@
           "points": 1
         },
         {
-          "id": "2023-may-m1-q14",
-          "number": 14,
+          "id": "2023-may-m1-q18",
+          "number": 18,
           "domain": "Information and Ideas",
           "skill": "Command of Evidence (Quantitative)",
           "difficulty": "medium",
@@ -283,103 +359,8 @@
           "points": 1
         },
         {
-          "id": "2023-may-m1-q15",
-          "number": 15,
-          "domain": "Information and Ideas",
-          "skill": "Inferences",
-          "difficulty": "medium",
-          "type": "multiple_choice",
-          "passage": "Like many other fruit-eating birds on the Hawaiian island of Oahu, the red-whiskered bulbul helps forest plants spread by dropping seeds from the plants' fruits in different spots (a process called seed dispersal). Ecologists have found that fruit-eating birds disperse some seeds from native plants at risk of extinction in the wild, such as the lapalapa tree. However, the birds disperse a higher number of seeds from night-blooming jessamine shrubs and other non-native plants with large populations, likely because there are so many more of those plants for them to choose from. Therefore, it isn't surprising that _____",
-          "question": "Which choice most logically completes the text?",
-          "options": {
-            "A": "on Oahu, the rate of population increase is higher for non-native plants than it is for vulnerable native forest plants, like lapalapa trees.",
-            "B": "night-blooming jessamine shrubs and other non-native forest plants only recently began to outnumber native forest plants in the wild.",
-            "C": "on Oahu, native plants, such as the lapalapa tree, are already growing in most of the spots where red-whiskered bulbuls would be likely to drop plant seeds on Oahu.",
-            "D": "the lapalapa tree and the night-blooming jessamine shrub are the plant species most in danger of going extinct in the wild."
-          },
-          "answer": "A",
-          "explanation": "The text says birds disperse more seeds from non-native plants (because they're more abundant), while native plants (like lapalapa, at risk of extinction) get fewer seeds dispersed. More seeds dispersed = faster population growth. So it follows logically that non-native plants are growing faster than vulnerable native plants.",
-          "points": 1
-        },
-        {
-          "id": "2023-may-m1-q16",
-          "number": 16,
-          "domain": "Craft and Structure",
-          "skill": "Words in Context",
-          "difficulty": "easy",
-          "type": "multiple_choice",
-          "passage": "Sarah Marquis, who walked 16,000 kilometers across Asia, Siberia, and Australia, undoubtedly accomplished much, but to _____ a lasting historical legacy for oneself, almost nothing is more effective than being the first to do something. For example, people will always remember that Anesia Pinheiro Machado was the first female pilot in Brazil to carry passengers and the first to make stunt flights.",
-          "question": "Which choice completes the text with the most logical and precise word or phrase?",
-          "options": {
-            "A": "recognize",
-            "B": "undermine",
-            "C": "constrain",
-            "D": "establish"
-          },
-          "answer": "D",
-          "explanation": "'Establish' means to create or secure something lasting, which fits — to create/build a lasting historical legacy. 'Recognize' means to acknowledge something already existing, 'undermine' means to weaken, and 'constrain' means to limit — none fit the context of building a legacy.",
-          "points": 1
-        },
-        {
-          "id": "2023-may-m1-q17",
-          "number": 17,
-          "domain": "Craft and Structure",
-          "skill": "Cross-Text Connections",
-          "difficulty": "hard",
-          "type": "multiple_choice",
-          "passage_1_2": "Text 1: The poet Audre Lorde once claimed that poetry is the most inexpensive of art forms to practice. While people who pursue other art forms—sculpture, architecture, long form prose—require large blocks of uninterrupted time as well as money to complete their work, poets can write, as Lorde said, \"between shifts, in the hospital pantry, on the subway, and on scraps of surplus paper.\" So poets can make worthwhile art even if they must earn their living in another way.\n\nText 2: Any assessment of the state of contemporary poetry must reckon with the professionalization of the field. While it is possible in theory for anyone to publish in Virginia Quarterly Review, Kenyon Review, or a similar major poetry outlet, many people who do so have professional training in poetry and extensive practice writing it, which requires time not often available to those who must also work full-time jobs. Thus, financial security indirectly affects which people become poets.",
-          "question": "Based on the texts, how would Lorde (Text 1) most likely respond to the argument presented in Text 2?",
-          "options": {
-            "A": "By indicating that those poets who publish in major poetry journals are most likely to be able to earn a living by writing poetry",
-            "B": "By pointing out that people can produce valuable poetry in other circumstances than those described by the author of Text 2",
-            "C": "By suggesting that those artists who specialize in more financially rewarding artistic forms are unlikely to also be successful as poets",
-            "D": "By asserting that people often work full-time jobs in order to afford the professional training described in Text 2"
-          },
-          "answer": "B",
-          "explanation": "Text 2 argues that professional training and financial security determine who becomes a poet. Lorde's position (Text 1) is that poetry can be written anywhere, anytime, on scraps of paper — making worthwhile art without large resources. Lorde would counter Text 2 by saying people can produce valuable poetry outside of the professional circumstances Text 2 describes.",
-          "points": 1
-        },
-        {
-          "id": "2023-may-m1-q18",
-          "number": 18,
-          "domain": "Information and Ideas",
-          "skill": "Central Ideas and Details",
-          "difficulty": "medium",
-          "type": "multiple_choice",
-          "passage": "The Yellow Admiral, first published in 1996, is a novel in Patrick O'Brian's Aubrey/Maturin series, which includes twenty books plus an unfinished fragment of a twenty-first. Like the rest of the books in the series, The Yellow Admiral has a rather abrupt ending, but the following book, The Hundred Days, picks up neatly where The Yellow Admiral leaves off. Thus, the sudden ending is only an issue if one considers the books as independent texts—the Aubrey/Maturin series is best thought of as a single incredibly long work, similar to other multivolume stories, such as Marcel Proust's In Search of Lost Time.",
-          "question": "Which choice best states the main idea of the text?",
-          "options": {
-            "A": "Over time, the Aubrey/Maturin series has acquired the same eminence among critics as works like In Search of Lost Time that have similar structures.",
-            "B": "A certain understanding of the structures of the novels in the Aubrey/Maturin series is helpful if one wishes to appreciate the series.",
-            "C": "Many readers find the Aubrey/Maturin novels to be remarkably entertaining despite flaws in the novels' structures.",
-            "D": "The Yellow Admiral and The Hundred Days are two of the most complex of O'Brian's novels due in part to their unconventional structures."
-          },
-          "answer": "B",
-          "explanation": "The text argues that the abrupt ending only seems like a flaw if you treat each book as independent — understanding that the series is one continuous long work resolves this. The main idea is that understanding the series' connected structure is key to appreciating it properly.",
-          "points": 1
-        },
-        {
           "id": "2023-may-m1-q19",
           "number": 19,
-          "domain": "Information and Ideas",
-          "skill": "Central Ideas and Details",
-          "difficulty": "medium",
-          "type": "multiple_choice",
-          "passage": "The following text is from Mary Shelley's 1818 novel Frankenstein. Victor Frankenstein, who narrates this portion of text, describes the state of scientific knowledge as he began his own study of the natural world.\n\nThe untaught peasant beheld the elements around him and was acquainted with their practical uses. The most learned philosopher knew little more. He had partially unveiled the face of Nature, but her immortal lineaments were still a wonder and a mystery. He might dissect, anatomize, and give names; but, not to speak of a final cause, causes in their secondary and tertiary grades were utterly unknown to him. I had gazed upon the fortifications and impediments that seemed to keep human beings from entering the citadel of nature, and rashly and ignorantly I had repined.",
-          "question": "Which choice best describes the main idea of the text?",
-          "options": {
-            "A": "Victor became disappointed in science when he realized that the practical knowledge laypeople have of nature is often deeper than the scientific understanding.",
-            "B": "Victor was impressed by the layperson's practical understanding of nature but thought science provided a clearer understanding.",
-            "C": "Victor was immediately impressed by the advantages of the scientific approach to understanding natural phenomena.",
-            "D": "Victor thinks that conventional scientific approaches to understanding natural phenomena will not yield the answers he seeks."
-          },
-          "answer": "D",
-          "explanation": "Victor describes how even the most learned philosophers can only dissect and name things, while deeper causes remain unknown. He sees 'fortifications and impediments' blocking entrance to nature's secrets, and 'rashly and ignorantly repined' — suggesting frustration with conventional science's limitations. He believes these approaches won't give him the answers he wants.",
-          "points": 1
-        },
-        {
-          "id": "2023-may-m1-q20",
-          "number": 20,
           "domain": "Information and Ideas",
           "skill": "Command of Evidence (Quantitative)",
           "difficulty": "medium",
@@ -395,6 +376,25 @@
           },
           "answer": "B",
           "explanation": "The mesophotic zone starts at 30 meters. The species least suited to migrate there would be the one whose maximum depth is farthest from 30m. Plerogyra discus has a maximum depth of only 15 meters — the lowest maximum depth, meaning it never reaches even close to the mesophotic zone and would be least capable of migrating there.",
+          "points": 1
+        },
+        {
+          "id": "2023-may-m1-q20",
+          "number": 20,
+          "domain": "Information and Ideas",
+          "skill": "Inferences",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "Like many other fruit-eating birds on the Hawaiian island of Oahu, the red-whiskered bulbul helps forest plants spread by dropping seeds from the plants' fruits in different spots (a process called seed dispersal). Ecologists have found that fruit-eating birds disperse some seeds from native plants at risk of extinction in the wild, such as the lapalapa tree. However, the birds disperse a higher number of seeds from night-blooming jessamine shrubs and other non-native plants with large populations, likely because there are so many more of those plants for them to choose from. Therefore, it isn't surprising that _____",
+          "question": "Which choice most logically completes the text?",
+          "options": {
+            "A": "on Oahu, the rate of population increase is higher for non-native plants than it is for vulnerable native forest plants, like lapalapa trees.",
+            "B": "night-blooming jessamine shrubs and other non-native forest plants only recently began to outnumber native forest plants in the wild.",
+            "C": "on Oahu, native plants, such as the lapalapa tree, are already growing in most of the spots where red-whiskered bulbuls would be likely to drop plant seeds on Oahu.",
+            "D": "the lapalapa tree and the night-blooming jessamine shrub are the plant species most in danger of going extinct in the wild."
+          },
+          "answer": "A",
+          "explanation": "The text says birds disperse more seeds from non-native plants (because they're more abundant), while native plants (like lapalapa, at risk of extinction) get fewer seeds dispersed. More seeds dispersed = faster population growth. So it follows logically that non-native plants are growing faster than vulnerable native plants.",
           "points": 1
         },
         {
@@ -465,6 +465,253 @@
           {
             "id": "2023-may-m2e-q1",
             "number": 1,
+            "domain": "Craft and Structure",
+            "skill": "Words in Context",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "TROFIMOV: Believe me, Anya, believe me! I'm not thirty yet, I'm young. I'm still a student, but I have undergone a great deal! I'm as hungry as the winter, I'm ill, I'm shaken....and where haven't I been-fate has tossed me everywhere!",
+            "question": "As used in the text, what does the word \"undergone\" most nearly mean?",
+            "options": {
+              "A": "Neglected",
+              "B": "Enjoyed",
+              "C": "Conveyed",
+              "D": "Endured"
+            },
+            "answer": "D",
+            "explanation": "In this context, the speaker mentions facing difficulties like hunger and illness. 'Endured' best captures the sense of experiencing and surviving a great deal of hardship.",
+            "points": 1
+          },
+          {
+            "id": "2023-may-m2e-q2",
+            "number": 2,
+            "domain": "Craft and Structure",
+            "skill": "Words in Context",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "Indigenous Photograph is an organization whose mission is to ensure that images of indigenous peoples in the media are presented from indigenous perspectives. The organization _____ this commitment by promoting the works of artist Geremew Tigabu (Ethiopian, Amhara, and Tigre) and other prominent indigenous photographers who document and reflect Indigenous lives and experiences.",
+            "question": "Which choice completes the text with the most logical and precise word or phrase?",
+            "options": {
+              "A": "concludes",
+              "B": "explains",
+              "C": "precedes",
+              "D": "shows"
+            },
+            "answer": "D",
+            "explanation": "The organization's actions of promoting works demonstrate or exhibit their commitment. 'Shows' fits precisely.",
+            "points": 1
+          },
+          {
+            "id": "2023-may-m2e-q3",
+            "number": 3,
+            "domain": "Craft and Structure",
+            "skill": "Words in Context",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "Although fewer companies trade their stocks on the Cambodia Securities Exchange in Phnom Penh, Cambodia, than on the stock exchanges in London, Mumbai, or Tokyo, the Cambodia Securities Exchange has the advantage of being able to _____ relatively small companies in Cambodia: by connecting those companies to investors with expertise about the country's economic conditions, the Cambodia Securities Exchange can help those companies thrive.",
+            "question": "Which choice completes the text with the most logical and precise word or phrase?",
+            "options": {
+              "A": "designate",
+              "B": "nurture",
+              "C": "preclude",
+              "D": "assess"
+            },
+            "answer": "B",
+            "explanation": "The text states the exchange can 'help those companies thrive' by connecting them to investors. 'Nurture', which means to care for and encourage the growth of, is the logical word to complete the text.",
+            "points": 1
+          },
+          {
+            "id": "2023-may-m2e-q4",
+            "number": 4,
+            "domain": "Craft and Structure",
+            "skill": "Words in Context",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "The emphasis on accurately representing the experiences of average working people that is characteristic of the realist style can be seen in The Gleaners, painted by Jean-Francois Millet, which depicts peasants picking stray wheat from a field after the harvest. This style can thus be seen as an effort to _____ what were regarded as the excesses of the romantic style evident in many paintings by Horace Vernet, which instead exaggerated their subjects' beauty or heroism while hiding all imperfection.",
+            "question": "Which choice completes the text with the most logical and precise word or phrase?",
+            "options": {
+              "A": "understand",
+              "B": "advance",
+              "C": "counteract",
+              "D": "accentuate"
+            },
+            "answer": "C",
+            "explanation": "Realism contrasts with romanticism, which exaggerated beauty and hid imperfection. Realism is therefore an effort to offset or 'counteract' the excesses of the romantic style.",
+            "points": 1
+          },
+          {
+            "id": "2023-may-m2e-q5",
+            "number": 5,
+            "domain": "Craft and Structure",
+            "skill": "Words in Context",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "The swordfish can swim very fast-up to 97 kilometers per hour (km/hr) —but it is significantly slower than the frigatebird, which can fly at speeds up to 153 km/hr. The difference between these speeds is largely _____ of the fact that the features that make flight possible do less to limit top speeds than the features suitable for swimming through water.",
+            "question": "Which choice completes the text with the most logical and precise word or phrase?",
+            "options": {
+              "A": "a consequence",
+              "B": "an explanation",
+              "C": "a repudiation",
+              "D": "an objective"
+            },
+            "answer": "A",
+            "explanation": "The slower speed of swimming compared to flying is a result, or 'consequence', of the physical limitations of water vs air.",
+            "points": 1
+          },
+          {
+            "id": "2023-may-m2e-q6",
+            "number": 6,
+            "domain": "Craft and Structure",
+            "skill": "Text Structure and Purpose",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "President Richard Nixon is most famous for his participation in the 1970s Watergate political scandal... But Nixon's legacy is complex: he has been praised for his role in affirming the sovereignty of tribal nations, and he once made an attempt at reforming United States health care policy that is arguably a precursor to the Affordable Care Act...",
+            "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+            "options": {
+              "A": "It presents an accomplishment of a historical figure whose significance is detailed later.",
+              "B": "It describes a common perception of a historical figure that is challenged by information presented later.",
+              "C": "It states a claim about a historical figure that is supported by evidence later.",
+              "D": "It compares the achievements of three historical figures to a fourth."
+            },
+            "answer": "B",
+            "explanation": "The first sentence presents his infamous Watergate association (the common perception), which the rest of the text challenges by showing his complex, positive accomplishments.",
+            "points": 1
+          },
+          {
+            "id": "2023-may-m2e-q7",
+            "number": 7,
+            "domain": "Craft and Structure",
+            "skill": "Text Structure and Purpose",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "In what is now Washington state, the Tulalip Tribes operate the Hibulb Cultural Center. Relying on traditional knowledge to guide the design of exhibits, this institution presents Tulalip history and culture to the tribes' citizens. The Comanche Nation, a tribe in Oklahoma, employs a similar strategy in its own cultural center. Both centers contrast with museums that aren't Indigenous-led; when displaying Indigenous artifacts, such museums tend to anticipate mainly non-Indigenous audiences and rely on Euro-centric strategies for designing exhibits.",
+            "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+            "options": {
+              "A": "It suggests improvements to a particular tribal cultural center.",
+              "B": "It encourages tribal citizens to attend their local cultural center.",
+              "C": "It explains how one tribal cultural center differs from other tribal cultural centers.",
+              "D": "It provides a basic description of a particular tribal cultural center."
+            },
+            "answer": "D",
+            "explanation": "The sentence describes how the Hibulb Cultural Center works, providing a basic description of its strategy before comparing it to others.",
+            "points": 1
+          },
+          {
+            "id": "2023-may-m2e-q8",
+            "number": 8,
+            "domain": "Craft and Structure",
+            "skill": "Text Structure and Purpose",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "The museum of Modern Art (MOMA) in New York City has an exhibition of video games that includes Pac-Man from 1980... MOMA claims the video presentations are only for games that would be impractical to display in a playable form, but video games are an inherently interactive medium, a feature that is grossly absent in a video-only presentation.",
+            "question": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+            "options": {
+              "A": "It identifies a feature of many video games that is not shared by some of the games included in MOMA's exhibition.",
+              "B": "It provides a claim about video games as art that both MOMA and the author accept as true.",
+              "C": "It describes a misconception about video games that the author believer is evident in MOMA's choice.",
+              "D": "It presents a consideration that the author thinks partly undermines MOMA's approach to exhibiting video games."
+            },
+            "answer": "D",
+            "explanation": "The author argues that video games are naturally interactive, suggesting that MOMA's video-only exhibition undermines the true nature of the medium.",
+            "points": 1
+          },
+          {
+            "id": "2023-may-m2e-q9",
+            "number": 9,
+            "domain": "Information and Ideas",
+            "skill": "Central Ideas and Details",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "In O'odham, an Indigenous language from the Southwest region of what is now the United States, gogs means \"a dog\", whereas gogogs is used to refer to several dogs. This phenomenon, in which an element of a root word is repeated, sometimes with modification, within another word that is related to the root word, is called reduplication. In this case, the element \"go\" in gogs gets repeated in gogogs.",
+            "question": "The text makes which point about the O'odham word gogogs?",
+            "options": {
+              "A": "It contains a repetition of the element 'go' in gogs.",
+              "B": "It doesn't have a clear equivalent in English.",
+              "C": "It is the only word in O'odham that uses reduplication.",
+              "D": "It is identical in meaning to several other words in O'odham."
+            },
+            "answer": "A",
+            "explanation": "The text explicitly states that 'the element \"go\" in gogs gets repeated in gogogs', which aligns perfectly with option A.",
+            "points": 1
+          },
+          {
+            "id": "2023-may-m2e-q10",
+            "number": 10,
+            "domain": "Information and Ideas",
+            "skill": "Central Ideas and Details",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "Master and Commander, first published in 1969, is a novel in Patrick O'Brian's Aubrey Maturin series, which includes twenty completed books. Some critics have found fault with the abrupt endings of Master and Commander and other books in the series, saying that they do not finish conclusively but arbitrarily stop. Other critics, however, argue that the books should not be thought of as discrete texts with traditional beginnings and endings but as a single incredibly long work...",
+            "question": "Which choice best states the main purpose of the text?",
+            "options": {
+              "A": "The unusual structure that O'Brian uses...",
+              "B": "Critics have differing views regarding the efficacy of the structures of the novels in the Aubrey Maturin series.",
+              "C": "Some critics think the Aubrey/Maturin series should have the literary renown...",
+              "D": "Many critics judge the Aubrey/Maturin novels to be remarkably entertaining..."
+            },
+            "answer": "B",
+            "explanation": "The text contrasts two views: one group of critics faults the abrupt endings, while another argues they should be viewed as one long work. This shows differing critical views over the novels' structures.",
+            "points": 1
+          },
+          {
+            "id": "2023-may-m2e-q11",
+            "number": 11,
+            "domain": "Information and Ideas",
+            "skill": "Command of Evidence (Textual)",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "\"The monster\" is an 1898 story by Stephen Crane. In the story, the character of Jim, a young boy, accidentally damages a peony (a flower) in the yard while his father is tending to the lawn. Crane depicts the dedication and care with which his father typically cares for his lawn, writing, _____",
+            "question": "Which quotation from \"The Monster\" most effectively illustrates the claim?",
+            "options": {
+              "A": "\"After some trouble [Jim's father] found the subject...\"",
+              "B": "\"[Jim's father] was shaving this lawn as if it were a priest's chin. All during the season he had worked at it in the coolness and peace...\"",
+              "C": "\"[Jim's father] paused, and with the howl of the machine...\"",
+              "D": "\"[Jim] went on to the lawn, very slowly, and kicking wretchedly at the turf...\""
+            },
+            "answer": "B",
+            "explanation": "Option B directly describes the intense care and dedication the father showed to the lawn, treating it carefully 'as if it were a priest's chin'.",
+            "points": 1
+          },
+          {
+            "id": "2023-may-m2e-q12",
+            "number": 12,
+            "domain": "Information and Ideas",
+            "skill": "Command of Evidence (Textual)",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "Biologist Rosanna Alegado believes that we might learn how multicellular organisms developed from single-celled ones if we understand why the single-celled organism Salpingoeca rosetta sometimes forms colonies of cells. Alegado and colleagues concluded that both A. ratkowskyi and A. boritolerans might have played a role in the development of multicellular organisms.",
+            "question": "Which finding, if true, would most directly support Alegado and colleagues' conclusion?",
+            "options": {
+              "A": "Bowman and Ahmed found that S. rosetta tended to form colonies after bacterial exposure.",
+              "B": "Bowman found that S. rosetta tended to form colonies... but Ahmed did not.",
+              "C": "Ahmed found that S rosetta tended to form colonies... but Bowman did not.",
+              "D": "Neither Bowman nor Ahmed found that s rosetta tended to form colonies..."
+            },
+            "answer": "A",
+            "explanation": "The conclusion states that BOTH bacterial strains played a role. Finding A shows that both researchers saw S. rosetta forming colonies after exposure, supporting the conclusion.",
+            "points": 1
+          },
+          {
+            "id": "2023-may-m2e-q13",
+            "number": 13,
+            "domain": "Information and Ideas",
+            "skill": "Command of Evidence (Quantitative)",
+            "difficulty": "hard",
+            "type": "multiple_choice",
+            "passage": "In a college course on urban affairs, a student asserts that increased traffic congestion in the 1990s in the United States was present both in very large cities such as New York City, and smaller areas such as Allentown-Bethlehem; though those smaller areas may have been less affected by traffic congestion than very large cities, this congestion also worsened in them over time.",
+            "question": "Which choice best describes data from the graph that support the student's claim?",
+            "options": {
+              "A": "While the number of hours of traffic delay... was always lower in the Allentown-Bethlehem area than in the New York City area... the amount of traffic delay rose in both areas...",
+              "B": "In at least one of the three urban areas shown...",
+              "C": "In 1992, the amount of traffic delay...",
+              "D": "Throughout the period between 1990 and 2000..."
+            },
+            "answer": "A",
+            "explanation": "The student claims that smaller areas were less affected overall but still worsened. Option A shows that Allentown-Bethlehem was indeed consistently lower than New York City but rose (worsened) in both places over time.",
+            "points": 1
+          },
+          {
+            "id": "2023-may-m2e-q14",
+            "number": 14,
             "domain": "Standard English Conventions",
             "skill": "Boundaries",
             "difficulty": "easy",
@@ -482,103 +729,8 @@
             "points": 1
           },
           {
-            "id": "2023-may-m2e-q2",
-            "number": 2,
-            "domain": "Standard English Conventions",
-            "skill": "Form, Structure, and Sense",
-            "difficulty": "medium",
-            "type": "multiple_choice",
-            "passage": "A recipient of the Othmer Gold Medal and the Davy Medal from the Royal Society, _____ known as femtochemistry when he devised an optical spectroscopy technique that allowed researchers to study ultrafast chemical reactions occurring within molecules.",
-            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
-            "options": {
-              "A": "the result of chemist Ahmed Zewail's expansion of the limits of measurability was the introduction of a new scientific discipline",
-              "B": "the introduction of a new scientific discipline by chemist Ahmed Zewail led to the expansion of the limits of measurability",
-              "C": "the limits of measurability were expanded by chemist Ahmed Zewail who introduced a new scientific discipline",
-              "D": "chemist Ahmed Zewail expanded the limits of measurability and introduced a new scientific discipline"
-            },
-            "answer": "D",
-            "explanation": "The opening participial phrase 'A recipient of the Othmer Gold Medal and the Davy Medal from the Royal Society' must modify a person — the subject of the main clause. Only Option D has a person (chemist Ahmed Zewail) as the subject, correctly matching the modifier to who actually received the medals.",
-            "points": 1
-          },
-          {
-            "id": "2023-may-m2e-q3",
-            "number": 3,
-            "domain": "Expression of Ideas",
-            "skill": "Rhetorical Synthesis",
-            "difficulty": "medium",
-            "type": "multiple_choice",
-            "notes": "Jean-Michel Basquiat was an American artist who produced more than two thousand drawings and paintings. His work Thin in the Old was completed in 1986 and sold at auction in 2020. Thin in the Old is composed of acrylic, oil, and paper collage on wood and measures 3,028 square inches in area. His work Victor was completed in 1987 and sold at auction in 2017. Victor is composed of acrylic, oil stick, and crayon on canvas and measures 9,432 square inches in area.",
-            "question": "Which choice most effectively uses information from the given sentences to emphasize how the two works are similar?",
-            "options": {
-              "A": "Composed by artist Jean-Michel Basquiat in 1986 and 1987, respectively, both Thin in the Old and Victor use acrylic paint as a medium.",
-              "B": "Artist Jean-Michel Basquiat completed Thin in the Old in 1986, and Victor followed in 1987.",
-              "C": "Artist Jean-Michel Basquiat's work Thin in the Old is composed of acrylic, oil, and paper collage, while Victor is composed of acrylic, oil stick, and crayon.",
-              "D": "Between artist Jean-Michel Basquiat's works Victor and Thin in the Old, the former is the larger of the two."
-            },
-            "answer": "A",
-            "explanation": "The goal is to emphasize similarity. Both works use acrylic paint — that's a shared medium. Option A highlights this common element (acrylic paint) and explicitly states both works share it. Option C contrasts differences, and Options B and D focus on dates and size respectively.",
-            "points": 1
-          },
-          {
-            "id": "2023-may-m2e-q4",
-            "number": 4,
-            "domain": "Expression of Ideas",
-            "skill": "Rhetorical Synthesis",
-            "difficulty": "medium",
-            "type": "multiple_choice",
-            "notes": "The Mohs scale of mineral hardness is a ten-point scale that orders minerals by hardness based on their ability to scratch other minerals. Minerals with larger numbers are harder than minerals with smaller numbers and can leave visible scratches on them. Minerals with smaller numbers are softer than minerals with larger numbers and cannot leave visible scratches on them. The mineral talc has a Mohs scale number of 1. The mineral fluorite has a Mohs scale number of 4. The mineral topaz has a Mohs scale number of 8.",
-            "question": "The student wants to compare the hardness of talc and topaz. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
-            "options": {
-              "A": "Topaz can leave visible scratches on fluorite, which is why topaz has a higher number than fluorite on the Mohs scale of mineral hardness.",
-              "B": "The Mohs scale of mineral hardness can be used to order fluorite, talc, and topaz by their ability to scratch other minerals.",
-              "C": "A mineral with a Mohs number of 4, like fluorite, is harder than one with a Mohs number of 1, like talc.",
-              "D": "Topaz can leave visible scratches on talc, which means that topaz is harder than talc."
-            },
-            "answer": "D",
-            "explanation": "The goal is to compare talc and topaz specifically. Option D directly compares these two minerals: topaz (8) can scratch talc (1), demonstrating topaz is harder. Option A discusses fluorite and topaz (not talc), Option B is general, and Option C compares fluorite and talc (not topaz).",
-            "points": 1
-          },
-          {
-            "id": "2023-may-m2e-q5",
-            "number": 5,
-            "domain": "Standard English Conventions",
-            "skill": "Form, Structure, and Sense",
-            "difficulty": "easy",
-            "type": "multiple_choice",
-            "passage": "What is the origin of the word \"pessimism\"? Interestingly, ____________. It first appears in a letter by English author Samuel Taylor Coleridge.",
-            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
-            "options": {
-              "A": "it was invented by an author.",
-              "B": "it was invented by an author?",
-              "C": "wasn't it invented by an author.",
-              "D": "was it invented by an author."
-            },
-            "answer": "A",
-            "explanation": "The blank follows 'Interestingly,' and is followed by another declarative sentence. The filled clause must be a declarative statement (not a question) because it ends with a period and the next sentence continues the statement. 'it was invented by an author.' is the correct declarative form.",
-            "points": 1
-          },
-          {
-            "id": "2023-may-m2e-q6",
-            "number": 6,
-            "domain": "Standard English Conventions",
-            "skill": "Form, Structure, and Sense",
-            "difficulty": "easy",
-            "type": "multiple_choice",
-            "passage": "After much debate, _____ finally made a decision: the judges for the 1974 Nobel Prize in Literature would award Eyvind Johnson of Sweden with that year's prize \"for a narrative art, far-seeing in lands and ages, in the service of freedom.\"",
-            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
-            "options": {
-              "A": "you",
-              "B": "it",
-              "C": "anyone",
-              "D": "they"
-            },
-            "answer": "D",
-            "explanation": "The sentence is about 'the judges for the 1974 Nobel Prize' (plural). The pronoun must refer to this group of judges. 'They' is the correct third-person plural pronoun. 'You' addresses the reader directly, 'it' is singular/neuter, and 'anyone' is indefinite and singular.",
-            "points": 1
-          },
-          {
-            "id": "2023-may-m2e-q7",
-            "number": 7,
+            "id": "2023-may-m2e-q15",
+            "number": 15,
             "domain": "Standard English Conventions",
             "skill": "Boundaries",
             "difficulty": "easy",
@@ -596,27 +748,8 @@
             "points": 1
           },
           {
-            "id": "2023-may-m2e-q8",
-            "number": 8,
-            "domain": "Standard English Conventions",
-            "skill": "Form, Structure, and Sense",
-            "difficulty": "easy",
-            "type": "multiple_choice",
-            "passage": "Pinon Chapter is one of the 110 chapters of the Navajo Nation (Naabeeho Bincihdsdzo). The chapter, known as Be'ek'id Bas Ahoodzdni in the Navajo language (Dine Bizaad), was the subject of a profile _____ in the Navajo Times on December 12, 2013.",
-            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
-            "options": {
-              "A": "appearing",
-              "B": "appears",
-              "C": "has appeared",
-              "D": "appeared"
-            },
-            "answer": "A",
-            "explanation": "'Appearing in the Navajo Times on December 12, 2013' is a participial phrase modifying 'profile.' The present participle 'appearing' correctly functions as an adjective describing the profile. The other options are finite verb forms that would create a grammatically incorrect sentence.",
-            "points": 1
-          },
-          {
-            "id": "2023-may-m2e-q9",
-            "number": 9,
+            "id": "2023-may-m2e-q16",
+            "number": 16,
             "domain": "Standard English Conventions",
             "skill": "Boundaries",
             "difficulty": "easy",
@@ -634,8 +767,84 @@
             "points": 1
           },
           {
-            "id": "2023-may-m2e-q10",
-            "number": 10,
+            "id": "2023-may-m2e-q17",
+            "number": 17,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "passage": "A recipient of the Othmer Gold Medal and the Davy Medal from the Royal Society, _____ known as femtochemistry when he devised an optical spectroscopy technique that allowed researchers to study ultrafast chemical reactions occurring within molecules.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "the result of chemist Ahmed Zewail's expansion of the limits of measurability was the introduction of a new scientific discipline",
+              "B": "the introduction of a new scientific discipline by chemist Ahmed Zewail led to the expansion of the limits of measurability",
+              "C": "the limits of measurability were expanded by chemist Ahmed Zewail who introduced a new scientific discipline",
+              "D": "chemist Ahmed Zewail expanded the limits of measurability and introduced a new scientific discipline"
+            },
+            "answer": "D",
+            "explanation": "The opening participial phrase 'A recipient of the Othmer Gold Medal and the Davy Medal from the Royal Society' must modify a person — the subject of the main clause. Only Option D has a person (chemist Ahmed Zewail) as the subject, correctly matching the modifier to who actually received the medals.",
+            "points": 1
+          },
+          {
+            "id": "2023-may-m2e-q18",
+            "number": 18,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "What is the origin of the word \"pessimism\"? Interestingly, ____________. It first appears in a letter by English author Samuel Taylor Coleridge.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "it was invented by an author.",
+              "B": "it was invented by an author?",
+              "C": "wasn't it invented by an author.",
+              "D": "was it invented by an author."
+            },
+            "answer": "A",
+            "explanation": "The blank follows 'Interestingly,' and is followed by another declarative sentence. The filled clause must be a declarative statement (not a question) because it ends with a period and the next sentence continues the statement. 'it was invented by an author.' is the correct declarative form.",
+            "points": 1
+          },
+          {
+            "id": "2023-may-m2e-q19",
+            "number": 19,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "After much debate, _____ finally made a decision: the judges for the 1974 Nobel Prize in Literature would award Eyvind Johnson of Sweden with that year's prize \"for a narrative art, far-seeing in lands and ages, in the service of freedom.\"",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "you",
+              "B": "it",
+              "C": "anyone",
+              "D": "they"
+            },
+            "answer": "D",
+            "explanation": "The sentence is about 'the judges for the 1974 Nobel Prize' (plural). The pronoun must refer to this group of judges. 'They' is the correct third-person plural pronoun. 'You' addresses the reader directly, 'it' is singular/neuter, and 'anyone' is indefinite and singular.",
+            "points": 1
+          },
+          {
+            "id": "2023-may-m2e-q20",
+            "number": 20,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "Pinon Chapter is one of the 110 chapters of the Navajo Nation (Naabeeho Bincihdsdzo). The chapter, known as Be'ek'id Bas Ahoodzdni in the Navajo language (Dine Bizaad), was the subject of a profile _____ in the Navajo Times on December 12, 2013.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "appearing",
+              "B": "appears",
+              "C": "has appeared",
+              "D": "appeared"
+            },
+            "answer": "A",
+            "explanation": "'Appearing in the Navajo Times on December 12, 2013' is a participial phrase modifying 'profile.' The present participle 'appearing' correctly functions as an adjective describing the profile. The other options are finite verb forms that would create a grammatically incorrect sentence.",
+            "points": 1
+          },
+          {
+            "id": "2023-may-m2e-q21",
+            "number": 21,
             "domain": "Standard English Conventions",
             "skill": "Form, Structure, and Sense",
             "difficulty": "easy",
@@ -653,8 +862,8 @@
             "points": 1
           },
           {
-            "id": "2023-may-m2e-q11",
-            "number": 11,
+            "id": "2023-may-m2e-q22",
+            "number": 22,
             "domain": "Standard English Conventions",
             "skill": "Form, Structure, and Sense",
             "difficulty": "easy",
@@ -672,8 +881,8 @@
             "points": 1
           },
           {
-            "id": "2023-may-m2e-q12",
-            "number": 12,
+            "id": "2023-may-m2e-q23",
+            "number": 23,
             "domain": "Standard English Conventions",
             "skill": "Form, Structure, and Sense",
             "difficulty": "easy",
@@ -691,8 +900,8 @@
             "points": 1
           },
           {
-            "id": "2023-may-m2e-q13",
-            "number": 13,
+            "id": "2023-may-m2e-q24",
+            "number": 24,
             "domain": "Standard English Conventions",
             "skill": "Form, Structure, and Sense",
             "difficulty": "easy",
@@ -710,8 +919,8 @@
             "points": 1
           },
           {
-            "id": "2023-may-m2e-q14",
-            "number": 14,
+            "id": "2023-may-m2e-q25",
+            "number": 25,
             "domain": "Standard English Conventions",
             "skill": "Form, Structure, and Sense",
             "difficulty": "easy",
@@ -729,251 +938,42 @@
             "points": 1
           },
           {
-            "id": "2023-may-m2e-q15",
-            "number": 15,
-            "domain": "Standard English Conventions",
-            "skill": "Boundaries",
-            "difficulty": "easy",
-            "type": "multiple_choice",
-            "passage": "",
-            "question": "",
-            "options": {
-              "A": "",
-              "B": "",
-              "C": "",
-              "D": ""
-            },
-            "answer": "",
-            "explanation": "Question 15 content not visible in the PDF — this slot is left blank.",
-            "points": 0
-          },
-          {
-            "id": "2023-may-m2e-q16",
-            "number": 16,
-            "domain": "",
-            "skill": "",
-            "difficulty": "",
-            "type": "multiple_choice",
-            "passage": "",
-            "question": "",
-            "options": {
-              "A": "",
-              "B": "",
-              "C": "",
-              "D": ""
-            },
-            "answer": "",
-            "explanation": "",
-            "points": 0
-          },
-          {
-            "id": "2023-may-m2e-q17",
-            "number": 17,
-            "domain": "",
-            "skill": "",
-            "difficulty": "",
-            "type": "multiple_choice",
-            "passage": "",
-            "question": "",
-            "options": {
-              "A": "",
-              "B": "",
-              "C": "",
-              "D": ""
-            },
-            "answer": "",
-            "explanation": "",
-            "points": 0
-          },
-          {
-            "id": "2023-may-m2e-q18",
-            "number": 18,
-            "domain": "",
-            "skill": "",
-            "difficulty": "",
-            "type": "multiple_choice",
-            "passage": "",
-            "question": "",
-            "options": {
-              "A": "",
-              "B": "",
-              "C": "",
-              "D": ""
-            },
-            "answer": "",
-            "explanation": "",
-            "points": 0
-          },
-          {
-            "id": "2023-may-m2e-q19",
-            "number": 19,
-            "domain": "",
-            "skill": "",
-            "difficulty": "",
-            "type": "multiple_choice",
-            "passage": "",
-            "question": "",
-            "options": {
-              "A": "",
-              "B": "",
-              "C": "",
-              "D": ""
-            },
-            "answer": "",
-            "explanation": "",
-            "points": 0
-          },
-          {
-            "id": "2023-may-m2e-q20",
-            "number": 20,
-            "domain": "",
-            "skill": "",
-            "difficulty": "",
-            "type": "multiple_choice",
-            "passage": "",
-            "question": "",
-            "options": {
-              "A": "",
-              "B": "",
-              "C": "",
-              "D": ""
-            },
-            "answer": "",
-            "explanation": "",
-            "points": 0
-          },
-          {
-            "id": "2023-may-m2e-q21",
-            "number": 21,
-            "domain": "",
-            "skill": "",
-            "difficulty": "",
-            "type": "multiple_choice",
-            "passage": "",
-            "question": "",
-            "options": {
-              "A": "",
-              "B": "",
-              "C": "",
-              "D": ""
-            },
-            "answer": "",
-            "explanation": "",
-            "points": 0
-          },
-          {
-            "id": "2023-may-m2e-q22",
-            "number": 22,
-            "domain": "",
-            "skill": "",
-            "difficulty": "",
-            "type": "multiple_choice",
-            "passage": "",
-            "question": "",
-            "options": {
-              "A": "",
-              "B": "",
-              "C": "",
-              "D": ""
-            },
-            "answer": "",
-            "explanation": "",
-            "points": 0
-          },
-          {
-            "id": "2023-may-m2e-q23",
-            "number": 23,
-            "domain": "",
-            "skill": "",
-            "difficulty": "",
-            "type": "multiple_choice",
-            "passage": "",
-            "question": "",
-            "options": {
-              "A": "",
-              "B": "",
-              "C": "",
-              "D": ""
-            },
-            "answer": "",
-            "explanation": "",
-            "points": 0
-          },
-          {
-            "id": "2023-may-m2e-q24",
-            "number": 24,
-            "domain": "",
-            "skill": "",
-            "difficulty": "",
-            "type": "multiple_choice",
-            "passage": "",
-            "question": "",
-            "options": {
-              "A": "",
-              "B": "",
-              "C": "",
-              "D": ""
-            },
-            "answer": "",
-            "explanation": "",
-            "points": 0
-          },
-          {
-            "id": "2023-may-m2e-q25",
-            "number": 25,
-            "domain": "",
-            "skill": "",
-            "difficulty": "",
-            "type": "multiple_choice",
-            "passage": "",
-            "question": "",
-            "options": {
-              "A": "",
-              "B": "",
-              "C": "",
-              "D": ""
-            },
-            "answer": "",
-            "explanation": "",
-            "points": 0
-          },
-          {
             "id": "2023-may-m2e-q26",
             "number": 26,
-            "domain": "",
-            "skill": "",
-            "difficulty": "",
+            "domain": "Expression of Ideas",
+            "skill": "Rhetorical Synthesis",
+            "difficulty": "medium",
             "type": "multiple_choice",
-            "passage": "",
-            "question": "",
+            "notes": "Jean-Michel Basquiat was an American artist who produced more than two thousand drawings and paintings. His work Thin in the Old was completed in 1986 and sold at auction in 2020. Thin in the Old is composed of acrylic, oil, and paper collage on wood and measures 3,028 square inches in area. His work Victor was completed in 1987 and sold at auction in 2017. Victor is composed of acrylic, oil stick, and crayon on canvas and measures 9,432 square inches in area.",
+            "question": "Which choice most effectively uses information from the given sentences to emphasize how the two works are similar?",
             "options": {
-              "A": "",
-              "B": "",
-              "C": "",
-              "D": ""
+              "A": "Composed by artist Jean-Michel Basquiat in 1986 and 1987, respectively, both Thin in the Old and Victor use acrylic paint as a medium.",
+              "B": "Artist Jean-Michel Basquiat completed Thin in the Old in 1986, and Victor followed in 1987.",
+              "C": "Artist Jean-Michel Basquiat's work Thin in the Old is composed of acrylic, oil, and paper collage, while Victor is composed of acrylic, oil stick, and crayon.",
+              "D": "Between artist Jean-Michel Basquiat's works Victor and Thin in the Old, the former is the larger of the two."
             },
-            "answer": "",
-            "explanation": "",
-            "points": 0
+            "answer": "A",
+            "explanation": "The goal is to emphasize similarity. Both works use acrylic paint — that's a shared medium. Option A highlights this common element (acrylic paint) and explicitly states both works share it. Option C contrasts differences, and Options B and D focus on dates and size respectively.",
+            "points": 1
           },
           {
             "id": "2023-may-m2e-q27",
             "number": 27,
-            "domain": "",
-            "skill": "",
-            "difficulty": "",
+            "domain": "Expression of Ideas",
+            "skill": "Rhetorical Synthesis",
+            "difficulty": "medium",
             "type": "multiple_choice",
-            "passage": "",
-            "question": "",
+            "notes": "The Mohs scale of mineral hardness is a ten-point scale that orders minerals by hardness based on their ability to scratch other minerals. Minerals with larger numbers are harder than minerals with smaller numbers and can leave visible scratches on them. Minerals with smaller numbers are softer than minerals with larger numbers and cannot leave visible scratches on them. The mineral talc has a Mohs scale number of 1. The mineral fluorite has a Mohs scale number of 4. The mineral topaz has a Mohs scale number of 8.",
+            "question": "The student wants to compare the hardness of talc and topaz. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
             "options": {
-              "A": "",
-              "B": "",
-              "C": "",
-              "D": ""
+              "A": "Topaz can leave visible scratches on fluorite, which is why topaz has a higher number than fluorite on the Mohs scale of mineral hardness.",
+              "B": "The Mohs scale of mineral hardness can be used to order fluorite, talc, and topaz by their ability to scratch other minerals.",
+              "C": "A mineral with a Mohs number of 4, like fluorite, is harder than one with a Mohs number of 1, like talc.",
+              "D": "Topaz can leave visible scratches on talc, which means that topaz is harder than talc."
             },
-            "answer": "",
-            "explanation": "",
-            "points": 0
+            "answer": "D",
+            "explanation": "The goal is to compare talc and topaz specifically. Option D directly compares these two minerals: topaz (8) can scratch talc (1), demonstrating topaz is harder. Option A discusses fluorite and topaz (not talc), Option B is general, and Option C compares fluorite and talc (not topaz).",
+            "points": 1
           }
         ]
       },

@@ -93,6 +93,101 @@
           "id": "2023-march-m1-q5",
           "number": 5,
           "domain": "Craft and Structure",
+          "skill": "Words in Context",
+          "difficulty": "easy",
+          "type": "multiple_choice",
+          "passage": "Few new parents _____ that their baby will someday become an astronaut. Yet if Jerry L. Ross's parents had made this prediction when he was born in 1948, they would have been correct, for NASA selected him for the job in 1980.",
+          "question": "Which choice completes the text with the most logical and precise word or phrase?",
+          "options": {
+            "A": "disagree",
+            "B": "ignore",
+            "C": "require",
+            "D": "anticipate"
+          },
+          "answer": "D",
+          "explanation": "'Anticipate' means to expect or predict in advance, which fits — few parents expect their baby will become an astronaut. The passage then gives a counterexample where such a prediction would have been correct.",
+          "points": 1
+        },
+        {
+          "id": "2023-march-m1-q6",
+          "number": 6,
+          "domain": "Craft and Structure",
+          "skill": "Words in Context",
+          "difficulty": "easy",
+          "type": "multiple_choice",
+          "passage": "The following text is from Kenneth Grahame's 1908 novel The Wind in the Willows. The Rat is looking for the Mole, his friend, in the woods.\n\n[The Rat] had patiently hunted through the wood for an hour or more, when at last to his joy he heard a little answering cry. Guiding himself by the sound, he made his way through the gathering darkness to the foot of an old beech tree.",
+          "question": "As used in the text, what does the word \"guiding\" most nearly mean?",
+          "options": {
+            "A": "Withdrawing",
+            "B": "Presenting",
+            "C": "Instructing",
+            "D": "Steering"
+          },
+          "answer": "D",
+          "explanation": "In context, the Rat is using the sound to direct his movement through the darkness. 'Steering' means directing one's course, which best captures this sense of orienting and moving toward something. 'Instructing' implies teaching others, not self-navigation.",
+          "points": 1
+        },
+        {
+          "id": "2023-march-m1-q7",
+          "number": 7,
+          "domain": "Craft and Structure",
+          "skill": "Words in Context",
+          "difficulty": "easy",
+          "type": "multiple_choice",
+          "passage": "Alfred Nobel intended for the Nobel Prize to be an award honoring those who have contributed \"the greatest benefit to mankind.\" Indeed, the work of Richard Laurence Millington Synge represented a significant _____ the field of chemistry, and in 1952 he was among those awarded the Nobel Prize in Chemistry for \"their invention of partition chromatography.\"",
+          "question": "Which choice completes the text with the most logical and precise word or phrase?",
+          "options": {
+            "A": "controversy in",
+            "B": "exposure to",
+            "C": "dependence on",
+            "D": "advancement in"
+          },
+          "answer": "D",
+          "explanation": "Synge won the Nobel Prize for inventing partition chromatography. This represents an 'advancement in' chemistry — a forward progress or development in the field. None of the other phrases make logical sense here.",
+          "points": 1
+        },
+        {
+          "id": "2023-march-m1-q8",
+          "number": 8,
+          "domain": "Craft and Structure",
+          "skill": "Words in Context",
+          "difficulty": "easy",
+          "type": "multiple_choice",
+          "passage": "The arrival of humans to the Americas is thought to have _____ a sudden decrease in biodiversity throughout the continents. Although the extinction of species like the toxodon was likely the result of a combination of factors, from decreasing food sources to habitat destruction, most of these factors can be directly tied to the presence of humans.",
+          "question": "Which choice completes the text with the most logical and precise word or phrase?",
+          "options": {
+            "A": "followed",
+            "B": "prolonged",
+            "C": "counteracted",
+            "D": "triggered"
+          },
+          "answer": "D",
+          "explanation": "'Triggered' means caused or set off, which fits — human arrival is thought to have caused the decrease in biodiversity. 'Followed' reverses the cause-effect relationship, 'prolonged' means extended over time, and 'counteracted' means worked against — none fit the causal meaning needed.",
+          "points": 1
+        },
+        {
+          "id": "2023-march-m1-q9",
+          "number": 9,
+          "domain": "Craft and Structure",
+          "skill": "Words in Context",
+          "difficulty": "easy",
+          "type": "multiple_choice",
+          "passage": "Some robots such as Surena (developed in 2008) and COMAN (developed in 2012) are designed to resemble humans so that people will find it easier to interact with them. To this end, certain features such as the ability to respond to voice commands can help to create the comforting semblance of humanity, but a robot that appears too similar to humans can make people feel more unsettled than _____",
+          "question": "Which choice completes the text with the most logical and precise word or phrase?",
+          "options": {
+            "A": "soothed",
+            "B": "indifferent",
+            "C": "revolted",
+            "D": "vindicated"
+          },
+          "answer": "A",
+          "explanation": "The features are intended to make people feel comfortable/soothed. The contrast is: a too-human robot makes people more unsettled than [soothed]. 'Soothed' is the intended positive emotional state that the robot fails to create, making it the correct contrast.",
+          "points": 1
+        },
+        {
+          "id": "2023-march-m1-q10",
+          "number": 10,
+          "domain": "Craft and Structure",
           "skill": "Text Structure and Purpose",
           "difficulty": "medium",
           "type": "multiple_choice",
@@ -109,8 +204,122 @@
           "points": 1
         },
         {
-          "id": "2023-march-m1-q6",
-          "number": 6,
+          "id": "2023-march-m1-q11",
+          "number": 11,
+          "domain": "Craft and Structure",
+          "skill": "Text Structure and Purpose",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "The following text is Rainer Maria Rilke's 1897 poem \"Evening\" (translated by Jessie Lamont in 1918).\n\nThe bleak fields are asleep,\nMy heart alone wakes;\nThe evening in the harbour\nDown his red sails takes.\n\nNight, guardian of dreams,\nNow wanders through the land;\nThe moon, a lily white,\nBlossoms within her hand.",
+          "question": "Which choice best states the function of the underlined portion in the text as a whole?",
+          "options": {
+            "A": "It conveys the speaker's sense that he is alone while experiencing the evening.",
+            "B": "It shows that the speaker would rather look at the fields than at the water.",
+            "C": "It indicates the speaker's disappointment that other people dislike rural settings.",
+            "D": "It explains why the speaker has woken up from sleeping."
+          },
+          "answer": "A",
+          "explanation": "The underlined portion 'The bleak fields are asleep, / My heart alone wakes' contrasts the sleeping fields with the speaker's solitary wakefulness. This conveys a sense of being alone — the speaker is the only one awake while everything else sleeps, highlighting solitude during the evening.",
+          "points": 1
+        },
+        {
+          "id": "2023-march-m1-q12",
+          "number": 12,
+          "domain": "Craft and Structure",
+          "skill": "Text Structure and Purpose",
+          "difficulty": "easy",
+          "type": "multiple_choice",
+          "passage": "When people think of dinosaurs with feathers, they typically think of winged dinosaurs, such as the bat-like Ambopteryx. However, many dinosaurs that didn't have wings also had feathers on their bodies. For instance, research indicates that the wingless, large Yutyrannus likely had feathers.",
+          "question": "Which choice best states the main purpose of the text?",
+          "options": {
+            "A": "To discuss the presence of feathers on certain types of dinosaurs",
+            "B": "To point out the differences between dinosaur feathers and bird feathers",
+            "C": "To explain why feathered dinosaurs went extinct",
+            "D": "To argue that only one species of dinosaur had feathers"
+          },
+          "answer": "A",
+          "explanation": "The text corrects a common assumption (only winged dinosaurs had feathers) by noting wingless dinosaurs also had feathers, using Yutyrannus as an example. The main purpose is to discuss the broader presence of feathers across different types of dinosaurs.",
+          "points": 1
+        },
+        {
+          "id": "2023-march-m1-q13",
+          "number": 13,
+          "domain": "Craft and Structure",
+          "skill": "Cross-Text Connections",
+          "difficulty": "hard",
+          "type": "multiple_choice",
+          "passage_1_2": "Text 1: In 2017 Buenaventura, Colombia, was named a City of Gastronomy by UNESCO in recognition of the city's unique food culture. The honor is well known among residents of the city as well as tourists who visit. It's obvious that the selection of Buenaventura by UNESCO has brought awareness to local recipes, cooking practices, and chefs and has provided a boost to the city's tourism industry.\n\nText 2: Many people in Buenaventura's restaurant industry hoped that food tourism would increase after the city was chosen as City of Gastronomy in 2017. However, as researcher Eerang Park and colleagues argue, cities must still create effective marketing strategies to benefit fully from being named a City of Gastronomy. Without an intentional effort to promote the city's food scene, many current and potential visitors to Buenaventura may not even be aware that it's home to uniquely delicious food.",
+          "question": "Based on the texts, what would the author of Text 2 most likely say in response to the underlined claim in Text 1?",
+          "options": {
+            "A": "A city that UNESCO officially names as a City of Gastronomy should still make deliberate efforts to attract visitors [in order to boost] tourism.",
+            "B": "Many people worked together to help Buenaventura be recognized by UNESCO, but chefs deserve the most credit for Buenaventura's selection as a City of Gastronomy.",
+            "C": "There are other benefits to being named a UNESCO City of Gastronomy besides increased tourism.",
+            "D": "The naming of Buenaventura as a City of Gastronomy was long overdue, given the city's delicious food."
+          },
+          "answer": "A",
+          "explanation": "Text 1 claims the UNESCO designation obviously boosted tourism. Text 2 argues cities must still create effective marketing strategies and that visitors may not even be aware of the food scene without intentional promotion. The author of Text 2 would challenge Text 1's optimistic claim by saying deliberate efforts are still needed.",
+          "points": 1
+        },
+        {
+          "id": "2023-march-m1-q14",
+          "number": 14,
+          "domain": "Information and Ideas",
+          "skill": "Central Ideas and Details",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "In a study by Mika R. Moran, Daniel A. Rodriguez, and colleagues, residents of Panama City, Panama, and Fortaleza, Brazil, were surveyed about parks in their cities. Of the 318 respondents from Panama City, 53.5% indicated that they use the city's parks, and of 938 respondents from Fortaleza 35.7% indicated using city parks. Given that the percentage of Panama City respondents who reported living within a 10-minute walk of a park was much lower than that reported by Fortaleza respondents, greater proximity alone can't explain the difference in park use.",
+          "question": "The text makes which point about the difference between the proportions of Panama City residents and Fortaleza residents using parks?",
+          "options": {
+            "A": "It was much larger than the researchers conducting the study expected.",
+            "B": "It could be due to inaccuracies in the survey results.",
+            "C": "It was calculated using sources that predate the survey.",
+            "D": "It is caused by something other than the parks' proximity to the residents."
+          },
+          "answer": "D",
+          "explanation": "Panama City had more park users (53.5%) despite fewer people living near parks. The text explicitly concludes that proximity alone cannot explain the difference — meaning something else must be causing it.",
+          "points": 1
+        },
+        {
+          "id": "2023-march-m1-q15",
+          "number": 15,
+          "domain": "Information and Ideas",
+          "skill": "Central Ideas and Details",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "The following text is adapted from Daniel Defoe's 1704 nonfiction book The Storm.\n\nThe sermon is a sound of words spoken to the ear, and prepared only for present meditation and extends no farther than the strength of memory can convey it; a book printed is a record, remaining in every man's possession, always ready to renew its acquaintance with his memory, and always ready to be produced as an authority or voucher to any reports he makes out of it, and conveys its contents for ages to come, to the eternity of mortal time, when the author is forgotten in his grave.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": {
+            "A": "People are less likely to forget a message when they hear it spoken aloud than they are when they read it in print.",
+            "B": "Unless a spoken message is delivered by [a confident orator, it may be] ignored.",
+            "C": "Most authors have little hope of being remembered well past their lifetimes.",
+            "D": "Words committed to print have a greater permanence than messages that are merely spoken aloud."
+          },
+          "answer": "D",
+          "explanation": "Defoe contrasts the sermon (spoken, limited by memory, temporary) with the printed book (a lasting record, always available, conveying content for ages). The main idea is that printed words endure far longer than spoken ones.",
+          "points": 1
+        },
+        {
+          "id": "2023-march-m1-q16",
+          "number": 16,
+          "domain": "Information and Ideas",
+          "skill": "Central Ideas and Details",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "The Far Side of the World, first published in 1984, is a novel in Patrick O'Brian's Aubrey/Maturin series, which includes twenty books plus an unfinished fragment of a twenty-first. Like the rest of the books in the series, The Far Side of the World has a rather abrupt ending, but the following book, The Reverse of the Medal, picks up neatly where The Far Side of the World leaves off. Thus, the sudden ending is only an issue if one considers the books as independent texts—the Aubrey/Maturin series is best thought of as a single incredibly long work, similar to other multivolume stories, such as John Galsworthy's The Forsyte Saga.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": {
+            "A": "It is unfair that the Aubrey/Maturin series does not have the critical reputation of The Forsyte Saga, which has a similar structure.",
+            "B": "The Far Side of the World and The Reverse of the Medal are [two] of the most complex of Patrick O'Brian's [novels of the Aubrey/Maturin series] with unconventional structures.",
+            "C": "The structure of each of the novels of the Aubrey/Maturin series suggests that the series should be considered a single continuous story.",
+            "D": "Many readers find the Aubrey/Maturin novels to be remarkably entertaining despite flaws novels' structures."
+          },
+          "answer": "C",
+          "explanation": "The text argues the abrupt ending of each book only seems like a problem if you treat them as independent — because each flows into the next, the series is best understood as one long continuous work. Option C directly states this main idea.",
+          "points": 1
+        },
+        {
+          "id": "2023-march-m1-q17",
+          "number": 17,
           "domain": "Information and Ideas",
           "skill": "Command of Evidence (Textual)",
           "difficulty": "medium",
@@ -128,8 +337,46 @@
           "points": 1
         },
         {
-          "id": "2023-march-m1-q7",
-          "number": 7,
+          "id": "2023-march-m1-q18",
+          "number": 18,
+          "domain": "Information and Ideas",
+          "skill": "Command of Evidence (Textual)",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "Life Among the Paiutes is an 1882 autobiographical narrative by Sarah Winnemucca Hopkins. In the work, Winnemucca directly addresses the reader to establish her authority and credibility, writing _____",
+          "question": "Which quotation from Life Among the Paiutes most effectively illustrates the claim?",
+          "options": {
+            "A": "\"My dear reader, I have not lived in this world for over thirty or forty years for nothing, and I know what I am talking about.\"",
+            "B": "\"I was born somewhere near 1844, but am not sure of the precise time.\"",
+            "C": "\"Oh, dear readers, these soldiers had gone only sixty miles away to Muddy Lake, where my people were then living and fishing.\"",
+            "D": "\"But how can I describe the scene that followed? Some of you, dear readers, can imagine.\""
+          },
+          "answer": "A",
+          "explanation": "The claim is that Winnemucca addresses the reader to establish authority and credibility. Option A directly addresses the reader and explicitly asserts credibility through lived experience ('I have not lived...for nothing, and I know what I am talking about'). This is the clearest illustration of establishing authority.",
+          "points": 1
+        },
+        {
+          "id": "2023-march-m1-q19",
+          "number": 19,
+          "domain": "Information and Ideas",
+          "skill": "Command of Evidence (Textual)",
+          "difficulty": "hard",
+          "type": "multiple_choice",
+          "passage": "Hypothesizing that lullabies, characterized by their slow tempos, are universally calming to infants, Constance M. Bainbridge and colleagues played a lullaby sung in the Scottish Gaelic language and a non-lullaby sung in the Seri language to a group of infants. The team found that the infants' heart rates decreased more during the lullaby than during the non-lullaby. Since a decrease in heart rate is associated with relaxation, the team concluded that the lullaby relaxed the infants. Noting that reduced heart rate can also be associated with increased attention, one critic argues that instead, the lullaby simply attracted the infants' attention. Bainbridge and colleagues also measured pupil size, as pupils typically become larger when a stimulus captures a person's attention.",
+          "question": "Which finding, if true, would most directly weaken the critic's claim?",
+          "options": {
+            "A": "Blinking, which indicates attention, was equally frequent whether infants were listening to the song in Scottish Gaelic or song in Seri.",
+            "B": "Neither the Scottish Gaelic language nor the melody of the traditional Scots lullaby was familiar to infants in the study.",
+            "C": "The infants' pupils were smaller when the infants were listening to lullabies than when they were listening to non-lullabies.",
+            "D": "Parents of infants in the study chose the lullaby over the non lullaby when asked which song they would use to calm their child."
+          },
+          "answer": "C",
+          "explanation": "The critic claims the lullaby attracted the infants' attention rather than relaxing them. The passage notes pupils become larger when attention is captured. If infants' pupils were SMALLER during the lullaby, this directly contradicts the attention-capture explanation, weakening the critic's claim and supporting the relaxation conclusion.",
+          "points": 1
+        },
+        {
+          "id": "2023-march-m1-q20",
+          "number": 20,
           "domain": "Information and Ideas",
           "skill": "Command of Evidence (Quantitative)",
           "difficulty": "medium",
@@ -148,8 +395,8 @@
           "points": 1
         },
         {
-          "id": "2023-march-m1-q8",
-          "number": 8,
+          "id": "2023-march-m1-q21",
+          "number": 21,
           "domain": "Information and Ideas",
           "skill": "Command of Evidence (Quantitative)",
           "difficulty": "medium",
@@ -168,8 +415,8 @@
           "points": 1
         },
         {
-          "id": "2023-march-m1-q9",
-          "number": 9,
+          "id": "2023-march-m1-q22",
+          "number": 22,
           "domain": "Information and Ideas",
           "skill": "Command of Evidence (Quantitative)",
           "difficulty": "medium",
@@ -188,293 +435,8 @@
           "points": 1
         },
         {
-          "id": "2023-march-m1-q10",
-          "number": 10,
-          "domain": "Information and Ideas",
-          "skill": "Inferences",
-          "difficulty": "medium",
-          "type": "multiple_choice",
-          "passage": "The Study on Global Ageing and Adult Health (SAGE) seeks to discover long-term trends related to aging by compiling and analyzing evidence from approximately 66,000 participants in multiple countries. As with most longitudinal studies, extensive funding support is needed for SAGE to collect the relevant data over timescales and at intervals that will support robust conclusions. But the quality of a more constrained investigation, such as a sociology study seeking only to yield the average age at which people in a given city first become parents, is much less dependent on high levels of funding because _____",
-          "question": "Which choice most logically completes the text?",
-          "options": {
-            "A": "such studies are likely to be a lower priority for funding than SAGE.",
-            "B": "the sociology study is unlikely to be able to recruit 66,000 participants.",
-            "C": "expanding the scope of such studies is unlikely to be feasible.",
-            "D": "such studies are not trying to identify trends over time."
-          },
-          "answer": "D",
-          "explanation": "SAGE needs extensive funding because it tracks long-term trends over time. A constrained study like finding the average age of first-time parents doesn't track trends over time — it's a single measurement. Option D logically explains why less funding is needed.",
-          "points": 1
-        },
-        {
-          "id": "2023-march-m1-q11",
-          "number": 11,
-          "domain": "Information and Ideas",
-          "skill": "Inferences",
-          "difficulty": "medium",
-          "type": "multiple_choice",
-          "passage": "Anne Bronte's 1847 novel Agnes Grey contains elements drawn from Bronte's own life: there are many parallels between the experiences of the novel's title character and those of Bronte, and as a result Agnes Grey is regularly described as an autobiographical novel. This characterization can be useful, but it also presents drawbacks in terms of how the work is perceived, as it may lead readers to believe that Bronte merely fictionalized true events, which, in an artistic field where creativity and inventiveness are prized, can suggest that _____",
-          "question": "Which choice most logically completes the text?",
-          "options": {
-            "A": "Agnes Grey is less of an imaginative achievement than it actually is.",
-            "B": "the real-world counterparts of other characters in Agnes Grey are hard to identify.",
-            "C": "Bronte should not have claimed that Agnes Grey is based on real events.",
-            "D": "critics disagree about whether Agnes Grey shows greater originality than works without autobiographical elements."
-          },
-          "answer": "A",
-          "explanation": "Labeling Agnes Grey as autobiographical may lead readers to think Bronte just fictionalized real events. In a field where creativity is prized, this implies the novel seems less of an imaginative or creative achievement. Option A completes this logic directly.",
-          "points": 1
-        },
-        {
-          "id": "2023-march-m1-q12",
-          "number": 12,
-          "domain": "Information and Ideas",
-          "skill": "Inferences",
-          "difficulty": "medium",
-          "type": "multiple_choice",
-          "passage": "Previous research has shown that plant species with a narrow geographical range tend to be more genetically homogeneous than plant species with extensive ranges are. Based on these findings, researchers recently ran simulations to predict how the genetic variation of several species of Mammillaria, a genus of cactus found throughout the Americas, might change in different distribution conditions. One of these species, M. klissingiana, is found only in the state of Tamaulipas. The researchers simulated what would happen if M. klissingiana spread to new habitats outside Tamaulipas, and, consistent with previous findings, the results showed that _____",
-          "question": "Which choice most logically completes the text?",
-          "options": {
-            "A": "several other Mammillaria species could survive in Tamaulipas in the future.",
-            "B": "the genetic homogeneity of M. klissingiana decreased over time.",
-            "C": "there was a gradual increase in the genetic homogeneity of Maminillaria species in states neighboring Tamaulipas.",
-            "D": "Marnmillaria species other than M. Klissingiana would become more common in Tamaulipas."
-          },
-          "answer": "B",
-          "explanation": "Previous research shows narrow-range species are more genetically homogeneous. If M. klissingiana (currently narrow range) spreads to new habitats, its range expands → consistent with previous findings, its genetic homogeneity would decrease (become more genetically diverse). Option B states exactly this.",
-          "points": 1
-        },
-        {
-          "id": "2023-march-m1-q13",
-          "number": 13,
-          "domain": "Information and Ideas",
-          "skill": "Inferences",
-          "difficulty": "hard",
-          "type": "multiple_choice",
-          "passage": "Arthurian legends (tales related to the character of King Arthur) derive from many sources, such as Annaies Cambriae, composed around 970, and the Mabinogion from the 12th and 13th centuries. One of the most significant sources, Geoffrey of Monmouth's History of the Kings of Britain, was written in Latin in the 1130s; some material from it was later adapted by the Norman poet Wace into the Roman de Brut in 1155. But while no source before 1155 includes references to the famous Round Table at which Arthur's knights assembled, both the Roman de Brut and Sir Thomas Malory's 15th-century compilation of Arthurian legends, Le Morte d'Arthur, do. It can therefore be inferred that _____",
-          "question": "Which choice most logically completes the text?",
-          "options": {
-            "A": "Malory did not use Annales Cambriae as a source for information [when] he presented about the Round Table.",
-            "B": "Geoffrey of Monmouth's accounts of Arthurian legends in his History are more similar overall in content to the accounts in the Mabinogion than they are to the accounts in Roman de Brut.",
-            "C": "Geoffrey of Monmouth was unaware of stories of the Round Table when composing his History, though historians know that works containing such stories were available to him.",
-            "D": "Le More d'Arthur is more historically accurate than History, because the Mabinogion had not been written when Geoffrey of Monmouth was writing his work."
-          },
-          "answer": "A",
-          "explanation": "No source before 1155 references the Round Table. Annales Cambriae was composed around 970 — well before 1155 — so it would contain no Round Table information. Therefore Malory could not have used it as a source for Round Table content. This is the most direct logical inference.",
-          "points": 1
-        },
-        {
-          "id": "2023-march-m1-q14",
-          "number": 14,
-          "domain": "Craft and Structure",
-          "skill": "Words in Context",
-          "difficulty": "easy",
-          "type": "multiple_choice",
-          "passage": "Few new parents _____ that their baby will someday become an astronaut. Yet if Jerry L. Ross's parents had made this prediction when he was born in 1948, they would have been correct, for NASA selected him for the job in 1980.",
-          "question": "Which choice completes the text with the most logical and precise word or phrase?",
-          "options": {
-            "A": "disagree",
-            "B": "ignore",
-            "C": "require",
-            "D": "anticipate"
-          },
-          "answer": "D",
-          "explanation": "'Anticipate' means to expect or predict in advance, which fits — few parents expect their baby will become an astronaut. The passage then gives a counterexample where such a prediction would have been correct.",
-          "points": 1
-        },
-        {
-          "id": "2023-march-m1-q15",
-          "number": 15,
-          "domain": "Craft and Structure",
-          "skill": "Words in Context",
-          "difficulty": "easy",
-          "type": "multiple_choice",
-          "passage": "The following text is from Kenneth Grahame's 1908 novel The Wind in the Willows. The Rat is looking for the Mole, his friend, in the woods.\n\n[The Rat] had patiently hunted through the wood for an hour or more, when at last to his joy he heard a little answering cry. Guiding himself by the sound, he made his way through the gathering darkness to the foot of an old beech tree.",
-          "question": "As used in the text, what does the word \"guiding\" most nearly mean?",
-          "options": {
-            "A": "Withdrawing",
-            "B": "Presenting",
-            "C": "Instructing",
-            "D": "Steering"
-          },
-          "answer": "D",
-          "explanation": "In context, the Rat is using the sound to direct his movement through the darkness. 'Steering' means directing one's course, which best captures this sense of orienting and moving toward something. 'Instructing' implies teaching others, not self-navigation.",
-          "points": 1
-        },
-        {
-          "id": "2023-march-m1-q16",
-          "number": 16,
-          "domain": "Craft and Structure",
-          "skill": "Words in Context",
-          "difficulty": "easy",
-          "type": "multiple_choice",
-          "passage": "Alfred Nobel intended for the Nobel Prize to be an award honoring those who have contributed \"the greatest benefit to mankind.\" Indeed, the work of Richard Laurence Millington Synge represented a significant _____ the field of chemistry, and in 1952 he was among those awarded the Nobel Prize in Chemistry for \"their invention of partition chromatography.\"",
-          "question": "Which choice completes the text with the most logical and precise word or phrase?",
-          "options": {
-            "A": "controversy in",
-            "B": "exposure to",
-            "C": "dependence on",
-            "D": "advancement in"
-          },
-          "answer": "D",
-          "explanation": "Synge won the Nobel Prize for inventing partition chromatography. This represents an 'advancement in' chemistry — a forward progress or development in the field. None of the other phrases make logical sense here.",
-          "points": 1
-        },
-        {
-          "id": "2023-march-m1-q17",
-          "number": 17,
-          "domain": "Craft and Structure",
-          "skill": "Words in Context",
-          "difficulty": "easy",
-          "type": "multiple_choice",
-          "passage": "The arrival of humans to the Americas is thought to have _____ a sudden decrease in biodiversity throughout the continents. Although the extinction of species like the toxodon was likely the result of a combination of factors, from decreasing food sources to habitat destruction, most of these factors can be directly tied to the presence of humans.",
-          "question": "Which choice completes the text with the most logical and precise word or phrase?",
-          "options": {
-            "A": "followed",
-            "B": "prolonged",
-            "C": "counteracted",
-            "D": "triggered"
-          },
-          "answer": "D",
-          "explanation": "'Triggered' means caused or set off, which fits — human arrival is thought to have caused the decrease in biodiversity. 'Followed' reverses the cause-effect relationship, 'prolonged' means extended over time, and 'counteracted' means worked against — none fit the causal meaning needed.",
-          "points": 1
-        },
-        {
-          "id": "2023-march-m1-q18",
-          "number": 18,
-          "domain": "Craft and Structure",
-          "skill": "Words in Context",
-          "difficulty": "easy",
-          "type": "multiple_choice",
-          "passage": "Some robots such as Surena (developed in 2008) and COMAN (developed in 2012) are designed to resemble humans so that people will find it easier to interact with them. To this end, certain features such as the ability to respond to voice commands can help to create the comforting semblance of humanity, but a robot that appears too similar to humans can make people feel more unsettled than _____",
-          "question": "Which choice completes the text with the most logical and precise word or phrase?",
-          "options": {
-            "A": "soothed",
-            "B": "indifferent",
-            "C": "revolted",
-            "D": "vindicated"
-          },
-          "answer": "A",
-          "explanation": "The features are intended to make people feel comfortable/soothed. The contrast is: a too-human robot makes people more unsettled than [soothed]. 'Soothed' is the intended positive emotional state that the robot fails to create, making it the correct contrast.",
-          "points": 1
-        },
-        {
-          "id": "2023-march-m1-q19",
-          "number": 19,
-          "domain": "Craft and Structure",
-          "skill": "Text Structure and Purpose",
-          "difficulty": "medium",
-          "type": "multiple_choice",
-          "passage": "The following text is Rainer Maria Rilke's 1897 poem \"Evening\" (translated by Jessie Lamont in 1918).\n\nThe bleak fields are asleep,\nMy heart alone wakes;\nThe evening in the harbour\nDown his red sails takes.\n\nNight, guardian of dreams,\nNow wanders through the land;\nThe moon, a lily white,\nBlossoms within her hand.",
-          "question": "Which choice best states the function of the underlined portion in the text as a whole?",
-          "options": {
-            "A": "It conveys the speaker's sense that he is alone while experiencing the evening.",
-            "B": "It shows that the speaker would rather look at the fields than at the water.",
-            "C": "It indicates the speaker's disappointment that other people dislike rural settings.",
-            "D": "It explains why the speaker has woken up from sleeping."
-          },
-          "answer": "A",
-          "explanation": "The underlined portion 'The bleak fields are asleep, / My heart alone wakes' contrasts the sleeping fields with the speaker's solitary wakefulness. This conveys a sense of being alone — the speaker is the only one awake while everything else sleeps, highlighting solitude during the evening.",
-          "points": 1
-        },
-        {
-          "id": "2023-march-m1-q20",
-          "number": 20,
-          "domain": "Craft and Structure",
-          "skill": "Text Structure and Purpose",
-          "difficulty": "easy",
-          "type": "multiple_choice",
-          "passage": "When people think of dinosaurs with feathers, they typically think of winged dinosaurs, such as the bat-like Ambopteryx. However, many dinosaurs that didn't have wings also had feathers on their bodies. For instance, research indicates that the wingless, large Yutyrannus likely had feathers.",
-          "question": "Which choice best states the main purpose of the text?",
-          "options": {
-            "A": "To discuss the presence of feathers on certain types of dinosaurs",
-            "B": "To point out the differences between dinosaur feathers and bird feathers",
-            "C": "To explain why feathered dinosaurs went extinct",
-            "D": "To argue that only one species of dinosaur had feathers"
-          },
-          "answer": "A",
-          "explanation": "The text corrects a common assumption (only winged dinosaurs had feathers) by noting wingless dinosaurs also had feathers, using Yutyrannus as an example. The main purpose is to discuss the broader presence of feathers across different types of dinosaurs.",
-          "points": 1
-        },
-        {
-          "id": "2023-march-m1-q21",
-          "number": 21,
-          "domain": "Craft and Structure",
-          "skill": "Cross-Text Connections",
-          "difficulty": "hard",
-          "type": "multiple_choice",
-          "passage_1_2": "Text 1: In 2017 Buenaventura, Colombia, was named a City of Gastronomy by UNESCO in recognition of the city's unique food culture. The honor is well known among residents of the city as well as tourists who visit. It's obvious that the selection of Buenaventura by UNESCO has brought awareness to local recipes, cooking practices, and chefs and has provided a boost to the city's tourism industry.\n\nText 2: Many people in Buenaventura's restaurant industry hoped that food tourism would increase after the city was chosen as City of Gastronomy in 2017. However, as researcher Eerang Park and colleagues argue, cities must still create effective marketing strategies to benefit fully from being named a City of Gastronomy. Without an intentional effort to promote the city's food scene, many current and potential visitors to Buenaventura may not even be aware that it's home to uniquely delicious food.",
-          "question": "Based on the texts, what would the author of Text 2 most likely say in response to the underlined claim in Text 1?",
-          "options": {
-            "A": "A city that UNESCO officially names as a City of Gastronomy should still make deliberate efforts to attract visitors [in order to boost] tourism.",
-            "B": "Many people worked together to help Buenaventura be recognized by UNESCO, but chefs deserve the most credit for Buenaventura's selection as a City of Gastronomy.",
-            "C": "There are other benefits to being named a UNESCO City of Gastronomy besides increased tourism.",
-            "D": "The naming of Buenaventura as a City of Gastronomy was long overdue, given the city's delicious food."
-          },
-          "answer": "A",
-          "explanation": "Text 1 claims the UNESCO designation obviously boosted tourism. Text 2 argues cities must still create effective marketing strategies and that visitors may not even be aware of the food scene without intentional promotion. The author of Text 2 would challenge Text 1's optimistic claim by saying deliberate efforts are still needed.",
-          "points": 1
-        },
-        {
-          "id": "2023-march-m1-q22",
-          "number": 22,
-          "domain": "Information and Ideas",
-          "skill": "Central Ideas and Details",
-          "difficulty": "medium",
-          "type": "multiple_choice",
-          "passage": "In a study by Mika R. Moran, Daniel A. Rodriguez, and colleagues, residents of Panama City, Panama, and Fortaleza, Brazil, were surveyed about parks in their cities. Of the 318 respondents from Panama City, 53.5% indicated that they use the city's parks, and of 938 respondents from Fortaleza 35.7% indicated using city parks. Given that the percentage of Panama City respondents who reported living within a 10-minute walk of a park was much lower than that reported by Fortaleza respondents, greater proximity alone can't explain the difference in park use.",
-          "question": "The text makes which point about the difference between the proportions of Panama City residents and Fortaleza residents using parks?",
-          "options": {
-            "A": "It was much larger than the researchers conducting the study expected.",
-            "B": "It could be due to inaccuracies in the survey results.",
-            "C": "It was calculated using sources that predate the survey.",
-            "D": "It is caused by something other than the parks' proximity to the residents."
-          },
-          "answer": "D",
-          "explanation": "Panama City had more park users (53.5%) despite fewer people living near parks. The text explicitly concludes that proximity alone cannot explain the difference — meaning something else must be causing it.",
-          "points": 1
-        },
-        {
           "id": "2023-march-m1-q23",
           "number": 23,
-          "domain": "Information and Ideas",
-          "skill": "Central Ideas and Details",
-          "difficulty": "medium",
-          "type": "multiple_choice",
-          "passage": "The following text is adapted from Daniel Defoe's 1704 nonfiction book The Storm.\n\nThe sermon is a sound of words spoken to the ear, and prepared only for present meditation and extends no farther than the strength of memory can convey it; a book printed is a record, remaining in every man's possession, always ready to renew its acquaintance with his memory, and always ready to be produced as an authority or voucher to any reports he makes out of it, and conveys its contents for ages to come, to the eternity of mortal time, when the author is forgotten in his grave.",
-          "question": "Which choice best states the main idea of the text?",
-          "options": {
-            "A": "People are less likely to forget a message when they hear it spoken aloud than they are when they read it in print.",
-            "B": "Unless a spoken message is delivered by [a confident orator, it may be] ignored.",
-            "C": "Most authors have little hope of being remembered well past their lifetimes.",
-            "D": "Words committed to print have a greater permanence than messages that are merely spoken aloud."
-          },
-          "answer": "D",
-          "explanation": "Defoe contrasts the sermon (spoken, limited by memory, temporary) with the printed book (a lasting record, always available, conveying content for ages). The main idea is that printed words endure far longer than spoken ones.",
-          "points": 1
-        },
-        {
-          "id": "2023-march-m1-q24",
-          "number": 24,
-          "domain": "Information and Ideas",
-          "skill": "Central Ideas and Details",
-          "difficulty": "medium",
-          "type": "multiple_choice",
-          "passage": "The Far Side of the World, first published in 1984, is a novel in Patrick O'Brian's Aubrey/Maturin series, which includes twenty books plus an unfinished fragment of a twenty-first. Like the rest of the books in the series, The Far Side of the World has a rather abrupt ending, but the following book, The Reverse of the Medal, picks up neatly where The Far Side of the World leaves off. Thus, the sudden ending is only an issue if one considers the books as independent texts—the Aubrey/Maturin series is best thought of as a single incredibly long work, similar to other multivolume stories, such as John Galsworthy's The Forsyte Saga.",
-          "question": "Which choice best states the main idea of the text?",
-          "options": {
-            "A": "It is unfair that the Aubrey/Maturin series does not have the critical reputation of The Forsyte Saga, which has a similar structure.",
-            "B": "The Far Side of the World and The Reverse of the Medal are [two] of the most complex of Patrick O'Brian's [novels of the Aubrey/Maturin series] with unconventional structures.",
-            "C": "The structure of each of the novels of the Aubrey/Maturin series suggests that the series should be considered a single continuous story.",
-            "D": "Many readers find the Aubrey/Maturin novels to be remarkably entertaining despite flaws novels' structures."
-          },
-          "answer": "C",
-          "explanation": "The text argues the abrupt ending of each book only seems like a problem if you treat them as independent — because each flows into the next, the series is best understood as one long continuous work. Option C directly states this main idea.",
-          "points": 1
-        },
-        {
-          "id": "2023-march-m1-q25",
-          "number": 25,
           "domain": "Information and Ideas",
           "skill": "Command of Evidence (Quantitative)",
           "difficulty": "easy",
@@ -493,41 +455,79 @@
           "points": 1
         },
         {
+          "id": "2023-march-m1-q24",
+          "number": 24,
+          "domain": "Information and Ideas",
+          "skill": "Inferences",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "The Study on Global Ageing and Adult Health (SAGE) seeks to discover long-term trends related to aging by compiling and analyzing evidence from approximately 66,000 participants in multiple countries. As with most longitudinal studies, extensive funding support is needed for SAGE to collect the relevant data over timescales and at intervals that will support robust conclusions. But the quality of a more constrained investigation, such as a sociology study seeking only to yield the average age at which people in a given city first become parents, is much less dependent on high levels of funding because _____",
+          "question": "Which choice most logically completes the text?",
+          "options": {
+            "A": "such studies are likely to be a lower priority for funding than SAGE.",
+            "B": "the sociology study is unlikely to be able to recruit 66,000 participants.",
+            "C": "expanding the scope of such studies is unlikely to be feasible.",
+            "D": "such studies are not trying to identify trends over time."
+          },
+          "answer": "D",
+          "explanation": "SAGE needs extensive funding because it tracks long-term trends over time. A constrained study like finding the average age of first-time parents doesn't track trends over time — it's a single measurement. Option D logically explains why less funding is needed.",
+          "points": 1
+        },
+        {
+          "id": "2023-march-m1-q25",
+          "number": 25,
+          "domain": "Information and Ideas",
+          "skill": "Inferences",
+          "difficulty": "medium",
+          "type": "multiple_choice",
+          "passage": "Anne Bronte's 1847 novel Agnes Grey contains elements drawn from Bronte's own life: there are many parallels between the experiences of the novel's title character and those of Bronte, and as a result Agnes Grey is regularly described as an autobiographical novel. This characterization can be useful, but it also presents drawbacks in terms of how the work is perceived, as it may lead readers to believe that Bronte merely fictionalized true events, which, in an artistic field where creativity and inventiveness are prized, can suggest that _____",
+          "question": "Which choice most logically completes the text?",
+          "options": {
+            "A": "Agnes Grey is less of an imaginative achievement than it actually is.",
+            "B": "the real-world counterparts of other characters in Agnes Grey are hard to identify.",
+            "C": "Bronte should not have claimed that Agnes Grey is based on real events.",
+            "D": "critics disagree about whether Agnes Grey shows greater originality than works without autobiographical elements."
+          },
+          "answer": "A",
+          "explanation": "Labeling Agnes Grey as autobiographical may lead readers to think Bronte just fictionalized real events. In a field where creativity is prized, this implies the novel seems less of an imaginative or creative achievement. Option A completes this logic directly.",
+          "points": 1
+        },
+        {
           "id": "2023-march-m1-q26",
           "number": 26,
           "domain": "Information and Ideas",
-          "skill": "Command of Evidence (Textual)",
+          "skill": "Inferences",
           "difficulty": "medium",
           "type": "multiple_choice",
-          "passage": "Life Among the Paiutes is an 1882 autobiographical narrative by Sarah Winnemucca Hopkins. In the work, Winnemucca directly addresses the reader to establish her authority and credibility, writing _____",
-          "question": "Which quotation from Life Among the Paiutes most effectively illustrates the claim?",
+          "passage": "Previous research has shown that plant species with a narrow geographical range tend to be more genetically homogeneous than plant species with extensive ranges are. Based on these findings, researchers recently ran simulations to predict how the genetic variation of several species of Mammillaria, a genus of cactus found throughout the Americas, might change in different distribution conditions. One of these species, M. klissingiana, is found only in the state of Tamaulipas. The researchers simulated what would happen if M. klissingiana spread to new habitats outside Tamaulipas, and, consistent with previous findings, the results showed that _____",
+          "question": "Which choice most logically completes the text?",
           "options": {
-            "A": "\"My dear reader, I have not lived in this world for over thirty or forty years for nothing, and I know what I am talking about.\"",
-            "B": "\"I was born somewhere near 1844, but am not sure of the precise time.\"",
-            "C": "\"Oh, dear readers, these soldiers had gone only sixty miles away to Muddy Lake, where my people were then living and fishing.\"",
-            "D": "\"But how can I describe the scene that followed? Some of you, dear readers, can imagine.\""
+            "A": "several other Mammillaria species could survive in Tamaulipas in the future.",
+            "B": "the genetic homogeneity of M. klissingiana decreased over time.",
+            "C": "there was a gradual increase in the genetic homogeneity of Maminillaria species in states neighboring Tamaulipas.",
+            "D": "Marnmillaria species other than M. Klissingiana would become more common in Tamaulipas."
           },
-          "answer": "A",
-          "explanation": "The claim is that Winnemucca addresses the reader to establish authority and credibility. Option A directly addresses the reader and explicitly asserts credibility through lived experience ('I have not lived...for nothing, and I know what I am talking about'). This is the clearest illustration of establishing authority.",
+          "answer": "B",
+          "explanation": "Previous research shows narrow-range species are more genetically homogeneous. If M. klissingiana (currently narrow range) spreads to new habitats, its range expands → consistent with previous findings, its genetic homogeneity would decrease (become more genetically diverse). Option B states exactly this.",
           "points": 1
         },
         {
           "id": "2023-march-m1-q27",
           "number": 27,
           "domain": "Information and Ideas",
-          "skill": "Command of Evidence (Textual)",
+          "skill": "Inferences",
           "difficulty": "hard",
           "type": "multiple_choice",
-          "passage": "Hypothesizing that lullabies, characterized by their slow tempos, are universally calming to infants, Constance M. Bainbridge and colleagues played a lullaby sung in the Scottish Gaelic language and a non-lullaby sung in the Seri language to a group of infants. The team found that the infants' heart rates decreased more during the lullaby than during the non-lullaby. Since a decrease in heart rate is associated with relaxation, the team concluded that the lullaby relaxed the infants. Noting that reduced heart rate can also be associated with increased attention, one critic argues that instead, the lullaby simply attracted the infants' attention. Bainbridge and colleagues also measured pupil size, as pupils typically become larger when a stimulus captures a person's attention.",
-          "question": "Which finding, if true, would most directly weaken the critic's claim?",
+          "passage": "Arthurian legends (tales related to the character of King Arthur) derive from many sources, such as Annaies Cambriae, composed around 970, and the Mabinogion from the 12th and 13th centuries. One of the most significant sources, Geoffrey of Monmouth's History of the Kings of Britain, was written in Latin in the 1130s; some material from it was later adapted by the Norman poet Wace into the Roman de Brut in 1155. But while no source before 1155 includes references to the famous Round Table at which Arthur's knights assembled, both the Roman de Brut and Sir Thomas Malory's 15th-century compilation of Arthurian legends, Le Morte d'Arthur, do. It can therefore be inferred that _____",
+          "question": "Which choice most logically completes the text?",
           "options": {
-            "A": "Blinking, which indicates attention, was equally frequent whether infants were listening to the song in Scottish Gaelic or song in Seri.",
-            "B": "Neither the Scottish Gaelic language nor the melody of the traditional Scots lullaby was familiar to infants in the study.",
-            "C": "The infants' pupils were smaller when the infants were listening to lullabies than when they were listening to non-lullabies.",
-            "D": "Parents of infants in the study chose the lullaby over the non lullaby when asked which song they would use to calm their child."
+            "A": "Malory did not use Annales Cambriae as a source for information [when] he presented about the Round Table.",
+            "B": "Geoffrey of Monmouth's accounts of Arthurian legends in his History are more similar overall in content to the accounts in the Mabinogion than they are to the accounts in Roman de Brut.",
+            "C": "Geoffrey of Monmouth was unaware of stories of the Round Table when composing his History, though historians know that works containing such stories were available to him.",
+            "D": "Le More d'Arthur is more historically accurate than History, because the Mabinogion had not been written when Geoffrey of Monmouth was writing his work."
           },
-          "answer": "C",
-          "explanation": "The critic claims the lullaby attracted the infants' attention rather than relaxing them. The passage notes pupils become larger when attention is captured. If infants' pupils were SMALLER during the lullaby, this directly contradicts the attention-capture explanation, weakening the critic's claim and supporting the relaxation conclusion.",
+          "answer": "A",
+          "explanation": "No source before 1155 references the Round Table. Annales Cambriae was composed around 970 — well before 1155 — so it would contain no Round Table information. Therefore Malory could not have used it as a source for Round Table content. This is the most direct logical inference.",
           "points": 1
         }
       ]
@@ -541,25 +541,6 @@
           {
             "id": "2023-march-m2e-q1",
             "number": 1,
-            "domain": "Standard English Conventions",
-            "skill": "Form, Structure, and Sense",
-            "difficulty": "easy",
-            "type": "multiple_choice",
-            "passage": "The writer Maya Angelou, along with others such as Lorenzo Thomas and Gwendolyn Brooks, _____ commonly associated with the Black Arts movement, a loose-knit group of writers and artists active in the 1960s and the 1970s who were interested in exploring the Black American experience through their work.",
-            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
-            "options": {
-              "A": "have been",
-              "B": "is",
-              "C": "are",
-              "D": "were"
-            },
-            "answer": "B",
-            "explanation": "The subject is 'The writer Maya Angelou' (singular). The phrase 'along with others...' is a modifier and does not change the subject's number. The singular present tense 'is' is correct for a current/general association.",
-            "points": 1
-          },
-          {
-            "id": "2023-march-m2e-q2",
-            "number": 2,
             "domain": "Standard English Conventions",
             "skill": "Boundaries",
             "difficulty": "easy",
@@ -577,8 +558,8 @@
             "points": 1
           },
           {
-            "id": "2023-march-m2e-q3",
-            "number": 3,
+            "id": "2023-march-m2e-q2",
+            "number": 2,
             "domain": "Standard English Conventions",
             "skill": "Boundaries",
             "difficulty": "easy",
@@ -596,8 +577,8 @@
             "points": 1
           },
           {
-            "id": "2023-march-m2e-q4",
-            "number": 4,
+            "id": "2023-march-m2e-q3",
+            "number": 3,
             "domain": "Standard English Conventions",
             "skill": "Boundaries",
             "difficulty": "easy",
@@ -615,8 +596,8 @@
             "points": 1
           },
           {
-            "id": "2023-march-m2e-q5",
-            "number": 5,
+            "id": "2023-march-m2e-q4",
+            "number": 4,
             "domain": "Standard English Conventions",
             "skill": "Boundaries",
             "difficulty": "easy",
@@ -634,8 +615,8 @@
             "points": 1
           },
           {
-            "id": "2023-march-m2e-q6",
-            "number": 6,
+            "id": "2023-march-m2e-q5",
+            "number": 5,
             "domain": "Standard English Conventions",
             "skill": "Boundaries",
             "difficulty": "easy",
@@ -653,8 +634,8 @@
             "points": 1
           },
           {
-            "id": "2023-march-m2e-q7",
-            "number": 7,
+            "id": "2023-march-m2e-q6",
+            "number": 6,
             "domain": "Standard English Conventions",
             "skill": "Boundaries",
             "difficulty": "easy",
@@ -672,141 +653,8 @@
             "points": 1
           },
           {
-            "id": "2023-march-m2e-q8",
-            "number": 8,
-            "domain": "Standard English Conventions",
-            "skill": "Form, Structure, and Sense",
-            "difficulty": "easy",
-            "type": "multiple_choice",
-            "passage": "\"Of Names,\" an essay by French philosopher Michel de Montaigne, explores a relatively light subject, while his essay \"Of the Punishment of Cowardice\" takes on heavier fare. No matter the essay topic, Montaigne challenges his own ideas, beliefs, and values. _____ he questions his own perspective, regardless of subject matter.",
-            "question": "Which choice completes the text with the most logical transition?",
-            "options": {
-              "A": "For example,",
-              "B": "At that time,",
-              "C": "Indeed,",
-              "D": "However,"
-            },
-            "answer": "A",
-            "explanation": "The previous sentence makes a general claim that Montaigne challenges his own ideas regardless of topic. The blank introduces a restatement that illustrates this claim. 'For example,' signals that what follows illustrates the preceding point.",
-            "points": 1
-          },
-          {
-            "id": "2023-march-m2e-q9",
-            "number": 9,
-            "domain": "Standard English Conventions",
-            "skill": "Form, Structure, and Sense",
-            "difficulty": "easy",
-            "type": "multiple_choice",
-            "passage": "Though Middle English was widely spoken in fourteenth-century England, the language was rarely employed in literature until poet Geoffrey Chaucer helped pioneer its literary use. _____ his manuscripts contain the first documented uses of over 2,000 English words—like the word \"exaltation\" in his 1386 poem \"The Squire's Tale\"—which led a contemporary to dub him \"the first finder of our fair language.\"",
-            "question": "Which choice completes the text with the most logical transition?",
-            "options": {
-              "A": "However,",
-              "B": "That being said,",
-              "C": "Besides,",
-              "D": "Indeed,"
-            },
-            "answer": "D",
-            "explanation": "The previous sentence says Chaucer pioneered Middle English's literary use. The following sentence confirms and reinforces this with strong evidence — 2,000 first documented word usages. 'Indeed,' signals confirmation and support for the preceding claim.",
-            "points": 1
-          },
-          {
-            "id": "2023-march-m2e-q10",
-            "number": 10,
-            "domain": "Standard English Conventions",
-            "skill": "Form, Structure, and Sense",
-            "difficulty": "easy",
-            "type": "multiple_choice",
-            "passage": "Built at a scale of 1:110, the Eiffel Tower in Baku, Azerbaijan, is one of many replicas of the famous Eiffel Tower in Paris, France. _____ towers like the Metallic Tower of Fourviere in Lyon, France, though not exact replicas, pay homage to the Eiffel's iconic spire-like design.",
-            "question": "Which choice completes the text with the most logical transition?",
-            "options": {
-              "A": "On the contrary,",
-              "B": "Consequently,",
-              "C": "Invariably,",
-              "D": "Moreover,"
-            },
-            "answer": "D",
-            "explanation": "The first sentence discusses exact replicas. The second adds related information about towers that are not exact replicas but still pay homage. 'Moreover,' signals an addition of further related information.",
-            "points": 1
-          },
-          {
-            "id": "2023-march-m2e-q11",
-            "number": 11,
-            "domain": "Standard English Conventions",
-            "skill": "Form, Structure, and Sense",
-            "difficulty": "easy",
-            "type": "multiple_choice",
-            "passage": "The Cheruku rasamu mango variety is from the South Asian country of India. _____ in 2018, 18.8 million metric tons of mangoes were produced.",
-            "question": "Which choice completes the text with the most logical transition?",
-            "options": {
-              "A": "Hence,",
-              "B": "There,",
-              "C": "In fact,",
-              "D": "Specifically,"
-            },
-            "answer": "B",
-            "explanation": "The first sentence identifies India as the origin country of the mango variety. The second sentence gives a production figure. 'There,' refers back to India (the place just mentioned), logically connecting origin country to production statistic.",
-            "points": 1
-          },
-          {
-            "id": "2023-march-m2e-q12",
-            "number": 12,
-            "domain": "Expression of Ideas",
-            "skill": "Rhetorical Synthesis",
-            "difficulty": "medium",
-            "type": "multiple_choice",
-            "notes": "Merle Oberon (1911-1979) was an actress born in Mumbai (then known as Bombay), India. She was of Indian, Maori, and Irish heritage. She was the first Indian-born actress to be nominated for an Academy Award. Early in her career, she played many nameless, uncredited roles, such as her role in Aren't We All? (1932). Later, she played many named, credited roles, such as Sue Mayberry in Affectionately Yours (1941).",
-            "question": "The student wants to begin a narrative about Merle Oberon's life. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
-            "options": {
-              "A": "Merle Oberon's story begins in Mumbai (then known as Bombay), India, in 1911.",
-              "B": "Merle Oberon appeared in many films, including Aren't We All? (1932) and Affectionately Yours (1941), and was the first Indian-born actress to be nominated for an Academy Award.",
-              "C": "In 1941, Merle Oberon played the role of Sue Mayberry in the film Affectionately Yours.",
-              "D": "Though she would go on to receive many films, Merle Oberon also played nameless, uncredited roles in many films such as the movie Aren't We all? (1932)."
-            },
-            "answer": "A",
-            "explanation": "A narrative about someone's life should logically begin at the beginning — birth. Option A opens with where and when Oberon was born (Mumbai, 1911), the most natural starting point for a life narrative.",
-            "points": 1
-          },
-          {
-            "id": "2023-march-m2e-q13",
-            "number": 13,
-            "domain": "Expression of Ideas",
-            "skill": "Rhetorical Synthesis",
-            "difficulty": "medium",
-            "type": "multiple_choice",
-            "notes": "The Music by Black Composers (MBC) project aims to inspire aspiring music students by archiving and sharing information about the music of Black classical composers. George Theophilus Walker is a Black classical music composer included in MBC's Historic Composers Directory. He was born in 1922 and died in 2018.",
-            "question": "Which choice most effectively uses information from the given sentences to set up a discussion of Walker's career for an audience already familiar with the MBC Project?",
-            "options": {
-              "A": "While George Theophilus Walker is considered a great composer included in MBC's Historic Composers Directory.",
-              "B": "Born in 1922, George Theophilus Walker passed away in 2018 according to the MBC project.",
-              "C": "Among the many talented figures included in the MBC project is classical music composer George Theophilus Walker.",
-              "D": "The MBC project's Historic Composers Directory highlights Black classical composers of the past, such as George Theophilus Walker (1922-2018), in order to inspire music students to become the classical composers of the future."
-            },
-            "answer": "C",
-            "explanation": "The audience already knows MBC, so no need to re-explain it. Option C efficiently introduces Walker as one of MBC's figures, then sets the stage to discuss his career. It assumes knowledge of MBC while foregrounding Walker as the subject.",
-            "points": 1
-          },
-          {
-            "id": "2023-march-m2e-q14",
-            "number": 14,
-            "domain": "Expression of Ideas",
-            "skill": "Rhetorical Synthesis",
-            "difficulty": "medium",
-            "type": "multiple_choice",
-            "notes": "Sister cities are pairs of cities that form social or legal partnerships to promote each other's cultures. Previously known as 'town twinning,' the concept of sister cities evolved in Europe after World War II as a way to repair bonds between cities. Many cities in New York State maintain such partnerships with cities around the world. Rhinebeck, New York, and Larreynaga, Nicaragua, became sister cities in 1989.",
-            "question": "The student wants to emphasize the duration of Rhinebeck and Larreynaga's sister city relationship. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
-            "options": {
-              "A": "Since the end of world war II, sister cities such as Rhinebeck, New York, and Larreynaga, Nicaragua, have continued to form social partnership to promote each other's cultures.",
-              "B": "As sister cities, Rhinebeck, New York, and Larreynago, Nicaragua, have engaged in cultural exchange and partnership since 1989.",
-              "C": "Larreyna, which in 1089 became a sister city—or 'twin town'—to Rhinebeck, New York, is located in Nicaragua.",
-              "D": "Despite their distance from each other, the sister cities of Rhinebeck, New York, and Larreyna Nicaragua have enjoyed the same partnership as many other sister cities."
-            },
-            "answer": "B",
-            "explanation": "To emphasize duration, the sentence should mention when the partnership started (1989) and that it continues. Option B names both cities and specifies 'since 1989,' directly highlighting the length of the relationship.",
-            "points": 1
-          },
-          {
-            "id": "2023-march-m2e-q15",
-            "number": 15,
+            "id": "2023-march-m2e-q7",
+            "number": 7,
             "domain": "Standard English Conventions",
             "skill": "Boundaries",
             "difficulty": "easy",
@@ -824,8 +672,103 @@
             "points": 1
           },
           {
-            "id": "2023-march-m2e-q16",
-            "number": 16,
+            "id": "2023-march-m2e-q8",
+            "number": 8,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "The writer Maya Angelou, along with others such as Lorenzo Thomas and Gwendolyn Brooks, _____ commonly associated with the Black Arts movement, a loose-knit group of writers and artists active in the 1960s and the 1970s who were interested in exploring the Black American experience through their work.",
+            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+            "options": {
+              "A": "have been",
+              "B": "is",
+              "C": "are",
+              "D": "were"
+            },
+            "answer": "B",
+            "explanation": "The subject is 'The writer Maya Angelou' (singular). The phrase 'along with others...' is a modifier and does not change the subject's number. The singular present tense 'is' is correct for a current/general association.",
+            "points": 1
+          },
+          {
+            "id": "2023-march-m2e-q9",
+            "number": 9,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "\"Of Names,\" an essay by French philosopher Michel de Montaigne, explores a relatively light subject, while his essay \"Of the Punishment of Cowardice\" takes on heavier fare. No matter the essay topic, Montaigne challenges his own ideas, beliefs, and values. _____ he questions his own perspective, regardless of subject matter.",
+            "question": "Which choice completes the text with the most logical transition?",
+            "options": {
+              "A": "For example,",
+              "B": "At that time,",
+              "C": "Indeed,",
+              "D": "However,"
+            },
+            "answer": "A",
+            "explanation": "The previous sentence makes a general claim that Montaigne challenges his own ideas regardless of topic. The blank introduces a restatement that illustrates this claim. 'For example,' signals that what follows illustrates the preceding point.",
+            "points": 1
+          },
+          {
+            "id": "2023-march-m2e-q10",
+            "number": 10,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "Though Middle English was widely spoken in fourteenth-century England, the language was rarely employed in literature until poet Geoffrey Chaucer helped pioneer its literary use. _____ his manuscripts contain the first documented uses of over 2,000 English words—like the word \"exaltation\" in his 1386 poem \"The Squire's Tale\"—which led a contemporary to dub him \"the first finder of our fair language.\"",
+            "question": "Which choice completes the text with the most logical transition?",
+            "options": {
+              "A": "However,",
+              "B": "That being said,",
+              "C": "Besides,",
+              "D": "Indeed,"
+            },
+            "answer": "D",
+            "explanation": "The previous sentence says Chaucer pioneered Middle English's literary use. The following sentence confirms and reinforces this with strong evidence — 2,000 first documented word usages. 'Indeed,' signals confirmation and support for the preceding claim.",
+            "points": 1
+          },
+          {
+            "id": "2023-march-m2e-q11",
+            "number": 11,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "Built at a scale of 1:110, the Eiffel Tower in Baku, Azerbaijan, is one of many replicas of the famous Eiffel Tower in Paris, France. _____ towers like the Metallic Tower of Fourviere in Lyon, France, though not exact replicas, pay homage to the Eiffel's iconic spire-like design.",
+            "question": "Which choice completes the text with the most logical transition?",
+            "options": {
+              "A": "On the contrary,",
+              "B": "Consequently,",
+              "C": "Invariably,",
+              "D": "Moreover,"
+            },
+            "answer": "D",
+            "explanation": "The first sentence discusses exact replicas. The second adds related information about towers that are not exact replicas but still pay homage. 'Moreover,' signals an addition of further related information.",
+            "points": 1
+          },
+          {
+            "id": "2023-march-m2e-q12",
+            "number": 12,
+            "domain": "Standard English Conventions",
+            "skill": "Form, Structure, and Sense",
+            "difficulty": "easy",
+            "type": "multiple_choice",
+            "passage": "The Cheruku rasamu mango variety is from the South Asian country of India. _____ in 2018, 18.8 million metric tons of mangoes were produced.",
+            "question": "Which choice completes the text with the most logical transition?",
+            "options": {
+              "A": "Hence,",
+              "B": "There,",
+              "C": "In fact,",
+              "D": "Specifically,"
+            },
+            "answer": "B",
+            "explanation": "The first sentence identifies India as the origin country of the mango variety. The second sentence gives a production figure. 'There,' refers back to India (the place just mentioned), logically connecting origin country to production statistic.",
+            "points": 1
+          },
+          {
+            "id": "2023-march-m2e-q13",
+            "number": 13,
             "domain": "Standard English Conventions",
             "skill": "Form, Structure, and Sense",
             "difficulty": "easy",
@@ -843,8 +786,8 @@
             "points": 1
           },
           {
-            "id": "2023-march-m2e-q17",
-            "number": 17,
+            "id": "2023-march-m2e-q14",
+            "number": 14,
             "domain": "Standard English Conventions",
             "skill": "Form, Structure, and Sense",
             "difficulty": "easy",
@@ -862,8 +805,8 @@
             "points": 1
           },
           {
-            "id": "2023-march-m2e-q18",
-            "number": 18,
+            "id": "2023-march-m2e-q15",
+            "number": 15,
             "domain": "Standard English Conventions",
             "skill": "Form, Structure, and Sense",
             "difficulty": "easy",
@@ -881,8 +824,8 @@
             "points": 1
           },
           {
-            "id": "2023-march-m2e-q19",
-            "number": 19,
+            "id": "2023-march-m2e-q16",
+            "number": 16,
             "domain": "Standard English Conventions",
             "skill": "Form, Structure, and Sense",
             "difficulty": "easy",
@@ -900,8 +843,8 @@
             "points": 1
           },
           {
-            "id": "2023-march-m2e-q20",
-            "number": 20,
+            "id": "2023-march-m2e-q17",
+            "number": 17,
             "domain": "Standard English Conventions",
             "skill": "Form, Structure, and Sense",
             "difficulty": "easy",
@@ -916,6 +859,63 @@
             },
             "answer": "C",
             "explanation": "The subject is 'Fans' (plural). The plural subject requires the base form of the verb without '-s.' 'Recognize' (plural present) is correct. 'Recognizes' and 'is recognizing' are singular/progressive, and 'has recognized' is singular perfect.",
+            "points": 1
+          },
+          {
+            "id": "2023-march-m2e-q18",
+            "number": 18,
+            "domain": "Expression of Ideas",
+            "skill": "Rhetorical Synthesis",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "notes": "Merle Oberon (1911-1979) was an actress born in Mumbai (then known as Bombay), India. She was of Indian, Maori, and Irish heritage. She was the first Indian-born actress to be nominated for an Academy Award. Early in her career, she played many nameless, uncredited roles, such as her role in Aren't We All? (1932). Later, she played many named, credited roles, such as Sue Mayberry in Affectionately Yours (1941).",
+            "question": "The student wants to begin a narrative about Merle Oberon's life. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+            "options": {
+              "A": "Merle Oberon's story begins in Mumbai (then known as Bombay), India, in 1911.",
+              "B": "Merle Oberon appeared in many films, including Aren't We All? (1932) and Affectionately Yours (1941), and was the first Indian-born actress to be nominated for an Academy Award.",
+              "C": "In 1941, Merle Oberon played the role of Sue Mayberry in the film Affectionately Yours.",
+              "D": "Though she would go on to receive many films, Merle Oberon also played nameless, uncredited roles in many films such as the movie Aren't We all? (1932)."
+            },
+            "answer": "A",
+            "explanation": "A narrative about someone's life should logically begin at the beginning — birth. Option A opens with where and when Oberon was born (Mumbai, 1911), the most natural starting point for a life narrative.",
+            "points": 1
+          },
+          {
+            "id": "2023-march-m2e-q19",
+            "number": 19,
+            "domain": "Expression of Ideas",
+            "skill": "Rhetorical Synthesis",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "notes": "The Music by Black Composers (MBC) project aims to inspire aspiring music students by archiving and sharing information about the music of Black classical composers. George Theophilus Walker is a Black classical music composer included in MBC's Historic Composers Directory. He was born in 1922 and died in 2018.",
+            "question": "Which choice most effectively uses information from the given sentences to set up a discussion of Walker's career for an audience already familiar with the MBC Project?",
+            "options": {
+              "A": "While George Theophilus Walker is considered a great composer included in MBC's Historic Composers Directory.",
+              "B": "Born in 1922, George Theophilus Walker passed away in 2018 according to the MBC project.",
+              "C": "Among the many talented figures included in the MBC project is classical music composer George Theophilus Walker.",
+              "D": "The MBC project's Historic Composers Directory highlights Black classical composers of the past, such as George Theophilus Walker (1922-2018), in order to inspire music students to become the classical composers of the future."
+            },
+            "answer": "C",
+            "explanation": "The audience already knows MBC, so no need to re-explain it. Option C efficiently introduces Walker as one of MBC's figures, then sets the stage to discuss his career. It assumes knowledge of MBC while foregrounding Walker as the subject.",
+            "points": 1
+          },
+          {
+            "id": "2023-march-m2e-q20",
+            "number": 20,
+            "domain": "Expression of Ideas",
+            "skill": "Rhetorical Synthesis",
+            "difficulty": "medium",
+            "type": "multiple_choice",
+            "notes": "Sister cities are pairs of cities that form social or legal partnerships to promote each other's cultures. Previously known as 'town twinning,' the concept of sister cities evolved in Europe after World War II as a way to repair bonds between cities. Many cities in New York State maintain such partnerships with cities around the world. Rhinebeck, New York, and Larreynaga, Nicaragua, became sister cities in 1989.",
+            "question": "The student wants to emphasize the duration of Rhinebeck and Larreynaga's sister city relationship. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+            "options": {
+              "A": "Since the end of world war II, sister cities such as Rhinebeck, New York, and Larreynaga, Nicaragua, have continued to form social partnership to promote each other's cultures.",
+              "B": "As sister cities, Rhinebeck, New York, and Larreynago, Nicaragua, have engaged in cultural exchange and partnership since 1989.",
+              "C": "Larreyna, which in 1089 became a sister city—or 'twin town'—to Rhinebeck, New York, is located in Nicaragua.",
+              "D": "Despite their distance from each other, the sister cities of Rhinebeck, New York, and Larreyna Nicaragua have enjoyed the same partnership as many other sister cities."
+            },
+            "answer": "B",
+            "explanation": "To emphasize duration, the sentence should mention when the partnership started (1989) and that it continues. Option B names both cities and specifies 'since 1989,' directly highlighting the length of the relationship.",
             "points": 1
           },
           {
