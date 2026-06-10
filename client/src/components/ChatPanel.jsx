@@ -453,14 +453,12 @@ function BookingsTab({ teachers, plan, onBook }) {
 
 // ── Root Component ──────────────────────────────────────────────
 
-export default function ChatPanel({ token, user, assignments, teachers: rawTeachers }) {
-  const [tab, setTab] = useState("teachers");
+export default function ChatPanel({ token, user, assignments, teachers: rawTeachers, tab = "teachers", onTabChange }) {
   const [selectedTeacher, setSelectedTeacher] = useState(null);
   const [bookTeacher, setBookTeacher] = useState(null);
 
   const plan = user.plan || "plus";
 
-  // Merge teachers with assignment info
   const teachers = assignments
     .filter(a => a.teacherId)
     .map(a => {
@@ -470,60 +468,18 @@ export default function ChatPanel({ token, user, assignments, teachers: rawTeach
 
   const handleChat = (teacher) => {
     setSelectedTeacher(teacher);
-    setTab("chat");
+    onTabChange?.("chat");
   };
 
   const handleBook = (teacher) => {
     setBookTeacher(teacher);
   };
 
-  const NAV = [
-    { id: "teachers", label: "Teachers",  icon: ICONS.star },
-    { id: "chat",     label: "Chat",      icon: ICONS.chat },
-    { id: "bookings", label: "Bookings",  icon: ICONS.calendar },
-  ];
-
-  const planRule = PLAN_RULES[plan] || PLAN_RULES.plus;
-
   if (!assignments.length) return null;
 
   return (
-    <div style={{ display: "flex", background: C.bg, minHeight: "70vh", borderRadius: 20, overflow: "hidden", border: `1px solid ${C.border}` }}>
-      {/* Sidebar */}
-      <aside style={{ width: 220, flexShrink: 0, background: "#fff", borderRight: `1px solid ${C.border}`, display: "flex", flexDirection: "column" }}>
-        <div style={{ padding: "14px 16px", borderBottom: `1px solid ${C.border}` }}>
-          <div style={{ fontSize: 12, fontWeight: 700, color: C.navy }}>My Teachers</div>
-          <div style={{ fontSize: 10, color: C.hint, marginTop: 2 }}>Chat · Book · Learn</div>
-        </div>
-
-        <nav style={{ flex: 1, padding: "10px 8px", display: "flex", flexDirection: "column", gap: 2 }}>
-          {NAV.map(item => {
-            const active = tab === item.id;
-            return (
-              <button key={item.id} onClick={() => setTab(item.id)}
-                style={{ width: "100%", display: "flex", alignItems: "center", gap: 10, padding: "9px 12px", borderRadius: 12, fontSize: 13, fontWeight: 500, border: "none", cursor: "pointer", textAlign: "left", fontFamily: "inherit", background: active ? C.navy : "transparent", color: active ? "#fff" : C.muted, transition: "all 150ms" }}>
-                <span style={{ width: 16, display: "flex", alignItems: "center", flexShrink: 0 }}>
-                  <Icon d={item.icon} size={15} color={active ? "#fff" : C.muted} />
-                </span>
-                {item.label}
-              </button>
-            );
-          })}
-        </nav>
-
-        {/* Plan info */}
-        <div style={{ padding: "12px 14px", margin: "0 8px 10px", background: planRule.bg, borderRadius: 12, border: `1px solid ${C.border}` }}>
-          <div style={{ fontSize: 11, fontWeight: 700, color: planRule.color, marginBottom: 4, textTransform: "capitalize" }}>{plan} Plan</div>
-          <div style={{ fontSize: 11, color: C.muted, lineHeight: 1.5 }}>{planRule.desc}</div>
-          {plan === "plus" && (
-            <button style={{ marginTop: 8, width: "100%", background: C.navy, color: "#fff", border: "none", borderRadius: 8, padding: "7px 12px", fontSize: 11, fontWeight: 700, cursor: "pointer", fontFamily: "inherit" }}>
-              Upgrade to Pro →
-            </button>
-          )}
-        </div>
-      </aside>
-
-      {/* Main content */}
+    <div style={{ display: "flex", flexDirection: "column", flex: 1, minHeight: 0, background: C.bg }}>
+      {/* Main content — no rounded edges, fills the space */}
       <div style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0, overflow: "auto" }}>
         {tab === "teachers" && (
           <TeachersTab teachers={teachers} onChat={handleChat} onBook={handleBook} />

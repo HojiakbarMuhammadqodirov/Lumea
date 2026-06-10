@@ -1,16 +1,16 @@
 import ChatPanel from "../../components/ChatPanel";
 import { useApp } from "../useApp";
 
-export default function ChatPage() {
+export default function ChatPage({ tab, onTabChange }) {
   const { token, rawUser, myTeachers } = useApp();
   return (
-    <div style={{ margin: "-24px", height: "calc(100vh - 60px)" }}>
-      <ChatPanel
-        token={token}
-        user={rawUser}
-        assignments={rawUser?.programAssignments || []}
-        teachers={myTeachers}
-      />
-    </div>
+    <ChatPanel
+      token={token}
+      user={rawUser}
+      assignments={rawUser?.programAssignments || []}
+      teachers={myTeachers}
+      tab={tab}
+      onTabChange={onTabChange}
+    />
   );
 }

@@ -269,5 +269,44 @@
       "sat-english": "",
       "ielts": ""
     }
+  },
+  {
+    "id": "u_1781082278432_zaun4u",
+    "email": "asik@asik.com",
+    "passwordHash": "$2a$12$wUgFLGpbc5jd9KCLWAA3jOGKwPohKDvG/Q6JufFT2yIJiWNgFHFZm",
+    "role": "student",
+    "profile": {
+      "firstName": "Asik",
+      "lastName": "Asik",
+      "gender": "male",
+      "englishLevel": "intermediate",
+      "phoneNumber": "123123123",
+      "dateOfBirth": "2026-06-19",
+      "addressLine1": "",
+      "addressLine2": "",
+      "city": "",
+      "country": "",
+      "postalCode": "",
+      "profilePicture": "",
+      "region": "",
+      "grade": "",
+      "goal": "",
+      "examDate": ""
+    },
+    "name": "Asik Asik",
+    "phoneNumber": "123123123",
+    "dateOfBirth": "2026-06-19",
+    "programAssignments": [
+      {
+        "programId": "sat-math",
+        "levelId": "beginner",
+        "teacherId": ""
+      }
+    ],
+    "targetScores": {
+      "sat-math": "",
+      "sat-english": "",
+      "ielts": ""
+    }
   }
 ]
