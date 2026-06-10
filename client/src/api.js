@@ -6,7 +6,10 @@ const withAuth = (token) => ({
 });
 
 const parse = async (response) => {
-  const data = await response.json();
+  const contentType = response.headers.get("content-type") || "";
+  const data = contentType.includes("application/json")
+    ? await response.json()
+    : { message: await response.text() };
   if (!response.ok) {
     throw new Error(data.message || "Request failed");
   }
