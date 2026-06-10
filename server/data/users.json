@@ -271,6 +271,7 @@
     }
   },
   {
+<<<<<<< HEAD
     "id": "u_1781115109356_po0xmi",
     "email": "hmuhammadqodirov23@gmail.com",
     "passwordHash": "$2a$12$4Ucjz9XA9uC1BRLx5P69f.L9pnKVshnFK3BgmrCoVj.vEooBR84vG",
@@ -282,6 +283,19 @@
       "englishLevel": "elementary",
       "phoneNumber": "456789",
       "dateOfBirth": "2026-06-03",
+=======
+    "id": "u_1781082278432_zaun4u",
+    "email": "asik@asik.com",
+    "passwordHash": "$2a$12$wUgFLGpbc5jd9KCLWAA3jOGKwPohKDvG/Q6JufFT2yIJiWNgFHFZm",
+    "role": "student",
+    "profile": {
+      "firstName": "Asik",
+      "lastName": "Asik",
+      "gender": "male",
+      "englishLevel": "intermediate",
+      "phoneNumber": "123123123",
+      "dateOfBirth": "2026-06-19",
+>>>>>>> ed77933dcd83bb51a761ccd1fa7a493e62601ab7
       "addressLine1": "",
       "addressLine2": "",
       "city": "",
@@ -293,9 +307,15 @@
       "goal": "",
       "examDate": ""
     },
+<<<<<<< HEAD
     "name": "Hojiakbar محمدقديروف",
     "phoneNumber": "456789",
     "dateOfBirth": "2026-06-03",
+=======
+    "name": "Asik Asik",
+    "phoneNumber": "123123123",
+    "dateOfBirth": "2026-06-19",
+>>>>>>> ed77933dcd83bb51a761ccd1fa7a493e62601ab7
     "programAssignments": [
       {
         "programId": "sat-math",

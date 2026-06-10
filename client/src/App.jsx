@@ -25,6 +25,7 @@ import ChatPage from "./dashboard/pages/ChatPage";
 function StudentDashboardShell({ onLogout }) {
   const { toast } = useApp();
   const [page, setPage] = useState("home");
+  const [chatTab, setChatTab] = useState("teachers");
   const goTests = () => setPage("tests");
 
   const pageComponent = {
@@ -33,18 +34,23 @@ function StudentDashboardShell({ onLogout }) {
     tests:   <TestsPage  />,
     stats:   <StatsPage  />,
     rating:  <RatingPage />,
-    chat:    <ChatPage   />,
     profile: <ProfilePage />,
   };
 
   return (
     <div style={{ display: "flex", minHeight: "100vh", fontFamily: "'DM Sans', sans-serif", color: "#173B64" }}>
-      <Sidebar page={page} onNav={setPage} onLogout={onLogout} />
+      <Sidebar page={page} onNav={setPage} onLogout={onLogout} chatTab={chatTab} onChatTab={setChatTab} />
       <div style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0, background: "#F0F5FC" }}>
         <Topbar page={page} />
-        <div style={{ flex: 1, overflowY: "auto", padding: 24, display: "flex", flexDirection: "column", gap: 16 }}>
-          {pageComponent[page] || pageComponent.home}
-        </div>
+        {page === "chat" ? (
+          <div style={{ flex: 1, display: "flex", flexDirection: "column", overflow: "hidden" }}>
+            <ChatPage tab={chatTab} onTabChange={setChatTab} />
+          </div>
+        ) : (
+          <div style={{ flex: 1, overflowY: "auto", padding: 24, display: "flex", flexDirection: "column", gap: 16 }}>
+            {pageComponent[page] || pageComponent.home}
+          </div>
+        )}
       </div>
       <Toast toast={toast} />
     </div>
