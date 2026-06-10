@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px 20px; background: #F0F5FC; font-family: 'DM Sans', sans-serif; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .tag-pill {
+    display: inline-flex; align-items: center;
+    padding: 3px 10px; border-radius: 999px;
+    font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  .section { margin-bottom: 16px; }
+  .group-label { font-size: 9px; font-weight: 800; color: #9EB3C8; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
+  .dim-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+  .dim-chip { padding: 8px 14px; border-radius: 10px; font-size: 11px; font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="group-label">Tag Pills</div>
+  <div class="row">
+    <span class="tag-pill" style="background:rgba(37,99,235,0.09); color:#1D4ED8">SAT</span>
+    <span class="tag-pill" style="background:rgba(15,158,106,0.09); color:#065F46">IELTS</span>
+    <span class="tag-pill" style="background:rgba(109,40,217,0.08); color:#5B21B6">AP</span>
+    <span class="tag-pill" style="background:rgba(217,119,6,0.09); color:#92400E">Amber</span>
+    <span class="tag-pill" style="background:rgba(220,38,38,0.09); color:#991B1B">Error</span>
+    <span class="tag-pill" style="background:#EEF4FB; color:#6B7E96">Default</span>
+    <span class="tag-pill" style="background:#DC2626; color:white">LIVE</span>
+  </div>
+  <div class="dim-chips" style="margin-top:18px;">
+    <div class="dim-chip" style="background:rgba(37,99,235,0.09); color:#1D4ED8">Blue tint bg</div>
+    <div class="dim-chip" style="background:rgba(15,158,106,0.09); color:#065F46">Green tint bg</div>
+    <div class="dim-chip" style="background:rgba(109,40,217,0.08); color:#5B21B6">Purple tint bg</div>
+    <div class="dim-chip" style="background:rgba(217,119,6,0.09); color:#92400E">Amber tint bg</div>
+  </div>
+</body>
+</html>

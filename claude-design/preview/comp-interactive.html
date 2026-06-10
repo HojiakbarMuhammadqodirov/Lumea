@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 20px; background: #F0F5FC; font-family: 'DM Sans', sans-serif; display: flex; gap: 14px; flex-wrap: wrap; align-items: flex-start; }
+  .group-label { font-size: 9px; font-weight: 800; color: #9EB3C8; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
+
+  /* Question option */
+  .q-option {
+    display: flex; align-items: flex-start; gap: 10px;
+    border: 1px solid; border-radius: 12px; padding: 10px 14px; margin-bottom: 8px;
+    cursor: pointer; transition: all 0.15s;
+  }
+  .q-label { font-weight: 700; font-size: 13px; flex-shrink: 0; width: 18px; }
+  .q-text { font-size: 13px; line-height: 1.5; }
+
+  /* Countdown */
+  .countdown { display: flex; gap: 8px; }
+  .cnt-box { flex: 1; background: #F0F5FC; border: 1px solid #DDE6F0; border-radius: 10px; padding: 8px 6px; text-align: center; }
+  .cnt-val { font-size: 20px; font-weight: 700; color: #173B64; line-height: 1; }
+  .cnt-label { font-size: 9px; color: #9EB3C8; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px; }
+
+  /* Activity bars */
+  .act-bars { display: flex; gap: 5px; height: 52px; align-items: flex-end; }
+  .act-bar-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; }
+  .act-bar { width: 100%; border-radius: 2px; }
+  .act-day { font-size: 9px; color: #9EB3C8; }
+</style>
+</head>
+<body>
+  <!-- Question Options -->
+  <div style="width:280px">
+    <div class="group-label">Question Options</div>
+    <div class="q-option" style="border-color:#DDE6F0; color:#173B64">
+      <span class="q-label">A.</span>
+      <span class="q-text">The function is undefined at x = 2</span>
+    </div>
+    <div class="q-option" style="border-color:#173B64; background:#EEF4FB; color:#173B64">
+      <span class="q-label">B.</span>
+      <span class="q-text" style="font-weight:600">The vertex is at (1.5, −6.25)</span>
+    </div>
+    <div class="q-option" style="border-color:#22c55e; background:#f0fdf4; color:#166534">
+      <span class="q-label">C.</span>
+      <span class="q-text">f(x) = 0 has two real solutions</span>
+    </div>
+    <div class="q-option" style="border-color:#ef4444; background:#fef2f2; color:#991b1b">
+      <span class="q-label">D.</span>
+      <span class="q-text">The discriminant is negative</span>
+    </div>
+  </div>
+
+  <!-- Countdown -->
+  <div style="width:200px">
+    <div class="group-label">Exam Countdown</div>
+    <div class="countdown">
+      <div class="cnt-box"><div class="cnt-val">42</div><div class="cnt-label">Kun</div></div>
+      <div class="cnt-box"><div class="cnt-val">08</div><div class="cnt-label">Soat</div></div>
+      <div class="cnt-box"><div class="cnt-val">23</div><div class="cnt-label">Daqiqa</div></div>
+      <div class="cnt-box"><div class="cnt-val">51</div><div class="cnt-label">Soniya</div></div>
+    </div>
+
+    <!-- Activity bars -->
+    <div class="group-label" style="margin-top:18px">Weekly Activity</div>
+    <div style="display:flex;align-items:baseline;gap:4px;margin-bottom:8px">
+      <span style="font-size:22px;font-weight:700;color:#173B64">214</span>
+      <span style="font-size:11px;color:#9EB3C8">daqiqa</span>
+    </div>
+    <div class="act-bars">
+      <div class="act-bar-wrap"><div class="act-bar" style="height:18px;background:#DDE6F0"></div><div class="act-day">Du</div></div>
+      <div class="act-bar-wrap"><div class="act-bar" style="height:32px;background:#DDE6F0"></div><div class="act-day">Se</div></div>
+      <div class="act-bar-wrap"><div class="act-bar" style="height:24px;background:#DDE6F0"></div><div class="act-day">Ch</div></div>
+      <div class="act-bar-wrap"><div class="act-bar" style="height:44px;background:#173B64"></div><div class="act-day" style="color:#173B64;font-weight:700">Pa</div></div>
+      <div class="act-bar-wrap"><div class="act-bar" style="height:12px;background:#DDE6F0"></div><div class="act-day">Ju</div></div>
+      <div class="act-bar-wrap"><div class="act-bar" style="height:4px;background:#DDE6F0"></div><div class="act-day">Sh</div></div>
+      <div class="act-bar-wrap"><div class="act-bar" style="height:4px;background:#DDE6F0"></div><div class="act-day">Ya</div></div>
+    </div>
+  </div>
+
+  <!-- Toast variants -->
+  <div style="width:220px">
+    <div class="group-label">Toast Notifications</div>
+    <div style="background:#173B64;color:#fff;border-radius:16px;padding:10px 14px;font-size:12px;font-weight:500;display:flex;align-items:center;gap:8px;margin-bottom:8px;box-shadow:0 4px 16px rgba(23,59,100,0.18)">
+      <span>✅</span> Dars muvaffaqiyatli yakunlandi!
+    </div>
+    <div style="background:#fef2f2;border:1px solid #fecaca;color:#b91c1c;border-radius:16px;padding:10px 14px;font-size:12px;font-weight:500;display:flex;align-items:center;gap:8px;box-shadow:0 4px 16px rgba(220,38,38,0.1)">
+      <span>⚠️</span> Xatolik yuz berdi. Qayta urinib ko'ring.
+    </div>
+  </div>
+</body>
+</html>

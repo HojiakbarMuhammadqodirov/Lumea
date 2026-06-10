@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
 
-const SECRET = "learnova-secret-key";
+const SECRET = process.env.JWT_SECRET;
+if (!SECRET) throw new Error("JWT_SECRET environment variable is not set");
 
 export const signToken = (user) =>
   jwt.sign(
@@ -15,12 +16,12 @@ export const authMiddleware = (req, res, next) => {
     return res.status(401).json({ message: "Unauthorized" });
   }
 
-  const token = header.slice("Bearer ".length);
+  const token = header.slice(7);
   try {
     req.user = jwt.verify(token, SECRET);
     return next();
   } catch {
-    return res.status(401).json({ message: "Invalid token" });
+    return res.status(401).json({ message: "Invalid or expired token" });
   }
 };
 
@@ -30,4 +31,3 @@ export const requireRole = (...roles) => (req, res, next) => {
   }
   return next();
 };
-

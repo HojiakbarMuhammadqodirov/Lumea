@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LearnNova — Student Dashboard UI Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body, #root { margin: 0; padding: 0; height: 100%; width: 100%; font-family: 'DM Sans', sans-serif; }
+  body { background: #F0F5FC; color: #173B64; }
+  @keyframes toastIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-thumb { background: #DDE6F0; border-radius: 99px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="UI.jsx"></script>
+<script type="text/babel" src="Sidebar.jsx"></script>
+<script type="text/babel" src="Topbar.jsx"></script>
+<script type="text/babel">
+
+const { useState, useEffect, useRef } = React;
+
+// ── Mock data ─────────────────────────────────────────────────
+const MOCK_USER = {
+  firstName: "Azizbek", lastName: "Karimov",
+  region: "Namangan", regionRank: 3, streak: 12,
+  sat: { target: 1500, current: 1200 },
+  ielts: { target: 7.5, current: 6.0 },
+};
+
+const MOCK_COURSES = [
+  { id: "sat-math",  label: "SAT Math",   icon: "∑", color: "#2563EB", glow: "rgba(37,99,235,0.09)",  pct: 68, done: 14, total: 20, tag: "blue" },
+  { id: "sat-ebrw",  label: "SAT EBRW",   icon: "A", color: "#6D28D9", glow: "rgba(109,40,217,0.08)", pct: 42, done: 9,  total: 20, tag: "purple" },
+  { id: "ielts",     label: "IELTS",       icon: "I", color: "#0F9E6A", glow: "rgba(15,158,106,0.09)", pct: 30, done: 6,  total: 20, tag: "green" },
+];
+
+const MOCK_TESTS = [
+  { id: 1, name: "SAT Math Mock 1",       type: "sat",   score: 760, max: 800, date: "Apr 28", change: 40 },
+  { id: 2, name: "IELTS Reading Test 2",  type: "ielts", score: 7.0, max: 9,   date: "Apr 24", change: 0.5 },
+  { id: 3, name: "SAT EBRW Module 1",     type: "sat",   score: 680, max: 800, date: "Apr 19", change: null },
+];
+
+const MOCK_WEAK = [
+  { name: "Quadratic Equations", pct: 38, color: "#DC2626" },
+  { name: "Data Analysis",       pct: 51, color: "#D97706" },
+  { name: "IELTS Writing Task 2",pct: 44, color: "#D97706" },
+];
+
+const ACTIVITY_DATA = [32, 65, 48, 90, 20, 0, 0];
+const ACTIVITY_DAYS = ["Du", "Se", "Ch", "Pa", "Ju", "Sh", "Ya"];
+const TODAY_IDX = 3;
+
+// ── Home Page ─────────────────────────────────────────────────
+function HomePage({ onNav }) {
+  const [toast, setToast] = useState(null);
+  const [scoreModal, setScoreModal] = useState(false);
+  const [dateModal, setDateModal] = useState(false);
+  const examDate = new Date(Date.now() + 42 * 86400000);
+  const totalMins = ACTIVITY_DATA.reduce((a, b) => a + b, 0);
+  const showToast = (msg) => { setToast(msg); setTimeout(() => setToast(null), 3000); };
+
+  return (
+    <div style={{ padding: 24, display: "flex", flexDirection: "column", gap: 16 }}>
+      {/* Row 1 */}
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 14 }}>
+        {/* Daily Task */}
+        <Card style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          <SLabel>Bugungi vazifa</SLabel>
+          <Card2 style={{ display: "flex", alignItems: "center", gap: 12 }}>
+            <div style={{ width: 36, height: 36, borderRadius: 10, background: "rgba(37,99,235,0.09)", display: "flex", alignItems: "center", justifyContent: "center", color: "#2563EB", fontWeight: 700, fontSize: 16, flexShrink: 0 }}>∑</div>
+            <div>
+              <div style={{ fontSize: 13, fontWeight: 600, color: "#173B64" }}>Algebra — Lesson 4</div>
+              <div style={{ fontSize: 11, color: "#9EB3C8", marginTop: 2 }}>SAT Math · 18 daqiqa</div>
+            </div>
+          </Card2>
+          <BtnPrimary onClick={() => onNav("lessons")}>▶ Darsni boshlash</BtnPrimary>
+        </Card>
+
+        {/* Countdown */}
+        <Card>
+          <SLabel>Imtihongacha</SLabel>
+          <CountdownBoxes examDate={examDate} />
+          <BtnGhost onClick={() => setDateModal(true)} style={{ fontSize: 11, marginTop: 4 }}>Sana o'zgartirish</BtnGhost>
+        </Card>
+
+        {/* Targets */}
+        <Card>
+          <SLabel>Maqsad balllar</SLabel>
+          <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
+            <TargetBox label="SAT"   value={MOCK_USER.sat.target}            current={MOCK_USER.sat.current}            accent="#2563EB" />
+            <TargetBox label="IELTS" value={MOCK_USER.ielts.target.toFixed(1)} current={MOCK_USER.ielts.current.toFixed(1)} accent="#0F9E6A" />
+          </div>
+          <BtnGhost onClick={() => setScoreModal(true)} style={{ fontSize: 11 }}>Maqsadni tahrirlash</BtnGhost>
+        </Card>
+      </div>
+
+      {/* Row 2 */}
+      <div style={{ display: "grid", gap: 14, gridTemplateColumns: "1.6fr 1fr" }}>
+        <Card>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 12 }}>
+            <SLabel style={{ marginBottom: 0 }}>Kurslar progressi</SLabel>
+            <TextBtn onClick={() => onNav("lessons")}>Hammasi →</TextBtn>
+          </div>
+          {MOCK_COURSES.map((c, i) => (
+            <Row key={c.id} noBorder={i === MOCK_COURSES.length - 1}>
+              <IconBox icon={c.icon} color={c.color} glow={c.glow} size={34} />
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
+                  <span style={{ fontSize: 13, fontWeight: 600, color: "#173B64" }}>{c.label}</span>
+                  <span style={{ fontSize: 12, fontWeight: 700, color: c.color }}>{c.pct}%</span>
+                </div>
+                <PBar pct={c.pct} color={c.color} />
+                <div style={{ fontSize: 11, color: "#9EB3C8", marginTop: 4 }}>{c.done}/{c.total} dars</div>
+              </div>
+              <Tag label="Faol" type={c.tag} />
+            </Row>
+          ))}
+        </Card>
+
+        <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+          <Card>
+            <SLabel>Haftalik faollik</SLabel>
+            <div style={{ display: "flex", alignItems: "baseline", gap: 6, marginBottom: 12 }}>
+              <span style={{ fontSize: 24, fontWeight: 700, color: "#173B64" }}>{totalMins}</span>
+              <span style={{ fontSize: 12, color: "#9EB3C8" }}>daqiqa</span>
+            </div>
+            <ActivityBars data={ACTIVITY_DATA} days={ACTIVITY_DAYS} todayIdx={TODAY_IDX} />
+          </Card>
+          <Card style={{ padding: "14px 16px" }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+              <div>
+                <div style={{ fontSize: 13, fontWeight: 600, color: "#173B64" }}>Streak</div>
+                <div style={{ fontSize: 11, color: "#9EB3C8", marginTop: 2 }}>{MOCK_USER.streak} kun uzluksiz</div>
+              </div>
+              <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
+                {Array.from({ length: 7 }, (_, i) => (
+                  <div key={i} style={{ width: 8, height: 8, borderRadius: "50%", background: i < MOCK_USER.streak ? "#173B64" : "#DDE6F0" }} />
+                ))}
+                <span style={{ fontSize: 10, color: "#9EB3C8", marginLeft: 4 }}>{MOCK_USER.streak}/7</span>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </div>
+
+      {/* Row 3 */}
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+        <Card>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 12 }}>
+            <SLabel style={{ marginBottom: 0 }}>So'nggi testlar</SLabel>
+            <TextBtn onClick={() => onNav("tests")}>Barchasi →</TextBtn>
+          </div>
+          {MOCK_TESTS.map((t, i) => (
+            <div key={t.id} style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 10px", borderRadius: 12, marginBottom: 6, background: i === 0 ? "#F0F5FC" : "transparent", border: i === 0 ? "1px solid #DDE6F0" : "none" }}>
+              <div style={{ width: 38, height: 38, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 11, fontWeight: 700, flexShrink: 0, background: t.type === "sat" ? "rgba(37,99,235,0.09)" : "rgba(15,158,106,0.09)", color: t.type === "sat" ? "#2563EB" : "#0F9E6A" }}>
+                {t.score}
+              </div>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ fontSize: 12, fontWeight: 600, color: "#173B64", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{t.name}</div>
+                <div style={{ fontSize: 10, color: "#9EB3C8", marginTop: 2 }}>{t.date} · /{t.max}</div>
+              </div>
+              {t.change !== null
+                ? <span style={{ fontSize: 11, fontWeight: 700, color: "#16a34a", background: "#f0fdf4", padding: "2px 8px", borderRadius: 999 }}>+{t.change}</span>
+                : <span style={{ fontSize: 10, color: "#9EB3C8", background: "#F0F5FC", padding: "2px 8px", borderRadius: 999 }}>baza</span>
+              }
+            </div>
+          ))}
+          <Sep />
+          <BtnGhost onClick={() => onNav("tests")} style={{ fontSize: 12 }}>Yangi test boshlash</BtnGhost>
+        </Card>
+
+        <Card>
+          <SLabel>Zaif mavzular</SLabel>
+          {MOCK_WEAK.map((w, i) => (
+            <div key={w.name} style={{ marginBottom: i < MOCK_WEAK.length - 1 ? 12 : 0 }}>
+              <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
+                <span style={{ fontSize: 12, color: "#173B64" }}>{w.name}</span>
+                <span style={{ fontSize: 12, fontWeight: 700, color: w.color }}>{w.pct}%</span>
+              </div>
+              <PBar pct={w.pct} color={w.color} />
+            </div>
+          ))}
+          <Sep />
+          <BtnPrimary onClick={() => onNav("tests")} style={{ fontSize: 12 }}>Zaif mavzularni mashq qilish →</BtnPrimary>
+        </Card>
+      </div>
+
+      {/* Pro Banner */}
+      <div style={{ background: "#0F2746", borderRadius: 16, padding: "18px 22px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+          <div style={{ width: 44, height: 44, background: "#173B64", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0 }}>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9EB3C8" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+            </svg>
+          </div>
+          <div>
+            <div style={{ color: "#fff", fontWeight: 700, fontSize: 14, marginBottom: 4 }}>AI Tushuntiruvchi — Pro rejim</div>
+            <div style={{ color: "#9EB3C8", fontSize: 12, lineHeight: 1.5 }}>
+              Noto'g'ri javobda AI boshqacha usulda tushuntiradi · Shaxsiy o'quv rejasi · Sertifikat
+              <br /><span style={{ color: "#6B7E96" }}>Oyiga 59,000 so'm</span>
+            </div>
+          </div>
+        </div>
+        <button onClick={() => showToast("Pro rejim tez kunda! 🚀")}
+          style={{ flexShrink: 0, background: "#fff", color: "#173B64", fontWeight: 700, fontSize: 13, padding: "10px 20px", borderRadius: 12, border: "none", cursor: "pointer", whiteSpace: "nowrap", fontFamily: "'DM Sans',sans-serif" }}>
+          Pro ga o'tish →
+        </button>
+      </div>
+
+      {toast && <Toast toast={toast} />}
+
+      {/* Score Modal */}
+      {scoreModal && (
+        <Modal title="Maqsad balllarni tahrirlash" onClose={() => setScoreModal(false)}>
+          <div style={{ display: "grid", gap: 12 }}>
+            <ModalField label="SAT maqsad" defaultValue="1500" />
+            <ModalField label="IELTS maqsad" defaultValue="7.5" />
+            <BtnPrimary onClick={() => { showToast("Maqsad saqlandi!"); setScoreModal(false); }}>Saqlash</BtnPrimary>
+          </div>
+        </Modal>
+      )}
+
+      {/* Date Modal */}
+      {dateModal && (
+        <Modal title="Imtihon sanasini belgilash" onClose={() => setDateModal(false)}>
+          <div style={{ display: "grid", gap: 12 }}>
+            <ModalField label="Imtihon sanasi" defaultValue="2025-10-04" type="date" />
+            <BtnPrimary onClick={() => { showToast("Sana saqlandi!"); setDateModal(false); }}>Saqlash</BtnPrimary>
+          </div>
+        </Modal>
+      )}
+    </div>
+  );
+}
+
+// ── Lessons Page ──────────────────────────────────────────────
+function LessonsPage() {
+  const [active, setActive] = useState("sat-math");
+  const lessons = [
+    { id: 1, title: "Algebra: Linear Equations", done: true,  duration: "22 min", score: 92 },
+    { id: 2, title: "Algebra: Quadratic Functions", done: true,  duration: "18 min", score: 76 },
+    { id: 3, title: "Algebra: Systems of Equations", done: false, duration: "20 min", score: null },
+    { id: 4, title: "Functions: Domain & Range", done: false, duration: "15 min", score: null },
+    { id: 5, title: "Geometry: Triangles & Angles", done: false, duration: "24 min", score: null },
+  ];
+  return (
+    <div style={{ padding: 24, display: "flex", flexDirection: "column", gap: 16 }}>
+      {/* Program tabs */}
+      <div style={{ display: "flex", gap: 8 }}>
+        {MOCK_COURSES.map(c => (
+          <button key={c.id} onClick={() => setActive(c.id)}
+            style={{ padding: "8px 16px", borderRadius: 12, border: `1px solid ${active === c.id ? c.color : "#DDE6F0"}`, background: active === c.id ? c.glow : "#fff", color: active === c.id ? c.color : "#6B7E96", fontSize: 13, fontWeight: 600, cursor: "pointer", fontFamily: "'DM Sans',sans-serif", transition: "all 150ms" }}>
+            {c.icon} {c.label}
+          </button>
+        ))}
+      </div>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 320px", gap: 14 }}>
+        <Card>
+          <SLabel>Darslar ro'yxati</SLabel>
+          {lessons.map((l, i) => (
+            <Row key={l.id} noBorder={i === lessons.length - 1}>
+              <div style={{ width: 32, height: 32, borderRadius: 8, background: l.done ? "rgba(15,158,106,0.09)" : "#F0F5FC", border: `1px solid ${l.done ? "rgba(15,158,106,0.2)" : "#DDE6F0"}`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                {l.done
+                  ? <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0F9E6A" strokeWidth="2.5" strokeLinecap="round"><polyline points="20,6 9,17 4,12"/></svg>
+                  : <span style={{ fontSize: 11, fontWeight: 700, color: "#9EB3C8" }}>{i + 1}</span>
+                }
+              </div>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ fontSize: 13, fontWeight: 600, color: "#173B64" }}>{l.title}</div>
+                <div style={{ fontSize: 11, color: "#9EB3C8", marginTop: 2 }}>{l.duration}{l.score ? ` · Score: ${l.score}%` : ""}</div>
+              </div>
+              {l.done
+                ? <Tag label={`${l.score}%`} type="green" />
+                : <button style={{ background: "#173B64", color: "#fff", border: "none", borderRadius: 10, padding: "6px 14px", fontSize: 12, fontWeight: 600, cursor: "pointer", fontFamily: "'DM Sans',sans-serif" }}>Boshlash</button>
+              }
+            </Row>
+          ))}
+        </Card>
+        <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+          <Card>
+            <SLabel>Progress</SLabel>
+            {MOCK_COURSES.map(c => (
+              <div key={c.id} style={{ marginBottom: 14 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
+                  <span style={{ fontSize: 12, color: "#173B64", fontWeight: 600 }}>{c.label}</span>
+                  <span style={{ fontSize: 12, fontWeight: 700, color: c.color }}>{c.pct}%</span>
+                </div>
+                <PBar pct={c.pct} color={c.color} />
+                <div style={{ fontSize: 10, color: "#9EB3C8", marginTop: 3 }}>{c.done}/{c.total} dars bajarildi</div>
+              </div>
+            ))}
+          </Card>
+          <Card style={{ background: "#0F2746" }}>
+            <div style={{ fontSize: 13, fontWeight: 700, color: "#fff", marginBottom: 6 }}>AI Tahlil</div>
+            <div style={{ fontSize: 12, color: "#9EB3C8", lineHeight: 1.5 }}>Kvadratik tenglamalar bo'yicha ko'proq mashq qiling — bu mavzuda sizdagi eng past ko'rsatkich.</div>
+            <button style={{ marginTop: 10, background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.15)", color: "#fff", borderRadius: 10, padding: "7px 14px", fontSize: 12, fontWeight: 600, cursor: "pointer", width: "100%", fontFamily: "'DM Sans',sans-serif" }}>
+              Mashq boshlash →
+            </button>
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── Tests Page ─────────────────────────────────────────────────
+function TestsPage() {
+  const [selected, setSelected] = useState(null);
+  const [qState, setQState] = useState({});
+  const tests = [
+    { id: "sat-m1",  name: "SAT Math Mock 1",       type: "sat",   duration: "70 min", questions: 44 },
+    { id: "ielts-r", name: "IELTS Reading Test 1",   type: "ielts", duration: "60 min", questions: 40 },
+    { id: "sat-rw",  name: "SAT Reading & Writing",  type: "sat",   duration: "64 min", questions: 54 },
+  ];
+  const sampleQ = {
+    text: "If f(x) = x² − 3x − 4, which of the following is true?",
+    options: ["f(x) = 0 has no real solutions", "The vertex is at (1.5, −6.25)", "The axis of symmetry is x = 3", "f(0) = 4"],
+    correct: 1,
+  };
+
+  if (selected) {
+    return (
+      <div style={{ padding: 24, display: "flex", flexDirection: "column", gap: 14 }}>
+        <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
+          <button onClick={() => { setSelected(null); setQState({}); }} style={{ background: "#F0F5FC", border: "1px solid #DDE6F0", borderRadius: 10, padding: "8px 14px", fontSize: 13, fontWeight: 600, color: "#6B7E96", cursor: "pointer", fontFamily: "'DM Sans',sans-serif" }}>← Orqaga</button>
+          <div style={{ fontSize: 16, fontWeight: 700, color: "#173B64" }}>{selected.name}</div>
+          <Tag label={selected.type.toUpperCase()} type={selected.type === "sat" ? "blue" : "green"} />
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 280px", gap: 14 }}>
+          <Card>
+            <div style={{ fontSize: 11, color: "#9EB3C8", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 14 }}>Savol 1 / {selected.questions}</div>
+            <div style={{ fontSize: 15, fontWeight: 600, color: "#173B64", lineHeight: 1.6, marginBottom: 18 }}>{sampleQ.text}</div>
+            {sampleQ.options.map((opt, i) => {
+              let state = "idle";
+              if (qState[i] === "selected") state = "selected";
+              if (qState.submitted) {
+                state = i === sampleQ.correct ? "correct" : (qState[i] === "selected" ? "wrong" : "idle");
+              }
+              return <QuestionOption key={i} label={String.fromCharCode(65 + i)} text={opt} state={state} onClick={() => !qState.submitted && setQState({ [i]: "selected" })} />;
+            })}
+            <div style={{ display: "flex", gap: 10, marginTop: 8 }}>
+              {!qState.submitted
+                ? <BtnPrimary onClick={() => setQState(s => ({ ...s, submitted: true }))} style={{ width: "auto", padding: "10px 24px" }}>Javobni tekshirish</BtnPrimary>
+                : <BtnPrimary onClick={() => setQState({})} style={{ width: "auto", padding: "10px 24px" }}>Keyingi savol →</BtnPrimary>
+              }
+            </div>
+          </Card>
+          <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+            <Card>
+              <SLabel>Vaqt</SLabel>
+              <div style={{ fontSize: 28, fontWeight: 700, color: "#173B64", fontVariantNumeric: "tabular-nums" }}>01:09:42</div>
+              <div style={{ fontSize: 11, color: "#9EB3C8", marginTop: 4 }}>Qolgan vaqt</div>
+              <div style={{ height: 4, background: "#DDE6F0", borderRadius: 999, marginTop: 10, overflow: "hidden" }}>
+                <div style={{ width: "62%", height: 4, background: "#2563EB", borderRadius: 999 }} />
+              </div>
+            </Card>
+            <Card>
+              <SLabel>Navigatsiya</SLabel>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 4 }}>
+                {Array.from({ length: 12 }, (_, i) => (
+                  <div key={i} style={{ width: "100%", aspectRatio: "1", borderRadius: 8, background: i === 0 ? "#173B64" : i < 3 ? "rgba(15,158,106,0.09)" : "#F0F5FC", border: `1px solid ${i === 0 ? "transparent" : i < 3 ? "rgba(15,158,106,0.2)" : "#DDE6F0"}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 10, fontWeight: 700, color: i === 0 ? "#fff" : i < 3 ? "#0F9E6A" : "#9EB3C8", cursor: "pointer" }}>
+                    {i + 1}
+                  </div>
+                ))}
+              </div>
+            </Card>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div style={{ padding: 24 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 14 }}>
+        {tests.map(t => (
+          <Card key={t.id} onClick={() => setSelected(t)} style={{ cursor: "pointer" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 12 }}>
+              <Tag label={t.type.toUpperCase()} type={t.type === "sat" ? "blue" : "green"} />
+              <span style={{ fontSize: 11, color: "#9EB3C8" }}>{t.duration}</span>
+            </div>
+            <div style={{ fontSize: 15, fontWeight: 700, color: "#173B64", marginBottom: 4 }}>{t.name}</div>
+            <div style={{ fontSize: 12, color: "#9EB3C8", marginBottom: 16 }}>{t.questions} savol</div>
+            <BtnPrimary style={{ fontSize: 12 }}>Testni boshlash</BtnPrimary>
+          </Card>
+        ))}
+      </div>
+
+      <div style={{ marginTop: 24 }}>
+        <SLabel>So'nggi natijalar</SLabel>
+        <Card>
+          {MOCK_TESTS.map((t, i) => (
+            <Row key={t.id} noBorder={i === MOCK_TESTS.length - 1}>
+              <div style={{ width: 40, height: 40, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12, fontWeight: 700, background: t.type === "sat" ? "rgba(37,99,235,0.09)" : "rgba(15,158,106,0.09)", color: t.type === "sat" ? "#2563EB" : "#0F9E6A", flexShrink: 0 }}>{t.score}</div>
+              <div style={{ flex: 1 }}>
+                <div style={{ fontSize: 13, fontWeight: 600, color: "#173B64" }}>{t.name}</div>
+                <div style={{ fontSize: 11, color: "#9EB3C8", marginTop: 2 }}>{t.date}</div>
+              </div>
+              <div style={{ textAlign: "right" }}>
+                <div style={{ fontSize: 11, color: "#9EB3C8" }}>/{t.max}</div>
+                {t.change !== null && <div style={{ fontSize: 12, fontWeight: 700, color: "#16a34a" }}>+{t.change}</div>}
+              </div>
+            </Row>
+          ))}
+        </Card>
+      </div>
+    </div>
+  );
+}
+
+// ── Stats Page ────────────────────────────────────────────────
+function StatsPage() {
+  return (
+    <div style={{ padding: 24, display: "flex", flexDirection: "column", gap: 16 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 14 }}>
+        <StatCard value="1,200" label="SAT joriy ball" color="#2563EB" />
+        <StatCard value="6.0" label="IELTS joriy ball" color="#0F9E6A" />
+        <StatCard value="12" label="Streak (kun)" color="#D97706" />
+        <StatCard value="#3" label="Namangan reytingi" color="#6D28D9" />
+      </div>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+        <Card>
+          <SLabel>Haftalik faollik</SLabel>
+          <div style={{ display: "flex", alignItems: "baseline", gap: 6, marginBottom: 14 }}>
+            <span style={{ fontSize: 28, fontWeight: 700, color: "#173B64" }}>255</span>
+            <span style={{ fontSize: 12, color: "#9EB3C8" }}>daqiqa bu hafta</span>
+          </div>
+          <ActivityBars data={ACTIVITY_DATA} days={ACTIVITY_DAYS} todayIdx={TODAY_IDX} />
+        </Card>
+        <Card>
+          <SLabel>Mavzular tahlili</SLabel>
+          {MOCK_WEAK.map(w => (
+            <div key={w.name} style={{ marginBottom: 14 }}>
+              <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
+                <span style={{ fontSize: 12, color: "#173B64" }}>{w.name}</span>
+                <span style={{ fontSize: 12, fontWeight: 700, color: w.color }}>{w.pct}%</span>
+              </div>
+              <PBar pct={w.pct} color={w.color} />
+            </div>
+          ))}
+        </Card>
+      </div>
+    </div>
+  );
+}
+
+// ── Profile Page ──────────────────────────────────────────────
+function ProfilePage() {
+  const [name, setName] = useState(MOCK_USER.firstName);
+  const [toast, setToast] = useState(null);
+  return (
+    <div style={{ padding: 24, maxWidth: 560 }}>
+      <Card>
+        <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 24 }}>
+          <Avatar initials="AK" size={56} />
+          <div>
+            <div style={{ fontSize: 18, fontWeight: 700, color: "#173B64" }}>{MOCK_USER.firstName} {MOCK_USER.lastName}</div>
+            <div style={{ fontSize: 12, color: "#9EB3C8", marginTop: 3 }}>{MOCK_USER.region} · Bepul rejim</div>
+          </div>
+        </div>
+        <Sep />
+        <div style={{ display: "grid", gap: 14 }}>
+          <ModalField label="Ism" defaultValue={MOCK_USER.firstName} />
+          <ModalField label="Familiya" defaultValue={MOCK_USER.lastName} />
+          <ModalField label="Viloyat" defaultValue={MOCK_USER.region} />
+          <BtnPrimary onClick={() => { setToast("Profil saqlandi!"); setTimeout(() => setToast(null), 3000); }}>Saqlash</BtnPrimary>
+        </div>
+      </Card>
+      {toast && <Toast toast={toast} />}
+    </div>
+  );
+}
+
+// ── Rating Page ───────────────────────────────────────────────
+function RatingPage() {
+  const students = [
+    { rank: 1, name: "Jasur Toshmatov",  score: 1480, region: "Namangan", streak: 21 },
+    { rank: 2, name: "Nilufar Yusupova", score: 1430, region: "Namangan", streak: 18 },
+    { rank: 3, name: "Azizbek Karimov",  score: 1200, region: "Namangan", streak: 12, isMe: true },
+    { rank: 4, name: "Bobur Rahimov",    score: 1180, region: "Namangan", streak: 9 },
+    { rank: 5, name: "Zulfiya Mirzaeva", score: 1120, region: "Namangan", streak: 7 },
+  ];
+  return (
+    <div style={{ padding: 24 }}>
+      <Card>
+        <SLabel>Namangan viloyati reytingi</SLabel>
+        {students.map((s, i) => (
+          <Row key={s.rank} noBorder={i === students.length - 1} style={{ background: s.isMe ? "rgba(37,99,235,0.04)" : "transparent", borderRadius: s.isMe ? 10 : 0, padding: s.isMe ? "10px 10px" : "10px 0" }}>
+            <div style={{ width: 28, textAlign: "center", fontSize: 14, fontWeight: 700, color: s.rank <= 3 ? ["#D97706","#6B7E96","#D97706"][s.rank - 1] : "#9EB3C8", flexShrink: 0 }}>
+              {s.rank <= 3 ? ["🥇","🥈","🥉"][s.rank - 1] : `#${s.rank}`}
+            </div>
+            <Avatar initials={s.name.split(" ").map(w => w[0]).join("")} size={32} />
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div style={{ fontSize: 13, fontWeight: s.isMe ? 700 : 600, color: "#173B64" }}>{s.name} {s.isMe && <span style={{ fontSize: 10, color: "#2563EB", fontWeight: 700 }}>(siz)</span>}</div>
+              <div style={{ fontSize: 11, color: "#9EB3C8", marginTop: 1 }}>{s.region}</div>
+            </div>
+            <div style={{ textAlign: "right" }}>
+              <div style={{ fontSize: 14, fontWeight: 700, color: "#173B64" }}>{s.score}</div>
+              <div style={{ fontSize: 10, color: "#9EB3C8" }}>🔥 {s.streak}</div>
+            </div>
+          </Row>
+        ))}
+      </Card>
+    </div>
+  );
+}
+
+// ── Helpers ───────────────────────────────────────────────────
+function TargetBox({ label, value, current, accent }) {
+  return (
+    <div style={{ flex: 1, background: "#F0F5FC", border: "1px solid #DDE6F0", borderRadius: 12, padding: 12, textAlign: "center" }}>
+      <div style={{ fontSize: 9, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 4, color: accent }}>{label}</div>
+      <div style={{ fontSize: 24, fontWeight: 700, lineHeight: 1, color: accent }}>{value}</div>
+      <div style={{ fontSize: 10, color: "#9EB3C8", marginTop: 4 }}>Hozir: {current}</div>
+    </div>
+  );
+}
+
+function TextBtn({ children, onClick }) {
+  return (
+    <button onClick={onClick} style={{ background: "none", border: "none", color: "#2563EB", fontSize: 12, fontWeight: 700, cursor: "pointer", padding: 0, fontFamily: "'DM Sans',sans-serif" }}>
+      {children}
+    </button>
+  );
+}
+
+function Modal({ title, children, onClose }) {
+  return (
+    <div style={{ position: "fixed", inset: 0, background: "rgba(15,39,70,0.35)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 100 }}>
+      <div style={{ background: "#fff", borderRadius: 20, padding: 28, width: 380, boxShadow: "0 18px 50px rgba(7,49,94,0.2)", maxWidth: "90vw" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
+          <div style={{ fontSize: 16, fontWeight: 700, color: "#173B64" }}>{title}</div>
+          <button onClick={onClose} style={{ background: "#F0F5FC", border: "none", borderRadius: 8, width: 30, height: 30, cursor: "pointer", fontSize: 14, color: "#6B7E96" }}>✕</button>
+        </div>
+        {children}
+      </div>
+    </div>
+  );
+}
+
+function ModalField({ label, defaultValue, type = "text" }) {
+  const [val, setVal] = useState(defaultValue);
+  return (
+    <div>
+      <div style={{ fontSize: 11, fontWeight: 700, color: "#9EB3C8", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 6 }}>{label}</div>
+      <input type={type} value={val} onChange={e => setVal(e.target.value)}
+        style={{ width: "100%", padding: "10px 12px", borderRadius: 10, border: "1px solid #DDE6F0", fontSize: 13, color: "#173B64", outline: "none", fontFamily: "'DM Sans',sans-serif", background: "#F0F5FC" }} />
+    </div>
+  );
+}
+
+// ── App Shell ─────────────────────────────────────────────────
+function App() {
+  const [page, setPage] = useState("home");
+
+  const pages = {
+    home:    <HomePage onNav={setPage} />,
+    lessons: <LessonsPage />,
+    tests:   <TestsPage />,
+    stats:   <StatsPage />,
+    rating:  <RatingPage />,
+    profile: <ProfilePage />,
+  };
+
+  return (
+    <div style={{ display: "flex", minHeight: "100vh", background: "#F0F5FC", fontFamily: "'DM Sans', sans-serif", color: "#173B64" }}>
+      <DashboardSidebar page={page} onNav={setPage} onLogout={() => alert("Logged out")} user={MOCK_USER} />
+      <div style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0 }}>
+        <DashboardTopbar page={page} user={MOCK_USER} />
+        <div style={{ flex: 1, overflowY: "auto" }}>
+          {pages[page] || pages.home}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>

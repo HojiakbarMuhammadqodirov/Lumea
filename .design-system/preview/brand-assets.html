@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 20px; background: #F0F5FC; font-family: 'DM Sans', sans-serif; }
+  .group-label { font-size: 9px; font-weight: 800; color: #9EB3C8; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; margin-top: 14px; }
+  .group-label:first-child { margin-top: 0; }
+  .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-end; }
+  .img-item { display: flex; flex-direction: column; gap: 6px; align-items: center; }
+  .img-label { font-size: 9px; color: #9EB3C8; text-align: center; }
+  .uni-img { width: 56px; height: 56px; object-fit: contain; opacity: 0.5; filter: drop-shadow(0 4px 8px rgba(23,59,100,0.12)); }
+  .book-img { height: 90px; object-fit: contain; border-radius: 4px; box-shadow: 0 10px 20px rgba(13,29,49,0.14); }
+
+  /* Chat mockup */
+  .chat-card {
+    width: 260px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid rgba(23,59,100,0.1);
+    box-shadow: 0 16px 34px rgba(23,59,100,0.12);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 220ms cubic-bezier(0.22,1,0.36,1), box-shadow 220ms ease;
+    text-decoration: none;
+    display: block;
+  }
+  .chat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 24px 48px rgba(23,59,100,0.18);
+  }
+  .chat-header {
+    background: #173B64;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .chat-avatar {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: #ffde70;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 800; color: #173B64; flex-shrink: 0;
+  }
+  .chat-teacher-name { font-size: 12px; font-weight: 700; color: #fff; }
+  .chat-teacher-role { font-size: 10px; color: #9EB3C8; margin-top: 1px; }
+  .chat-online { width: 7px; height: 7px; border-radius: 50%; background: #0F9E6A; margin-left: auto; flex-shrink: 0; }
+
+  .chat-body { padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+
+  .msg { max-width: 80%; padding: 8px 11px; border-radius: 10px; font-size: 11px; line-height: 1.5; }
+  .msg-teacher { background: #F0F5FC; color: #173B64; border-bottom-left-radius: 3px; align-self: flex-start; }
+  .msg-student { background: #173B64; color: #fff; border-bottom-right-radius: 3px; align-self: flex-end; }
+  .msg-time { font-size: 9px; color: #9EB3C8; }
+  .msg-row { display: flex; flex-direction: column; }
+  .msg-row.right { align-items: flex-end; }
+
+  .chat-input-bar {
+    border-top: 1px solid #DDE6F0;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .chat-input-fake {
+    flex: 1; background: #F0F5FC; border-radius: 999px;
+    padding: 6px 12px; font-size: 11px; color: #9EB3C8;
+  }
+  .chat-send-btn {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: #173B64; display: flex; align-items: center;
+    justify-content: center; flex-shrink: 0;
+  }
+
+  .chat-cta {
+    background: linear-gradient(135deg, #F6FAFF, #eaf2f8);
+    border: 1px solid rgba(23,59,100,0.1);
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin: 0 12px 12px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: #173B64;
+  }
+  .chat-cta span { color: #2563EB; }
+</style>
+</head>
+<body>
+  <div class="group-label">University Logos (floating bg elements, 50% opacity)</div>
+  <div class="row">
+    <div class="img-item"><img class="uni-img" src="../assets/images/harvard.png" alt="Harvard"><div class="img-label">Harvard</div></div>
+    <div class="img-item"><img class="uni-img" src="../assets/images/mit.png" alt="MIT"><div class="img-label">MIT</div></div>
+    <div class="img-item"><img class="uni-img" src="../assets/images/yale.png" alt="Yale"><div class="img-label">Yale</div></div>
+    <div class="img-item"><img class="uni-img" src="../assets/images/princeton.png" alt="Princeton"><div class="img-label">Princeton</div></div>
+    <div class="img-item"><img class="uni-img" src="../assets/images/duke.png" alt="Duke"><div class="img-label">Duke</div></div>
+  </div>
+
+  <div class="group-label">Study Books (landing carousel)</div>
+  <div class="row">
+    <div class="img-item"><img class="book-img" src="../assets/images/books/ebrwpanda.png" alt="EBRW Panda"><div class="img-label">EBRW Panda</div></div>
+    <div class="img-item"><img class="book-img" src="../assets/images/books/ielts.png" alt="IELTS"><div class="img-label">IELTS</div></div>
+    <div class="img-item"><img class="book-img" src="../assets/images/books/mathpanda.png" alt="Math Panda"><div class="img-label">Math Panda</div></div>
+    <div class="img-item"><img class="book-img" src="../assets/images/books/satguide.png" alt="SAT Guide"><div class="img-label">SAT Guide</div></div>
+  </div>
+
+  <div class="group-label">Chat with Teacher — click to go to registration</div>
+  <div class="row" style="align-items: flex-start; gap: 16px;">
+
+    <!-- Chat card 1 — front (active conversation) -->
+    <div class="img-item">
+      <a class="chat-card" href="../ui_kits/website/index.html#register" target="_blank" title="Click to register">
+        <div class="chat-header">
+          <div class="chat-avatar">S</div>
+          <div>
+            <div class="chat-teacher-name">Sarvar — SAT 1510</div>
+            <div class="chat-teacher-role">Math & EBRW teacher</div>
+          </div>
+          <div class="chat-online"></div>
+        </div>
+        <div class="chat-body">
+          <div class="msg-row">
+            <div class="msg msg-teacher">Salom! Bugun qaysi mavzuda yordam kerak? 👋</div>
+            <div class="msg-time">10:42</div>
+          </div>
+          <div class="msg-row right">
+            <div class="msg msg-student">Quadratic equations tushunarsiz edi</div>
+            <div class="msg-time">10:43</div>
+          </div>
+          <div class="msg-row">
+            <div class="msg msg-teacher">Yaxshi! Keling, discriminant formulasidan boshlaymiz. b²−4ac &gt; 0 bo'lsa...</div>
+            <div class="msg-time">10:43</div>
+          </div>
+          <div class="msg-row right">
+            <div class="msg msg-student">Rahmat, endi tushundim! 🙌</div>
+            <div class="msg-time">10:45</div>
+          </div>
+        </div>
+        <div class="chat-input-bar">
+          <div class="chat-input-fake">Xabar yozing…</div>
+          <div class="chat-send-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22,2 15,22 11,13 2,9"/></svg>
+          </div>
+        </div>
+        <div class="chat-cta">
+          <span>Ro'yxatdan o'ting</span> va o'qituvchi bilan bog'laning →
+        </div>
+      </a>
+      <div class="img-label">chat-teacher.html (click → register)</div>
+    </div>
+
+    <!-- Chat card 2 — IELTS teacher, back card style -->
+    <div class="img-item">
+      <a class="chat-card" href="../ui_kits/website/index.html#register" target="_blank" title="Click to register" style="opacity:0.82; transform: scale(0.95); filter: saturate(0.9);">
+        <div class="chat-header" style="background:#0F2746;">
+          <div class="chat-avatar" style="background:#dff0ff; color:#0d4f9c;">N</div>
+          <div>
+            <div class="chat-teacher-name">Nilufar — IELTS 7.5</div>
+            <div class="chat-teacher-role">Writing & Speaking</div>
+          </div>
+          <div class="chat-online"></div>
+        </div>
+        <div class="chat-body">
+          <div class="msg-row">
+            <div class="msg msg-teacher">Your Task 2 essay needs a stronger thesis. Let me show you how.</div>
+            <div class="msg-time">09:15</div>
+          </div>
+          <div class="msg-row right">
+            <div class="msg msg-student">Can you check my introduction?</div>
+            <div class="msg-time">09:16</div>
+          </div>
+          <div class="msg-row">
+            <div class="msg msg-teacher">Sure! Send it and I'll give feedback within minutes. ✍️</div>
+            <div class="msg-time">09:16</div>
+          </div>
+        </div>
+        <div class="chat-input-bar">
+          <div class="chat-input-fake">Type a message…</div>
+          <div class="chat-send-btn" style="background:#0F9E6A;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22,2 15,22 11,13 2,9"/></svg>
+          </div>
+        </div>
+        <div class="chat-cta" style="border-color:rgba(15,158,106,0.15);">
+          <span style="color:#0F9E6A;">Sign up</span> to chat with your teacher →
+        </div>
+      </a>
+      <div class="img-label">chat-ielts.html (click → register)</div>
+    </div>
+
+  </div>
+</body>
+</html>

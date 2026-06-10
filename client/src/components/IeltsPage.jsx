@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import PublicHeader from "./PublicHeader";
 import PublicFooter from "./PublicFooter";
 import TestCarousel from "./TestCarousel";
+import PublicAtmosphere from "./PublicAtmosphere";
 import { useLanguage } from "../context/LanguageContext";
 import { translations } from "../i18n/translations";
 
@@ -208,7 +209,7 @@ function TestViewerModal({ test, onClose, tMocks }) {
 
 // ── Main Component ─────────────────────────────────────────────────────────
 
-export default function IeltsPage({ onLoginClick, onNavClick }) {
+export default function IeltsPage({ onLoginClick, onNavClick, currentTheme, onToggleTheme }) {
   const { lang } = useLanguage();
   const t = translations[lang].ielts;
 
@@ -250,7 +251,8 @@ export default function IeltsPage({ onLoginClick, onNavClick }) {
 
   return (
     <section className="examPage ieltsExamPage">
-      <PublicHeader onLoginClick={onLoginClick} onNavClick={onNavClick} currentView="ielts" />
+      <PublicAtmosphere variant="ielts" />
+      <PublicHeader onLoginClick={onLoginClick} onNavClick={onNavClick} currentView="ielts" currentTheme={currentTheme} onToggleTheme={onToggleTheme} />
 
       {/* ── Hero ── */}
       <section className="examHero" id="top">

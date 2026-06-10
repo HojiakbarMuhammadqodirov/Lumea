@@ -1,0 +1,392 @@
+/*
+ * Learnova / Lumea — Design System Tokens
+ * Generated from: Learnova/client/src/styles.css + dashboard/tokens.js
+ *
+ * ⚠️ Font note: "Soleil" (primary brand font) is a commercial typeface.
+ *    Substituted with "DM Sans" from Google Fonts for design purposes.
+ *    "Trebuchet MS" (marketing pages) substituted with "Plus Jakarta Sans".
+ *    Replace with licensed Soleil files in production.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+
+/* ────────────────────────────────────────────────────────────────
+   BASE COLOR TOKENS
+   ──────────────────────────────────────────────────────────────── */
+:root {
+
+  /* ── Brand Blues ── */
+  --color-navy:         #173B64;   /* Primary brand navy — text, icons, buttons */
+  --color-navy-deep:    #0F2746;   /* Darker navy — hover states, dark UI */
+  --color-navy-dim:     #08355f;   /* ink — deepest navy */
+  --color-blue-accent:  #2563EB;   /* Interactive blue — links, progress, active */
+  --color-blue-dim:     rgba(37, 99, 235, 0.09);  /* Blue tint background */
+  --color-blue-border:  rgba(37, 99, 235, 0.18);  /* Blue tint border */
+  --color-blue-mid:     #2762C0;   /* Mid blue — formula highlights */
+  --color-blue-soft:    #8bc2ff;   /* Soft blue — bg gradient mid */
+  --color-blue-bg1:     #dff0ff;   /* Lightest blue tint — bg gradient start */
+  --color-blue-bg3:     #0d4f9c;   /* Deep blue — bg gradient end */
+
+  /* ── Accent ── */
+  --color-yellow:       #ffde70;   /* Accent yellow — SVG accent mark, highlights */
+
+  /* ── Semantic Status ── */
+  --color-green:        #0F9E6A;   /* Success / IELTS */
+  --color-green-dim:    rgba(15, 158, 106, 0.09);
+  --color-green-border: rgba(15, 158, 106, 0.2);
+  --color-purple:       #6D28D9;   /* AP / Advanced */
+  --color-purple-dim:   rgba(109, 40, 217, 0.08);
+  --color-amber:        #D97706;   /* Warning / milestone */
+  --color-amber-dim:    rgba(217, 119, 6, 0.09);
+  --color-red:          #DC2626;   /* Error */
+  --color-red-dim:      rgba(220, 38, 38, 0.09);
+  --color-danger:       #bf2c55;   /* Danger (public) */
+
+  /* ── Neutrals ── */
+  --color-bg-app:       #F0F5FC;   /* Dashboard background */
+  --color-bg-public:    #F6FAFF;   /* Public pages background */
+  --color-card-white:   #FFFFFF;   /* Primary card */
+  --color-card-tinted:  #F0F5FC;   /* Secondary card / sub-card */
+  --color-border:       #DDE6F0;   /* Default border */
+  --color-border-soft:  rgba(23, 59, 100, 0.08);  /* Soft border (public) */
+  --color-border-mid:   rgba(23, 59, 100, 0.1);
+  --color-text:         #173B64;   /* Primary text */
+  --color-text-bright:  #0F2746;   /* Bright text */
+  --color-text-sub:     #4A6580;   /* Subdued text */
+  --color-muted:        #6B7E96;   /* Muted text */
+  --color-hint:         #9EB3C8;   /* Hint / placeholder */
+  --color-nav-muted:    #7c858d;   /* Nav link color */
+  --color-nav-dim:      #5c6670;   /* Slightly darker nav muted */
+
+  /* ── Glass ── */
+  --color-glass:        rgba(255, 255, 255, 0.22);
+  --color-glass-strong: rgba(255, 255, 255, 0.32);
+  --color-glass-line:   rgba(255, 255, 255, 0.34);
+
+  /* ── Tag Colors ── */
+  --tag-blue-bg:        rgba(37, 99, 235, 0.09);
+  --tag-blue-text:      #1D4ED8;
+  --tag-green-bg:       rgba(15, 158, 106, 0.09);
+  --tag-green-text:     #065F46;
+  --tag-purple-bg:      rgba(109, 40, 217, 0.08);
+  --tag-purple-text:    #5B21B6;
+  --tag-amber-bg:       rgba(217, 119, 6, 0.09);
+  --tag-amber-text:     #92400E;
+  --tag-red-bg:         rgba(220, 38, 38, 0.09);
+  --tag-red-text:       #991B1B;
+  --tag-gray-bg:        #EEF4FB;
+  --tag-gray-text:      #6B7E96;
+
+
+  /* ────────────────────────────────────────────────────────────────
+     SEMANTIC ALIASES
+     ──────────────────────────────────────────────────────────────── */
+
+  /* Backgrounds */
+  --bg-page:            var(--color-bg-app);
+  --bg-page-public:     var(--color-bg-public);
+  --bg-card:            var(--color-card-white);
+  --bg-card-2:          var(--color-card-tinted);
+
+  /* Text */
+  --fg-1:               var(--color-text);       /* Primary text */
+  --fg-2:               var(--color-text-sub);   /* Secondary text */
+  --fg-3:               var(--color-muted);       /* Muted text */
+  --fg-4:               var(--color-hint);        /* Hint text */
+  --fg-link:            var(--color-blue-accent); /* Links */
+  --fg-danger:          var(--color-red);         /* Error text */
+
+  /* Borders */
+  --border-default:     var(--color-border);
+  --border-soft:        var(--color-border-soft);
+
+  /* Interactive */
+  --btn-primary-bg:     var(--color-navy);
+  --btn-primary-hover:  var(--color-navy-deep);
+  --btn-primary-text:   #FFFFFF;
+  --accent:             var(--color-yellow);
+  --focus-ring:         var(--color-blue-accent);
+
+
+  /* ────────────────────────────────────────────────────────────────
+     TYPOGRAPHY TOKENS
+     ──────────────────────────────────────────────────────────────── */
+
+  /* Families */
+  --font-sans:          'DM Sans', 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+  --font-marketing:     'Plus Jakarta Sans', 'Trebuchet MS', 'Segoe UI', Arial, sans-serif;
+  /* NOTE: Replace DM Sans → Soleil, Plus Jakarta Sans → Trebuchet MS in production */
+
+  /* Size Scale */
+  --text-2xs:           0.46rem;   /* ~7.4px  — tiny badge text */
+  --text-xs:            0.75rem;   /* 12px    — meta, timestamps */
+  --text-sm:            0.875rem;  /* 14px    — body small, labels */
+  --text-base:          1rem;      /* 16px    — body default */
+  --text-lg:            1.08rem;   /* ~17px   — body prominent */
+  --text-xl:            1.12rem;   /* ~18px   — section intro */
+  --text-2xl:           1.35rem;   /* ~22px   — card titles */
+  --text-3xl:           2rem;      /* 32px    — section headings min */
+  --text-hero:          clamp(2rem, 4.4vw, 3.6rem);   /* Hero headings */
+  --text-display:       clamp(2.9rem, 6vw, 5.6rem);   /* Score display */
+
+  /* Weight Scale */
+  --weight-regular:     400;
+  --weight-medium:      500;
+  --weight-semibold:    600;
+  --weight-bold:        700;
+  --weight-extrabold:   800;
+  --weight-black:       900;
+  --weight-ultra:       1000;   /* Score numbers only */
+
+  /* Line Heights */
+  --leading-tight:      1.06;
+  --leading-snug:       1.08;
+  --leading-normal:     1.5;
+  --leading-relaxed:    1.6;
+  --leading-loose:      1.7;
+
+  /* Letter Spacing */
+  --tracking-wide:      0.03em;
+  --tracking-wider:     0.04em;
+  --tracking-widest:    0.1em;   /* Section labels / nav sections */
+
+
+  /* ────────────────────────────────────────────────────────────────
+     SPACING & LAYOUT
+     ──────────────────────────────────────────────────────────────── */
+
+  --space-1:    4px;
+  --space-2:    8px;
+  --space-3:    12px;
+  --space-4:    16px;
+  --space-5:    20px;
+  --space-6:    24px;
+  --space-8:    32px;
+  --space-10:   40px;
+  --space-12:   48px;
+  --space-16:   64px;
+
+  --radius-sm:  8px;    /* Public result cards */
+  --radius-md:  12px;   /* rounded-xl — sub-cards, inputs, buttons */
+  --radius-lg:  16px;   /* rounded-2xl — main dashboard cards */
+  --radius-xl:  20px;   /* Large card variants */
+  --radius-pill: 999px; /* Pill buttons, badges, tags */
+
+  --container-max: 1180px;
+  --container:  min(1180px, calc(100% - 32px));
+
+
+  /* ────────────────────────────────────────────────────────────────
+     SHADOWS
+     ──────────────────────────────────────────────────────────────── */
+
+  --shadow-card-public: 0 18px 40px rgba(23, 59, 100, 0.08);
+  --shadow-card-modal:  0 18px 50px rgba(7, 49, 94, 0.18);
+  --shadow-nav:         0 10px 20px rgba(23, 59, 100, 0.18);
+  --shadow-book:        0 22px 42px rgba(13, 29, 49, 0.18), 18px 0 24px rgba(23, 59, 100, 0.08);
+  /* Dashboard cards have no shadow — border-only styling */
+
+
+  /* ────────────────────────────────────────────────────────────────
+     ANIMATION
+     ──────────────────────────────────────────────────────────────── */
+
+  --ease-smooth:        cubic-bezier(0.22, 1, 0.36, 1);   /* Primary ease — deceleration */
+  --ease-standard:      cubic-bezier(0.4, 0, 0.2, 1);     /* Progress bars */
+  --duration-fast:      180ms;
+  --duration-normal:    220ms;
+  --duration-slow:      650ms;   /* AOS default */
+  --duration-nav:       960ms;   /* Navbar morph transition */
+}
+
+
+/* ────────────────────────────────────────────────────────────────
+   SEMANTIC ELEMENT STYLES
+   ──────────────────────────────────────────────────────────────── */
+
+/* Base reset */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--fg-1);
+  line-height: var(--leading-normal);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Headings ── */
+h1, .h1 {
+  font-family: var(--font-marketing);
+  font-size: var(--text-hero);
+  font-weight: var(--weight-black);
+  line-height: var(--leading-tight);
+  color: var(--color-navy);
+  margin: 0;
+}
+
+h2, .h2 {
+  font-family: var(--font-marketing);
+  font-size: clamp(2rem, 4.4vw, 3.5rem);
+  font-weight: var(--weight-black);
+  line-height: var(--leading-snug);
+  color: var(--color-navy);
+  margin: 0;
+}
+
+h3, .h3 {
+  font-family: var(--font-sans);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  line-height: 1.2;
+  color: var(--color-navy);
+  margin: 0;
+}
+
+h4, .h4 {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  color: var(--color-navy);
+  margin: 0;
+}
+
+/* ── Body Text ── */
+p, .body {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--fg-3);
+  margin: 0;
+}
+
+.body-sm {
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--fg-3);
+}
+
+/* ── Labels ── */
+.label {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-extrabold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+  color: var(--fg-4);
+}
+
+.label-section {
+  font-size: 0.92rem;
+  font-weight: var(--weight-extrabold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--fg-3);
+}
+
+/* ── Score / Display ── */
+.display-score {
+  font-family: var(--font-sans);
+  font-size: var(--text-display);
+  font-weight: var(--weight-ultra);
+  line-height: 0.95;
+  color: var(--color-navy);
+}
+
+/* ── Tags / Badges ── */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 0.625rem;  /* 10px */
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+.tag-blue   { background: var(--tag-blue-bg);   color: var(--tag-blue-text); }
+.tag-green  { background: var(--tag-green-bg);  color: var(--tag-green-text); }
+.tag-purple { background: var(--tag-purple-bg); color: var(--tag-purple-text); }
+.tag-amber  { background: var(--tag-amber-bg);  color: var(--tag-amber-text); }
+.tag-red    { background: var(--tag-red-bg);    color: var(--tag-red-text); }
+.tag-gray   { background: var(--tag-gray-bg);   color: var(--tag-gray-text); }
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-weight: var(--weight-semibold);
+  transition: background var(--duration-fast) ease,
+              color var(--duration-fast) ease,
+              transform var(--duration-fast) ease,
+              box-shadow var(--duration-normal) ease;
+}
+
+.btn-primary {
+  background: var(--color-navy);
+  color: #fff;
+  border-radius: var(--radius-md);
+  padding: 10px 16px;
+  font-size: var(--text-sm);
+}
+.btn-primary:hover {
+  background: var(--color-navy-deep);
+}
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--fg-3);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 10px 16px;
+  font-size: var(--text-sm);
+}
+.btn-ghost:hover {
+  background: var(--bg-card-2);
+  color: var(--color-navy);
+}
+
+.btn-pill-primary {
+  background: var(--color-navy);
+  color: #fff;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-navy);
+  padding: 0 26px;
+  min-height: 46px;
+  font-weight: var(--weight-extrabold);
+}
+.btn-pill-primary:hover {
+  color: var(--color-navy);
+  background: var(--color-bg-public);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-nav);
+}
+
+/* ── Card ── */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+}
+
+.card-tinted {
+  background: var(--bg-card-2);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.card-public {
+  background: rgba(246, 250, 255, 0.9);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card-public);
+  padding: 22px 24px;
+}

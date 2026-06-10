@@ -4,7 +4,10 @@
       "Bash(npm run:*)",
       "Bash(python3 generate_questions.py)",
       "Bash(py -3 --version)",
-      "Bash(py -3 generate_questions.py)"
+      "Bash(py -3 generate_questions.py)",
+      "WebFetch(domain:api.anthropic.com)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\user\\\\Learnova\" -Directory)",
+      "Bash(Select-Object Name)"
     ]
   }
 }

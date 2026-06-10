@@ -8,6 +8,7 @@ import IeltsPage from "./components/IeltsPage";
 import PricingPage from "./components/PricingPage";
 import FaqPage from "./components/FaqPage";
 import AdminTeacherPanel from "./components/AdminTeacherPanel";
+import PublicAtmosphere from "./components/PublicAtmosphere";
 
 // ── Dashboard shell ──────────────────────────────────────────
 import { AppProvider, useApp } from "./dashboard/useApp";
@@ -18,6 +19,7 @@ import HomePage from "./dashboard/pages/Home";
 import LessonsPage from "./dashboard/pages/Lessons";
 import TestsPage from "./dashboard/pages/Tests";
 import { StatsPage, RatingPage, ProfilePage } from "./dashboard/pages/OtherPages";
+import ChatPage from "./dashboard/pages/ChatPage";
 
 // ── Dashboard inner wrapper (needs AppProvider context) ──────
 function StudentDashboardShell({ onLogout }) {
@@ -31,40 +33,39 @@ function StudentDashboardShell({ onLogout }) {
     tests:   <TestsPage  />,
     stats:   <StatsPage  />,
     rating:  <RatingPage />,
+    chat:    <ChatPage   />,
     profile: <ProfilePage />,
   };
 
   return (
-    <div className="flex min-h-screen bg-[#F0F5FC] font-sans text-[#173B64]">
+    <div style={{ display: "flex", minHeight: "100vh", fontFamily: "'DM Sans', sans-serif", color: "#173B64" }}>
       <Sidebar page={page} onNav={setPage} onLogout={onLogout} />
-      <div className="flex-1 flex flex-col min-w-0">
+      <div style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0, background: "#F0F5FC" }}>
         <Topbar page={page} />
-        <div className="p-6 flex-1 overflow-y-auto flex flex-col gap-4">
+        <div style={{ flex: 1, overflowY: "auto", padding: 24, display: "flex", flexDirection: "column", gap: 16 }}>
           {pageComponent[page] || pageComponent.home}
         </div>
       </div>
       <Toast toast={toast} />
-      <style>{`
-        @keyframes toastIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
-        ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: #DDE6F0; border-radius: 99px; }
-      `}</style>
     </div>
   );
 }
+
 
 // ── Root App ─────────────────────────────────────────────────
 export default function App() {
   const [token, setToken] = useState(localStorage.getItem("learnova_token") || "");
   const [user, setUser] = useState(() => {
-    const raw = localStorage.getItem("learnova_user");
-    return raw ? JSON.parse(raw) : null;
+    try {
+      const raw = localStorage.getItem("learnova_user");
+      return raw ? JSON.parse(raw) : null;
+    } catch { return null; }
   });
   const [error, setError] = useState("");
   const [courses, setCourses] = useState([]);
   const [practiceTests, setPracticeTests] = useState([]);
   const [progress, setProgress] = useState(null);
+  const [ranking, setRanking] = useState([]);
   const [students, setStudents] = useState([]);
   const [teachers, setTeachers] = useState([]);
   const [studentProgressMap, setStudentProgressMap] = useState({});
@@ -72,6 +73,7 @@ export default function App() {
   const [selectedProgramId, setSelectedProgramId] = useState("");
   const [selectedLevelId, setSelectedLevelId] = useState("");
   const [publicView, setPublicView] = useState("landing");
+  const [publicTheme, setPublicTheme] = useState(localStorage.getItem("learnova_public_theme") || "light");
   const [needsPlan, setNeedsPlan] = useState(false);
   const [toast, setToast] = useState("");
 
@@ -135,6 +137,7 @@ export default function App() {
       setSelectedLevelId(first?.levelId || "");
       setProgress(await api.getProgress(t, me.id));
       setMyTeachers(await api.getMyTeachers(t));
+      try { setRanking(await api.getRanking(t)); } catch { /* non-critical */ }
     }
     if (u.role === "teacher" || u.role === "admin") await refreshUsers(t, u.role);
   };
@@ -145,6 +148,21 @@ export default function App() {
 
   useEffect(() => { AOS.refresh(); },
     [user, error, courses.length, practiceTests.length, students.length, teachers.length, selectedProgramId, selectedLevelId]);
+
+  useEffect(() => {
+    localStorage.setItem("learnova_public_theme", publicTheme);
+
+    if (user) {
+      delete document.body.dataset.publicTheme;
+      return;
+    }
+
+    document.body.dataset.publicTheme = publicTheme;
+
+    return () => {
+      delete document.body.dataset.publicTheme;
+    };
+  }, [publicTheme, user]);
 
   useEffect(() => {
     if (!token || !user) return;
@@ -237,10 +255,15 @@ export default function App() {
 
   // ── nav helper passed to all public pages ───────────────────
   const navTo = (view) => { setPublicView(view); window.scrollTo({ top: 0, behavior: "smooth" }); };
-  const publicProps = { onLoginClick: () => navTo("login"), onNavClick: navTo };
+  const publicProps = {
+    onLoginClick: () => navTo("login"),
+    onNavClick: navTo,
+    currentTheme: publicTheme,
+    onToggleTheme: () => setPublicTheme((current) => (current === "dark" ? "light" : "dark")),
+  };
 
   return (
-    <main className={user ? "" : "publicContainer"} style={user ? {minHeight:"100vh"} : {}}>
+    <main className={user ? "" : "publicContainer"} style={user ? {minHeight:"100vh", background:"#F0F5FC"} : {}}>
       {toast && <div className="toastAlert">{toast}</div>}
 
       {/* ── PUBLIC VIEWS ── */}
@@ -253,13 +276,32 @@ export default function App() {
       {/* ── LOGIN / REGISTER ── */}
       {!user && publicView === "login" && (
         <section className="publicAuthPage">
+          <PublicAtmosphere variant="auth" />
           <nav className="authPageNavbar" aria-label="Login navigation">
             <button className="landingLogo authPageLogo" type="button" onClick={() => navTo("landing")}>
               Lumea
             </button>
-            <button className="landingUtilityButton authBackButton" type="button" onClick={() => navTo("landing")}>
-              Back
-            </button>
+            <div className="authPageNavbarActions">
+              <button
+                className={publicTheme === "dark" ? "landingUtilityButton landingThemeButton dark" : "landingUtilityButton landingThemeButton"}
+                type="button"
+                onClick={() => setPublicTheme((current) => (current === "dark" ? "light" : "dark"))}
+                aria-label={publicTheme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+              >
+                <span className="themeIconWrap" aria-hidden="true">
+                  <svg className="themeIcon themeIconSun" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M12 2v2.2M12 19.8V22M4.93 4.93l1.56 1.56M17.51 17.51l1.56 1.56M2 12h2.2M19.8 12H22M4.93 19.07l1.56-1.56M17.51 6.49l1.56-1.56" />
+                  </svg>
+                  <svg className="themeIcon themeIconMoon" viewBox="0 0 24 24">
+                    <path d="M20.5 15.2A7.9 7.9 0 0 1 8.8 3.5 8.8 8.8 0 1 0 20.5 15.2Z" />
+                  </svg>
+                </span>
+              </button>
+              <button className="landingUtilityButton authBackButton" type="button" onClick={() => navTo("landing")}>
+                Back
+              </button>
+            </div>
           </nav>
           <div className="publicAuthIntro">
             <h1>Welcome back to Lumea.</h1>
@@ -278,8 +320,17 @@ export default function App() {
 
       {/* ── STUDENT DASHBOARD (new UI) ── */}
       {user && !needsPlan && user.role === "student" && (
-        <AppProvider onLogout={clearSession}>
-            <StudentDashboardShell onLogout={clearSession} />
+        <AppProvider
+          onLogout={clearSession}
+          apiUser={user}
+          apiCourses={visibleCourses}
+          apiProgress={progress}
+          apiRanking={ranking}
+          onSaveProfile={updateMyProfile}
+          token={token}
+          myTeachers={myTeachers}
+        >
+          <StudentDashboardShell onLogout={clearSession} />
         </AppProvider>
       )}
 

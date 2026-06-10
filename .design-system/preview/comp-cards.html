@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 20px; background: #F0F5FC; font-family: 'DM Sans', sans-serif; display: flex; gap: 14px; flex-wrap: wrap; align-items: flex-start; }
+
+  .card-main {
+    background: #fff; border: 1px solid #DDE6F0; border-radius: 16px;
+    padding: 18px; width: 200px;
+  }
+  .card-tinted {
+    background: #F0F5FC; border: 1px solid #DDE6F0; border-radius: 12px;
+    padding: 14px; width: 180px;
+  }
+  .card-public {
+    background: rgba(246,250,255,0.9); border: 1px solid rgba(23,59,100,0.08);
+    border-radius: 8px; box-shadow: 0 18px 40px rgba(23,59,100,0.08);
+    padding: 18px 20px; width: 200px;
+  }
+  .card-dark {
+    background: #0F2746; border-radius: 16px;
+    padding: 18px; width: 200px;
+  }
+  .slabel { font-size: 9px; font-weight: 800; color: #9EB3C8; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
+  .title { font-size: 13px; font-weight: 700; color: #173B64; margin-bottom: 4px; }
+  .sub { font-size: 11px; color: #9EB3C8; }
+  .pbar-track { height: 5px; background: #DDE6F0; border-radius: 999px; overflow: hidden; margin-top: 6px; }
+  .pbar-fill { height: 5px; background: #2563EB; border-radius: 999px; width: 68%; }
+  .stat { text-align: center; }
+  .stat-val { font-size: 22px; font-weight: 700; color: #2563EB; line-height: 1; }
+  .stat-label { font-size: 10px; color: #9EB3C8; margin-top: 2px; }
+  .card-label { font-size: 9px; font-weight: 800; color: #9EB3C8; text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 8px; }
+</style>
+</head>
+<body>
+  <!-- White card -->
+  <div>
+    <div class="card-label">White Card (dashboard)</div>
+    <div class="card-main">
+      <div class="slabel">Kurslar progressi</div>
+      <div class="title">SAT Math</div>
+      <div class="sub">Algebra — Lesson 4 of 12</div>
+      <div class="pbar-track"><div class="pbar-fill"></div></div>
+      <div class="sub" style="margin-top:4px">68% · 3 done</div>
+    </div>
+  </div>
+
+  <!-- Tinted card -->
+  <div>
+    <div class="card-label">Tinted Card (sub-card)</div>
+    <div class="card-tinted">
+      <div class="title" style="font-size:12px">Algebra — Lesson 4</div>
+      <div class="sub">SAT Math · 18 daqiqa</div>
+    </div>
+  </div>
+
+  <!-- Public result card -->
+  <div>
+    <div class="card-label">Public Card (landing)</div>
+    <div class="card-public">
+      <div class="slabel" style="color:#173B64; font-size:9px; letter-spacing:0.06em">SAT MATH</div>
+      <div style="display:flex; gap:18px; margin-top:10px; text-align:center;">
+        <div class="stat"><div class="stat-val" style="color:#d4687d;font-size:28px">980</div><div class="stat-label">Previous</div></div>
+        <div class="stat"><div class="stat-val" style="color:#173B64;font-size:28px">1420</div><div class="stat-label">Next score</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dark promo card -->
+  <div>
+    <div class="card-label">Dark Promo Card</div>
+    <div class="card-dark">
+      <div style="font-size:13px; font-weight:700; color:#fff; margin-bottom:4px">AI Tushuntiruvchi — Pro</div>
+      <div style="font-size:11px; color:#9EB3C8; line-height:1.5">Shaxsiy o'quv rejasi · Sertifikat<br><span style="color:#6B7E96">Oyiga 59,000 so'm</span></div>
+      <button style="margin-top:10px; background:#fff; color:#173B64; border:none; border-radius:10px; padding:7px 14px; font-size:12px; font-weight:700; cursor:pointer">Pro ga o'tish →</button>
+    </div>
+  </div>
+</body>
+</html>

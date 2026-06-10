@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumea — Public Website UI Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body, #root { margin: 0; padding: 0; min-height: 100vh; width: 100%; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: #173B64;
+    background: linear-gradient(180deg, #F6FAFF 0%, #F6FAFF 62%, #eaf2f8 100%);
+  }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-thumb { background: #DDE6F0; border-radius: 99px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="Header.jsx"></script>
+<script type="text/babel" src="LandingHero.jsx"></script>
+<script type="text/babel" src="Footer.jsx"></script>
+<script type="text/babel">
+
+const { useState } = React;
+
+// ── Accent Mark ──────────────────────────────────────────────
+function AccentMark({ variant = "growth", size = 56 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 72 72" aria-hidden="true" style={{ filter: "drop-shadow(0 4px 0 rgba(23,59,100,0.18))" }}>
+      <path d="M36 6c10.4 0 20.8 3 28 8.8v19.4c0 15.4-10.4 25.5-28 31.8C18.4 59.7 8 49.6 8 34.2V14.8C15.2 9 25.6 6 36 6Z"
+        fill="#ffde70" stroke="#173B64" strokeWidth="4" strokeLinejoin="round"/>
+      {variant === "chat" ? (
+        <>
+          <path d="M22 20.5h28c3.3 0 6 2.7 6 6v13c0 3.3-2.7 6-6 6H36l-8.8 7.2c-1.4 1.1-3.5.1-3.5-1.7v-5.5H22c-3.3 0-6-2.7-6-6v-13c0-3.3 2.7-6 6-6Z"
+            fill="#F6FAFF" stroke="#173B64" strokeWidth="4" strokeLinejoin="round"/>
+          <path d="M24.5 31h23" stroke="#173B64" strokeWidth="4" strokeLinecap="round"/>
+          <path d="M24.5 39h15" stroke="#173B64" strokeWidth="4" strokeLinecap="round"/>
+        </>
+      ) : variant === "tick" ? (
+        <path d="M22 37.5 31 46.5 49.5 25.5" fill="none" stroke="#173B64" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round"/>
+      ) : (
+        <>
+          <path d="M20 47.5h31" fill="none" stroke="#173B64" strokeWidth="4" strokeLinecap="round"/>
+          <path d="M22 41.5 30.5 34l7 4.5 13-15" fill="none" stroke="#173B64" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M45 23.5h5.5V29" fill="none" stroke="#173B64" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+        </>
+      )}
+    </svg>
+  );
+}
+
+// ── Stats Section ────────────────────────────────────────────
+function StatsSection() {
+  return (
+    <section style={{ width: "min(1180px, calc(100% - 32px))", margin: "0 auto", padding: "120px 0 0", position: "relative", zIndex: 1 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,auto)", gap: "18px", alignItems: "center" }}>
+        <div style={{ display: "grid", gap: "16px", maxWidth: "560px" }}>
+          <p style={{ margin: 0, color: "#7c858d", fontSize: "0.92rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.04em" }}>Target Performance</p>
+          <AccentMark variant="growth" size={52} />
+          <h2 style={{ margin: 0, color: "#173B64", fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "clamp(2rem, 4vw, 3.2rem)", fontWeight: 900, lineHeight: 1.06 }}>
+            For minds that aim beyond the crowd.
+          </h2>
+          <p style={{ margin: 0, color: "#7c858d", fontSize: "1.08rem", lineHeight: 1.6, maxWidth: "480px" }}>
+            Every lesson, test, and AI insight is engineered to push your score into the top percentile — systematically.
+          </p>
+        </div>
+        <div style={{ display: "flex", gap: "16px", flexWrap: "nowrap", alignItems: "flex-start", justifyContent: "flex-end" }}>
+          {[
+            { value: "1560", label: "Top SAT Score", color: "#173B64" },
+            { value: "7.5", label: "IELTS Band", color: "#0F9E6A" },
+            { value: "99th", label: "Percentile", color: "#D97706" },
+          ].map(s => (
+            <div key={s.label} style={{ textAlign: "center" }}>
+              <div style={{ color: s.color, fontSize: "clamp(2.8rem, 5vw, 4.5rem)", fontWeight: 1000, lineHeight: 0.95 }}>{s.value}</div>
+              <div style={{ color: "#5c6670", fontSize: "1rem", fontWeight: 700, marginTop: 6 }}>{s.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── Teachers Section ─────────────────────────────────────────
+function TeachersSection() {
+  return (
+    <section style={{ width: "min(1180px, calc(100% - 32px))", margin: "0 auto", padding: "180px 0 100px", position: "relative", zIndex: 1 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "minmax(340px, 460px) minmax(0, 1fr)", gap: "56px", alignItems: "center" }}>
+        {/* Chat screenshot stack */}
+        <div style={{ position: "relative", width: 440, height: 330, marginTop: 40 }}>
+          <div style={{ position: "absolute", left: 82, top: -30, width: 300, borderRadius: 8, border: "1px solid rgba(23,59,100,0.1)", background: "#f6faff", boxShadow: "0 10px 24px rgba(23,59,100,0.08)", overflow: "hidden", opacity: 0.82 }}>
+            <img src="../../assets/images/screenshots/chat2.png" alt="Chat" style={{ width: "100%", display: "block", filter: "saturate(0.9)" }} />
+          </div>
+          <div style={{ position: "absolute", left: 0, top: 0, width: 300, borderRadius: 8, border: "1px solid rgba(23,59,100,0.1)", background: "#f6faff", boxShadow: "0 24px 54px rgba(23,59,100,0.16)", overflow: "hidden" }}>
+            <img src="../../assets/images/screenshots/chat.png" alt="Chat" style={{ width: "100%", display: "block" }} />
+          </div>
+        </div>
+
+        {/* Copy */}
+        <div style={{ display: "grid", gap: "14px", maxWidth: "500px", justifySelf: "end" }}>
+          <p style={{ margin: 0, color: "#7c858d", fontSize: "0.92rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.04em" }}>Always Around</p>
+          <AccentMark variant="chat" size={52} />
+          <h2 style={{ margin: 0, color: "#173B64", fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, lineHeight: 1.08 }}>
+            Experienced SAT 1510+, IELTS 7.5
+          </h2>
+          <p style={{ margin: 0, color: "#7c858d", fontSize: "1.08rem", lineHeight: 1.6 }}>
+            24/7 ready to answer you on chat. Real teachers, real experience, real support — whenever you need it.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── Books Section ─────────────────────────────────────────────
+function BooksSection() {
+  const books = [
+    { src: "../../assets/images/books/ebrwpanda.png", alt: "EBRW Panda" },
+    { src: "../../assets/images/books/ielts.png", alt: "IELTS" },
+    { src: "../../assets/images/books/mathpanda.png", alt: "Math Panda" },
+    { src: "../../assets/images/books/satguide.png", alt: "SAT Guide" },
+  ];
+  const [center, setCenter] = React.useState(0);
+
+  const positions = books.map((_, i) => {
+    const rel = (i - center + books.length) % books.length;
+    if (rel === 0) return "isCenter";
+    if (rel === 1) return "isRight";
+    if (rel === books.length - 1) return "isLeft";
+    return "isBack";
+  });
+
+  const transforms = {
+    isCenter: "translate(-50%, -50%) scale(1.05) rotateY(0deg)",
+    isLeft:   "translate(-50%, -50%) translateX(-148px) translateY(18px) scale(0.82) rotateY(34deg)",
+    isRight:  "translate(-50%, -50%) translateX(148px) translateY(18px) scale(0.82) rotateY(-34deg)",
+    isBack:   "translate(-50%, -50%) scale(0.72) rotateY(0deg)",
+  };
+  const zIndexes = { isCenter: 4, isLeft: 3, isRight: 3, isBack: 2 };
+  const opacities = { isCenter: 1, isLeft: 0.7, isRight: 1, isBack: 0.06 };
+
+  return (
+    <section style={{ width: "min(1180px, calc(100% - 32px))", margin: "0 auto", padding: "200px 0 100px", position: "relative", zIndex: 1 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 0.9fr) minmax(460px, 1fr)", gap: "34px", alignItems: "center" }}>
+        <div style={{ display: "grid", gap: "14px", maxWidth: "460px" }}>
+          <p style={{ margin: 0, color: "#7c858d", fontSize: "0.92rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.04em" }}>Official Sources</p>
+          <AccentMark variant="tick" size={52} />
+          <h2 style={{ margin: 0, color: "#173B64", fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, lineHeight: 1.08 }}>
+            Real materials from official books and past papers.
+          </h2>
+          <p style={{ margin: 0, color: "#7c858d", fontSize: "1.08rem", lineHeight: 1.65 }}>
+            Study with the same sources serious test takers use when they want reliable practice and cleaner score jumps.
+          </p>
+          <div style={{ display: "flex", gap: "10px", marginTop: "8px" }}>
+            <button
+              onClick={() => setCenter(c => (c - 1 + books.length) % books.length)}
+              style={{ background: "transparent", border: "1px solid #DDE6F0", borderRadius: 999, width: 42, height: 42, cursor: "pointer", fontSize: 16, color: "#173B64", display: "flex", alignItems: "center", justifyContent: "center" }}
+            >←</button>
+            <button
+              onClick={() => setCenter(c => (c + 1) % books.length)}
+              style={{ background: "#173B64", border: "1px solid #173B64", borderRadius: 999, width: 42, height: 42, cursor: "pointer", fontSize: 16, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}
+            >→</button>
+          </div>
+        </div>
+        {/* Book carousel */}
+        <div style={{ height: 460, perspective: 1800, transformStyle: "preserve-3d", position: "relative" }}>
+          {books.map((book, i) => {
+            const pos = positions[i];
+            return (
+              <div
+                key={book.alt}
+                onClick={() => setCenter(i)}
+                style={{
+                  position: "absolute", left: "50%", top: "50%",
+                  width: 220, cursor: "pointer",
+                  zIndex: zIndexes[pos],
+                  opacity: opacities[pos],
+                  transform: transforms[pos],
+                  transition: "transform 760ms cubic-bezier(0.22,1,0.36,1), opacity 760ms cubic-bezier(0.22,1,0.36,1)",
+                }}
+              >
+                <img src={book.src} alt={book.alt} style={{ width: "100%", display: "block", borderRadius: 6, boxShadow: "0 22px 42px rgba(13,29,49,0.18), 18px 0 24px rgba(23,59,100,0.08)" }} />
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── Results Section ───────────────────────────────────────────
+function ResultsSection() {
+  const results = [
+    { exam: "SAT Math", prev: 580, next: 780, max: 800, color: "#2563EB" },
+    { exam: "IELTS Overall", prev: 5.5, next: 7.5, max: 9, color: "#0F9E6A", decimals: 1 },
+  ];
+  return (
+    <section style={{ width: "min(1180px, calc(100% - 32px))", margin: "0 auto", padding: "100px 0 140px", position: "relative", zIndex: 1 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "minmax(0,0.85fr) minmax(0,1fr)", alignItems: "center", gap: "clamp(28px, 4vw, 72px)" }}>
+        <div style={{ display: "grid", gap: "14px", maxWidth: "440px" }}>
+          <p style={{ margin: 0, color: "#7c858d", fontSize: "0.92rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.04em" }}>Score Pushing</p>
+          <AccentMark variant="growth" size={52} />
+          <h2 style={{ margin: 0, color: "#173B64", fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "clamp(2rem, 3.8vw, 3rem)", fontWeight: 900, lineHeight: 1.08 }}>
+            Improve your next score unimaginably with <span style={{ color: "#ffde70", WebkitTextStroke: "1.5px #173B64" }}>Score Rush</span>
+          </h2>
+          <p style={{ margin: 0, color: "#7c858d", fontSize: "1.08rem", lineHeight: 1.65 }}>Put your score report to work.</p>
+        </div>
+        <div style={{ display: "grid", gap: "18px" }}>
+          {results.map(r => (
+            <div key={r.exam} style={{ padding: "20px 24px", borderRadius: 8, background: "rgba(246,250,255,0.9)", border: "1px solid rgba(23,59,100,0.08)", boxShadow: "0 18px 40px rgba(23,59,100,0.08)" }}>
+              <div style={{ color: "#173B64", fontSize: "0.88rem", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: 12 }}>{r.exam}</div>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, alignItems: "center" }}>
+                <div style={{ textAlign: "center" }}>
+                  <div style={{ color: "#9EB3C8", fontSize: "0.78rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.03em", marginBottom: 4 }}>Previous score</div>
+                  <div style={{ color: "#d4687d", fontSize: "clamp(2.2rem, 4vw, 3.2rem)", fontWeight: 1000, lineHeight: 0.95 }}>{r.decimals ? r.prev.toFixed(1) : r.prev}</div>
+                </div>
+                <div style={{ textAlign: "center" }}>
+                  <div style={{ color: "#173B64", fontSize: "0.78rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.03em", marginBottom: 4 }}>Next score</div>
+                  <div style={{ color: r.color, fontSize: "clamp(2.8rem, 5vw, 4.4rem)", fontWeight: 1000, lineHeight: 0.95 }}>{r.decimals ? r.next.toFixed(1) : r.next}</div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── Milestones Section ────────────────────────────────────────
+function MilestonesSection() {
+  const milestones = [
+    { value: "8,000+", label: "SAT-Math Questions" },
+    { value: "6,500+", label: "SAT-EBRW Questions" },
+    { value: "5,200+", label: "IELTS Questions" },
+  ];
+  return (
+    <section style={{ width: "min(1180px, calc(100% - 32px))", margin: "0 auto", padding: "80px 0 80px" }}>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "clamp(32px, 6vw, 100px)", flexWrap: "wrap" }}>
+        {milestones.map(m => (
+          <div key={m.label} style={{ textAlign: "center" }}>
+            <div style={{ color: "#173B64", fontSize: "clamp(2.2rem, 4vw, 3.8rem)", fontWeight: 900, lineHeight: 0.95 }}>{m.value}</div>
+            <div style={{ color: "#7c858d", fontSize: "1rem", fontWeight: 700, marginTop: 8 }}>{m.label}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+// ── Pricing Preview ───────────────────────────────────────────
+function PricingSection() {
+  const [billing, setBilling] = React.useState("monthly");
+  const plans = [
+    { name: "Basic", price: 0, free: true, highlight: false, features: ["5 lessons/month", "10 practice questions/day", "Community access"] },
+    { name: "Plus", price: 79990, free: false, highlight: true, badge: "Most Popular", features: ["Unlimited lessons", "Full test library", "AI score analysis", "Teacher chat"] },
+    { name: "Pro", price: 119990, free: false, highlight: false, badge: "Full Access", features: ["Everything in Plus", "AI Explainer", "Personal study plan", "Certificate"] },
+  ];
+  const discounts = { monthly: 0, quarterly: 0.09, yearly: 0.17 };
+  const discount = discounts[billing];
+
+  return (
+    <section style={{ width: "min(1180px, calc(100% - 32px))", margin: "0 auto", padding: "80px 0 120px" }}>
+      <div style={{ textAlign: "center", marginBottom: 40 }}>
+        <h2 style={{ margin: "0 0 12px", color: "#173B64", fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 900 }}>Choose your plan</h2>
+        <div style={{ display: "inline-flex", gap: 4, background: "#F0F5FC", borderRadius: 999, padding: 4 }}>
+          {["monthly", "quarterly", "yearly"].map(k => (
+            <button key={k} onClick={() => setBilling(k)} style={{ background: billing === k ? "#173B64" : "transparent", color: billing === k ? "#fff" : "#6B7E96", border: "none", borderRadius: 999, padding: "7px 16px", fontSize: 13, fontWeight: 700, cursor: "pointer", fontFamily: "'DM Sans', sans-serif", transition: "all 200ms" }}>
+              {k.charAt(0).toUpperCase() + k.slice(1)}
+              {k === "quarterly" && <span style={{ marginLeft: 4, fontSize: 10, opacity: 0.8 }}>−9%</span>}
+              {k === "yearly" && <span style={{ marginLeft: 4, fontSize: 10, opacity: 0.8 }}>−17%</span>}
+            </button>
+          ))}
+        </div>
+      </div>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
+        {plans.map(p => {
+          const price = p.free ? 0 : Math.round(p.price * (1 - discount));
+          return (
+            <div key={p.name} style={{ background: p.highlight ? "#173B64" : "#fff", border: `1px solid ${p.highlight ? "transparent" : "#DDE6F0"}`, borderRadius: 16, padding: "28px 24px", position: "relative", boxShadow: p.highlight ? "0 24px 50px rgba(23,59,100,0.22)" : "none" }}>
+              {p.badge && (
+                <div style={{ position: "absolute", top: -12, left: "50%", transform: "translateX(-50%)", background: p.highlight ? "#ffde70" : "#F0F5FC", color: p.highlight ? "#173B64" : "#6B7E96", borderRadius: 999, padding: "4px 14px", fontSize: 11, fontWeight: 800 }}>{p.badge}</div>
+              )}
+              <div style={{ color: p.highlight ? "#9EB3C8" : "#9EB3C8", fontSize: 12, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 8 }}>{p.name}</div>
+              <div style={{ marginBottom: 20 }}>
+                {p.free ? (
+                  <span style={{ fontSize: 32, fontWeight: 900, color: p.highlight ? "#fff" : "#173B64" }}>Free</span>
+                ) : (
+                  <>
+                    <span style={{ fontSize: 28, fontWeight: 900, color: p.highlight ? "#fff" : "#173B64" }}>{price.toLocaleString("ru-RU")}</span>
+                    <span style={{ fontSize: 13, color: p.highlight ? "#9EB3C8" : "#9EB3C8", marginLeft: 4 }}>UZS/mo</span>
+                  </>
+                )}
+              </div>
+              <ul style={{ listStyle: "none", padding: 0, margin: "0 0 20px", display: "grid", gap: 8 }}>
+                {p.features.map(f => (
+                  <li key={f} style={{ display: "flex", gap: 8, alignItems: "flex-start", fontSize: 13, color: p.highlight ? "#DDE6F0" : "#6B7E96" }}>
+                    <span style={{ color: p.highlight ? "#ffde70" : "#0F9E6A", fontWeight: 700, flexShrink: 0 }}>✓</span>{f}
+                  </li>
+                ))}
+              </ul>
+              <button style={{ width: "100%", background: p.highlight ? "#ffde70" : "#173B64", color: p.highlight ? "#173B64" : "#fff", border: "none", borderRadius: 12, padding: "11px 16px", fontSize: 14, fontWeight: 700, cursor: "pointer", fontFamily: "'DM Sans', sans-serif" }}>
+                {p.free ? "Get started free" : "Choose " + p.name}
+              </button>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+// ── App ───────────────────────────────────────────────────────
+function App() {
+  const [view, setView] = React.useState("landing");
+
+  const navItems = [
+    { label: "Home", view: "landing" },
+    { label: "SAT", view: "sat" },
+    { label: "IELTS", view: "ielts" },
+    { label: "Pricing", view: "pricing" },
+    { label: "FAQ", view: "faq" },
+    { label: "AP", soon: true },
+  ];
+
+  return (
+    <div style={{ minHeight: "100vh" }}>
+      <LumeaHeader navItems={navItems} currentView={view} onNav={setView} />
+
+      <main style={{ paddingTop: 82 }}>
+        {view === "landing" && (
+          <>
+            <LumeaHero onLogin={() => setView("login")} onCTA={() => setView("sat")} />
+            <StatsSection />
+            <TeachersSection />
+            <BooksSection />
+            <MilestonesSection />
+            <ResultsSection />
+          </>
+        )}
+        {view === "pricing" && <PricingSection />}
+        {(view === "sat" || view === "ielts" || view === "faq") && (
+          <div style={{ width: "min(1180px, calc(100%-32px))", margin: "120px auto", padding: "0 16px", textAlign: "center" }}>
+            <div style={{ fontSize: 48, marginBottom: 16 }}>{view === "sat" ? "📐" : view === "ielts" ? "📝" : "❓"}</div>
+            <div style={{ fontSize: 24, fontWeight: 800, color: "#173B64", marginBottom: 8 }}>{view.toUpperCase()} Page</div>
+            <div style={{ color: "#7c858d" }}>This page is in the full UI kit</div>
+          </div>
+        )}
+      </main>
+
+      <LumeaFooter onNav={setView} onLogin={() => setView("login")} />
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>

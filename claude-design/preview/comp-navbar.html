@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 0; background: #F6FAFF; font-family: 'Plus Jakarta Sans', sans-serif; }
+
+  .navbar {
+    width: 100%; background: #F6FAFF; border-bottom: 1px solid rgba(23,59,100,0.08);
+    padding: 14px 40px; display: grid; grid-template-columns: auto 1fr auto;
+    align-items: center; gap: 24px;
+  }
+  .logo { font-size: 24px; font-weight: 900; color: #173B64; text-decoration: none; letter-spacing: -0.02em; }
+  .nav-links { display: flex; justify-content: center; gap: 24px; align-items: center; }
+  .nav-link { font-size: 14px; font-weight: 600; color: #5f6b76; text-decoration: none; background: none; border: none; cursor: pointer; padding: 0; position: relative; }
+  .nav-link-soon { font-size: 14px; color: #a8b1b8; cursor: default; position: relative; }
+  .soon-label { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); font-size: 7px; font-weight: 800; color: #c5ccd3; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; }
+  .nav-actions { display: flex; gap: 10px; align-items: center; }
+  .nav-util { background: none; border: none; color: #7c858d; font-size: 13px; font-weight: 800; cursor: pointer; padding: 6px 10px; border-radius: 999px; font-family: inherit; }
+  .login-btn { background: #173B64; color: #F6FAFF; border: 1px solid #173B64; border-radius: 999px; padding: 8px 22px; font-size: 14px; font-weight: 800; cursor: pointer; font-family: inherit; }
+
+  /* Scrolled state preview */
+  .navbar-scrolled {
+    margin: 20px auto; width: min(calc(100% - 60px), 800px); background: rgba(246,250,255,0.96);
+    border: 1px solid rgba(23,59,100,0.1); border-radius: 999px; padding: 12px 28px;
+    display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 24px;
+    box-shadow: none;
+  }
+
+  .label { font-size: 9px; font-weight: 800; color: #9EB3C8; text-transform: uppercase; letter-spacing: 0.1em; padding: 12px 20px 4px; }
+</style>
+</head>
+<body>
+  <div class="label">Default (full-width)</div>
+  <nav class="navbar">
+    <a class="logo" href="#">Lumea</a>
+    <div class="nav-links">
+      <button class="nav-link">SAT</button>
+      <button class="nav-link">IELTS</button>
+      <button class="nav-link">Pricing</button>
+      <button class="nav-link">FAQ</button>
+      <span class="nav-link-soon" style="position:relative;padding-bottom:10px">AP<span class="soon-label">Soon</span></span>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-util">ENG</button>
+      <button class="nav-util">☀</button>
+      <button class="login-btn">Log in</button>
+    </div>
+  </nav>
+
+  <div class="label">Scrolled (pill / floating)</div>
+  <nav class="navbar-scrolled">
+    <a class="logo" href="#" style="font-size:20px;font-weight:900;color:#173B64;text-decoration:none;">Lumea</a>
+    <div class="nav-links">
+      <button class="nav-link">SAT</button>
+      <button class="nav-link">IELTS</button>
+      <button class="nav-link">Pricing</button>
+      <button class="nav-link">FAQ</button>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-util">ENG</button>
+      <button class="login-btn" style="padding:7px 18px;font-size:13px">Log in</button>
+    </div>
+  </nav>
+</body>
+</html>

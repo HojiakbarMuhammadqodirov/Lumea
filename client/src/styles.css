@@ -1,14 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
 :root {
-  --bg-1: #dff0ff;
-  --bg-2: #8bc2ff;
-  --bg-3: #0d4f9c;
-  --glass: rgba(255, 255, 255, 0.22);
-  --glass-strong: rgba(255, 255, 255, 0.32);
-  --glass-line: rgba(255, 255, 255, 0.34);
-  --ink: #08355f;
+  /* ── Brand Blues ── */
+  --color-navy:         #173B64;
+  --color-navy-deep:    #0F2746;
+  --color-navy-dim:     #08355f;
+  --color-navy-dark:    #040E1C;
+  --color-blue-accent:  #2563EB;
+  --color-blue-mid:     #2762C0;
+  --color-blue-dim:     rgba(37, 99, 235, 0.09);
+  --color-blue-border:  rgba(37, 99, 235, 0.18);
+  --color-blue-soft:    #8bc2ff;
+  --color-blue-bg1:     #dff0ff;
+  --color-blue-bg3:     #0d4f9c;
+
+  /* ── Yellow Accent (3 stops) ── */
+  --color-yellow:       #ffde70;
+  --color-yellow-light: #FFF3B0;
+  --color-yellow-deep:  #F5C400;
+
+  /* ── Semantic Status ── */
+  --color-green:        #0F9E6A;
+  --color-green-dim:    rgba(15, 158, 106, 0.09);
+  --color-green-border: rgba(15, 158, 106, 0.2);
+  --color-purple:       #6D28D9;
+  --color-purple-dim:   rgba(109, 40, 217, 0.08);
+  --color-amber:        #D97706;
+  --color-amber-dim:    rgba(217, 119, 6, 0.09);
+  --color-red:          #DC2626;
+  --color-red-dim:      rgba(220, 38, 38, 0.09);
+  --color-danger:       #bf2c55;
+
+  /* ── Neutrals ── */
+  --color-bg-app:       #F0F5FC;
+  --color-bg-public:    #F6FAFF;
+  --color-card-white:   #FFFFFF;
+  --color-card-tinted:  #F0F5FC;
+  --color-border:       #DDE6F0;
+  --color-border-soft:  rgba(23, 59, 100, 0.08);
+  --color-border-mid:   rgba(23, 59, 100, 0.1);
+  --color-text:         #173B64;
+  --color-text-bright:  #0F2746;
+  --color-text-sub:     #4A6580;
+  --color-muted:        #6B7E96;
+  --color-hint:         #9EB3C8;
+  --color-nav-muted:    #7c858d;
+  --color-nav-dim:      #5c6670;
+
+  /* ── Glass ── */
+  --color-glass:        rgba(255, 255, 255, 0.22);
+  --color-glass-strong: rgba(255, 255, 255, 0.32);
+  --color-glass-line:   rgba(255, 255, 255, 0.34);
+
+  /* ── Tag Colors ── */
+  --tag-blue-bg:        rgba(37, 99, 235, 0.09);
+  --tag-blue-text:      #1D4ED8;
+  --tag-green-bg:       rgba(15, 158, 106, 0.09);
+  --tag-green-text:     #065F46;
+  --tag-purple-bg:      rgba(109, 40, 217, 0.08);
+  --tag-purple-text:    #5B21B6;
+  --tag-amber-bg:       rgba(217, 119, 6, 0.09);
+  --tag-amber-text:     #92400E;
+  --tag-red-bg:         rgba(220, 38, 38, 0.09);
+  --tag-red-text:       #991B1B;
+  --tag-gray-bg:        #EEF4FB;
+  --tag-gray-text:      #6B7E96;
+
+  /* ── Semantic Aliases ── */
+  --bg-page:            var(--color-bg-app);
+  --bg-page-public:     var(--color-bg-public);
+  --bg-card:            var(--color-card-white);
+  --bg-card-2:          var(--color-card-tinted);
+  --fg-1:               var(--color-text);
+  --fg-2:               var(--color-text-sub);
+  --fg-3:               var(--color-muted);
+  --fg-4:               var(--color-hint);
+  --fg-link:            var(--color-blue-accent);
+  --fg-danger:          var(--color-red);
+  --border-default:     var(--color-border);
+  --border-soft:        var(--color-border-soft);
+  --btn-primary-bg:     var(--color-navy);
+  --btn-primary-hover:  var(--color-navy-deep);
+  --btn-primary-text:   #FFFFFF;
+  --accent:             var(--color-yellow);
+  --focus-ring:         var(--color-blue-accent);
+
+  /* ── Typography ── */
+  --font-sans:          'DM Sans', 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+  --font-marketing:     'Plus Jakarta Sans', 'Trebuchet MS', 'Segoe UI', Arial, sans-serif;
+  --text-2xs:           0.46rem;
+  --text-xs:            0.75rem;
+  --text-sm:            0.875rem;
+  --text-base:          1rem;
+  --text-lg:            1.08rem;
+  --text-xl:            1.12rem;
+  --text-2xl:           1.35rem;
+  --text-3xl:           2rem;
+  --text-hero:          clamp(2rem, 4.4vw, 3.6rem);
+  --text-display:       clamp(2.9rem, 6vw, 5.6rem);
+  --weight-regular:     400;
+  --weight-medium:      500;
+  --weight-semibold:    600;
+  --weight-bold:        700;
+  --weight-extrabold:   800;
+  --weight-black:       900;
+  --leading-tight:      1.06;
+  --leading-snug:       1.08;
+  --leading-normal:     1.5;
+  --leading-relaxed:    1.6;
+  --tracking-wide:      0.03em;
+  --tracking-wider:     0.04em;
+  --tracking-widest:    0.1em;
+
+  /* ── Spacing ── */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-16:  64px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-pill: 999px;
+  --container-max: 1180px;
+  --container: min(1180px, calc(100% - 32px));
+
+  /* ── Shadows ── */
+  --shadow-card-public: 0 18px 40px rgba(23, 59, 100, 0.08);
+  --shadow-card-modal:  0 18px 50px rgba(7, 49, 94, 0.18);
+  --shadow-nav:         0 10px 20px rgba(23, 59, 100, 0.18);
+  --shadow-book:        0 22px 42px rgba(13, 29, 49, 0.18), 18px 0 24px rgba(23, 59, 100, 0.08);
+
+  /* Legacy aliases kept for compatibility */
+  --bg-1: var(--color-blue-bg1);
+  --bg-2: var(--color-blue-soft);
+  --bg-3: var(--color-blue-bg3);
+  --dark-blue: var(--color-navy-dark);
+  --yellow-light: var(--color-yellow-light);
+  --yellow-base: var(--color-yellow);
+  --yellow-deep: var(--color-yellow-deep);
+  --glass: var(--color-glass);
+  --glass-strong: var(--color-glass-strong);
+  --glass-line: var(--color-glass-line);
+  --ink: var(--color-navy-dim);
   --ink-soft: #376b99;
-  --danger: #bf2c55;
-  --shadow: 0 18px 50px rgba(7, 49, 94, 0.18);
+  --danger: var(--color-danger);
+  --shadow: var(--shadow-card-modal);
+
+  /* ── Animation ── */
+  --ease-smooth:    cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-standard:  cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast:  180ms;
+  --duration-normal: 220ms;
+  --duration-slow:  650ms;
+  --duration-nav:   960ms;
 }
 
 *,
@@ -32,7 +184,7 @@ body {
 
 body {
   margin: 0;
-  font-family: "Soleil", "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-sans);
   color: var(--ink);
   background:
     radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), transparent 24%),
@@ -56,6 +208,64 @@ body {
     linear-gradient(180deg, #F6FAFF 0%, #F6FAFF 62%, #eaf2f8 100%);
 }
 
+.publicThemeRoot,
+.examPage,
+.pricingPage,
+.faqPage,
+.publicAuthPage {
+  position: relative;
+  isolation: isolate;
+}
+
+.publicAtmosphere {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.publicBackdropOrb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(6px);
+  opacity: 0.7;
+}
+
+.publicBackdropOrbOne {
+  width: 28rem;
+  height: 28rem;
+  top: -9rem;
+  left: -6rem;
+  background: radial-gradient(circle, rgba(255, 223, 128, 0.48) 0%, rgba(255, 223, 128, 0) 72%);
+}
+
+.publicBackdropOrbTwo {
+  width: 24rem;
+  height: 24rem;
+  top: 12rem;
+  right: -5rem;
+  background: radial-gradient(circle, rgba(71, 132, 208, 0.26) 0%, rgba(71, 132, 208, 0) 74%);
+}
+
+.publicBackdropOrbThree {
+  width: 22rem;
+  height: 22rem;
+  bottom: 8rem;
+  left: 22%;
+  background: radial-gradient(circle, rgba(23, 59, 100, 0.14) 0%, rgba(23, 59, 100, 0) 76%);
+}
+
+.publicBackdropGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(23, 59, 100, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 59, 100, 0.035) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), transparent 85%);
+}
+
 .publicAuthWrap {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
@@ -66,7 +276,7 @@ body {
   width: 100%;
   max-width: 100%;
   color: #173B64;
-  font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+  font-family: var(--font-marketing);
   position: relative;
   overflow-x: clip;
   overflow-y: visible;
@@ -144,7 +354,7 @@ body {
 
 .landingLogo {
   color: #173B64;
-  font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+  font-family: var(--font-marketing);
   font-size: 2rem;
   font-weight: 900;
   line-height: 1;
@@ -554,14 +764,14 @@ body {
   display: grid;
   grid-template-columns: minmax(340px, 460px) minmax(0, 1fr);
   gap: 56px;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .landingChatShotStack {
   position: relative;
   width: 455px;
   height: 348px;
-  margin-top: 50px;
+  margin-top: 0;
 }
 
 .landingChatShot {
@@ -1177,10 +1387,18 @@ body {
   min-height: 100vh;
   padding: 24px 0 48px;
   color: #173B64;
-  font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+  font-family: var(--font-marketing);
   background:
     radial-gradient(circle at 18% 12%, rgba(23, 59, 100, 0.08), transparent 24%),
     linear-gradient(180deg, #F6FAFF 0%, #f1f6fb 100%);
+}
+
+.publicAuthPage > :not(.publicAtmosphere),
+.examPage > :not(.publicAtmosphere),
+.pricingPage > :not(.publicAtmosphere),
+.faqPage > :not(.publicAtmosphere) {
+  position: relative;
+  z-index: 1;
 }
 
 .authPageNavbar {
@@ -1195,6 +1413,12 @@ body {
   background: rgba(246, 250, 255, 0.96);
   border: 1px solid rgba(23, 59, 100, 0.1);
   box-shadow: 0 18px 44px rgba(23, 59, 100, 0.12);
+}
+
+.authPageNavbarActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .authPageLogo {
@@ -1264,7 +1488,7 @@ body {
   display: inline-grid;
   grid-template-columns: repeat(2, minmax(132px, 1fr));
   gap: 6px;
-  border-radius: 999px;
+  border-radius: 18px;
   background: rgba(246, 250, 255, 0.96);
   border: 1px solid rgba(23, 59, 100, 0.08);
   box-shadow:
@@ -1278,6 +1502,7 @@ body {
   color: #6f7c88;
   background: transparent;
   border: 0;
+  border-radius: 12px;
   box-shadow: none;
   font-weight: 800;
 }
@@ -1293,6 +1518,7 @@ body {
   color: #173B64;
   background: #F6FAFF;
   border: 1px solid rgba(23, 59, 100, 0.08);
+  border-radius: 12px;
   box-shadow: 0 10px 22px rgba(23, 59, 100, 0.08);
 }
 
@@ -1503,21 +1729,21 @@ button,
 input,
 select,
 .modalCard {
-  backdrop-filter: blur(10px) saturate(130%);
-  -webkit-backdrop-filter: blur(10px) saturate(130%);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .hero,
 .card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.18));
-  border: 1px solid var(--glass-line);
-  box-shadow: var(--shadow);
+  background: #ffffff;
+  border: 1px solid #DDE6F0;
+  box-shadow: none;
 }
 
 .hero,
 .card,
 .cardSection {
-  border-radius: 28px;
+  border-radius: 16px;
   padding: 20px;
 }
 
@@ -1589,58 +1815,52 @@ button,
   justify-content: center;
   gap: 8px;
   appearance: none;
-  border: 1px solid rgba(255, 255, 255, 0.42);
-  border-radius: 18px;
-  padding: 11px 16px;
-  color: #F6FAFF;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.1)),
-    linear-gradient(135deg, rgba(13, 79, 156, 0.88), rgba(32, 122, 215, 0.72));
+  border: none;
+  border-radius: 12px;
+  padding: 9px 16px;
+  color: #ffffff;
+  background: #173B64;
   cursor: pointer;
-  font-weight: 700;
-  transition:
-    transform 160ms ease,
-    box-shadow 160ms ease,
-    background 160ms ease,
-    border-color 160ms ease;
-  box-shadow: 0 12px 28px rgba(13, 79, 156, 0.22);
+  font-weight: 600;
+  font-size: 13px;
+  transition: background 150ms ease, opacity 150ms ease;
+  box-shadow: none;
   font-family: inherit;
 }
 
 button:hover,
 .menu:hover {
-  transform: translateY(-1px) scale(1.01);
-  box-shadow: 0 16px 34px rgba(13, 79, 156, 0.28);
-  border-color: rgba(255, 255, 255, 0.66);
+  background: #0F2746;
+  transform: none;
+  box-shadow: none;
 }
 
 button:active,
 .menu:active {
-  transform: translateY(1px) scale(0.985);
-  box-shadow: 0 8px 16px rgba(13, 79, 156, 0.18);
+  background: #0A1E35;
+  transform: none;
+  box-shadow: none;
 }
 
 button:disabled {
   opacity: 0.45;
   cursor: not-allowed;
-  transform: none;
 }
 
 .menu.active {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.12)),
-    linear-gradient(135deg, rgba(7, 49, 94, 0.92), rgba(13, 79, 156, 0.78));
+  background: #0F2746;
 }
 
 .ghost {
-  color: var(--ink);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.18));
+  color: #173B64;
+  background: #ffffff;
+  border: 1px solid #DDE6F0 !important;
+  box-shadow: none !important;
 }
 
 .secondary {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.08)),
-    linear-gradient(135deg, rgba(43, 119, 191, 0.74), rgba(103, 182, 255, 0.58));
+  background: #173B64;
+  color: #ffffff;
 }
 
 .danger {
@@ -2299,11 +2519,11 @@ select:focus {
 .lessonStepCard,
 .learningSlideCard,
 .dashboardNavItem {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.36), rgba(255, 255, 255, 0.18));
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(9px) saturate(130%);
-  -webkit-backdrop-filter: blur(9px) saturate(130%);
+  background: #ffffff;
+  border: 1px solid #DDE6F0;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .dashboardSidebar,
@@ -2312,7 +2532,7 @@ select:focus {
 .lessonHeroCard,
 .lessonStepCard,
 .learningSlideCard {
-  border-radius: 28px;
+  border-radius: 16px;
 }
 
 .dashboardSidebar {
@@ -2357,15 +2577,13 @@ select:focus {
 
 .dashboardNavItem {
   justify-content: flex-start;
-  color: var(--ink);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0.2));
+  color: #6B7E96;
+  background: transparent;
 }
 
 .dashboardNavItem.active {
   color: #F6FAFF;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.08)),
-    linear-gradient(135deg, #5da8f4, #7fc8ff);
+  background: #173B64;
 }
 
 .dashboardContent {
@@ -5063,7 +5281,7 @@ select:focus {
   min-height: 100vh;
   width: 100%;
   color: #173B64;
-  font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+  font-family: var(--font-marketing);
   position: relative;
   overflow-x: clip;
   background: linear-gradient(180deg, #F6FAFF 0%, #F6FAFF 58%, #eaf2f8 100%);
@@ -5305,14 +5523,14 @@ select:focus {
 .satQGAxisLbl {
   font-size: 12px;
   fill: #7c858d;
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: var(--font-marketing);
   font-weight: 700;
 }
 
 .satQGTick {
   font-size: 9px;
   fill: #a8b1b8;
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: var(--font-marketing);
 }
 
 .satQGParabola {
@@ -5370,7 +5588,7 @@ select:focus {
 .satQGPtLbl {
   font-size: 9.5px;
   fill: #173B64;
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: var(--font-marketing);
   font-weight: 700;
   opacity: 0;
 }
@@ -5440,7 +5658,7 @@ select:focus {
 
 .ieltsBandEndLbl {
   font-size: 9.5px;
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: var(--font-marketing);
   font-weight: 700;
 }
 
@@ -7107,7 +7325,7 @@ select:focus {
   font-size: 13px;
   font-weight: 700;
   fill: #173B64;
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: var(--font-marketing);
 }
 
 .ieltsRGGrid {
@@ -7123,7 +7341,7 @@ select:focus {
 .ieltsRGTick {
   font-size: 9px;
   fill: #9CA3AF;
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: var(--font-marketing);
 }
 
 .ieltsRGLine {
@@ -7148,7 +7366,7 @@ select:focus {
 .ieltsRGLegendTxt {
   font-size: 9.5px;
   fill: #5c6670;
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: var(--font-marketing);
   font-weight: 700;
 }
 
@@ -7599,7 +7817,7 @@ select:focus {
   min-height: 100vh;
   width: 100%;
   background: linear-gradient(180deg, #F6FAFF 0%, #EAF2F8 100%);
-  font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+  font-family: var(--font-marketing);
   color: #173B64;
   overflow-x: clip;
 }
@@ -8019,7 +8237,7 @@ select:focus {
   min-height: 100vh;
   width: 100%;
   background: #F6FAFF;
-  font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+  font-family: var(--font-marketing);
   color: #173B64;
   overflow-x: clip;
 }
@@ -8283,6 +8501,146 @@ select:focus {
   margin-top: 100px;
 }
 
+body[data-public-theme="dark"] {
+  background:
+    radial-gradient(circle at top left, rgba(55, 114, 187, 0.26), transparent 24%),
+    radial-gradient(circle at 88% 8%, rgba(248, 188, 65, 0.14), transparent 18%),
+    linear-gradient(145deg, #09172a 0%, #0b1f38 42%, #102947 100%);
+}
+
+body[data-public-theme="dark"] .publicContainer,
+body[data-public-theme="dark"] .pricingPage,
+body[data-public-theme="dark"] .faqPage,
+body[data-public-theme="dark"] .examPage,
+body[data-public-theme="dark"] .publicAuthPage {
+  background:
+    linear-gradient(180deg, rgba(9, 23, 42, 0.98) 0%, rgba(10, 28, 49, 0.98) 45%, rgba(13, 36, 60, 0.98) 100%);
+  color: #e6eff8;
+}
+
+body[data-public-theme="dark"] .publicBackdropGrid {
+  background-image:
+    linear-gradient(rgba(173, 203, 235, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(173, 203, 235, 0.06) 1px, transparent 1px);
+}
+
+body[data-public-theme="dark"] .floatingBackgroundPhoto {
+  filter: drop-shadow(0 18px 28px rgba(5, 10, 18, 0.45));
+}
+
+body[data-public-theme="dark"] .landingNavbar,
+body[data-public-theme="dark"] .landingNavbarScrolled,
+body[data-public-theme="dark"] .authPageNavbar,
+body[data-public-theme="dark"] .pricingCard,
+body[data-public-theme="dark"] .pricingBillingToggle,
+body[data-public-theme="dark"] .faqTopicNavBtn,
+body[data-public-theme="dark"] .faqAccordionItem,
+body[data-public-theme="dark"] .faqTopicShell,
+body[data-public-theme="dark"] .examHeroStats,
+body[data-public-theme="dark"] .satGraphCard,
+body[data-public-theme="dark"] .ieltsChartCard,
+body[data-public-theme="dark"] .examTimerCard,
+body[data-public-theme="dark"] .examScoreInputCard,
+body[data-public-theme="dark"] .examPlanCard,
+body[data-public-theme="dark"] .examRegShell,
+body[data-public-theme="dark"] .testViewerShell,
+body[data-public-theme="dark"] .publicAuthPage .authModeTabs,
+body[data-public-theme="dark"] .publicAuthPage .authStandaloneCard,
+body[data-public-theme="dark"] .publicAuthPage .authChoiceCard {
+  background: rgba(10, 27, 47, 0.82);
+  border-color: rgba(160, 192, 225, 0.16);
+  box-shadow:
+    0 24px 48px rgba(3, 10, 20, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+body[data-public-theme="dark"] .landingLogo,
+body[data-public-theme="dark"] .landingHeroTitle,
+body[data-public-theme="dark"] .pricingHeroTitle,
+body[data-public-theme="dark"] .faqHeroTitle,
+body[data-public-theme="dark"] .faqTopicTitle,
+body[data-public-theme="dark"] .examHeroTitle,
+body[data-public-theme="dark"] .examTopicH2,
+body[data-public-theme="dark"] .examScoreH2,
+body[data-public-theme="dark"] .examRegH2,
+body[data-public-theme="dark"] .examCarouselH2,
+body[data-public-theme="dark"] .examTestsH2,
+body[data-public-theme="dark"] .examMockH2,
+body[data-public-theme="dark"] .publicAuthIntro h1,
+body[data-public-theme="dark"] .publicAuthPage .authStandaloneCard h2,
+body[data-public-theme="dark"] .pricingCardAmount,
+body[data-public-theme="dark"] .examHeroStatNum,
+body[data-public-theme="dark"] .testViewerTitle {
+  color: #f3f8fd;
+}
+
+body[data-public-theme="dark"] .landingNavLink,
+body[data-public-theme="dark"] .landingUtilityButton,
+body[data-public-theme="dark"] .landingSectionLabel,
+body[data-public-theme="dark"] .landingHeroSubtitle,
+body[data-public-theme="dark"] .pricingHeroSub,
+body[data-public-theme="dark"] .faqHeroSub,
+body[data-public-theme="dark"] .examHeroDesc,
+body[data-public-theme="dark"] .examTopicDesc,
+body[data-public-theme="dark"] .examScoreDesc,
+body[data-public-theme="dark"] .examRegDesc,
+body[data-public-theme="dark"] .examCarouselDesc,
+body[data-public-theme="dark"] .examTestsDesc,
+body[data-public-theme="dark"] .examMockDesc,
+body[data-public-theme="dark"] .faqAccordionA,
+body[data-public-theme="dark"] .pricingCardFeature,
+body[data-public-theme="dark"] .pricingCardPeriod,
+body[data-public-theme="dark"] .pricingCardTotal,
+body[data-public-theme="dark"] .publicAuthIntro p,
+body[data-public-theme="dark"] .publicAuthPage .authFieldLabel,
+body[data-public-theme="dark"] .publicAuthPage .authProgressCompact,
+body[data-public-theme="dark"] .publicAuthPage .authStepNote,
+body[data-public-theme="dark"] .publicAuthPage .hint {
+  color: #b6c6d8 !important;
+}
+
+body[data-public-theme="dark"] .landingNavLink::after,
+body[data-public-theme="dark"] .faqHeroEmail,
+body[data-public-theme="dark"] .faqAccordionQ,
+body[data-public-theme="dark"] .pricingCardCta--ghost,
+body[data-public-theme="dark"] .pricingCardCta--dark,
+body[data-public-theme="dark"] .examRegNavBtn,
+body[data-public-theme="dark"] .publicAuthPage .authStandaloneCard .ghost {
+  border-color: rgba(196, 218, 242, 0.18);
+}
+
+body[data-public-theme="dark"] .landingLoginButton,
+body[data-public-theme="dark"] .landingHeroPrimary,
+body[data-public-theme="dark"] .pricingCardCta--dark,
+body[data-public-theme="dark"] .publicAuthPage .authStandaloneCard button:not(.ghost):not(.authModeTab) {
+  background: #f5b546;
+  border-color: #f5b546;
+  color: #10233c;
+  box-shadow: 0 14px 30px rgba(245, 181, 70, 0.22);
+}
+
+body[data-public-theme="dark"] .landingLoginButton:hover,
+body[data-public-theme="dark"] .landingHeroPrimary:hover,
+body[data-public-theme="dark"] .pricingCardCta--dark:hover,
+body[data-public-theme="dark"] .publicAuthPage .authStandaloneCard button:not(.ghost):not(.authModeTab):hover {
+  background: #fff4da;
+  border-color: #fff4da;
+  color: #0d223b;
+}
+
+body[data-public-theme="dark"] .publicAuthPage .authFieldLabel input,
+body[data-public-theme="dark"] .publicAuthPage .authFieldLabel select,
+body[data-public-theme="dark"] .publicAuthPage .authStandaloneCard input,
+body[data-public-theme="dark"] .publicAuthPage .authStandaloneCard select,
+body[data-public-theme="dark"] .examTimerDatePicker {
+  background: rgba(6, 18, 32, 0.86);
+  color: #f3f8fd;
+  border-color: rgba(181, 208, 237, 0.18);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
 /* Responsive */
 
 @media (max-width: 600px) {
@@ -8297,5 +8655,3 @@ select:focus {
     padding-top: 56px;
   }
 }
-/* ── Tailwind v4 ── */
-@import "tailwindcss";

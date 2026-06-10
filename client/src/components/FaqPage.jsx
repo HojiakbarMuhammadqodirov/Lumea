@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import PublicHeader from "./PublicHeader";
 import PublicFooter from "./PublicFooter";
+import PublicAtmosphere from "./PublicAtmosphere";
 import { useLanguage } from "../context/LanguageContext";
 import { translations } from "../i18n/translations";
 
@@ -106,7 +107,7 @@ function TopicSection({ topic, index, topicLabel }) {
 
 // ── Main component ─────────────────────────────────────────────────────────
 
-export default function FaqPage({ onLoginClick, onNavClick }) {
+export default function FaqPage({ onLoginClick, onNavClick, currentTheme, onToggleTheme }) {
   const { lang } = useLanguage();
   const t = translations[lang].faq;
 
@@ -120,7 +121,8 @@ export default function FaqPage({ onLoginClick, onNavClick }) {
 
   return (
     <section className="faqPage">
-      <PublicHeader onLoginClick={onLoginClick} onNavClick={onNavClick} currentView="faq" />
+      <PublicAtmosphere variant="faq" />
+      <PublicHeader onLoginClick={onLoginClick} onNavClick={onNavClick} currentView="faq" currentTheme={currentTheme} onToggleTheme={onToggleTheme} />
 
       {/* ── Hero ── */}
       <div className="faqHero" data-aos="fade-up">

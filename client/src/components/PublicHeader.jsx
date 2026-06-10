@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { translations } from "../i18n/translations";
 
-export default function PublicHeader({ onLoginClick, onNavClick, currentView }) {
+export default function PublicHeader({ onLoginClick, onNavClick, currentView, currentTheme = "light", onToggleTheme }) {
   const { lang, toggle } = useLanguage();
   const t = translations[lang].header;
 
@@ -13,8 +13,6 @@ export default function PublicHeader({ onLoginClick, onNavClick, currentView }) 
     { label: t.nav.faq,    view: "faq" },
     { label: t.nav.ap,     soon: true },
   ];
-
-  const [isDarkIcon, setIsDarkIcon] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -28,10 +26,12 @@ export default function PublicHeader({ onLoginClick, onNavClick, currentView }) 
     <nav className={isScrolled ? "landingNavbar landingNavbarScrolled" : "landingNavbar"} aria-label="Main navigation">
       {currentView && currentView !== "landing" ? (
         <button className="landingLogo" style={{ background:"none",border:"none",cursor:"pointer",padding:0 }} onClick={() => onNavClick?.("landing")} aria-label="Lumea home">
-          Lumea
+          <img src="/images/logopng.png" alt="Lumea" style={{ height: "36px", display: "block" }} />
         </button>
       ) : (
-        <a className="landingLogo" href="#top" aria-label="Lumea home">Lumea</a>
+        <a className="landingLogo" href="#top" aria-label="Lumea home">
+          <img src="/images/logopng.png" alt="Lumea" style={{ height: "36px", display: "block" }} />
+        </a>
       )}
 
       <div className="landingNavLinks">
@@ -68,10 +68,10 @@ export default function PublicHeader({ onLoginClick, onNavClick, currentView }) 
         </button>
 
         <button
-          className={isDarkIcon ? "landingUtilityButton landingThemeButton dark" : "landingUtilityButton landingThemeButton"}
+          className={currentTheme === "dark" ? "landingUtilityButton landingThemeButton dark" : "landingUtilityButton landingThemeButton"}
           type="button"
-          onClick={() => setIsDarkIcon((current) => !current)}
-          aria-label={isDarkIcon ? "Switch to light mode" : "Switch to dark mode"}
+          onClick={onToggleTheme}
+          aria-label={currentTheme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
         >
           <span className="themeIconWrap" aria-hidden="true">
             <svg className="themeIcon themeIconSun" viewBox="0 0 24 24">

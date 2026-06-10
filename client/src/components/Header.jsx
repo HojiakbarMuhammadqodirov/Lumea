@@ -2,7 +2,7 @@ export default function Header({ user, onLogout }) {
   return (
     <header className="hero">
       <div>
-        <p className="eyebrow">Learnova</p>
+        <p className="eyebrow">Lumea</p>
         <h1>SAT + IELTS Study Platform</h1>
         <p className="subtext">
           Structured study paths, teacher assignment, searchable admin records, and program-based chat.

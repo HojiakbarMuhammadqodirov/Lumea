@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 20px; background: #F0F5FC; font-family: 'DM Sans', sans-serif; }
+  .row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; }
+  .tag { display: inline-flex; align-items: center; padding: 3px 10px; border-radius: 999px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+  .badge-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 5px; }
+  .streak-dot { width: 8px; height: 8px; border-radius: 50%; }
+  .group-label { font-size: 9px; font-weight: 800; color: #9EB3C8; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; margin-top: 14px; }
+  .group-label:first-child { margin-top: 0; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid; border-radius: 12px; padding: 5px 12px; font-size: 12px; font-weight: 600; }
+  .pbar-track { height: 5px; background: #DDE6F0; border-radius: 999px; overflow: hidden; width: 120px; }
+  .pbar-fill { height: 5px; border-radius: 999px; }
+  .iconbox { width: 34px; height: 34px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; }
+  .avatar { width: 32px; height: 32px; border-radius: 50%; background: #173B64; display: inline-flex; align-items: center; justify-content: center; color: #fff; font-size: 11px; font-weight: 700; }
+  .streak-row { display: flex; gap: 4px; align-items: center; }
+</style>
+</head>
+<body>
+  <div class="group-label">Tags / Badges</div>
+  <div class="row">
+    <span class="tag" style="background:rgba(37,99,235,0.09); color:#1D4ED8">SAT</span>
+    <span class="tag" style="background:rgba(15,158,106,0.09); color:#065F46">IELTS</span>
+    <span class="tag" style="background:rgba(109,40,217,0.08); color:#5B21B6">AP</span>
+    <span class="tag" style="background:rgba(217,119,6,0.09); color:#92400E">Faol</span>
+    <span class="tag" style="background:#EEF4FB; color:#6B7E96">Baza</span>
+    <span class="tag" style="background:#DC2626; color:white">3 new</span>
+  </div>
+
+  <div class="group-label">Topbar Chips</div>
+  <div class="row">
+    <div class="chip" style="color:#f97316; background:#fff7ed; border-color:#fed7aa">🔥 12 kun</div>
+    <div class="chip" style="color:#2563EB; background:#eff6ff; border-color:#bfdbfe">⭐ #3 Namangan</div>
+  </div>
+
+  <div class="group-label">Icon Boxes</div>
+  <div class="row">
+    <div class="iconbox" style="background:rgba(37,99,235,0.09); color:#2563EB">∑</div>
+    <div class="iconbox" style="background:rgba(15,158,106,0.09); color:#0F9E6A">✓</div>
+    <div class="iconbox" style="background:rgba(109,40,217,0.08); color:#6D28D9">AP</div>
+    <div class="iconbox" style="background:rgba(217,119,6,0.09); color:#D97706">★</div>
+  </div>
+
+  <div class="group-label">Avatars</div>
+  <div class="row">
+    <div class="avatar">AK</div>
+    <div class="avatar" style="width:24px;height:24px;font-size:8px">JD</div>
+    <div class="avatar" style="width:40px;height:40px;font-size:14px">MS</div>
+  </div>
+
+  <div class="group-label">Progress Bars</div>
+  <div class="row">
+    <div>
+      <div style="font-size:10px;color:#9EB3C8;margin-bottom:4px">68% — SAT Math</div>
+      <div class="pbar-track"><div class="pbar-fill" style="width:68%; background:#2563EB"></div></div>
+    </div>
+    <div>
+      <div style="font-size:10px;color:#9EB3C8;margin-bottom:4px">42% — IELTS</div>
+      <div class="pbar-track"><div class="pbar-fill" style="width:42%; background:#0F9E6A"></div></div>
+    </div>
+    <div>
+      <div style="font-size:10px;color:#9EB3C8;margin-bottom:4px">24% — AP</div>
+      <div class="pbar-track"><div class="pbar-fill" style="width:24%; background:#DC2626"></div></div>
+    </div>
+  </div>
+
+  <div class="group-label">Streak Dots</div>
+  <div class="streak-row">
+    <div class="streak-dot" style="background:#173B64"></div>
+    <div class="streak-dot" style="background:#173B64"></div>
+    <div class="streak-dot" style="background:#173B64"></div>
+    <div class="streak-dot" style="background:#173B64"></div>
+    <div class="streak-dot" style="background:#DDE6F0"></div>
+    <div class="streak-dot" style="background:#DDE6F0"></div>
+    <div class="streak-dot" style="background:#DDE6F0"></div>
+    <span style="font-size:10px;color:#9EB3C8;margin-left:6px">4/7</span>
+  </div>
+</body>
+</html>

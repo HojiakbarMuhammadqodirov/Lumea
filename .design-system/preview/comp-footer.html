@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 20px; background: #F6FAFF; font-family: 'Plus Jakarta Sans', sans-serif; }
+  .footer {
+    background: #F6FAFF; border-top: 1px solid rgba(23,59,100,0.1);
+    padding: 32px 0 22px;
+  }
+  .shell { max-width: 700px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1.2fr 0.7fr 0.7fr; gap: 24px; }
+  .logo { font-size: 20px; font-weight: 900; color: #173B64; display: block; margin-bottom: 10px; }
+  .brand-desc { font-size: 13px; color: #7c858d; line-height: 1.7; margin: 0; }
+  .col-title { font-size: 9px; font-weight: 800; color: #9EB3C8; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
+  .footer-link { display: block; font-size: 13px; color: #7c858d; text-decoration: none; font-weight: 700; margin-bottom: 6px; }
+  .footer-btn { background: #173B64; color: #F6FAFF; border: 1px solid #173B64; border-radius: 999px; padding: 8px 18px; font-size: 13px; font-weight: 800; cursor: pointer; font-family: inherit; display: inline-block; }
+  .bottom { border-top: 1px solid rgba(23,59,100,0.08); margin-top: 20px; padding-top: 14px; display: flex; justify-content: space-between; align-items: center; }
+  .copy { font-size: 12px; color: #9EB3C8; }
+  .bottom-links { display: flex; gap: 14px; }
+  .bottom-link { font-size: 12px; color: #9EB3C8; text-decoration: none; font-weight: 700; }
+</style>
+</head>
+<body>
+  <footer class="footer">
+    <div class="shell">
+      <div>
+        <span class="logo">Lumea</span>
+        <p class="brand-desc">Structured prep, AI-powered guidance, real materials, and support from experienced teachers that keeps moving with you.</p>
+      </div>
+      <div>
+        <div class="col-title">Pages</div>
+        <a class="footer-link" href="#">Home</a>
+        <a class="footer-link" href="#">SAT</a>
+        <a class="footer-link" href="#">IELTS</a>
+        <a class="footer-link" href="#">Pricing</a>
+        <a class="footer-link" href="#">FAQ</a>
+      </div>
+      <div>
+        <div class="col-title">Contact</div>
+        <a class="footer-link" href="#">info@lumea.uz</a>
+        <button class="footer-btn">Log in</button>
+      </div>
+    </div>
+    <div class="shell">
+      <div class="bottom" style="grid-column:1/-1">
+        <span class="copy">© 2026 Lumea. All rights reserved.</span>
+        <div class="bottom-links">
+          <a class="bottom-link" href="#">Privacy</a>
+          <a class="bottom-link" href="#">Terms</a>
+          <a class="bottom-link" href="#">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

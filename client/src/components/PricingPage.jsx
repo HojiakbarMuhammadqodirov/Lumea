@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PublicHeader from "./PublicHeader";
 import PublicFooter from "./PublicFooter";
+import PublicAtmosphere from "./PublicAtmosphere";
 import { useLanguage } from "../context/LanguageContext";
 import { translations } from "../i18n/translations";
 
@@ -34,7 +35,7 @@ function getPlanPrice(meta, billingKey) {
 
 // ── Main component ─────────────────────────────────────────────────────────
 
-export default function PricingPage({ onLoginClick, onNavClick, onSelectPlan }) {
+export default function PricingPage({ onLoginClick, onNavClick, onSelectPlan, currentTheme, onToggleTheme }) {
   const { lang } = useLanguage();
   const t = translations[lang].pricing;
 
@@ -51,7 +52,8 @@ export default function PricingPage({ onLoginClick, onNavClick, onSelectPlan }) 
 
   return (
     <section className="pricingPage">
-      <PublicHeader onLoginClick={onLoginClick} onNavClick={onNavClick} currentView="pricing" />
+      <PublicAtmosphere variant="pricing" />
+      <PublicHeader onLoginClick={onLoginClick} onNavClick={onNavClick} currentView="pricing" currentTheme={currentTheme} onToggleTheme={onToggleTheme} />
 
       {/* ── Hero ── */}
       <div className="pricingHero" data-aos="fade-up">

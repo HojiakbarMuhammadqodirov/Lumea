@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 0; background: #F0F5FC; font-family: 'DM Sans', sans-serif; display: flex; }
+
+  .sidebar {
+    width: 220px; background: #fff; border-right: 1px solid #DDE6F0;
+    display: flex; flex-direction: column; height: 380px;
+  }
+  .logo-row {
+    padding: 14px 18px; border-bottom: 1px solid #DDE6F0;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .logo-box {
+    width: 30px; height: 30px; border-radius: 10px; background: #173B64;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-weight: 700; font-size: 13px;
+  }
+  .logo-name { font-size: 14px; font-weight: 700; color: #173B64; line-height: 1; }
+  .logo-sub { font-size: 9px; color: #9EB3C8; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 2px; }
+  .nav { flex: 1; padding: 12px; display: flex; flex-direction: column; gap: 2px; }
+  .nav-section { font-size: 9px; color: #9EB3C8; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; padding: 0 8px; margin-bottom: 4px; margin-top: 10px; }
+  .nav-section:first-child { margin-top: 0; }
+  .nav-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 12px; border-radius: 12px; font-size: 13px; font-weight: 500;
+    color: #6B7E96; cursor: pointer; border: none; background: none; text-align: left; width: 100%;
+  }
+  .nav-item.active { background: #173B64; color: #fff; }
+  .nav-item:not(.active):hover { background: #F0F5FC; color: #173B64; }
+  .nav-icon { width: 16px; text-align: center; font-size: 14px; flex-shrink: 0; }
+  .badge { background: #DC2626; color: #fff; font-size: 9px; font-weight: 700; padding: 2px 5px; border-radius: 999px; margin-left: auto; }
+  .user-area { padding: 10px; border-top: 1px solid #DDE6F0; }
+  .user-btn {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 12px; border-radius: 12px; background: #F0F5FC;
+    cursor: pointer; border: none; width: 100%; text-align: left;
+  }
+  .user-avatar {
+    width: 30px; height: 30px; border-radius: 50%; background: #173B64;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 10px; font-weight: 700; flex-shrink: 0;
+  }
+  .user-name { font-size: 11px; font-weight: 600; color: #173B64; }
+  .user-plan { font-size: 9px; color: #9EB3C8; }
+  .logout-btn {
+    display: flex; align-items: center; gap: 8px;
+    padding: 8px 12px; border-radius: 12px; color: #DC2626; font-size: 11px;
+    font-weight: 500; background: none; border: none; cursor: pointer; width: 100%; margin-top: 4px;
+  }
+
+  /* Topbar preview */
+  .topbar {
+    width: 100%; background: #fff; border-bottom: 1px solid #DDE6F0;
+    padding: 14px 22px; display: flex; align-items: center; justify-content: space-between;
+  }
+  .topbar-title { font-size: 18px; font-weight: 700; color: #173B64; line-height: 1; }
+  .topbar-sub { font-size: 11px; color: #9EB3C8; margin-top: 3px; }
+  .chip { display: inline-flex; align-items: center; gap: 5px; border: 1px solid; border-radius: 10px; padding: 4px 10px; font-size: 11px; font-weight: 600; }
+  .right-chips { display: flex; gap: 8px; }
+</style>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo-row">
+      <div class="logo-box">L</div>
+      <div>
+        <div class="logo-name">LearnNova</div>
+        <div class="logo-sub">Student Space</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <div class="nav-section">Asosiy</div>
+      <button class="nav-item active"><span class="nav-icon">🏠</span> Bosh sahifa</button>
+      <button class="nav-item"><span class="nav-icon">📚</span> Darslar <span class="badge">3</span></button>
+      <button class="nav-item"><span class="nav-icon">✏️</span> Testlar</button>
+      <button class="nav-item"><span class="nav-icon">📊</span> Statistika</button>
+      <div class="nav-section">O'qish</div>
+      <button class="nav-item"><span class="nav-icon">⭐</span> Reyting</button>
+      <button class="nav-item"><span class="nav-icon">👤</span> Profil</button>
+    </nav>
+    <div class="user-area">
+      <button class="user-btn">
+        <div class="user-avatar">AK</div>
+        <div>
+          <div class="user-name">Azizbek K.</div>
+          <div class="user-plan">Bepul rejim</div>
+        </div>
+      </button>
+      <button class="logout-btn">← Chiqish</button>
+    </div>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column;">
+    <div class="topbar">
+      <div>
+        <div class="topbar-title">Bosh sahifa</div>
+        <div class="topbar-sub">Namangan · LearnNova</div>
+      </div>
+      <div class="right-chips">
+        <div class="chip" style="color:#f97316; background:#fff7ed; border-color:#fed7aa">🔥 12 kun</div>
+        <div class="chip" style="color:#2563EB; background:#eff6ff; border-color:#bfdbfe">⭐ #3 Namangan</div>
+      </div>
+    </div>
+    <div style="padding:16px; flex:1; background:#F0F5FC; display:flex; gap:10px; align-items:flex-start; flex-wrap:wrap;">
+      <div style="background:#fff;border:1px solid #DDE6F0;border-radius:14px;padding:14px;width:140px">
+        <div style="font-size:9px;font-weight:800;color:#9EB3C8;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px">Bugungi vazifa</div>
+        <div style="font-size:12px;font-weight:700;color:#173B64">Algebra — L4</div>
+        <div style="font-size:10px;color:#9EB3C8;margin-top:2px">SAT Math · 18 min</div>
+        <button style="margin-top:10px;width:100%;background:#173B64;color:#fff;border:none;border-radius:10px;padding:7px;font-size:11px;font-weight:600;cursor:pointer">▶ Boshlash</button>
+      </div>
+      <div style="background:#fff;border:1px solid #DDE6F0;border-radius:14px;padding:14px;width:140px">
+        <div style="font-size:9px;font-weight:800;color:#9EB3C8;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px">Maqsad balllar</div>
+        <div style="display:flex;gap:6px;">
+          <div style="flex:1;background:#F0F5FC;border:1px solid #DDE6F0;border-radius:10px;padding:8px;text-align:center">
+            <div style="font-size:8px;font-weight:700;color:#2563EB;text-transform:uppercase">SAT</div>
+            <div style="font-size:18px;font-weight:700;color:#2563EB;line-height:1">1500</div>
+            <div style="font-size:8px;color:#9EB3C8;margin-top:2px">Hozir: 1200</div>
+          </div>
+          <div style="flex:1;background:#F0F5FC;border:1px solid #DDE6F0;border-radius:10px;padding:8px;text-align:center">
+            <div style="font-size:8px;font-weight:700;color:#0F9E6A;text-transform:uppercase">IELTS</div>
+            <div style="font-size:18px;font-weight:700;color:#0F9E6A;line-height:1">7.5</div>
+            <div style="font-size:8px;color:#9EB3C8;margin-top:2px">Hozir: 6.0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

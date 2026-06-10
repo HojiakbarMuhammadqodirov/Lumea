@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LearnNova — Student Chat & Teacher Booking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #root { margin: 0; padding: 0; min-height: 100vh; font-family: 'DM Sans', sans-serif; color: #173B64; }
+body { background: #F0F5FC; }
+@keyframes toastIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn  { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+@keyframes slideUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: #DDE6F0; border-radius: 99px; }
+input, select, textarea { font-family: 'DM Sans', sans-serif; outline: none; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useState, useEffect, useRef } = React;
+
+const C = {
+  navy: "#173B64", navyDeep: "#0F2746",
+  blueAccent: "#2563EB", blueDim: "rgba(37,99,235,0.09)",
+  green: "#0F9E6A", greenDim: "rgba(15,158,106,0.09)", greenBorder: "rgba(15,158,106,0.2)",
+  amber: "#D97706", amberDim: "rgba(217,119,6,0.09)",
+  purple: "#6D28D9", purpleDim: "rgba(109,40,217,0.08)",
+  yellow: "#ffde70",
+  red: "#DC2626", redDim: "rgba(220,38,38,0.09)",
+  bg: "#F0F5FC", card: "#FFFFFF", border: "#DDE6F0",
+  muted: "#6B7E96", hint: "#9EB3C8", text: "#173B64",
+};
+
+// ── Mock data ──────────────────────────────────────────────────
+const ME = { id: "s1", name: "Azizbek Karimov", plan: "plus" };
+
+const TEACHERS = [
+  { id: "t1", name: "Sarvar Toshmatov",  subject: "SAT Math & EBRW", score: "SAT 1510", rating: 4.9, students: 12, online: true,  bio: "5+ years SAT coaching. Helped 200+ students reach 1400+.", tags: ["SAT Math", "SAT EBRW"] },
+  { id: "t2", name: "Nilufar Yusupova",  subject: "IELTS Writing & Speaking", score: "IELTS 7.5", rating: 4.8, students: 8, online: true,  bio: "British Council certified. Specialises in Writing Task 2 and Speaking Band 7+.", tags: ["IELTS Writing", "IELTS Speaking"] },
+  { id: "t3", name: "Bobur Rahimov",     subject: "SAT Math", score: "SAT 1480", rating: 4.7, students: 6, online: false, bio: "Former math olympiad coach. Top scorer in Namangan region.", tags: ["SAT Math"] },
+];
+
+const PLAN_RULES = {
+  plus: { duration: 30,  label: "30 min", color: C.blueAccent, bg: C.blueDim, desc: "30-minute session · every 2 days" },
+  pro:  { duration: 90, label: "90 min", color: C.purple,     bg: C.purpleDim, desc: "90-minute session · every 2 days" },
+  basic:{ duration: 0,   label: "No sessions", color: C.hint, bg: C.bg, desc: "Upgrade to Plus or Pro to book sessions" },
+};
+
+const SEED_MESSAGES = {
+  t1: [
+    { id: 1, from: "teacher", text: "Salom Azizbek! Bugun qaysi mavzuni ko'rib chiqamiz?", time: "10:42" },
+    { id: 2, from: "me",      text: "Quadratic equations hali ham qiyin", time: "10:43" },
+    { id: 3, from: "teacher", text: "Yaxshi! Discriminant formulasidan b²−4ac boshlaymiz. Grafik chizamizmi?", time: "10:44" },
+    { id: 4, from: "me",      text: "Ha, iltimos!", time: "10:44" },
+    { id: 5, from: "teacher", text: "f(x) = x² − 3x − 4 ni ko'rib chiqaylik. a=1, b=−3, c=−4. Ildizlarni toping.", time: "10:46" },
+  ],
+  t2: [
+    { id: 1, from: "teacher", text: "Your Task 2 draft looks much better! Let's refine the thesis.", time: "09:15" },
+    { id: 2, from: "me",      text: "Thank you! Can we book a session this Friday?", time: "09:16" },
+    { id: 3, from: "teacher", text: "Absolutely! Check the booking section and pick a time that works.", time: "09:17" },
+  ],
+  t3: [],
+};
+
+const SEED_BOOKINGS = [
+  { id: "b1", teacherId: "t1", date: "2026-05-06", time: "15:00", duration: 30, plan: "plus", status: "confirmed", program: "SAT Math" },
+];
+
+// ── Primitives ─────────────────────────────────────────────────
+function Card({ children, style = {}, onClick }) {
+  return <div onClick={onClick} style={{ background: "#fff", border: `1px solid ${C.border}`, borderRadius: 16, padding: 20, cursor: onClick ? "pointer" : "default", ...style }}>{children}</div>;
+}
+function Tag({ label, bg, color }) {
+  return <span style={{ background: bg, color, fontSize: 10, fontWeight: 700, padding: "2px 8px", borderRadius: 999, textTransform: "uppercase", letterSpacing: "0.04em", whiteSpace: "nowrap" }}>{label}</span>;
+}
+function Avatar({ name, size = 36, color = C.navy }) {
+  const initials = name?.split(" ").map(w => w[0]).join("").slice(0,2).toUpperCase() || "?";
+  return <div style={{ width: size, height: size, borderRadius: "50%", background: color, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: size * 0.35, flexShrink: 0 }}>{initials}</div>;
+}
+function Btn({ children, onClick, variant = "primary", style = {}, disabled = false }) {
+  const variants = {
+    primary: { background: C.navy, color: "#fff", border: "none" },
+    ghost:   { background: "transparent", color: C.muted, border: `1px solid ${C.border}` },
+    success: { background: C.greenDim, color: C.green, border: `1px solid ${C.greenBorder}` },
+  };
+  return <button onClick={onClick} disabled={disabled} style={{ borderRadius: 12, padding: "9px 16px", fontSize: 13, fontWeight: 600, cursor: disabled ? "not-allowed" : "pointer", fontFamily: "'DM Sans',sans-serif", transition: "all 150ms", opacity: disabled ? 0.5 : 1, display: "inline-flex", alignItems: "center", gap: 6, ...variants[variant], ...style }}>{children}</button>;
+}
+function Modal({ title, children, onClose, width = 440 }) {
+  return (
+    <div style={{ position: "fixed", inset: 0, background: "rgba(15,39,70,0.45)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 200, padding: 20 }}>
+      <div style={{ background: "#fff", borderRadius: 20, padding: 28, width, maxWidth: "95vw", maxHeight: "90vh", overflowY: "auto", boxShadow: "0 24px 60px rgba(7,49,94,0.22)", animation: "slideUp 220ms ease" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
+          <div style={{ fontSize: 17, fontWeight: 700, color: C.navy }}>{title}</div>
+          <button onClick={onClose} style={{ background: C.bg, border: "none", borderRadius: 8, width: 30, height: 30, cursor: "pointer", fontSize: 14, color: C.muted }}>✕</button>
+        </div>
+        {children}
+      </div>
+    </div>
+  );
+}
+function Icon({ d, size = 16, color = "currentColor" }) {
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d={d}/></svg>;
+}
+const ICONS = {
+  chat:     "M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z",
+  calendar: "M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z",
+  send:     "M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z",
+  star:     "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z",
+  clock:    "M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zM12 6v6l4 2",
+  check:    "M20 6L9 17l-5-5",
+  arrow:    "M5 12h14M12 5l7 7-7 7",
+  back:     "M19 12H5M12 19l-7-7 7-7",
+  upgrade:  "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z",
+};
+
+// ── Sidebar Navigation ─────────────────────────────────────────
+function Sidebar({ view, onView }) {
+  const nav = [
+    { id: "teachers", label: "Teachers",  icon: ICONS.star },
+    { id: "chat",     label: "Chat",      icon: ICONS.chat },
+    { id: "bookings", label: "Bookings",  icon: ICONS.calendar },
+  ];
+  return (
+    <aside style={{ width: 220, flexShrink: 0, background: "#fff", borderRight: `1px solid ${C.border}`, display: "flex", flexDirection: "column", height: "100vh", position: "sticky", top: 0 }}>
+      <div style={{ padding: "16px 18px", borderBottom: `1px solid ${C.border}`, display: "flex", alignItems: "center", gap: 10 }}>
+        <div style={{ width: 32, height: 32, borderRadius: 10, background: C.navy, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: 14 }}>L</div>
+        <div>
+          <div style={{ fontSize: 14, fontWeight: 700, color: C.navy }}>LearnNova</div>
+          <div style={{ fontSize: 9, color: C.hint, textTransform: "uppercase", letterSpacing: "0.1em", marginTop: 2 }}>Student Space</div>
+        </div>
+      </div>
+      <nav style={{ flex: 1, padding: "12px 10px", display: "flex", flexDirection: "column", gap: 2 }}>
+        <div style={{ fontSize: 9, color: C.hint, textTransform: "uppercase", letterSpacing: "0.1em", fontWeight: 700, padding: "0 8px", marginBottom: 4 }}>My Teachers</div>
+        {nav.map(item => (
+          <button key={item.id} onClick={() => onView(item.id)}
+            style={{ width: "100%", display: "flex", alignItems: "center", gap: 10, padding: "9px 12px", borderRadius: 12, fontSize: 13, fontWeight: 500, border: "none", cursor: "pointer", textAlign: "left", fontFamily: "'DM Sans',sans-serif", background: view === item.id ? C.navy : "transparent", color: view === item.id ? "#fff" : C.muted, transition: "all 150ms" }}>
+            <span style={{ width: 16, display: "flex", alignItems: "center", flexShrink: 0 }}><Icon d={item.icon} size={15} color={view === item.id ? "#fff" : C.muted} /></span>
+            {item.label}
+          </button>
+        ))}
+      </nav>
+      {/* Plan info */}
+      <div style={{ padding: "12px 14px", margin: "0 10px 10px", background: C.blueDim, borderRadius: 12, border: `1px solid ${C.border}` }}>
+        <div style={{ fontSize: 11, fontWeight: 700, color: C.blueAccent, marginBottom: 4 }}>Plus Plan</div>
+        <div style={{ fontSize: 11, color: C.muted, lineHeight: 1.5 }}>30 min sessions · every 2 days</div>
+        <button style={{ marginTop: 8, width: "100%", background: C.navy, color: "#fff", border: "none", borderRadius: 8, padding: "7px 12px", fontSize: 11, fontWeight: 700, cursor: "pointer", fontFamily: "'DM Sans',sans-serif" }}>
+          Upgrade to Pro →
+        </button>
+      </div>
+    </aside>
+  );
+}
+
+// ── Teachers Browse Page ───────────────────────────────────────
+function TeachersPage({ onSelectTeacher, onBook }) {
+  return (
+    <div style={{ padding: 24 }}>
+      <div style={{ marginBottom: 20 }}>
+        <h2 style={{ margin: "0 0 4px", fontSize: 22, fontWeight: 700, color: C.navy }}>Your Teachers</h2>
+        <p style={{ margin: 0, fontSize: 13, color: C.hint }}>Choose a teacher to chat or book a session</p>
+      </div>
+
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 16 }}>
+        {TEACHERS.map(t => (
+          <Card key={t.id} style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            {/* Header */}
+            <div style={{ display: "flex", alignItems: "flex-start", gap: 14 }}>
+              <div style={{ position: "relative", flexShrink: 0 }}>
+                <Avatar name={t.name} size={52} color={t.id === "t2" ? C.green : C.navy} />
+                {t.online && <div style={{ position: "absolute", bottom: 2, right: 2, width: 12, height: 12, borderRadius: "50%", background: C.green, border: "2px solid #fff" }} />}
+              </div>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ fontSize: 15, fontWeight: 700, color: C.navy }}>{t.name}</div>
+                <div style={{ fontSize: 12, color: C.muted, marginTop: 2 }}>{t.subject}</div>
+                <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 6 }}>
+                  <Tag label={t.score} bg={C.bg} color={C.muted} />
+                  <Tag label={`⭐ ${t.rating}`} bg={C.amberDim} color={C.amber} />
+                  {t.online
+                    ? <Tag label="Online" bg={C.greenDim} color={C.green} />
+                    : <Tag label="Offline" bg={C.bg} color={C.hint} />
+                  }
+                </div>
+              </div>
+            </div>
+
+            {/* Bio */}
+            <p style={{ margin: 0, fontSize: 12, color: C.muted, lineHeight: 1.6 }}>{t.bio}</p>
+
+            {/* Tags */}
+            <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+              {t.tags.map(tag => <Tag key={tag} label={tag} bg={C.blueDim} color={C.blueAccent} />)}
+              <Tag label={`${t.students} students`} bg={C.bg} color={C.hint} />
+            </div>
+
+            {/* Actions */}
+            <div style={{ display: "flex", gap: 8 }}>
+              <Btn onClick={() => onSelectTeacher(t)} variant="ghost" style={{ flex: 1, justifyContent: "center" }}>
+                <Icon d={ICONS.chat} size={13} color={C.muted} /> Chat
+              </Btn>
+              <Btn onClick={() => onBook(t)} style={{ flex: 1, justifyContent: "center" }}>
+                <Icon d={ICONS.calendar} size={13} color="#fff" /> Book Session
+              </Btn>
+            </div>
+          </Card>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ── Chat Page ──────────────────────────────────────────────────
+function ChatPage({ selectedTeacher, onSelectTeacher }) {
+  const [messages, setMessages] = useState(SEED_MESSAGES);
+  const [text, setText] = useState("");
+  const [bookModal, setBookModal] = useState(null);
+  const endRef = useRef(null);
+
+  const currentMsgs = selectedTeacher ? (messages[selectedTeacher.id] || []) : [];
+
+  useEffect(() => { endRef.current?.scrollIntoView({ behavior: "smooth" }); }, [currentMsgs.length, selectedTeacher?.id]);
+
+  const send = () => {
+    if (!text.trim() || !selectedTeacher) return;
+    const msg = { id: Date.now(), from: "me", text: text.trim(), time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }) };
+    setMessages(prev => ({ ...prev, [selectedTeacher.id]: [...(prev[selectedTeacher.id] || []), msg] }));
+    setText("");
+  };
+
+  return (
+    <div style={{ display: "flex", height: "calc(100vh - 0px)", overflow: "hidden" }}>
+      {/* Teacher list panel */}
+      <div style={{ width: 260, borderRight: `1px solid ${C.border}`, background: "#fff", display: "flex", flexDirection: "column" }}>
+        <div style={{ padding: "14px 14px 8px", borderBottom: `1px solid ${C.border}` }}>
+          <div style={{ fontSize: 12, fontWeight: 700, color: C.navy }}>Messages</div>
+        </div>
+        <div style={{ flex: 1, overflowY: "auto" }}>
+          {TEACHERS.map(t => {
+            const msgs = messages[t.id] || [];
+            const last = msgs[msgs.length - 1];
+            const isSelected = selectedTeacher?.id === t.id;
+            return (
+              <div key={t.id} onClick={() => onSelectTeacher(t)}
+                style={{ padding: "12px 14px", cursor: "pointer", background: isSelected ? C.bg : "transparent", borderBottom: `1px solid ${C.border}`, transition: "background 120ms" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                  <div style={{ position: "relative", flexShrink: 0 }}>
+                    <Avatar name={t.name} size={36} color={t.id === "t2" ? C.green : C.navy} />
+                    {t.online && <div style={{ position: "absolute", bottom: 0, right: 0, width: 10, height: 10, borderRadius: "50%", background: C.green, border: "2px solid #fff" }} />}
+                  </div>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                      <div style={{ fontSize: 13, fontWeight: isSelected ? 700 : 600, color: C.navy, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", maxWidth: 120 }}>{t.name.split(" ")[0]}</div>
+                      {last && <div style={{ fontSize: 10, color: C.hint }}>{last.time}</div>}
+                    </div>
+                    <div style={{ fontSize: 11, color: C.hint, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{last ? last.text : "No messages"}</div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Chat window */}
+      {selectedTeacher ? (
+        <div style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0 }}>
+          {/* Header */}
+          <div style={{ padding: "12px 20px", background: "#fff", borderBottom: `1px solid ${C.border}`, display: "flex", alignItems: "center", gap: 12 }}>
+            <div style={{ position: "relative" }}>
+              <Avatar name={selectedTeacher.name} size={38} color={selectedTeacher.id === "t2" ? C.green : C.navy} />
+              {selectedTeacher.online && <div style={{ position: "absolute", bottom: 1, right: 1, width: 10, height: 10, borderRadius: "50%", background: C.green, border: "2px solid #fff" }} />}
+            </div>
+            <div>
+              <div style={{ fontSize: 14, fontWeight: 700, color: C.navy }}>{selectedTeacher.name}</div>
+              <div style={{ fontSize: 11, color: selectedTeacher.online ? C.green : C.hint, fontWeight: 600 }}>
+                {selectedTeacher.online ? "● Online" : "○ Offline"} · {selectedTeacher.subject}
+              </div>
+            </div>
+            <div style={{ marginLeft: "auto" }}>
+              <Btn onClick={() => setBookModal(selectedTeacher)} style={{ fontSize: 12, padding: "7px 14px" }}>
+                <Icon d={ICONS.calendar} size={13} color="#fff" /> Book Session
+              </Btn>
+            </div>
+          </div>
+
+          {/* Messages */}
+          <div style={{ flex: 1, overflowY: "auto", padding: 20, display: "flex", flexDirection: "column", gap: 12, background: C.bg }}>
+            {/* Date stamp */}
+            <div style={{ textAlign: "center" }}>
+              <span style={{ fontSize: 11, color: C.hint, background: C.border, padding: "3px 10px", borderRadius: 999 }}>Today</span>
+            </div>
+            {currentMsgs.map(msg => {
+              const isMe = msg.from === "me";
+              return (
+                <div key={msg.id} style={{ display: "flex", justifyContent: isMe ? "flex-end" : "flex-start", alignItems: "flex-end", gap: 8 }}>
+                  {!isMe && <Avatar name={selectedTeacher.name} size={28} color={selectedTeacher.id === "t2" ? C.green : C.navy} />}
+                  <div>
+                    <div style={{ maxWidth: 340, padding: "10px 14px", borderRadius: isMe ? "14px 14px 4px 14px" : "14px 14px 14px 4px", background: isMe ? C.navy : "#fff", color: isMe ? "#fff" : C.navy, fontSize: 13, lineHeight: 1.5, boxShadow: "0 2px 8px rgba(23,59,100,0.07)", border: isMe ? "none" : `1px solid ${C.border}` }}>{msg.text}</div>
+                    <div style={{ fontSize: 10, color: C.hint, marginTop: 3, textAlign: isMe ? "right" : "left" }}>{msg.time}</div>
+                  </div>
+                  {isMe && <Avatar name={ME.name} size={28} color={C.blueAccent} />}
+                </div>
+              );
+            })}
+            {currentMsgs.length === 0 && (
+              <div style={{ textAlign: "center", color: C.hint, fontSize: 13, paddingTop: 40 }}>No messages yet. Say hello! 👋</div>
+            )}
+            <div ref={endRef} />
+          </div>
+
+          {/* Input */}
+          <div style={{ padding: "12px 20px", background: "#fff", borderTop: `1px solid ${C.border}`, display: "flex", gap: 10, alignItems: "flex-end" }}>
+            <textarea value={text} onChange={e => setText(e.target.value)}
+              onKeyDown={e => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(); } }}
+              placeholder="Type a message… (Enter to send)"
+              rows={2}
+              style={{ flex: 1, padding: "10px 14px", border: `1px solid ${C.border}`, borderRadius: 12, fontSize: 13, color: C.navy, resize: "none", fontFamily: "'DM Sans',sans-serif", background: C.bg, lineHeight: 1.5 }} />
+            <button onClick={send} style={{ width: 42, height: 42, borderRadius: 12, background: C.navy, border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+              <Icon d={ICONS.send} size={16} color="#fff" />
+            </button>
+          </div>
+        </div>
+      ) : (
+        <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 12, color: C.hint }}>
+          <Icon d={ICONS.chat} size={40} color={C.border} />
+          <div style={{ fontSize: 14 }}>Select a teacher to start chatting</div>
+        </div>
+      )}
+
+      {bookModal && <BookingModal teacher={bookModal} onClose={() => setBookModal(null)} />}
+    </div>
+  );
+}
+
+// ── Booking Modal ──────────────────────────────────────────────
+function BookingModal({ teacher, onClose, onConfirm }) {
+  const plan = ME.plan;
+  const rule = PLAN_RULES[plan];
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("15:00");
+  const [done, setDone] = useState(false);
+
+  const TIMES = ["09:00","10:00","11:00","13:00","14:00","15:00","16:00","17:00","18:00"];
+
+  if (done) return (
+    <Modal title="Session Booked! 🎉" onClose={onClose} width={400}>
+      <div style={{ textAlign: "center", padding: "20px 0" }}>
+        <div style={{ width: 64, height: 64, borderRadius: "50%", background: C.greenDim, border: `2px solid ${C.greenBorder}`, display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 16px" }}>
+          <Icon d={ICONS.check} size={28} color={C.green} />
+        </div>
+        <div style={{ fontSize: 17, fontWeight: 700, color: C.navy, marginBottom: 8 }}>Booking Confirmed!</div>
+        <div style={{ fontSize: 13, color: C.muted, lineHeight: 1.6 }}>
+          Your <strong>{rule.label}</strong> session with <strong>{teacher.name}</strong><br/>
+          on <strong>{date} at {time}</strong> is confirmed.
+        </div>
+        <div style={{ marginTop: 20, padding: 14, background: C.bg, borderRadius: 12, fontSize: 12, color: C.muted }}>
+          Next available booking: in 2 days
+        </div>
+        <Btn onClick={onClose} style={{ marginTop: 16, width: "100%", justifyContent: "center" }}>Done</Btn>
+      </div>
+    </Modal>
+  );
+
+  return (
+    <Modal title={`Book a Session`} onClose={onClose} width={420}>
+      {/* Teacher info */}
+      <div style={{ display: "flex", alignItems: "center", gap: 12, background: C.bg, borderRadius: 12, padding: "12px 14px", marginBottom: 20 }}>
+        <Avatar name={teacher.name} size={40} color={teacher.id === "t2" ? C.green : C.navy} />
+        <div>
+          <div style={{ fontSize: 14, fontWeight: 700, color: C.navy }}>{teacher.name}</div>
+          <div style={{ fontSize: 12, color: C.muted }}>{teacher.subject}</div>
+        </div>
+        {teacher.online && <Tag label="Online" bg={C.greenDim} color={C.green} />}
+      </div>
+
+      {/* Plan rule */}
+      <div style={{ display: "flex", alignItems: "center", gap: 12, background: rule.bg, borderRadius: 12, padding: "12px 14px", marginBottom: 20, border: `1px solid ${plan === "pro" ? "rgba(109,40,217,0.2)" : C.border}` }}>
+        <Icon d={ICONS.clock} size={18} color={rule.color} />
+        <div>
+          <div style={{ fontSize: 13, fontWeight: 700, color: rule.color }}>{rule.label} session ({plan} plan)</div>
+          <div style={{ fontSize: 11, color: C.muted }}>{rule.desc}</div>
+        </div>
+      </div>
+
+      {plan === "basic" ? (
+        <div style={{ textAlign: "center", padding: "20px 0" }}>
+          <div style={{ fontSize: 14, color: C.muted, marginBottom: 16 }}>Upgrade your plan to book sessions with teachers.</div>
+          <Btn onClick={onClose} style={{ justifyContent: "center" }}>Upgrade to Plus</Btn>
+        </div>
+      ) : (
+        <>
+          {/* Date picker */}
+          <div style={{ marginBottom: 14 }}>
+            <div style={{ fontSize: 11, fontWeight: 700, color: C.hint, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 6 }}>Date</div>
+            <input type="date" value={date} onChange={e => setDate(e.target.value)}
+              min={new Date().toISOString().split("T")[0]}
+              style={{ width: "100%", padding: "9px 12px", border: `1px solid ${C.border}`, borderRadius: 10, fontSize: 13, color: C.navy, background: C.bg, fontFamily: "'DM Sans',sans-serif" }} />
+          </div>
+
+          {/* Time slots */}
+          <div style={{ marginBottom: 20 }}>
+            <div style={{ fontSize: 11, fontWeight: 700, color: C.hint, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 8 }}>Time Slot</div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 6 }}>
+              {TIMES.map(t => (
+                <button key={t} onClick={() => setTime(t)}
+                  style={{ padding: "8px 0", borderRadius: 10, border: `1px solid ${time === t ? C.navy : C.border}`, background: time === t ? C.navy : "#fff", color: time === t ? "#fff" : C.navy, fontSize: 12, fontWeight: 600, cursor: "pointer", fontFamily: "'DM Sans',sans-serif", transition: "all 150ms" }}>
+                  {t}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div style={{ display: "flex", gap: 10 }}>
+            <Btn onClick={() => { if (date) setDone(true); }} disabled={!date} style={{ flex: 1, justifyContent: "center" }}>
+              <Icon d={ICONS.check} size={13} color="#fff" /> Confirm Booking
+            </Btn>
+            <Btn variant="ghost" onClick={onClose}>Cancel</Btn>
+          </div>
+        </>
+      )}
+    </Modal>
+  );
+}
+
+// ── Bookings Page ──────────────────────────────────────────────
+function BookingsPage({ onBook }) {
+  const [bookings, setBookings] = useState(SEED_BOOKINGS);
+
+  const cancel = id => setBookings(bs => bs.filter(b => b.id !== id));
+
+  return (
+    <div style={{ padding: 24 }}>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 20 }}>
+        <div>
+          <h2 style={{ margin: "0 0 4px", fontSize: 20, fontWeight: 700, color: C.navy }}>My Bookings</h2>
+          <p style={{ margin: 0, fontSize: 13, color: C.hint }}>Upcoming sessions with your teachers</p>
+        </div>
+        <Btn onClick={() => onBook(TEACHERS[0])}>
+          <Icon d={ICONS.calendar} size={13} color="#fff" /> Book New Session
+        </Btn>
+      </div>
+
+      {/* Plan rules */}
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 20 }}>
+        {[
+          { plan: "plus", ...PLAN_RULES.plus },
+          { plan: "pro",  ...PLAN_RULES.pro },
+        ].map(r => (
+          <div key={r.plan} style={{ background: r.bg, borderRadius: 12, padding: "12px 16px", display: "flex", gap: 12, alignItems: "center", border: `1px solid ${C.border}` }}>
+            <Icon d={ICONS.clock} size={18} color={r.color} />
+            <div>
+              <div style={{ fontSize: 13, fontWeight: 700, color: r.color }}>{r.label}</div>
+              <div style={{ fontSize: 11, color: C.muted }}>{r.desc}</div>
+            </div>
+            <Tag label={r.plan} bg={r.bg} color={r.color} />
+          </div>
+        ))}
+      </div>
+
+      {/* Bookings */}
+      {bookings.length === 0 ? (
+        <Card style={{ textAlign: "center", padding: "60px 20px", color: C.hint }}>
+          <Icon d={ICONS.calendar} size={40} color={C.border} />
+          <div style={{ marginTop: 12, fontSize: 14 }}>No upcoming sessions</div>
+          <Btn onClick={() => onBook(TEACHERS[0])} style={{ marginTop: 16, justifyContent: "center" }}>Book your first session</Btn>
+        </Card>
+      ) : (
+        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          {bookings.map(b => {
+            const teacher = TEACHERS.find(t => t.id === b.teacherId);
+            const rule = PLAN_RULES[b.plan] || PLAN_RULES.plus;
+            return (
+              <Card key={b.id} style={{ padding: "16px 20px" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                    <Avatar name={teacher?.name || "?"} size={44} color={teacher?.id === "t2" ? C.green : C.navy} />
+                    <div>
+                      <div style={{ fontSize: 14, fontWeight: 700, color: C.navy }}>{teacher?.name}</div>
+                      <div style={{ fontSize: 12, color: C.muted }}>{teacher?.subject}</div>
+                    </div>
+                  </div>
+                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap", flex: 1, justifyContent: "center", alignItems: "center" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 5, fontSize: 13, color: C.navy, fontWeight: 600 }}>
+                      <Icon d={ICONS.calendar} size={14} color={C.muted} /> {b.date}
+                    </div>
+                    <div style={{ display: "flex", alignItems: "center", gap: 5, fontSize: 13, color: C.navy, fontWeight: 600 }}>
+                      <Icon d={ICONS.clock} size={14} color={C.muted} /> {b.time}
+                    </div>
+                    <Tag label={`${b.duration} min`} bg={rule.bg} color={rule.color} />
+                    <Tag label={b.program} bg={C.blueDim} color={C.blueAccent} />
+                    <Tag label={b.status} bg={b.status === "confirmed" ? C.greenDim : C.amberDim} color={b.status === "confirmed" ? C.green : C.amber} />
+                  </div>
+                  <button onClick={() => cancel(b.id)} style={{ background: C.redDim, border: "none", borderRadius: 10, padding: "7px 14px", fontSize: 12, color: C.red, fontWeight: 600, cursor: "pointer", fontFamily: "'DM Sans',sans-serif" }}>
+                    Cancel
+                  </button>
+                </div>
+              </Card>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── App ────────────────────────────────────────────────────────
+function App() {
+  const [view, setView] = useState("teachers");
+  const [selectedTeacher, setSelectedTeacher] = useState(null);
+  const [bookTeacher, setBookTeacher] = useState(null);
+
+  const handleSelectTeacher = (t) => {
+    setSelectedTeacher(t);
+    setView("chat");
+  };
+
+  const handleBook = (t) => {
+    setBookTeacher(t);
+  };
+
+  return (
+    <div style={{ display: "flex", minHeight: "100vh" }}>
+      <Sidebar view={view} onView={setView} />
+      <div style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0, overflow: "hidden" }}>
+        {view === "teachers"  && <TeachersPage onSelectTeacher={handleSelectTeacher} onBook={handleBook} />}
+        {view === "chat"      && <ChatPage selectedTeacher={selectedTeacher} onSelectTeacher={setSelectedTeacher} />}
+        {view === "bookings"  && <BookingsPage onBook={handleBook} />}
+      </div>
+      {bookTeacher && <BookingModal teacher={bookTeacher} onClose={() => setBookTeacher(null)} />}
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>

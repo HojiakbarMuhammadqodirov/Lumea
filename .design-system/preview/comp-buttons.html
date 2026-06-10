@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px 20px; background: #F0F5FC; font-family: 'DM Sans', sans-serif; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; }
+  .group-label { font-size: 9px; font-weight: 800; color: #9EB3C8; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; margin-top: 14px; }
+  .group-label:first-child { margin-top: 0; }
+
+  /* Dashboard buttons */
+  .btn-primary {
+    background: #173B64; color: #fff; border: none; border-radius: 12px;
+    padding: 10px 16px; font-size: 14px; font-weight: 600; cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-ghost {
+    background: transparent; color: #6B7E96; border: 1px solid #DDE6F0; border-radius: 12px;
+    padding: 10px 16px; font-size: 14px; font-weight: 500; cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-icon {
+    background: #F0F5FC; border: 1px solid #DDE6F0; border-radius: 12px;
+    padding: 8px; font-size: 14px; cursor: pointer; line-height: 1;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .btn-disabled { background: #173B64; color: #fff; border: none; border-radius: 12px;
+    padding: 10px 16px; font-size: 14px; font-weight: 600; opacity: 0.4;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  /* Landing buttons */
+  .btn-pill {
+    border-radius: 999px; border: 1px solid #173B64;
+    min-height: 46px; padding: 0 26px; font-weight: 800;
+    font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; cursor: pointer;
+  }
+  .btn-pill-primary { background: #173B64; color: #F6FAFF; }
+  .btn-pill-ghost { background: transparent; color: #173B64; }
+  .btn-link { background: none; border: none; color: #2563EB; font-size: 12px; font-weight: 700; cursor: pointer; padding: 0; font-family: 'DM Sans', sans-serif; }
+</style>
+</head>
+<body>
+  <div class="group-label">Dashboard Buttons</div>
+  <div class="row">
+    <button class="btn-primary">▶ Darsni boshlash</button>
+    <button class="btn-ghost">Sana o'zgartirish</button>
+    <button class="btn-icon">✏️</button>
+    <button class="btn-icon">←</button>
+    <button class="btn-disabled" disabled>Submit</button>
+  </div>
+
+  <div class="group-label">Landing / Marketing Buttons</div>
+  <div class="row">
+    <button class="btn-pill btn-pill-primary">Log in</button>
+    <button class="btn-pill btn-pill-ghost">Start Preparing</button>
+  </div>
+
+  <div class="group-label">Text Buttons</div>
+  <div class="row">
+    <button class="btn-link">Hammasi →</button>
+    <button class="btn-link">Barchasi →</button>
+    <button class="btn-link" style="color:#173B64">Pro ga o'tish →</button>
+  </div>
+</body>
+</html>

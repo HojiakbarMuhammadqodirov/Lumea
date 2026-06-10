@@ -1,4 +1,4 @@
-const BASE_URL = import.meta.env.PROD ? "/api" : "http://localhost:4000/api";
+const BASE_URL = "/api";
 
 const withAuth = (token) => ({
   "Content-Type": "application/json",
@@ -155,5 +155,10 @@ export const api = {
     request(`/lessons/${programId}/${levelId}/${lessonId}`, {
       method: "DELETE",
       headers: withAuth(token)
-    })
+    }),
+
+  getRanking: (token) =>
+    request("/ranking", {
+      headers: withAuth(token)
+    }),
 };

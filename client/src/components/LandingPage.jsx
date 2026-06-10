@@ -136,7 +136,7 @@ function AnimatedCounter({ start, end, duration = 1800, suffix = "", className =
   );
 }
 
-export default function LandingPage({ onLoginClick, onNavClick }) {
+export default function LandingPage({ onLoginClick, onNavClick, currentTheme, onToggleTheme }) {
   const { lang } = useLanguage();
   const t = translations[lang].landing;
 
@@ -160,7 +160,7 @@ export default function LandingPage({ onLoginClick, onNavClick }) {
   return (
     <section className="landingPage">
       <FloatingBackgroundPhotos />
-      <PublicHeader onLoginClick={onLoginClick} onNavClick={onNavClick} currentView="landing" />
+      <PublicHeader onLoginClick={onLoginClick} onNavClick={onNavClick} currentView="landing" currentTheme={currentTheme} onToggleTheme={onToggleTheme} />
 
       <section className="landingHero" id="top">
         <div className="landingHeroCopy" data-aos="fade-up">

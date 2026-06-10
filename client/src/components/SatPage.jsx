@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import PublicHeader from "./PublicHeader";
 import PublicFooter from "./PublicFooter";
 import TestCarousel from "./TestCarousel";
+import PublicAtmosphere from "./PublicAtmosphere";
 import { useLanguage } from "../context/LanguageContext";
 import { translations } from "../i18n/translations";
 
@@ -196,7 +197,7 @@ function QuadraticGraph({ active }) {
 
 // ── Main Component ────────────────────────────────────────────────────────
 
-export default function SatPage({ onLoginClick, onNavClick }) {
+export default function SatPage({ onLoginClick, onNavClick, currentTheme, onToggleTheme }) {
   const { lang } = useLanguage();
   const t = translations[lang].sat;
 
@@ -238,7 +239,8 @@ export default function SatPage({ onLoginClick, onNavClick }) {
 
   return (
     <section className="examPage satExamPage">
-      <PublicHeader onLoginClick={onLoginClick} onNavClick={onNavClick} currentView="sat" />
+      <PublicAtmosphere variant="sat" />
+      <PublicHeader onLoginClick={onLoginClick} onNavClick={onNavClick} currentView="sat" currentTheme={currentTheme} onToggleTheme={onToggleTheme} />
 
       {/* ── Hero ── */}
       <section className="examHero" id="top">

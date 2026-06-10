@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px 20px; background: #F0F5FC; font-family: 'DM Sans', sans-serif; }
+  .row { display: flex; gap: 16px; align-items: flex-end; margin-bottom: 18px; }
+  .score-block { text-align: center; }
+  .score-num { font-weight: 1000; line-height: 0.95; color: #173B64; }
+  .score-label { font-size: 10px; font-weight: 800; color: #9EB3C8; text-transform: uppercase; letter-spacing: 0.04em; margin-top: 4px; }
+  .divider { width: 1px; height: 60px; background: #DDE6F0; margin-bottom: 18px; }
+  .weight-row { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 6px; }
+  .w { }
+  .w-label { font-size: 9px; color: #9EB3C8; margin-bottom: 3px; }
+  .group-label { font-size: 9px; font-weight: 800; color: #9EB3C8; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
+</style>
+</head>
+<body>
+  <div class="group-label">Score / Display Numerals</div>
+  <div class="row">
+    <div class="score-block">
+      <div class="score-num" style="font-size:clamp(2.9rem,6vw,4.8rem); color:#173B64">1560</div>
+      <div class="score-label">SAT Score</div>
+    </div>
+    <div class="divider"></div>
+    <div class="score-block">
+      <div class="score-num" style="font-size:clamp(2.4rem,4.5vw,3.8rem); color:#d4687d">1200</div>
+      <div class="score-label">Previous</div>
+    </div>
+    <div class="divider"></div>
+    <div class="score-block">
+      <div class="score-num" style="font-size:clamp(2rem,3.5vw,3rem); color:#0F9E6A">7.5</div>
+      <div class="score-label">IELTS Band</div>
+    </div>
+    <div class="divider"></div>
+    <div class="score-block">
+      <div class="score-num" style="font-size:2.4rem; color:#D97706">99</div>
+      <div class="score-label">Percentile</div>
+    </div>
+  </div>
+
+  <div class="group-label" style="margin-top:4px">Weight Scale</div>
+  <div class="weight-row">
+    <div class="w"><div class="w-label">400 Regular</div><div style="font-size:18px;font-weight:400;color:#173B64">Learnova</div></div>
+    <div class="w"><div class="w-label">500 Medium</div><div style="font-size:18px;font-weight:500;color:#173B64">Learnova</div></div>
+    <div class="w"><div class="w-label">600 Semibold</div><div style="font-size:18px;font-weight:600;color:#173B64">Learnova</div></div>
+    <div class="w"><div class="w-label">700 Bold</div><div style="font-size:18px;font-weight:700;color:#173B64">Learnova</div></div>
+    <div class="w"><div class="w-label">800 Extrabold</div><div style="font-size:18px;font-weight:800;color:#173B64">Learnova</div></div>
+    <div class="w"><div class="w-label">900 Black</div><div style="font-size:18px;font-weight:900;color:#173B64">Learnova</div></div>
+  </div>
+</body>
+</html>

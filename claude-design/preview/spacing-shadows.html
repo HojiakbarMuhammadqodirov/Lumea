@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px 20px; background: #F0F5FC; font-family: 'DM Sans', sans-serif; }
+  .group-label { font-size: 9px; font-weight: 800; color: #9EB3C8; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; margin-top: 14px; }
+  .group-label:first-child { margin-top: 0; }
+  .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-start; margin-bottom: 12px; }
+
+  /* Shadows */
+  .shadow-box { width: 90px; height: 60px; background: #fff; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; }
+  .shadow-name { font-size: 9px; font-weight: 700; color: #9EB3C8; text-align: center; margin-top: 8px; }
+
+  /* Motion easing curves */
+  .ease-row { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+  .ease-item { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .ease-label { font-size: 9px; font-weight: 700; color: #9EB3C8; text-align: center; }
+  .ease-val { font-size: 8px; color: #9EB3C8; font-family: monospace; text-align: center; max-width: 120px; }
+  .ease-track { width: 100px; height: 6px; background: #DDE6F0; border-radius: 999px; position: relative; overflow: hidden; }
+  .ease-fill { position: absolute; left: 0; top: 0; height: 6px; border-radius: 999px; background: #173B64; }
+  .dur-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-top: 10px; }
+  .dur-item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .dur-bar { height: 6px; background: #173B64; border-radius: 999px; }
+  .dur-label { font-size: 9px; color: #9EB3C8; }
+  .dur-val { font-size: 8px; color: #9EB3C8; font-family: monospace; }
+</style>
+</head>
+<body>
+  <div class="group-label">Shadow System</div>
+  <div class="row">
+    <div>
+      <div class="shadow-box" style="box-shadow: 0 18px 40px rgba(23,59,100,0.08)">
+        <div style="font-size:9px;color:#9EB3C8;text-align:center">Public Card</div>
+      </div>
+      <div class="shadow-name">card-public<br>0 18px 40px</div>
+    </div>
+    <div>
+      <div class="shadow-box" style="box-shadow: 0 18px 50px rgba(7,49,94,0.18)">
+        <div style="font-size:9px;color:#9EB3C8;text-align:center">Modal</div>
+      </div>
+      <div class="shadow-name">card-modal<br>0 18px 50px</div>
+    </div>
+    <div>
+      <div class="shadow-box" style="box-shadow: 0 10px 20px rgba(23,59,100,0.18)">
+        <div style="font-size:9px;color:#9EB3C8;text-align:center">Button Lift</div>
+      </div>
+      <div class="shadow-name">btn-hover<br>0 10px 20px</div>
+    </div>
+    <div>
+      <div class="shadow-box" style="border: 1px solid #DDE6F0">
+        <div style="font-size:9px;color:#9EB3C8;text-align:center">Dashboard<br>No shadow</div>
+      </div>
+      <div class="shadow-name">border-only<br>#DDE6F0</div>
+    </div>
+    <div>
+      <div class="shadow-box" style="box-shadow: 0 22px 42px rgba(13,29,49,0.18), 18px 0 24px rgba(23,59,100,0.08)">
+        <div style="font-size:9px;color:#9EB3C8;text-align:center">Book</div>
+      </div>
+      <div class="shadow-name">book-3d<br>dual shadow</div>
+    </div>
+  </div>
+
+  <div class="group-label">Animation Durations</div>
+  <div class="dur-row">
+    <div class="dur-item"><div class="dur-bar" style="width:18px"></div><div class="dur-label">Fast</div><div class="dur-val">180ms</div></div>
+    <div class="dur-item"><div class="dur-bar" style="width:22px"></div><div class="dur-label">Normal</div><div class="dur-val">220ms</div></div>
+    <div class="dur-item"><div class="dur-bar" style="width:40px"></div><div class="dur-label">Medium</div><div class="dur-val">400ms</div></div>
+    <div class="dur-item"><div class="dur-bar" style="width:65px"></div><div class="dur-label">Slow</div><div class="dur-val">650ms</div></div>
+    <div class="dur-item"><div class="dur-bar" style="width:76px"></div><div class="dur-label">Book/3D</div><div class="dur-val">760ms</div></div>
+    <div class="dur-item"><div class="dur-bar" style="width:96px"></div><div class="dur-label">Nav Morph</div><div class="dur-val">960ms</div></div>
+  </div>
+
+  <div class="group-label" style="margin-top:16px">Easing Curves</div>
+  <div class="ease-row">
+    <div class="ease-item">
+      <div style="width:80px;height:40px;position:relative;">
+        <svg viewBox="0 0 80 40" width="80" height="40">
+          <path d="M4 36 C20 36 28 4 76 4" stroke="#173B64" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="ease-label">smooth</div>
+      <div class="ease-val">cubic-bezier(.22,1,.36,1)</div>
+    </div>
+    <div class="ease-item">
+      <div style="width:80px;height:40px;position:relative;">
+        <svg viewBox="0 0 80 40" width="80" height="40">
+          <path d="M4 36 C40 36 40 4 76 4" stroke="#173B64" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="ease-label">standard</div>
+      <div class="ease-val">cubic-bezier(.4,0,.2,1)</div>
+    </div>
+    <div class="ease-item">
+      <div style="width:80px;height:40px;position:relative;">
+        <svg viewBox="0 0 80 40" width="80" height="40">
+          <path d="M4 36 C4 4 76 4 76 4" stroke="#173B64" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="ease-label">ease-out-cubic</div>
+      <div class="ease-val">AOS default</div>
+    </div>
+  </div>
+</body>
+</html>

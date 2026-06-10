@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LearnNova — Admin & Teacher Panel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #root { margin: 0; padding: 0; min-height: 100vh; font-family: 'DM Sans', sans-serif; color: #173B64; }
+body { background: #F0F5FC; }
+@keyframes toastIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: #DDE6F0; border-radius: 99px; }
+input, select, textarea { font-family: 'DM Sans', sans-serif; outline: none; }
+input:focus, select:focus, textarea:focus { border-color: #173B64 !important; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useState, useEffect, useRef, useMemo } = React;
+
+// ── Design tokens ─────────────────────────────────────────────
+const C = {
+  navy: "#173B64", navyDeep: "#0F2746", navyDark: "#040E1C",
+  blueAccent: "#2563EB", blueDim: "rgba(37,99,235,0.09)", blueBorder: "rgba(37,99,235,0.18)",
+  green: "#0F9E6A", greenDim: "rgba(15,158,106,0.09)", greenBorder: "rgba(15,158,106,0.2)",
+  amber: "#D97706", amberDim: "rgba(217,119,6,0.09)",
+  red: "#DC2626", redDim: "rgba(220,38,38,0.09)",
+  purple: "#6D28D9", purpleDim: "rgba(109,40,217,0.08)",
+  yellow: "#ffde70",
+  bg: "#F0F5FC", card: "#FFFFFF", card2: "#F0F5FC",
+  border: "#DDE6F0", muted: "#6B7E96", hint: "#9EB3C8",
+  text: "#173B64", textSub: "#4A6580",
+};
+
+// ── Mock data ──────────────────────────────────────────────────
+const MOCK_ROLE = "admin"; // toggle to "teacher" to preview teacher view
+
+const MOCK_USER = {
+  id: "u-admin", name: "Jasur Nazarov", role: MOCK_ROLE,
+  programAccess: ["sat-math", "sat-english", "ielts"],
+};
+
+const MOCK_TEACHERS = [
+  { id: "t1", name: "Sarvar Toshmatov", email: "sarvar@lumea.uz", programAccess: ["sat-math", "sat-english"], score: 1510, plan: "pro", students: 12, rating: 4.9 },
+  { id: "t2", name: "Nilufar Yusupova", email: "nilufar@lumea.uz", programAccess: ["ielts"],                score: 7.5,  plan: "pro", students: 8,  rating: 4.8 },
+  { id: "t3", name: "Bobur Rahimov",    email: "bobur@lumea.uz",   programAccess: ["sat-math"],             score: 1480, plan: "plus", students: 6,  rating: 4.7 },
+];
+
+const MOCK_STUDENTS = [
+  { id: "s1", name: "Azizbek Karimov",   email: "aziz@mail.uz",   plan: "plus",  programAssignments: [{ programId: "sat-math", levelId: "intermediate", teacherId: "t1" }], sat: { current: 1200, target: 1500 }, ielts: { current: 0, target: 0 },   streak: 12, points: 340 },
+  { id: "s2", name: "Zulfiya Mirzaeva",  email: "zulfi@mail.uz",  plan: "pro",   programAssignments: [{ programId: "ielts", levelId: "advanced", teacherId: "t2" }],        sat: { current: 0, target: 0 },   ielts: { current: 6.0, target: 7.5 }, streak: 8,  points: 510 },
+  { id: "s3", name: "Doniyor Ergashev",  email: "doni@mail.uz",   plan: "basic", programAssignments: [{ programId: "sat-math", levelId: "beginner", teacherId: "t1" }],     sat: { current: 980, target: 1400 }, ielts: { current: 0, target: 0 },   streak: 3,  points: 120 },
+  { id: "s4", name: "Malika Hasanova",   email: "malika@mail.uz", plan: "plus",  programAssignments: [{ programId: "sat-english", levelId: "intermediate", teacherId: "t1" }], sat: { current: 1100, target: 1450 }, ielts: { current: 0, target: 0 }, streak: 5,  points: 290 },
+  { id: "s5", name: "Rustam Qodirov",    email: "rustam@mail.uz", plan: "pro",   programAssignments: [{ programId: "ielts", levelId: "intermediate", teacherId: "t2" }],     sat: { current: 0, target: 0 },   ielts: { current: 5.5, target: 7.0 }, streak: 15, points: 620 },
+];
+
+const PROGRAM_LABELS = { "sat-math": "SAT Math", "sat-english": "SAT English", ielts: "IELTS" };
+const PLAN_COLORS = { basic: C.hint, plus: C.blueAccent, pro: C.purple };
+const PLAN_BG = { basic: "#EEF4FB", plus: C.blueDim, pro: C.purpleDim };
+
+// seed chat messages
+const SEED_CHATS = {
+  "s1-t1": [
+    { id: 1, senderId: "t1", role: "teacher", text: "Salom Azizbek! Bugun qaysi mavzuni ko'rib chiqamiz?", time: "10:42" },
+    { id: 2, senderId: "s1", role: "student", text: "Quadratic equations hali ham qiyin", time: "10:43" },
+    { id: 3, senderId: "t1", role: "teacher", text: "Yaxshi! Discriminant b²−4ac dan boshlaymiz.", time: "10:44" },
+  ],
+  "s2-t2": [
+    { id: 1, senderId: "t2", role: "teacher", text: "Your Task 2 draft looks much better! Let's work on the thesis.", time: "09:15" },
+    { id: 2, senderId: "s2", role: "student", text: "Thank you! Can we book a session this Friday?", time: "09:16" },
+  ],
+};
+
+// seed bookings
+const SEED_BOOKINGS = [
+  { id: "b1", studentId: "s1", teacherId: "t1", date: "2026-05-06", time: "15:00", duration: 30, plan: "plus", status: "confirmed", program: "SAT Math" },
+  { id: "b2", studentId: "s2", teacherId: "t2", date: "2026-05-08", time: "17:00", duration: 90, plan: "pro", status: "pending", program: "IELTS" },
+  { id: "b3", studentId: "s5", teacherId: "t2", date: "2026-05-10", time: "14:00", duration: 90, plan: "pro", status: "confirmed", program: "IELTS" },
+];
+
+// ── UI Primitives ──────────────────────────────────────────────
+function Card({ children, style = {}, onClick }) {
+  return <div onClick={onClick} style={{ background: "#fff", border: `1px solid ${C.border}`, borderRadius: 16, padding: 20, cursor: onClick ? "pointer" : "default", transition: onClick ? "border-color 150ms, box-shadow 150ms" : "none", ...style }}>{children}</div>;
+}
+function Card2({ children, style = {} }) {
+  return <div style={{ background: C.bg, border: `1px solid ${C.border}`, borderRadius: 12, padding: 14, ...style }}>{children}</div>;
+}
+function SLabel({ children, style = {} }) {
+  return <div style={{ fontSize: 10, color: C.hint, textTransform: "uppercase", letterSpacing: "0.1em", fontWeight: 700, marginBottom: 10, ...style }}>{children}</div>;
+}
+function Sep({ style = {} }) { return <div style={{ height: 1, background: C.border, margin: "12px 0", ...style }} />; }
+function PBar({ pct, color, height = 5 }) {
+  return <div style={{ height, background: C.border, borderRadius: 999, overflow: "hidden" }}><div style={{ width: `${Math.min(pct,100)}%`, height, background: color, borderRadius: 999, transition: "width 800ms cubic-bezier(.4,0,.2,1)" }} /></div>;
+}
+function Avatar({ name, size = 32, color = C.navy }) {
+  const initials = name?.split(" ").map(w => w[0]).join("").slice(0,2).toUpperCase() || "?";
+  return <div style={{ width: size, height: size, borderRadius: "50%", background: color, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: size * 0.35, flexShrink: 0 }}>{initials}</div>;
+}
+function Tag({ label, bg, color }) {
+  return <span style={{ background: bg, color, fontSize: 10, fontWeight: 700, padding: "2px 8px", borderRadius: 999, textTransform: "uppercase", letterSpacing: "0.04em", whiteSpace: "nowrap" }}>{label}</span>;
+}
+function PlanTag({ plan }) {
+  return <Tag label={plan} bg={PLAN_BG[plan] || C.bg} color={PLAN_COLORS[plan] || C.hint} />;
+}
+function Btn({ children, onClick, style = {}, variant = "primary", disabled = false }) {
+  const base = { border: "none", borderRadius: 12, padding: "9px 16px", fontSize: 13, fontWeight: 600, cursor: disabled ? "not-allowed" : "pointer", fontFamily: "'DM Sans',sans-serif", transition: "all 150ms", opacity: disabled ? 0.45 : 1, display: "inline-flex", alignItems: "center", gap: 6 };
+  const variants = {
+    primary: { background: C.navy, color: "#fff" },
+    ghost: { background: "transparent", color: C.muted, border: `1px solid ${C.border}` },
+    danger: { background: C.redDim, color: C.red, border: `1px solid rgba(220,38,38,0.2)` },
+    success: { background: C.greenDim, color: C.green, border: `1px solid ${C.greenBorder}` },
+  };
+  return <button onClick={onClick} disabled={disabled} style={{ ...base, ...variants[variant], ...style }}>{children}</button>;
+}
+function Input({ label, value, onChange, placeholder, type = "text", style = {} }) {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
+      {label && <div style={{ fontSize: 11, fontWeight: 700, color: C.hint, textTransform: "uppercase", letterSpacing: "0.06em" }}>{label}</div>}
+      <input type={type} value={value} onChange={e => onChange(e.target.value)} placeholder={placeholder}
+        style={{ padding: "9px 12px", borderRadius: 10, border: `1px solid ${C.border}`, fontSize: 13, color: C.navy, background: C.bg, width: "100%", ...style }} />
+    </div>
+  );
+}
+function Modal({ title, children, onClose, width = 480 }) {
+  return (
+    <div style={{ position: "fixed", inset: 0, background: "rgba(15,39,70,0.4)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 200, padding: 20 }}>
+      <div style={{ background: "#fff", borderRadius: 20, padding: 28, width, maxWidth: "95vw", maxHeight: "90vh", overflowY: "auto", boxShadow: "0 18px 50px rgba(7,49,94,0.2)", animation: "fadeIn 200ms ease" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
+          <div style={{ fontSize: 17, fontWeight: 700, color: C.navy }}>{title}</div>
+          <button onClick={onClose} style={{ background: C.bg, border: "none", borderRadius: 8, width: 30, height: 30, cursor: "pointer", fontSize: 14, color: C.muted }}>✕</button>
+        </div>
+        {children}
+      </div>
+    </div>
+  );
+}
+function Toast({ msg, onDone }) {
+  useEffect(() => { if (!msg) return; const t = setTimeout(onDone, 3000); return () => clearTimeout(t); }, [msg]);
+  if (!msg) return null;
+  return <div style={{ position: "fixed", bottom: 24, right: 24, zIndex: 300, background: C.navy, color: "#fff", borderRadius: 14, padding: "11px 18px", fontSize: 13, fontWeight: 500, boxShadow: "0 8px 24px rgba(23,59,100,0.2)", animation: "toastIn 250ms ease", display: "flex", alignItems: "center", gap: 8 }}>✓ {msg}</div>;
+}
+
+// ── SVG Icons ──────────────────────────────────────────────────
+function Icon({ d, size = 16, color = "currentColor", stroke = true }) {
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill={stroke ? "none" : color} stroke={stroke ? color : "none"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d={d}/></svg>;
+}
+const ICONS = {
+  students: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75",
+  teachers: "M12 14l9-5-9-5-9 5 9 5zM12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z",
+  lessons: "M4 19.5A2.5 2.5 0 016.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z",
+  chat: "M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z",
+  rating: "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z",
+  calendar: "M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z",
+  logout: "M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9",
+  send: "M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z",
+  plus: "M12 5v14M5 12h14",
+  check: "M20 6L9 17l-5-5",
+  clock: "M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zM12 6v6l4 2",
+  search: "M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z",
+  filter: "M22 3H2l8 9.46V19l4 2v-8.54L22 3z",
+  trash: "M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6",
+  edit: "M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z",
+};
+
+// ── Sidebar ────────────────────────────────────────────────────
+function Sidebar({ role, tab, onTab, user, onLogout }) {
+  const adminNav = [
+    { id: "overview", label: "Overview",  icon: "rating" },
+    { id: "students", label: "Students",  icon: "students" },
+    { id: "teachers", label: "Teachers",  icon: "teachers" },
+    { id: "lessons",  label: "Lessons",   icon: "lessons" },
+    { id: "bookings", label: "Bookings",  icon: "calendar" },
+    { id: "ratings",  label: "Ratings",   icon: "rating" },
+  ];
+  const teacherNav = [
+    { id: "overview", label: "Overview",  icon: "rating" },
+    { id: "students", label: "My Students", icon: "students" },
+    { id: "chat",     label: "Chat",      icon: "chat" },
+    { id: "bookings", label: "Bookings",  icon: "calendar" },
+    { id: "lessons",  label: "Lessons",   icon: "lessons" },
+  ];
+  const nav = role === "admin" ? adminNav : teacherNav;
+
+  return (
+    <aside style={{ width: 220, flexShrink: 0, background: "#fff", borderRight: `1px solid ${C.border}`, display: "flex", flexDirection: "column", height: "100vh", position: "sticky", top: 0 }}>
+      {/* Logo */}
+      <div style={{ padding: "16px 18px", borderBottom: `1px solid ${C.border}`, display: "flex", alignItems: "center", gap: 10 }}>
+        <div style={{ width: 32, height: 32, borderRadius: 10, background: C.navy, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: 14 }}>L</div>
+        <div>
+          <div style={{ fontSize: 14, fontWeight: 700, color: C.navy, lineHeight: 1 }}>LearnNova</div>
+          <div style={{ fontSize: 9, color: C.hint, textTransform: "uppercase", letterSpacing: "0.1em", marginTop: 2 }}>{role === "admin" ? "Admin Panel" : "Teacher Panel"}</div>
+        </div>
+      </div>
+
+      {/* Nav */}
+      <nav style={{ flex: 1, padding: "12px 10px", display: "flex", flexDirection: "column", gap: 2, overflowY: "auto" }}>
+        <div style={{ fontSize: 9, color: C.hint, textTransform: "uppercase", letterSpacing: "0.1em", fontWeight: 700, padding: "0 8px", marginBottom: 4 }}>Navigation</div>
+        {nav.map(item => (
+          <button key={item.id} onClick={() => onTab(item.id)}
+            style={{ width: "100%", display: "flex", alignItems: "center", gap: 10, padding: "9px 12px", borderRadius: 12, fontSize: 13, fontWeight: 500, border: "none", cursor: "pointer", textAlign: "left", fontFamily: "'DM Sans',sans-serif", background: tab === item.id ? C.navy : "transparent", color: tab === item.id ? "#fff" : C.muted, transition: "all 150ms" }}>
+            <span style={{ width: 16, display: "flex", alignItems: "center", flexShrink: 0 }}><Icon d={ICONS[item.icon]} size={15} color={tab === item.id ? "#fff" : C.muted} /></span>
+            {item.label}
+          </button>
+        ))}
+      </nav>
+
+      {/* User */}
+      <div style={{ padding: "10px", borderTop: `1px solid ${C.border}` }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "9px 12px", borderRadius: 12, background: C.bg }}>
+          <Avatar name={user.name} size={30} />
+          <div style={{ overflow: "hidden" }}>
+            <div style={{ fontSize: 12, fontWeight: 600, color: C.navy, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{user.name}</div>
+            <div style={{ fontSize: 10, color: C.hint, textTransform: "capitalize" }}>{user.role}</div>
+          </div>
+        </div>
+        <button onClick={onLogout} style={{ width: "100%", marginTop: 4, display: "flex", alignItems: "center", gap: 8, padding: "8px 12px", borderRadius: 12, color: C.red, fontSize: 12, fontWeight: 500, background: "none", border: "none", cursor: "pointer", fontFamily: "'DM Sans',sans-serif" }}>
+          <Icon d={ICONS.logout} size={13} color={C.red} /> Log out
+        </button>
+      </div>
+    </aside>
+  );
+}
+
+// ── Topbar ─────────────────────────────────────────────────────
+function Topbar({ tab, role, counts }) {
+  const titles = { overview: "Overview", students: role === "admin" ? "Students" : "My Students", teachers: "Teachers", lessons: "Lessons", chat: "Chat", bookings: "Bookings", ratings: "Ratings" };
+  const subtitles = { overview: "Your dashboard at a glance", students: `${counts.students} active`, teachers: `${counts.teachers} teachers`, lessons: "Manage content", chat: "Student messages", bookings: "Session bookings", ratings: "Leaderboard" };
+  return (
+    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "16px 24px", background: "#fff", borderBottom: `1px solid ${C.border}`, flexShrink: 0 }}>
+      <div>
+        <h1 style={{ margin: 0, fontSize: 20, fontWeight: 700, color: C.navy, lineHeight: 1 }}>{titles[tab] || tab}</h1>
+        <p style={{ margin: "4px 0 0", fontSize: 11, color: C.hint }}>{subtitles[tab]}</p>
+      </div>
+      <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 6, background: C.greenDim, border: `1px solid ${C.greenBorder}`, borderRadius: 10, padding: "5px 12px", fontSize: 12, fontWeight: 600, color: C.green }}>
+          <div style={{ width: 6, height: 6, borderRadius: "50%", background: C.green }} />
+          System Online
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── Overview Page ──────────────────────────────────────────────
+function OverviewPage({ role, students, teachers, bookings, onTab }) {
+  const statCards = role === "admin" ? [
+    { label: "Total Students", value: students.length, color: C.blueAccent, bg: C.blueDim, icon: ICONS.students, tab: "students" },
+    { label: "Total Teachers", value: teachers.length, color: C.green, bg: C.greenDim, icon: ICONS.teachers, tab: "teachers" },
+    { label: "Pending Bookings", value: bookings.filter(b => b.status === "pending").length, color: C.amber, bg: C.amberDim, icon: ICONS.calendar, tab: "bookings" },
+    { label: "Pro Students", value: students.filter(s => s.plan === "pro").length, color: C.purple, bg: C.purpleDim, icon: ICONS.rating, tab: "students" },
+  ] : [
+    { label: "My Students", value: students.length, color: C.blueAccent, bg: C.blueDim, icon: ICONS.students, tab: "students" },
+    { label: "Upcoming Sessions", value: bookings.filter(b => b.status === "confirmed").length, color: C.green, bg: C.greenDim, icon: ICONS.calendar, tab: "bookings" },
+    { label: "Pending Requests", value: bookings.filter(b => b.status === "pending").length, color: C.amber, bg: C.amberDim, icon: ICONS.clock, tab: "bookings" },
+    { label: "Unread Chats", value: 2, color: C.purple, bg: C.purpleDim, icon: ICONS.chat, tab: "chat" },
+  ];
+
+  const recentBookings = [...bookings].slice(0, 3);
+
+  return (
+    <div style={{ padding: 24, display: "flex", flexDirection: "column", gap: 20 }}>
+      {/* Stat cards */}
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 14 }}>
+        {statCards.map(s => (
+          <Card key={s.label} onClick={() => onTab(s.tab)} style={{ cursor: "pointer" }}>
+            <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 14 }}>
+              <div style={{ width: 38, height: 38, borderRadius: 10, background: s.bg, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <Icon d={s.icon} size={17} color={s.color} />
+              </div>
+            </div>
+            <div style={{ fontSize: 28, fontWeight: 700, color: s.color, lineHeight: 1, marginBottom: 4 }}>{s.value}</div>
+            <div style={{ fontSize: 12, color: C.muted }}>{s.label}</div>
+          </Card>
+        ))}
+      </div>
+
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+        {/* Recent bookings */}
+        <Card>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14 }}>
+            <SLabel style={{ marginBottom: 0 }}>Recent Bookings</SLabel>
+            <button onClick={() => onTab("bookings")} style={{ fontSize: 12, fontWeight: 700, color: C.blueAccent, background: "none", border: "none", cursor: "pointer" }}>View all →</button>
+          </div>
+          {recentBookings.map((b, i) => {
+            const student = MOCK_STUDENTS.find(s => s.id === b.studentId);
+            const teacher = MOCK_TEACHERS.find(t => t.id === b.teacherId);
+            return (
+              <div key={b.id} style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 0", borderBottom: i < recentBookings.length - 1 ? `1px solid ${C.border}` : "none" }}>
+                <Avatar name={student?.name || "?"} size={32} />
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={{ fontSize: 13, fontWeight: 600, color: C.navy, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{student?.name}</div>
+                  <div style={{ fontSize: 11, color: C.hint }}>{b.program} · {b.date} {b.time}</div>
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                  <Tag label={b.status} bg={b.status === "confirmed" ? C.greenDim : C.amberDim} color={b.status === "confirmed" ? C.green : C.amber} />
+                  <Tag label={`${b.duration}min`} bg={C.bg} color={C.muted} />
+                </div>
+              </div>
+            );
+          })}
+        </Card>
+
+        {/* Top students */}
+        <Card>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14 }}>
+            <SLabel style={{ marginBottom: 0 }}>Top Students</SLabel>
+            <button onClick={() => onTab("ratings")} style={{ fontSize: 12, fontWeight: 700, color: C.blueAccent, background: "none", border: "none", cursor: "pointer" }}>Leaderboard →</button>
+          </div>
+          {[...students].sort((a, b) => b.points - a.points).slice(0, 4).map((s, i) => (
+            <div key={s.id} style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 0", borderBottom: i < 3 ? `1px solid ${C.border}` : "none" }}>
+              <div style={{ width: 22, textAlign: "center", fontSize: 13, fontWeight: 700, color: i < 3 ? [C.amber, C.hint, "#cd7f32"][i] : C.hint, flexShrink: 0 }}>#{i + 1}</div>
+              <Avatar name={s.name} size={30} />
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ fontSize: 13, fontWeight: 600, color: C.navy, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{s.name}</div>
+                <div style={{ fontSize: 11, color: C.hint }}>{s.points} pts · 🔥 {s.streak}</div>
+              </div>
+              <PlanTag plan={s.plan} />
+            </div>
+          ))}
+        </Card>
+      </div>
+    </div>
+  );
+}
+
+// ── Students Page ──────────────────────────────────────────────
+function StudentsPage({ students, teachers, role, showToast }) {
+  const [search, setSearch] = useState("");
+  const [planFilter, setPlanFilter] = useState("");
+  const [editing, setEditing] = useState(null);
+
+  const filtered = students.filter(s =>
+    s.name.toLowerCase().includes(search.toLowerCase()) &&
+    (!planFilter || s.plan === planFilter)
+  );
+
+  return (
+    <div style={{ padding: 24 }}>
+      {/* Toolbar */}
+      <div style={{ display: "flex", gap: 10, marginBottom: 16, alignItems: "center" }}>
+        <div style={{ position: "relative", flex: 1, maxWidth: 280 }}>
+          <span style={{ position: "absolute", left: 10, top: "50%", transform: "translateY(-50%)" }}><Icon d={ICONS.search} size={14} color={C.hint} /></span>
+          <input value={search} onChange={e => setSearch(e.target.value)} placeholder="Search students…"
+            style={{ width: "100%", padding: "9px 12px 9px 32px", border: `1px solid ${C.border}`, borderRadius: 10, fontSize: 13, background: "#fff", color: C.navy, fontFamily: "'DM Sans',sans-serif" }} />
+        </div>
+        <select value={planFilter} onChange={e => setPlanFilter(e.target.value)}
+          style={{ padding: "9px 12px", border: `1px solid ${C.border}`, borderRadius: 10, fontSize: 13, background: "#fff", color: C.navy, fontFamily: "'DM Sans',sans-serif" }}>
+          <option value="">All plans</option>
+          <option value="basic">Basic</option>
+          <option value="plus">Plus</option>
+          <option value="pro">Pro</option>
+        </select>
+        {role === "admin" && <Btn onClick={() => showToast("Add student modal — connect to real API")}><Icon d={ICONS.plus} size={13} color="#fff" /> Add Student</Btn>}
+      </div>
+
+      {/* Table */}
+      <Card style={{ padding: 0, overflow: "hidden" }}>
+        <table style={{ width: "100%", borderCollapse: "collapse" }}>
+          <thead>
+            <tr style={{ background: C.bg }}>
+              {["#", "Student", "Plan", "Program & Level", "Teacher", "SAT Score", "IELTS Band", "Streak", ""].map(h => (
+                <th key={h} style={{ padding: "10px 14px", textAlign: "left", fontSize: 10, fontWeight: 700, color: C.hint, textTransform: "uppercase", letterSpacing: "0.06em", borderBottom: `1px solid ${C.border}` }}>{h}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {filtered.map((s, i) => {
+              const teacher = teachers.find(t => s.programAssignments[0]?.teacherId === t.id);
+              return (
+                <tr key={s.id} onClick={() => setEditing(s)} style={{ cursor: "pointer", transition: "background 120ms" }}
+                  onMouseEnter={e => e.currentTarget.style.background = C.bg}
+                  onMouseLeave={e => e.currentTarget.style.background = "transparent"}>
+                  <td style={{ padding: "11px 14px", fontSize: 12, color: C.hint, borderBottom: `1px solid ${C.border}` }}>{i + 1}</td>
+                  <td style={{ padding: "11px 14px", borderBottom: `1px solid ${C.border}` }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                      <Avatar name={s.name} size={28} />
+                      <div>
+                        <div style={{ fontSize: 13, fontWeight: 600, color: C.navy }}>{s.name}</div>
+                        <div style={{ fontSize: 11, color: C.hint }}>{s.email}</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td style={{ padding: "11px 14px", borderBottom: `1px solid ${C.border}` }}><PlanTag plan={s.plan} /></td>
+                  <td style={{ padding: "11px 14px", borderBottom: `1px solid ${C.border}`, fontSize: 12, color: C.textSub }}>
+                    {s.programAssignments.map(a => `${PROGRAM_LABELS[a.programId] || a.programId} · ${a.levelId}`).join(", ")}
+                  </td>
+                  <td style={{ padding: "11px 14px", borderBottom: `1px solid ${C.border}` }}>
+                    {teacher ? (
+                      <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                        <Avatar name={teacher.name} size={22} color={C.green} />
+                        <span style={{ fontSize: 12, color: C.textSub }}>{teacher.name.split(" ")[0]}</span>
+                      </div>
+                    ) : <span style={{ fontSize: 12, color: C.hint }}>Unassigned</span>}
+                  </td>
+                  <td style={{ padding: "11px 14px", borderBottom: `1px solid ${C.border}`, fontSize: 13, fontWeight: 700, color: s.sat.current ? C.blueAccent : C.hint }}>{s.sat.current || "—"}</td>
+                  <td style={{ padding: "11px 14px", borderBottom: `1px solid ${C.border}`, fontSize: 13, fontWeight: 700, color: s.ielts.current ? C.green : C.hint }}>{s.ielts.current || "—"}</td>
+                  <td style={{ padding: "11px 14px", borderBottom: `1px solid ${C.border}`, fontSize: 12, color: C.amber, fontWeight: 600 }}>🔥 {s.streak}</td>
+                  <td style={{ padding: "11px 14px", borderBottom: `1px solid ${C.border}` }}>
+                    <Btn variant="ghost" style={{ padding: "5px 10px", fontSize: 12 }}><Icon d={ICONS.edit} size={12} color={C.muted} /> Edit</Btn>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </Card>
+
+      {editing && (
+        <Modal title={`Edit — ${editing.name}`} onClose={() => setEditing(null)} width={520}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+            <Input label="First name" value={editing.name.split(" ")[0]} onChange={() => {}} />
+            <Input label="Last name" value={editing.name.split(" ")[1] || ""} onChange={() => {}} />
+            <Input label="Email" value={editing.email} onChange={() => {}} />
+            <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
+              <div style={{ fontSize: 11, fontWeight: 700, color: C.hint, textTransform: "uppercase", letterSpacing: "0.06em" }}>Plan</div>
+              <select defaultValue={editing.plan} style={{ padding: "9px 12px", borderRadius: 10, border: `1px solid ${C.border}`, fontSize: 13, color: C.navy, background: C.bg, fontFamily: "'DM Sans',sans-serif" }}>
+                <option value="basic">Basic</option>
+                <option value="plus">Plus</option>
+                <option value="pro">Pro</option>
+              </select>
+            </div>
+            <Input label="SAT Target" value={String(editing.sat.target || "")} onChange={() => {}} />
+            <Input label="IELTS Target" value={String(editing.ielts.target || "")} onChange={() => {}} />
+          </div>
+          <div style={{ display: "flex", gap: 10, marginTop: 20 }}>
+            <Btn onClick={() => { showToast("Changes saved!"); setEditing(null); }}>Save Changes</Btn>
+            <Btn variant="ghost" onClick={() => setEditing(null)}>Cancel</Btn>
+            {role === "admin" && <Btn variant="danger" onClick={() => { showToast("Student deleted"); setEditing(null); }} style={{ marginLeft: "auto" }}><Icon d={ICONS.trash} size={13} color={C.red} /> Delete</Btn>}
+          </div>
+        </Modal>
+      )}
+    </div>
+  );
+}
+
+// ── Teachers Page (admin only) ────────────────────────────────
+function TeachersPage({ teachers, showToast }) {
+  const [editing, setEditing] = useState(null);
+
+  return (
+    <div style={{ padding: 24 }}>
+      <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 16 }}>
+        <Btn onClick={() => showToast("Add teacher — connect to real API")}><Icon d={ICONS.plus} size={13} color="#fff" /> Add Teacher</Btn>
+      </div>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 14 }}>
+        {teachers.map(t => (
+          <Card key={t.id} style={{ cursor: "pointer" }} onClick={() => setEditing(t)}>
+            <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 14 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                <Avatar name={t.name} size={44} />
+                <div>
+                  <div style={{ fontSize: 14, fontWeight: 700, color: C.navy }}>{t.name}</div>
+                  <div style={{ fontSize: 11, color: C.hint }}>{t.email}</div>
+                </div>
+              </div>
+              <PlanTag plan={t.plan} />
+            </div>
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 14 }}>
+              {t.programAccess.map(p => <Tag key={p} label={PROGRAM_LABELS[p] || p} bg={C.blueDim} color={C.blueAccent} />)}
+            </div>
+            <Sep />
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8 }}>
+              <div style={{ textAlign: "center" }}>
+                <div style={{ fontSize: 17, fontWeight: 700, color: C.navy }}>{t.score}</div>
+                <div style={{ fontSize: 10, color: C.hint }}>Score</div>
+              </div>
+              <div style={{ textAlign: "center" }}>
+                <div style={{ fontSize: 17, fontWeight: 700, color: C.blueAccent }}>{t.students}</div>
+                <div style={{ fontSize: 10, color: C.hint }}>Students</div>
+              </div>
+              <div style={{ textAlign: "center" }}>
+                <div style={{ fontSize: 17, fontWeight: 700, color: C.amber }}>⭐ {t.rating}</div>
+                <div style={{ fontSize: 10, color: C.hint }}>Rating</div>
+              </div>
+            </div>
+          </Card>
+        ))}
+      </div>
+
+      {editing && (
+        <Modal title={`Edit — ${editing.name}`} onClose={() => setEditing(null)}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+            <Input label="Name" value={editing.name.split(" ")[0]} onChange={() => {}} />
+            <Input label="Surname" value={editing.name.split(" ")[1] || ""} onChange={() => {}} />
+            <Input label="Email" value={editing.email} onChange={() => {}} />
+            <Input label="Score" value={String(editing.score)} onChange={() => {}} />
+          </div>
+          <div style={{ marginTop: 14 }}>
+            <SLabel>Program Access</SLabel>
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+              {["sat-math", "sat-english", "ielts"].map(p => (
+                <label key={p} style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 13, color: C.textSub, cursor: "pointer" }}>
+                  <input type="checkbox" defaultChecked={editing.programAccess.includes(p)} />
+                  {PROGRAM_LABELS[p]}
+                </label>
+              ))}
+            </div>
+          </div>
+          <div style={{ display: "flex", gap: 10, marginTop: 20 }}>
+            <Btn onClick={() => { showToast("Teacher updated!"); setEditing(null); }}>Save</Btn>
+            <Btn variant="ghost" onClick={() => setEditing(null)}>Cancel</Btn>
+            <Btn variant="danger" onClick={() => { showToast("Teacher deleted"); setEditing(null); }} style={{ marginLeft: "auto" }}><Icon d={ICONS.trash} size={13} color={C.red} /> Delete</Btn>
+          </div>
+        </Modal>
+      )}
+    </div>
+  );
+}
+
+// ── Chat Page ──────────────────────────────────────────────────
+function ChatPage({ role, currentUser, students, teachers }) {
+  const [selectedStudent, setSelectedStudent] = useState(students[0]);
+  const [chats, setChats] = useState(SEED_CHATS);
+  const [text, setText] = useState("");
+  const messagesEndRef = useRef(null);
+
+  const chatKey = selectedStudent ? `${selectedStudent.id}-${currentUser.id}` : null;
+  const messages = chatKey ? (chats[chatKey] || []) : [];
+
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages.length]);
+
+  const sendMessage = () => {
+    if (!text.trim() || !chatKey) return;
+    const newMsg = { id: Date.now(), senderId: currentUser.id, role: role, text: text.trim(), time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }) };
+    setChats(prev => ({ ...prev, [chatKey]: [...(prev[chatKey] || []), newMsg] }));
+    setText("");
+  };
+
+  return (
+    <div style={{ display: "flex", height: "calc(100vh - 73px)", overflow: "hidden" }}>
+      {/* Student list */}
+      <div style={{ width: 260, borderRight: `1px solid ${C.border}`, background: "#fff", display: "flex", flexDirection: "column" }}>
+        <div style={{ padding: "14px 14px 10px" }}>
+          <div style={{ position: "relative" }}>
+            <span style={{ position: "absolute", left: 10, top: "50%", transform: "translateY(-50%)" }}><Icon d={ICONS.search} size={13} color={C.hint} /></span>
+            <input placeholder="Search…" style={{ width: "100%", padding: "8px 10px 8px 30px", border: `1px solid ${C.border}`, borderRadius: 10, fontSize: 12, background: C.bg, color: C.navy, fontFamily: "'DM Sans',sans-serif" }} />
+          </div>
+        </div>
+        <div style={{ flex: 1, overflowY: "auto" }}>
+          {students.map(s => {
+            const key = `${s.id}-${currentUser.id}`;
+            const msgs = chats[key] || [];
+            const last = msgs[msgs.length - 1];
+            const isSelected = selectedStudent?.id === s.id;
+            return (
+              <div key={s.id} onClick={() => setSelectedStudent(s)}
+                style={{ padding: "12px 14px", cursor: "pointer", background: isSelected ? C.bg : "transparent", borderBottom: `1px solid ${C.border}`, transition: "background 120ms" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                  <div style={{ position: "relative", flexShrink: 0 }}>
+                    <Avatar name={s.name} size={36} />
+                    <div style={{ position: "absolute", bottom: 0, right: 0, width: 10, height: 10, borderRadius: "50%", background: C.green, border: "2px solid #fff" }} />
+                  </div>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                      <div style={{ fontSize: 13, fontWeight: isSelected ? 700 : 600, color: C.navy, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", maxWidth: 130 }}>{s.name}</div>
+                      {last && <div style={{ fontSize: 10, color: C.hint }}>{last.time}</div>}
+                    </div>
+                    <div style={{ fontSize: 11, color: C.hint, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                      {last ? last.text : "No messages yet"}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Chat window */}
+      {selectedStudent ? (
+        <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+          {/* Chat header */}
+          <div style={{ padding: "12px 20px", background: "#fff", borderBottom: `1px solid ${C.border}`, display: "flex", alignItems: "center", gap: 12 }}>
+            <Avatar name={selectedStudent.name} size={36} />
+            <div>
+              <div style={{ fontSize: 14, fontWeight: 700, color: C.navy }}>{selectedStudent.name}</div>
+              <div style={{ fontSize: 11, color: C.green, fontWeight: 600 }}>● Online · {selectedStudent.programAssignments.map(a => PROGRAM_LABELS[a.programId]).join(", ")}</div>
+            </div>
+            <div style={{ marginLeft: "auto", display: "flex", gap: 8 }}>
+              <PlanTag plan={selectedStudent.plan} />
+              <Tag label={`🔥 ${selectedStudent.streak} streak`} bg={C.amberDim} color={C.amber} />
+            </div>
+          </div>
+
+          {/* Messages */}
+          <div style={{ flex: 1, overflowY: "auto", padding: "20px", display: "flex", flexDirection: "column", gap: 12, background: C.bg }}>
+            {messages.length === 0 && (
+              <div style={{ textAlign: "center", color: C.hint, fontSize: 13, marginTop: 40 }}>No messages yet. Start the conversation!</div>
+            )}
+            {messages.map(msg => {
+              const isMe = msg.senderId === currentUser.id;
+              return (
+                <div key={msg.id} style={{ display: "flex", justifyContent: isMe ? "flex-end" : "flex-start" }}>
+                  <div>
+                    <div style={{ maxWidth: 360, padding: "10px 14px", borderRadius: isMe ? "14px 14px 4px 14px" : "14px 14px 14px 4px", background: isMe ? C.navy : "#fff", color: isMe ? "#fff" : C.navy, fontSize: 13, lineHeight: 1.5, boxShadow: "0 2px 8px rgba(23,59,100,0.08)", border: isMe ? "none" : `1px solid ${C.border}` }}>{msg.text}</div>
+                    <div style={{ fontSize: 10, color: C.hint, marginTop: 3, textAlign: isMe ? "right" : "left" }}>{msg.time}</div>
+                  </div>
+                </div>
+              );
+            })}
+            <div ref={messagesEndRef} />
+          </div>
+
+          {/* Input */}
+          <div style={{ padding: "12px 20px", background: "#fff", borderTop: `1px solid ${C.border}`, display: "flex", gap: 10, alignItems: "flex-end" }}>
+            <textarea value={text} onChange={e => setText(e.target.value)}
+              onKeyDown={e => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); sendMessage(); } }}
+              placeholder="Type a message… (Enter to send)"
+              rows={2}
+              style={{ flex: 1, padding: "10px 14px", border: `1px solid ${C.border}`, borderRadius: 12, fontSize: 13, color: C.navy, resize: "none", fontFamily: "'DM Sans',sans-serif", background: C.bg, lineHeight: 1.5 }} />
+            <button onClick={sendMessage} style={{ width: 42, height: 42, borderRadius: 12, background: C.navy, border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+              <Icon d={ICONS.send} size={16} color="#fff" />
+            </button>
+          </div>
+        </div>
+      ) : (
+        <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", color: C.hint, fontSize: 14 }}>Select a student to start chatting</div>
+      )}
+    </div>
+  );
+}
+
+// ── Bookings Page ──────────────────────────────────────────────
+function BookingsPage({ role, bookings: initBookings, students, teachers, showToast }) {
+  const [bookings, setBookings] = useState(initBookings);
+  const [filter, setFilter] = useState("all");
+  const [showAdd, setShowAdd] = useState(false);
+  const [newB, setNewB] = useState({ studentId: students[0]?.id || "", teacherId: teachers[0]?.id || "", date: "", time: "15:00", program: "SAT Math" });
+
+  const PLAN_DURATION = { plus: 30, pro: 90 };
+
+  const filtered = bookings.filter(b => filter === "all" || b.status === filter);
+
+  const confirm = (id) => { setBookings(bs => bs.map(b => b.id === id ? { ...b, status: "confirmed" } : b)); showToast("Booking confirmed!"); };
+  const cancel = (id) => { setBookings(bs => bs.filter(b => b.id !== id)); showToast("Booking cancelled"); };
+
+  const addBooking = () => {
+    const student = students.find(s => s.id === newB.studentId);
+    if (!student) return;
+    const duration = PLAN_DURATION[student.plan] || 30;
+    const booking = { id: `b${Date.now()}`, ...newB, duration, plan: student.plan, status: "pending" };
+    setBookings(bs => [booking, ...bs]);
+    setShowAdd(false);
+    showToast("Booking request sent!");
+  };
+
+  return (
+    <div style={{ padding: 24 }}>
+      {/* Plan rules banner */}
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 20 }}>
+        <Card2 style={{ display: "flex", alignItems: "center", gap: 14 }}>
+          <div style={{ width: 40, height: 40, borderRadius: 10, background: C.blueDim, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+            <Icon d={ICONS.clock} size={18} color={C.blueAccent} />
+          </div>
+          <div>
+            <div style={{ fontSize: 13, fontWeight: 700, color: C.navy }}>Plus Plan — 30 min sessions</div>
+            <div style={{ fontSize: 12, color: C.hint }}>One session every 2 days · Chat access included</div>
+          </div>
+          <Tag label="Plus" bg={C.blueDim} color={C.blueAccent} />
+        </Card2>
+        <Card2 style={{ display: "flex", alignItems: "center", gap: 14 }}>
+          <div style={{ width: 40, height: 40, borderRadius: 10, background: C.purpleDim, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+            <Icon d={ICONS.clock} size={18} color={C.purple} />
+          </div>
+          <div>
+            <div style={{ fontSize: 13, fontWeight: 700, color: C.navy }}>Pro Plan — 90 min sessions</div>
+            <div style={{ fontSize: 12, color: C.hint }}>One session every 2 days · Priority support</div>
+          </div>
+          <Tag label="Pro" bg={C.purpleDim} color={C.purple} />
+        </Card2>
+      </div>
+
+      {/* Toolbar */}
+      <div style={{ display: "flex", gap: 10, marginBottom: 16, alignItems: "center" }}>
+        <div style={{ display: "flex", gap: 4, background: C.bg, borderRadius: 10, padding: 4 }}>
+          {["all", "confirmed", "pending"].map(f => (
+            <button key={f} onClick={() => setFilter(f)}
+              style={{ padding: "6px 14px", borderRadius: 8, border: "none", background: filter === f ? C.navy : "transparent", color: filter === f ? "#fff" : C.muted, fontSize: 12, fontWeight: 600, cursor: "pointer", fontFamily: "'DM Sans',sans-serif", textTransform: "capitalize", transition: "all 150ms" }}>
+              {f}
+            </button>
+          ))}
+        </div>
+        <Btn onClick={() => setShowAdd(true)} style={{ marginLeft: "auto" }}><Icon d={ICONS.plus} size={13} color="#fff" /> New Booking</Btn>
+      </div>
+
+      {/* Bookings list */}
+      <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+        {filtered.map(b => {
+          const student = students.find(s => s.id === b.studentId);
+          const teacher = teachers.find(t => t.id === b.teacherId);
+          return (
+            <Card key={b.id} style={{ padding: "14px 18px" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 14, flexWrap: "wrap" }}>
+                {/* Student */}
+                <div style={{ display: "flex", alignItems: "center", gap: 10, minWidth: 160 }}>
+                  <Avatar name={student?.name || "?"} size={36} />
+                  <div>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: C.navy }}>{student?.name}</div>
+                    <div style={{ fontSize: 11, color: C.hint }}>Student</div>
+                  </div>
+                </div>
+
+                <div style={{ color: C.hint, fontSize: 16 }}>→</div>
+
+                {/* Teacher */}
+                <div style={{ display: "flex", alignItems: "center", gap: 10, minWidth: 160 }}>
+                  <Avatar name={teacher?.name || "?"} size={36} color={C.green} />
+                  <div>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: C.navy }}>{teacher?.name}</div>
+                    <div style={{ fontSize: 11, color: C.hint }}>Teacher</div>
+                  </div>
+                </div>
+
+                {/* Details */}
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap", flex: 1, justifyContent: "center" }}>
+                  <Tag label={b.program} bg={C.blueDim} color={C.blueAccent} />
+                  <Tag label={`${b.date} · ${b.time}`} bg={C.bg} color={C.textSub} />
+                  <Tag label={`${b.duration} min`} bg={b.duration === 90 ? C.purpleDim : C.blueDim} color={b.duration === 90 ? C.purple : C.blueAccent} />
+                  <PlanTag plan={b.plan} />
+                </div>
+
+                {/* Status + actions */}
+                <div style={{ display: "flex", gap: 8, alignItems: "center", marginLeft: "auto" }}>
+                  <Tag label={b.status} bg={b.status === "confirmed" ? C.greenDim : C.amberDim} color={b.status === "confirmed" ? C.green : C.amber} />
+                  {b.status === "pending" && <Btn variant="success" onClick={() => confirm(b.id)} style={{ padding: "5px 12px", fontSize: 12 }}><Icon d={ICONS.check} size={12} color={C.green} /> Confirm</Btn>}
+                  <Btn variant="danger" onClick={() => cancel(b.id)} style={{ padding: "5px 10px", fontSize: 12 }}><Icon d={ICONS.trash} size={12} color={C.red} /></Btn>
+                </div>
+              </div>
+            </Card>
+          );
+        })}
+        {filtered.length === 0 && <div style={{ textAlign: "center", padding: "60px 0", color: C.hint, fontSize: 14 }}>No bookings found</div>}
+      </div>
+
+      {/* Add booking modal */}
+      {showAdd && (
+        <Modal title="New Booking Request" onClose={() => setShowAdd(false)}>
+          <div style={{ display: "grid", gap: 14 }}>
+            <div>
+              <div style={{ fontSize: 11, fontWeight: 700, color: C.hint, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 6 }}>Student</div>
+              <select value={newB.studentId} onChange={e => setNewB(p => ({ ...p, studentId: e.target.value }))}
+                style={{ width: "100%", padding: "9px 12px", borderRadius: 10, border: `1px solid ${C.border}`, fontSize: 13, color: C.navy, background: C.bg, fontFamily: "'DM Sans',sans-serif" }}>
+                {students.map(s => <option key={s.id} value={s.id}>{s.name} ({s.plan})</option>)}
+              </select>
+            </div>
+            <div>
+              <div style={{ fontSize: 11, fontWeight: 700, color: C.hint, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 6 }}>Teacher</div>
+              <select value={newB.teacherId} onChange={e => setNewB(p => ({ ...p, teacherId: e.target.value }))}
+                style={{ width: "100%", padding: "9px 12px", borderRadius: 10, border: `1px solid ${C.border}`, fontSize: 13, color: C.navy, background: C.bg, fontFamily: "'DM Sans',sans-serif" }}>
+                {teachers.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}
+              </select>
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+              <Input label="Date" value={newB.date} onChange={v => setNewB(p => ({ ...p, date: v }))} type="date" />
+              <Input label="Time" value={newB.time} onChange={v => setNewB(p => ({ ...p, time: v }))} type="time" />
+            </div>
+            {/* Duration hint */}
+            {newB.studentId && (() => {
+              const s = students.find(st => st.id === newB.studentId);
+              const dur = PLAN_DURATION[s?.plan] || 30;
+              return (
+                <div style={{ background: s?.plan === "pro" ? C.purpleDim : C.blueDim, borderRadius: 10, padding: "10px 14px", fontSize: 12, color: s?.plan === "pro" ? C.purple : C.blueAccent, fontWeight: 600 }}>
+                  Session duration: <strong>{dur} minutes</strong> ({s?.plan} plan · every 2 days)
+                </div>
+              );
+            })()}
+            <div style={{ display: "flex", gap: 10, marginTop: 4 }}>
+              <Btn onClick={addBooking}>Create Booking</Btn>
+              <Btn variant="ghost" onClick={() => setShowAdd(false)}>Cancel</Btn>
+            </div>
+          </div>
+        </Modal>
+      )}
+    </div>
+  );
+}
+
+// ── Ratings Page ───────────────────────────────────────────────
+function RatingsPage({ students }) {
+  const ranked = [...students].sort((a, b) => b.points - a.points);
+  return (
+    <div style={{ padding: 24 }}>
+      <Card style={{ padding: 0, overflow: "hidden" }}>
+        <table style={{ width: "100%", borderCollapse: "collapse" }}>
+          <thead>
+            <tr style={{ background: C.bg }}>
+              {["Rank", "Student", "Plan", "Programs", "Points", "Streak", "SAT", "IELTS"].map(h => (
+                <th key={h} style={{ padding: "10px 16px", textAlign: "left", fontSize: 10, fontWeight: 700, color: C.hint, textTransform: "uppercase", letterSpacing: "0.06em", borderBottom: `1px solid ${C.border}` }}>{h}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {ranked.map((s, i) => (
+              <tr key={s.id} style={{ background: i === 0 ? "rgba(255,222,112,0.06)" : "transparent" }}>
+                <td style={{ padding: "12px 16px", borderBottom: `1px solid ${C.border}`, fontSize: 16, fontWeight: 700, color: i < 3 ? [C.amber, C.hint, "#cd7f32"][i] : C.hint }}>
+                  {i < 3 ? ["🥇","🥈","🥉"][i] : `#${i+1}`}
+                </td>
+                <td style={{ padding: "12px 16px", borderBottom: `1px solid ${C.border}` }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                    <Avatar name={s.name} size={30} />
+                    <div>
+                      <div style={{ fontSize: 13, fontWeight: 600, color: C.navy }}>{s.name}</div>
+                      <div style={{ fontSize: 11, color: C.hint }}>{s.email}</div>
+                    </div>
+                  </div>
+                </td>
+                <td style={{ padding: "12px 16px", borderBottom: `1px solid ${C.border}` }}><PlanTag plan={s.plan} /></td>
+                <td style={{ padding: "12px 16px", borderBottom: `1px solid ${C.border}`, fontSize: 12, color: C.textSub }}>{s.programAssignments.map(a => PROGRAM_LABELS[a.programId]).join(", ")}</td>
+                <td style={{ padding: "12px 16px", borderBottom: `1px solid ${C.border}`, fontSize: 15, fontWeight: 700, color: C.blueAccent }}>{s.points}</td>
+                <td style={{ padding: "12px 16px", borderBottom: `1px solid ${C.border}`, fontSize: 13, color: C.amber, fontWeight: 600 }}>🔥 {s.streak}</td>
+                <td style={{ padding: "12px 16px", borderBottom: `1px solid ${C.border}`, fontSize: 13, fontWeight: 700, color: s.sat.current ? C.blueAccent : C.hint }}>{s.sat.current || "—"}</td>
+                <td style={{ padding: "12px 16px", borderBottom: `1px solid ${C.border}`, fontSize: 13, fontWeight: 700, color: s.ielts.current ? C.green : C.hint }}>{s.ielts.current || "—"}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </Card>
+    </div>
+  );
+}
+
+// ── Lessons Page (stub) ────────────────────────────────────────
+function LessonsPage({ showToast }) {
+  const programs = ["SAT Math", "SAT English", "IELTS"];
+  const [prog, setProg] = useState("SAT Math");
+  const lessons = [
+    { title: "Algebra: Linear Equations", level: "Beginner", questions: 20, done: true },
+    { title: "Algebra: Quadratic Functions", level: "Intermediate", questions: 18, done: true },
+    { title: "Geometry: Triangles", level: "Intermediate", questions: 22, done: false },
+    { title: "Data Analysis", level: "Advanced", questions: 25, done: false },
+  ];
+  return (
+    <div style={{ padding: 24 }}>
+      <div style={{ display: "flex", gap: 8, marginBottom: 16 }}>
+        {programs.map(p => (
+          <button key={p} onClick={() => setProg(p)}
+            style={{ padding: "8px 16px", borderRadius: 10, border: `1px solid ${prog === p ? C.navy : C.border}`, background: prog === p ? C.navy : "#fff", color: prog === p ? "#fff" : C.muted, fontSize: 13, fontWeight: 600, cursor: "pointer", fontFamily: "'DM Sans',sans-serif" }}>
+            {p}
+          </button>
+        ))}
+        <Btn onClick={() => showToast("Add lesson")} style={{ marginLeft: "auto" }}><Icon d={ICONS.plus} size={13} color="#fff" /> Add Lesson</Btn>
+      </div>
+      <Card style={{ padding: 0, overflow: "hidden" }}>
+        <table style={{ width: "100%", borderCollapse: "collapse" }}>
+          <thead><tr style={{ background: C.bg }}>{["Title","Level","Questions","Status",""].map(h => <th key={h} style={{ padding: "10px 16px", textAlign: "left", fontSize: 10, fontWeight: 700, color: C.hint, textTransform: "uppercase", letterSpacing: "0.06em", borderBottom: `1px solid ${C.border}` }}>{h}</th>)}</tr></thead>
+          <tbody>
+            {lessons.map((l, i) => (
+              <tr key={l.title}>
+                <td style={{ padding: "12px 16px", borderBottom: `1px solid ${C.border}`, fontSize: 13, fontWeight: 600, color: C.navy }}>{l.title}</td>
+                <td style={{ padding: "12px 16px", borderBottom: `1px solid ${C.border}` }}><Tag label={l.level} bg={C.bg} color={C.muted} /></td>
+                <td style={{ padding: "12px 16px", borderBottom: `1px solid ${C.border}`, fontSize: 13, color: C.textSub }}>{l.questions}</td>
+                <td style={{ padding: "12px 16px", borderBottom: `1px solid ${C.border}` }}><Tag label={l.done ? "Published" : "Draft"} bg={l.done ? C.greenDim : C.amberDim} color={l.done ? C.green : C.amber} /></td>
+                <td style={{ padding: "12px 16px", borderBottom: `1px solid ${C.border}` }}>
+                  <div style={{ display: "flex", gap: 6 }}>
+                    <Btn variant="ghost" style={{ padding: "5px 10px", fontSize: 12 }}><Icon d={ICONS.edit} size={12} color={C.muted} /></Btn>
+                    <Btn variant="danger" onClick={() => showToast("Lesson deleted")} style={{ padding: "5px 10px", fontSize: 12 }}><Icon d={ICONS.trash} size={12} color={C.red} /></Btn>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </Card>
+    </div>
+  );
+}
+
+// ── Root App ───────────────────────────────────────────────────
+function App() {
+  const [role, setRole] = useState("admin");
+  const [tab, setTab] = useState("overview");
+  const [toast, setToast] = useState("");
+
+  const showToast = (msg) => setToast(msg);
+
+  const teacherStudents = MOCK_STUDENTS.filter(s =>
+    s.programAssignments.some(a => a.teacherId === "t1")
+  );
+  const myStudents = role === "admin" ? MOCK_STUDENTS : teacherStudents;
+
+  const myBookings = role === "admin" ? SEED_BOOKINGS : SEED_BOOKINGS.filter(b => b.teacherId === "t1");
+
+  const counts = { students: myStudents.length, teachers: MOCK_TEACHERS.length };
+
+  const user = role === "admin" ? MOCK_USER : { ...MOCK_TEACHERS[0], role: "teacher" };
+
+  return (
+    <div style={{ display: "flex", minHeight: "100vh" }}>
+      <Sidebar role={role} tab={tab} onTab={setTab} user={user}
+        onLogout={() => alert("Logged out")} />
+
+      <div style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0 }}>
+        {/* Role switcher strip */}
+        <div style={{ background: C.navyDark, padding: "6px 24px", display: "flex", gap: 8, alignItems: "center" }}>
+          <span style={{ fontSize: 11, color: "#9EB3C8" }}>Preview as:</span>
+          {["admin", "teacher"].map(r => (
+            <button key={r} onClick={() => { setRole(r); setTab("overview"); }}
+              style={{ padding: "3px 12px", borderRadius: 6, border: "none", background: role === r ? C.yellow : "rgba(255,255,255,0.08)", color: role === r ? C.navy : "#9EB3C8", fontSize: 11, fontWeight: 700, cursor: "pointer", textTransform: "capitalize", fontFamily: "'DM Sans',sans-serif" }}>
+              {r}
+            </button>
+          ))}
+        </div>
+
+        <Topbar tab={tab} role={role} counts={counts} />
+
+        <div style={{ flex: 1, overflowY: "auto" }}>
+          {tab === "overview" && <OverviewPage role={role} students={myStudents} teachers={MOCK_TEACHERS} bookings={myBookings} onTab={setTab} />}
+          {tab === "students" && <StudentsPage students={myStudents} teachers={MOCK_TEACHERS} role={role} showToast={showToast} />}
+          {tab === "teachers" && role === "admin" && <TeachersPage teachers={MOCK_TEACHERS} showToast={showToast} />}
+          {tab === "chat" && <ChatPage role={role} currentUser={user} students={myStudents} teachers={MOCK_TEACHERS} />}
+          {tab === "bookings" && <BookingsPage role={role} bookings={myBookings} students={myStudents} teachers={MOCK_TEACHERS} showToast={showToast} />}
+          {tab === "ratings" && <RatingsPage students={myStudents} />}
+          {tab === "lessons" && <LessonsPage showToast={showToast} />}
+        </div>
+      </div>
+
+      <Toast msg={toast} onDone={() => setToast("")} />
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>
