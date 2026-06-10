@@ -269,5 +269,44 @@
       "sat-english": "",
       "ielts": ""
     }
+  },
+  {
+    "id": "u_1781115109356_po0xmi",
+    "email": "hmuhammadqodirov23@gmail.com",
+    "passwordHash": "$2a$12$4Ucjz9XA9uC1BRLx5P69f.L9pnKVshnFK3BgmrCoVj.vEooBR84vG",
+    "role": "student",
+    "profile": {
+      "firstName": "Hojiakbar",
+      "lastName": "محمدقديروف",
+      "gender": "other",
+      "englishLevel": "elementary",
+      "phoneNumber": "456789",
+      "dateOfBirth": "2026-06-03",
+      "addressLine1": "",
+      "addressLine2": "",
+      "city": "",
+      "country": "",
+      "postalCode": "",
+      "profilePicture": "",
+      "region": "",
+      "grade": "",
+      "goal": "",
+      "examDate": ""
+    },
+    "name": "Hojiakbar محمدقديروف",
+    "phoneNumber": "456789",
+    "dateOfBirth": "2026-06-03",
+    "programAssignments": [
+      {
+        "programId": "sat-math",
+        "levelId": "beginner",
+        "teacherId": ""
+      }
+    ],
+    "targetScores": {
+      "sat-math": "",
+      "sat-english": "",
+      "ielts": ""
+    }
   }
 ]

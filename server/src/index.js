@@ -8,7 +8,7 @@ import { db } from "./dataStore.js";
 import { authMiddleware, requireRole, signToken } from "./auth.js";
 
 const app = express();
-const PORT = 4000;
+const PORT = 4001;
 
 // ── Allowed programs & levels ──────────────────────────────────────────────
 const studentPrograms = ["sat-math", "sat-english", "ielts"];
@@ -25,7 +25,7 @@ const validPassword = (p) => typeof p === "string" && p.length >= 8 && p.length 
 const appError = (res, status, message) => res.status(status).json({ message });
 
 // ── CORS ───────────────────────────────────────────────────────────────────
-const allowedOrigins = (process.env.ALLOWED_ORIGINS || "http://localhost:5173")
+const allowedOrigins = (process.env.ALLOWED_ORIGINS || "http://localhost:5173,http://localhost:5178,http://localhost:5179")
   .split(",")
   .map((o) => o.trim());
 
